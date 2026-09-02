@@ -38,13 +38,48 @@ export default async function CasePage({ params }: Props) {
 
   return (
     <article>
-      <header className="case-hero">
-        <p className="eyebrow">{study.kicker}</p>
+      <header className="page-hero">
+        <p className="eyebrow">{study.brand}</p>
         <h1>{study.headline}</h1>
         <p className="lede measure">
-          {study.role}. {study.dates}. {study.reportsTo}. {study.stat}.
+          {study.role}. {study.dates}. {study.reportsTo}.
         </p>
       </header>
+
+      <aside className="case-artifact" aria-label="Case facts">
+        <div>
+          <h3>Desk</h3>
+          <p>
+            {study.role}
+            <br />
+            {study.reportsTo}
+          </p>
+        </div>
+        <div>
+          <h3>Dates</h3>
+          <p>{study.dates}</p>
+        </div>
+        <div>
+          <h3>On the book</h3>
+          <p>{study.stat}</p>
+        </div>
+      </aside>
+
+      <div className="exp-story case-pao">
+        <div>
+          <h3>Problem</h3>
+          <p>{study.problem}</p>
+        </div>
+        <div>
+          <h3>Approach</h3>
+          <p>{study.approach}</p>
+        </div>
+        <div>
+          <h3>Outcome</h3>
+          <p>{study.outcome}</p>
+        </div>
+      </div>
+
       <div className="case-blocks">
         {blocks.map((block) => (
           <section className="case-block" key={block.title}>

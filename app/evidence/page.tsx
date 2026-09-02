@@ -13,13 +13,22 @@ export const metadata: Metadata = {
 export default function EvidencePage() {
   return (
     <article>
-      <header className="case-hero">
-        <p className="eyebrow">Evidence</p>
+      <header className="page-hero">
         <h1>What’s on the desk</h1>
         <p className="lede measure">
           The same facts as the resume, in one place. No invented lifts. The public folders are
           SAMPLE method work — not Black Clover, not Nutricost, not client extracts.
         </p>
+        <div className="artifact-list">
+          <a className="artifact" href={site.proof.recast} rel="noreferrer" target="_blank">
+            <strong>SAMPLE Recast memo</strong>
+            <span>Public R write-up — method only, not client data</span>
+          </a>
+          <a className="artifact" href={site.proof.geolift} rel="noreferrer" target="_blank">
+            <strong>SAMPLE GeoLift</strong>
+            <span>Public geo-holdout notebooks — method only, not client data</span>
+          </a>
+        </div>
       </header>
       <div className="proof-list">
         {evidenceItems.map((item) => (
@@ -33,23 +42,13 @@ export default function EvidencePage() {
         ))}
       </div>
       <section className="band">
-        <p className="note measure">
-          SAMPLE Recast R memo and SAMPLE GeoLift notebooks are public method folders — not client
-          data.
-        </p>
         <p className="actions">
-          <Link className="btn" href="/resume">
-            Full resume
+          <Link className="btn btn-solid" href="/resume">
+            Resume / PDF
           </Link>
           <Link className="btn" href="/approach">
             Approach
           </Link>
-          <a className="btn" href={site.proof.recast} rel="noreferrer" target="_blank">
-            SAMPLE Recast memo
-          </a>
-          <a className="btn" href={site.proof.geolift} rel="noreferrer" target="_blank">
-            SAMPLE GeoLift
-          </a>
         </p>
       </section>
     </article>

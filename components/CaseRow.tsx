@@ -22,19 +22,18 @@ export function CaseRow({ study }: { study: CaseStudy }) {
   return (
     <article>
       <Link className="exp-row exp-row-slim" href={`/work/${study.slug}`}>
-        <p className="exp-idx num">{study.index}</p>
         <div>
-          <h3 className="exp-brand">{study.brand}</h3>
+          <h3 className="exp-brand">
+            <span className="exp-idx num">{study.index}</span>
+            {study.brand}
+          </h3>
           <p className="exp-role">{study.role}</p>
           <p className="exp-meta">
             {study.reportsTo} · {study.dates}
-          </p>
-          <p className="exp-metrics">
-            {metrics.map((metric) => (
-              <span className="num" key={metric}>
-                {metric}
-              </span>
-            ))}
+            <span className="exp-metrics">
+              {" · "}
+              {metrics.join(" · ")}
+            </span>
           </p>
           <span className="more">Read case →</span>
         </div>

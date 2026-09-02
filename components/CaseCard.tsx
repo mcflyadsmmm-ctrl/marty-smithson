@@ -5,9 +5,11 @@ export function CaseCard({ study }: { study: CaseStudy }) {
   return (
     <article>
       <Link className="exp-row" href={`/work/${study.slug}`}>
-        <p className="exp-idx num">{study.index}</p>
         <div>
-          <h3 className="exp-brand">{study.brand}</h3>
+          <h3 className="exp-brand">
+            <span className="exp-idx num">{study.index}</span>
+            {study.brand}
+          </h3>
           <p className="exp-role">{study.role}</p>
           <p className="exp-meta">
             {study.reportsTo} · {study.dates} · {study.stat}

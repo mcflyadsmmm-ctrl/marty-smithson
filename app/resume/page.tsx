@@ -12,18 +12,21 @@ export const metadata: Metadata = {
 
 export default function ResumePage() {
   return (
-    <article>
-      <header className="resume-top">
-        <p className="eyebrow">Master resume</p>
+    <article className="resume-page">
+      <header className="page-hero">
         <h1>{site.name}</h1>
-        <p className="note wide">
-          {site.locationLine} · {site.authorization} ·{" "}
-          <a href={`mailto:${site.email}`}>{site.email}</a> ·{" "}
-          <a href={site.linkedin} rel="noreferrer" target="_blank">
-            {site.linkedinLabel}
-          </a>{" "}
-          · <Link href="/contact">{site.url.replace("https://", "")}/contact</Link>
+        <p className="note resume-contact">
+          {site.locationLine}
+          <br />
+          {site.authorization}
           <span className="phone-print"> · {site.phone}</span>
+        </p>
+        <p className="resume-links no-print">
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+          <a href={site.linkedin} rel="noreferrer" target="_blank">
+            LinkedIn
+          </a>
+          <Link href="/contact">Contact</Link>
         </p>
         <p className="note no-print">Phone is on the printed PDF only.</p>
         <div className="resume-tools no-print">
@@ -32,19 +35,16 @@ export default function ResumePage() {
             Markdown
           </a>
           <a className="btn" href="/resume.doc" download="Marty-Smithson-Resume.doc">
-            Word (Workday)
+            Word
           </a>
-          <Link className="btn" href="/contact">
-            Contact
-          </Link>
         </div>
         <h2>{resume.role}</h2>
         <p className="resume-scan">{resume.scan}</p>
       </header>
 
       <section className="band">
-        <p className="kicker">Summary</p>
-        <p className="measure">{resume.summary}</p>
+        <h3 className="kicker">Summary</h3>
+        <p>{resume.summary}</p>
       </section>
 
       {resume.jobs.map((job) => (
@@ -63,17 +63,17 @@ export default function ResumePage() {
       ))}
 
       <section className="band">
-        <p className="kicker">Skills</p>
+        <h3 className="kicker">Skills</h3>
         {resume.skills.map((group) => (
-          <p key={group.label} className="measure">
+          <p key={group.label}>
             <strong>{group.label}:</strong> {group.items}
           </p>
         ))}
       </section>
 
       <section className="band">
-        <p className="kicker">Education</p>
-        <p className="measure">{resume.education}</p>
+        <h3 className="kicker">Education</h3>
+        <p>{resume.education}</p>
       </section>
     </article>
   );
