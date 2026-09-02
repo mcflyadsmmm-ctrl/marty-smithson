@@ -53,11 +53,11 @@ Education: UVU B.S., Data Science and Statistics emphasis.
 
 Resume PDFs live in `public/resumes/`. User-facing labels: Full resume / Measurement / Systems and analytics.
 
-FINAL md5s:
+NEW FINAL md5s (Nutricost SoT rewritten). Old `31bedaf2` / `bbf49f5b` / `64835551` are obsolete.
 
-- MASTER `31bedaf26017d345b91fb50ffac370a2`
-- SCIENCE `bbf49f5b07aa0b48e0064fd2a37b9214`
-- OPERATOR `648355511eeb4ae0623f576894dbdf6e`
+- MASTER `529fbf25aebc5e2a7e90c50ef1fc586a`
+- SCIENCE `4d13437d4b91e002b50bfb8c2bf0a641`
+- OPERATOR `7605a9c0650e50644d5180abb791d0de`
 
 ## Deploy
 
