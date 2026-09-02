@@ -21,6 +21,10 @@ export function SiteHeader() {
     };
   }, [open]);
 
+  if (pathname === "/") {
+    return null;
+  }
+
   return (
     <header className="site-header">
       <div className="site-header-inner">
