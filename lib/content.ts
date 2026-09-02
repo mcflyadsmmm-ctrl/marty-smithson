@@ -332,7 +332,7 @@ export const resume = {
       meta: "W-2. Reports to the CEO. ~$45M this year. Hundreds of employees. Global. 18 months on the paid mix (Feb 2025–Present).",
       bullets: [
         "Bayesian statistical modeling: Meridian MMM on Google, Meta, and Microsoft. GeoLift geo-holdouts, geo-testing, and RCTs when two channels claimed the same sale — experimental methods and causal inference. Below cash MER break-even, we cut.",
-        "Allocated $1M/month paid mix for 18 months across Google Ads, Meta Ads, and Microsoft Ads against cash MER for the CEO. Platform ROAS was not the budget.",
+        "Directed a seven-figure monthly paid mix for ~18 months across Google Ads, Meta Ads, and Microsoft Ads against cash MER for the CEO. Platform ROAS was not the budget.",
         "Built a 50-person sales portal from scratch for executives, rep leads, and reps — the sales desk, not company headcount. Live Oracle NetSuite, tiered access, CRM-style messaging.",
         "Finance desk: Snowflake warehouse, dbt models, and Airflow jobs into Oracle NetSuite. R for data cleaning and exploratory analysis, plus SQL and Python. BI in Looker, Domo, and Tableau.",
         "Led 1 social media manager, 1 graphic designer, and international advertising leads in Asia, the UK, Canada, and Australia.",
@@ -345,7 +345,7 @@ export const resume = {
       meta: "W-2. Reported to the CMO.",
       bullets: [
         "Robyn MMM on Amazon, Google, Meta, and TikTok. GeoLift incrementality when those platforms claimed the same order. Presented results to the CMO. The test was the budget call — not last-click.",
-        "Scaled Ketologic and Primaforce from $50/day to $1,000/day. Owned $2M/month paid for 7 months across the four platforms.",
+        "Scaled Ketologic and Primaforce from $50/day to $1,000/day. Owned a seven-figure monthly paid book for 7 months across the four platforms.",
         "Multi-touch attribution, LTV, and cohorts in BigQuery, SQL, and R so the CMO could see contribution beyond last-click. GA4 and Looker Studio for the weekly desk.",
       ],
     },
