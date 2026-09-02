@@ -47,17 +47,17 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Do not invent lifts, ROAS, or titles. He reports to the Black Clover CEO. CEO applies only at McFly Ads.
 
-Nutricost: Performance Marketing & Analytics Lead, reported to the CMO. Helped organize a data portfolio for 13 sub-brands. Helped build the warehouse and advertising data-science station for margins and COGS. Never use the Ketologic / Primaforce spend ramp.
+Nutricost: Performance Marketing & Analytics Lead, reported to the CMO. Organized a data portfolio for 13 unique sub-brands. Built the full warehouse and advertising data-science station for margins and COGS. Never use “helped.” Never use the Ketologic / Primaforce spend ramp.
 
 Education: UVU B.S., Data Science and Statistics emphasis.
 
 Resume PDFs live in `public/resumes/`. User-facing labels: Full resume / Measurement / Systems and analytics.
 
-NEW FINAL md5s (Nutricost SoT rewritten). Old `31bedaf2` / `bbf49f5b` / `64835551` are obsolete.
+Ownership FINAL md5s (already on main via #16). Helped-era `529fbf25` / `4d13437d` / `7605a9c0` are obsolete.
 
-- MASTER `529fbf25aebc5e2a7e90c50ef1fc586a`
-- SCIENCE `4d13437d4b91e002b50bfb8c2bf0a641`
-- OPERATOR `7605a9c0650e50644d5180abb791d0de`
+- MASTER `28e46f6afed043de3a84d2937412a201`
+- SCIENCE `bf39d5feeef7d6631e8e907b905fea4d`
+- OPERATOR `c074515643580a7e077087d0c55a6b28`
 
 ## Deploy
 
