@@ -60,7 +60,7 @@ export const workPage = {
     title: "Nutricost",
     role: "Performance Marketing & Analytics Lead. I reported to the CMO.",
     href: "/work/nutricost",
-    body: "I helped organize a data portfolio for thirteen sub-brands under the main brand, and I helped build the warehouse and the advertising data-science station where executives could see profit margins and COGS.",
+    body: "I organized a data portfolio for thirteen sub-brands under the main brand, and I built the full data warehouse and the advertising data-science station where executives could see profit margins and COGS.",
   },
   mcfly: {
     title: "McFly Ads",
@@ -78,9 +78,9 @@ export const cases: CaseStudy[] = [
     role: "Performance Marketing & Analytics Lead",
     dates: "August 2024 — February 2025",
     reportsTo: "Reported to the CMO",
-    lead: "I helped get a data portfolio in order, and helped build the place executives used to see margins.",
+    lead: "I organized a data portfolio for thirteen sub-brands, and I built the place executives used to see margins.",
     body: [
-      "I helped organize a data portfolio for thirteen unique sub-brands under the Nutricost main brand. I also helped build the full data warehouse and the advertising data-science station where executives could see profit margins and COGS.",
+      "I organized a data portfolio for thirteen unique sub-brands under the Nutricost main brand. I also built the full data warehouse and the advertising data-science station where executives could see profit margins and COGS.",
     ],
   },
   {
@@ -139,7 +139,7 @@ export const resume = {
   role: "Head of Business Intelligence & Performance Marketing",
   scan: "Head of BI & Performance Marketing at Black Clover · reports to the CEO · UVU B.S. Data Science and Statistics",
   summary:
-    "Head of Business Intelligence & Performance Marketing at Black Clover — I report to the CEO. I moved the full data warehouse off Domo onto Google Cloud Run (about $20K a month saved) and built a partner portal on Cloud Run for about 50 people. I allocate a seven-figure monthly paid mix across Google, Meta, and Microsoft against cash MER. Previously Performance Marketing & Analytics Lead at Nutricost, reporting to the CMO: I helped organize a data portfolio for 13 sub-brands and helped build the warehouse and advertising data-science station executives used for profit margins and COGS. CEO of McFly Ads since 2020.",
+    "Head of Business Intelligence & Performance Marketing at Black Clover — I report to the CEO. I moved the full data warehouse off Domo onto Google Cloud Run (about $20K a month saved) and built a partner portal on Cloud Run for about 50 people. I allocate a seven-figure monthly paid mix across Google, Meta, and Microsoft against cash MER. Previously Performance Marketing & Analytics Lead at Nutricost, reporting to the CMO: I organized a data portfolio for 13 sub-brands and built the full data warehouse and advertising data-science station executives used for profit margins and COGS. CEO of McFly Ads since 2020.",
   jobs: [
     {
       title: "Head of Business Intelligence & Performance Marketing",
@@ -161,8 +161,8 @@ export const resume = {
       dates: "08/2024 - 02/2025 (7 months)",
       meta: "Reported to the CMO.",
       bullets: [
-        "Helped organize a data portfolio for 13 unique sub-brands under the Nutricost main brand.",
-        "Helped build the full data warehouse and the advertising data-science station where executives could see profit margins and COGS.",
+        "Organized a data portfolio for 13 unique sub-brands under the Nutricost main brand.",
+        "Built the full data warehouse and the advertising data-science station where executives could see profit margins and COGS.",
       ],
     },
     {
