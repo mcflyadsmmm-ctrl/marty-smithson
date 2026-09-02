@@ -37,34 +37,47 @@ export default async function CasePage({ params }: Props) {
   if (!study) notFound();
 
   return (
-    <article className="doc">
-      <header className="open">
-        <h1>{study.brand}</h1>
-        <p className="quiet">
-          {study.role}. {study.reportsTo}. {study.dates}.
+    <article className="page">
+      <header className="page-head wrap">
+        <p className="label">
+          {study.role} · {study.dates}
         </p>
-        <p className="open-line">{study.lead}</p>
+        <h1>{study.brand}</h1>
+        <p className="lede">{study.lead}</p>
+        <p className="quiet">{study.reportsTo}.</p>
       </header>
 
-      {study.body.map((paragraph) => (
-        <p key={paragraph}>{paragraph}</p>
-      ))}
-
-      {study.slug === "mcfly" ? (
-        <section>
-          <h2>Named brands</h2>
-          <BrandRoster />
-        </section>
-      ) : null}
-
-      <p className="close-links">
-        <Link href="/work">All work</Link>
-        {study.slug === "mcfly" ? (
-          <a href={site.mcfly} rel="noreferrer" target="_blank">
-            mcflyads.com
-          </a>
+      <div className="wrap">
+        {study.slug === "nutricost" ? (
+          <div className="case-stat">
+            <p className="case-stat-num">13</p>
+            <p>unique sub-brands. I organized the data portfolio under the Nutricost main brand.</p>
+          </div>
         ) : null}
-      </p>
+
+        <div className="section-copy">
+          {study.body.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+
+        {study.slug === "mcfly" ? (
+          <section className="section">
+            <p className="label">Roster</p>
+            <h2>Named brands</h2>
+            <BrandRoster />
+          </section>
+        ) : null}
+
+        <p className="close-links">
+          <Link href="/work">All work</Link>
+          {study.slug === "mcfly" ? (
+            <a href={site.mcfly} rel="noreferrer" target="_blank">
+              mcflyads.com
+            </a>
+          ) : null}
+        </p>
+      </div>
     </article>
   );
 }

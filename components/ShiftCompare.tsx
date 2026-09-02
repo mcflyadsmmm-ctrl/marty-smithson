@@ -1,14 +1,21 @@
 import { fleet } from "@/lib/content";
 
-export function ShiftCompare() {
+export function ShiftCompare({
+  compact = false,
+}: {
+  compact?: boolean;
+}) {
   const { shift } = fleet;
 
   return (
-    <figure className="shift">
-      <figcaption>{shift.title}</figcaption>
+    <figure className={compact ? "figure shift is-compact" : "figure shift"}>
+      <figcaption>
+        <span className="label">Shift</span>
+        {shift.title}
+      </figcaption>
       <div className="shift-grid">
-        <section>
-          <p className="shift-label">{shift.before.label}</p>
+        <section className="shift-col">
+          <p className="label">{shift.before.label}</p>
           <h3>{shift.before.title}</h3>
           <ul>
             {shift.before.points.map((point) => (
@@ -16,8 +23,13 @@ export function ShiftCompare() {
             ))}
           </ul>
         </section>
-        <section>
-          <p className="shift-label">{shift.after.label}</p>
+        <div className="shift-delta">
+          <p className="shift-delta-num">~$20K</p>
+          <p className="shift-delta-unit">a month off the bill</p>
+          <p className="shift-delta-hold">GCP class held around $30</p>
+        </div>
+        <section className="shift-col">
+          <p className="label">{shift.after.label}</p>
           <h3>{shift.after.title}</h3>
           <ul>
             {shift.after.points.map((point) => (

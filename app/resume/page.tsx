@@ -10,32 +10,37 @@ export const metadata: Metadata = {
 
 export default function ResumePage() {
   return (
-    <article className="doc">
-      <header className="open">
+    <article className="page">
+      <header className="page-head wrap">
+        <p className="label">Resume</p>
         <h1>Resume</h1>
-        <p className="open-line">
-          You can download a PDF here. There are three versions if you want a different emphasis.
+        <p className="lede">
+          Three PDFs. Same facts, different emphasis.
         </p>
         <p className="quiet">{site.locationLine}</p>
       </header>
 
-      <ul className="file-list">
-        {resumePdfs.map((pdf) => (
-          <li key={pdf.key}>
-            <a href={pdf.href} download>
-              {pdf.title}
-            </a>
-            <span>{pdf.note}</span>
-          </li>
-        ))}
-      </ul>
+      <div className="wrap">
+        <ul className="resume-chooser">
+          {resumePdfs.map((pdf) => (
+            <li key={pdf.key}>
+              <a className="resume-card" href={pdf.href} download>
+                <span className="label">PDF</span>
+                <strong>{pdf.title}</strong>
+                <span className="quiet">{pdf.note}</span>
+                <span className="more">Download</span>
+              </a>
+            </li>
+          ))}
+        </ul>
 
-      <p className="close-links">
-        <a href={`mailto:${site.email}`}>{site.email}</a>
-        <a href={site.linkedin} rel="noreferrer" target="_blank">
-          LinkedIn
-        </a>
-      </p>
+        <p className="close-links">
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+          <a href={site.linkedin} rel="noreferrer" target="_blank">
+            LinkedIn
+          </a>
+        </p>
+      </div>
     </article>
   );
 }

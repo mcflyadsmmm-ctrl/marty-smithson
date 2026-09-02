@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FleetMap } from "@/components/FleetMap";
+import { LaneGrid } from "@/components/LaneGrid";
 import { PortalRoles } from "@/components/PortalRoles";
 import { ShiftCompare } from "@/components/ShiftCompare";
 import { fleet } from "@/lib/content";
@@ -14,64 +15,83 @@ export const metadata: Metadata = {
 
 export default function SystemsFleetPage() {
   return (
-    <article className="doc proof">
-      <header className="open">
-        <h1>{fleet.title}</h1>
-        <p className="quiet">
-          {fleet.role}. {fleet.reportsTo} {fleet.dates}.
+    <article className="page proof">
+      <header className="page-head wrap">
+        <p className="label">
+          {fleet.role} · {fleet.dates}
         </p>
-        <p className="open-line">{fleet.lead}</p>
+        <h1>{fleet.title}</h1>
+        <p className="lede">{fleet.lead}</p>
       </header>
 
-      {fleet.open.map((paragraph) => (
-        <p key={paragraph}>{paragraph}</p>
-      ))}
-
-      <FleetMap />
-
-      <section>
-        <h2>{fleet.shift.title}</h2>
-        <p>{fleet.shift.lead}</p>
-        <ShiftCompare />
-        <p>{fleet.shift.note}</p>
-      </section>
-
-      <section>
-        <h2>{fleet.identities.title}</h2>
-        <p>{fleet.identities.lead}</p>
-        <PortalRoles />
-        <p>{fleet.identities.note}</p>
-      </section>
-
-      {fleet.lanes.map((lane) => (
-        <section id={lane.id} key={lane.id}>
-          <h2>{lane.title}</h2>
-          {lane.body.map((paragraph) => (
+      <div className="wrap">
+        <section className="section-copy">
+          {fleet.open.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </section>
-      ))}
 
-      <section>
-        <h2>{fleet.constraints.title}</h2>
-        <p>{fleet.constraints.lead}</p>
-        {fleet.constraints.items.map((item) => (
-          <div className="constraint" key={item.title}>
-            <h3>{item.title}</h3>
-            <p>{item.body}</p>
+        <section className="section" aria-labelledby="arch-title">
+          <h2 id="arch-title" className="visually-hidden">
+            Architecture
+          </h2>
+          <FleetMap />
+        </section>
+
+        <section className="section">
+          <h2>{fleet.shift.title}</h2>
+          <div className="section-copy">
+            <p>{fleet.shift.lead}</p>
           </div>
-        ))}
-      </section>
+          <ShiftCompare />
+          <div className="section-copy">
+            <p>{fleet.shift.note}</p>
+          </div>
+        </section>
 
-      <section>
-        <h2>{fleet.mix.title}</h2>
-        <p>{fleet.mix.body}</p>
-      </section>
+        <section className="section">
+          <h2>{fleet.identities.title}</h2>
+          <div className="section-copy">
+            <p>{fleet.identities.lead}</p>
+          </div>
+          <PortalRoles />
+          <div className="section-copy">
+            <p>{fleet.identities.note}</p>
+          </div>
+        </section>
 
-      <p className="close-links">
-        <Link href="/work">All work</Link>
-        <Link href="/resume">Resume</Link>
-      </p>
+        <section className="section">
+          <p className="label">Lanes</p>
+          <h2>Five books. One writer each.</h2>
+          <LaneGrid />
+        </section>
+
+        <section className="section">
+          <h2>{fleet.constraints.title}</h2>
+          <div className="section-copy">
+            <p>{fleet.constraints.lead}</p>
+          </div>
+          <ul className="constraint-grid">
+            {fleet.constraints.items.map((item) => (
+              <li className="constraint" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="band">
+          <p className="label">Mix</p>
+          <h2>{fleet.mix.title}</h2>
+          <p>{fleet.mix.body}</p>
+        </section>
+
+        <p className="close-links">
+          <Link href="/work">All work</Link>
+          <Link href="/resume">Resume</Link>
+        </p>
+      </div>
     </article>
   );
 }

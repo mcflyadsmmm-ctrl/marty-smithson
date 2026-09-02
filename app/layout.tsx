@@ -1,23 +1,25 @@
 import type { Metadata } from "next";
-import { Inter, Source_Serif_4 } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const sans = Inter({
+const sans = IBM_Plex_Sans({
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
   variable: "--font-sans",
-  display: "optional",
+  display: "swap",
   adjustFontFallback: true,
   preload: true,
 });
 
-const serif = Source_Serif_4({
+const mono = IBM_Plex_Mono({
   subsets: ["latin"],
-  variable: "--font-serif",
-  display: "optional",
+  weight: ["400", "500"],
+  variable: "--font-mono",
+  display: "swap",
   adjustFontFallback: true,
   preload: true,
 });
@@ -51,8 +53,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
-      <body className={serif.className}>
+    <html lang="en" className={`${sans.variable} ${mono.variable}`}>
+      <body className={sans.className}>
         <JsonLd />
         <div className="sheet">
           <SiteHeader />

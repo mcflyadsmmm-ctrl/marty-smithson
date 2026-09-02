@@ -20,17 +20,9 @@ export const hero = {
 } as const;
 
 export const homeTease = {
-  paragraphs: [
-    "When I got here the warehouse lived in Domo. I moved it onto Google Cloud Run — Cloud Run, BigQuery, and the Apps Script jobs a shop like this actually runs on — and about twenty thousand a month came off the bill. The new stack had to stay in a cheap GCP class, around thirty dollars.",
-    "I built a partner portal on that same stack for about fifty people in the field. Executives, rep leads, and the reps. Live NetSuite. Each role sees a different slice. They can message each other. They cannot rewrite the number.",
-    "Wholesale, cash, retail, and fulfillment each keep their own book. One writer. Isolated identity. If two lanes can quietly disagree, leadership is deciding on theater.",
-  ],
   more: "The architecture, the Domo move, and the portal identity model.",
   href: "/work/systems-fleet",
 } as const;
-
-export const homeAfter =
-  "I was at Nutricost before this. I organized the data portfolio for thirteen unique sub-brands, and I built the full data warehouse and the advertising data-science station executives used for profit margins and COGS. McFly Ads is the company I started in 2020.";
 
 export type FleetLane = {
   id: LaneId;
@@ -177,14 +169,14 @@ export const workPage = {
     title: "Nutricost",
     role: "Performance Marketing & Analytics Lead. I reported to the CMO.",
     href: "/work/nutricost",
-    body: "I organized the data portfolio for thirteen unique sub-brands under the main brand. I built the full data warehouse, and I built the advertising data-science station where executives could see profit margins and COGS.",
+    line: "Thirteen unique sub-brands. Warehouse and ads station for margins and COGS.",
     more: "The Nutricost note.",
   },
   mcfly: {
     title: "McFly Ads",
     role: "I started the company in 2020, and I’m CEO there.",
     href: "/work/mcfly",
-    body: "I’ve spent those years doing marketing data science for ten brands.",
+    line: "Marketing data science for ten named brands.",
     more: "The brand names.",
   },
 } as const;
@@ -198,7 +190,7 @@ export const cases: CaseStudy[] = [
     reportsTo: "Reported to the CMO",
     lead: "Thirteen sub-brands. One CMO desk for margins and COGS.",
     body: [
-      "I organized the data portfolio for thirteen unique sub-brands under the Nutricost main brand. The job was to get those books to sit together so a CMO desk could see the portfolio, not thirteen separate stories.",
+      "The job was to get those books to sit together so a CMO desk could see the portfolio, not thirteen separate stories.",
       "I built the full data warehouse. I built the advertising data-science station where executives could see profit margins and COGS.",
     ],
   },

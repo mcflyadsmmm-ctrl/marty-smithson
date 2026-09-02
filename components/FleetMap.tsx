@@ -9,22 +9,46 @@ export function FleetMap({
   const prefix = compact ? "/work/systems-fleet" : "";
 
   return (
-    <figure className={compact ? "fleet-map is-compact" : "fleet-map"}>
-      <figcaption>{fleet.mapCaption}</figcaption>
-      {compact ? null : (
-        <ul className="fleet-sources">
-          {fleet.sources.map((source) => (
-            <li key={source}>{source}</li>
-          ))}
-        </ul>
-      )}
-      <ol className="fleet-lanes">
-        {fleet.lanes.map((lane) => (
-          <li key={lane.id}>
-            <Link href={laneHref(lane.id, prefix)}>{lane.short}</Link>
-          </li>
-        ))}
-      </ol>
+    <figure className={compact ? "figure arch is-compact" : "figure arch"}>
+      <figcaption>
+        <span className="label">Architecture</span>
+        {fleet.mapCaption}
+      </figcaption>
+      <div className="arch-board">
+        <div className="arch-col arch-sources-col">
+          <p className="label">Sources</p>
+          <ul className="arch-sources">
+            {fleet.sources.map((source) => (
+              <li key={source}>{source}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="arch-join arch-join-sources" aria-hidden="true">
+          <span className="arch-join-line" />
+        </div>
+        <div className="arch-spine">
+          <p className="label">Warehouse</p>
+          <p className="arch-spine-title">Cloud Run</p>
+          <p>BigQuery · Apps Script</p>
+          <p className="arch-spine-note">GCP class around $30</p>
+        </div>
+        <div className="arch-join" aria-hidden="true">
+          <span className="arch-join-line" />
+        </div>
+        <div className="arch-col">
+          <p className="label">Five isolated books</p>
+          <ol className="arch-lanes">
+            {fleet.lanes.map((lane, index) => (
+              <li key={lane.id}>
+                <Link href={laneHref(lane.id, prefix)}>
+                  <span className="arch-idx">{String(index + 1).padStart(2, "0")}</span>
+                  <span>{lane.short}</span>
+                </Link>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
     </figure>
   );
 }
