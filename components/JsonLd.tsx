@@ -18,8 +18,7 @@ const graph = {
         {
           "@type": "Occupation",
           name: "Head of Business Intelligence & Performance Marketing",
-          experienceRequirements: "6 years of experience in marketing data science",
-          educationRequirements: "Bachelor of Science, emphasis Data Science and Statistics",
+          educationRequirements: "Bachelor of Science, Data Science and Statistics emphasis",
           occupationLocation: { "@type": "Organization", name: "Black Clover" },
         },
         {
@@ -33,13 +32,11 @@ const graph = {
         { "@type": "Organization", name: "McFly Ads" },
       ],
       knowsAbout: [
+        "business intelligence",
+        "Google Cloud Run",
+        "data warehousing",
         "marketing mix modeling",
-        "GeoLift",
-        "incrementality testing",
         "cash MER",
-        "Robyn",
-        "Meridian",
-        "marketing data science",
       ],
       address: {
         "@type": "PostalAddress",
