@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PrintButton } from "@/components/PrintButton";
 import { resume } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -14,66 +13,66 @@ export default function ResumePage() {
   return (
     <article className="resume-page">
       <header className="page-hero">
+        <p className="eyebrow">Resume pack</p>
         <h1>{site.name}</h1>
-        <p className="note resume-contact">
-          {site.locationLine}
-          <br />
-          {site.authorization}
-          <span className="phone-print"> · {site.phone}</span>
+        <p className="lede measure">
+          Pack PDFs are the source of truth. Pick the tilt for the seat — do not use a divergent HTML
+          copy.
         </p>
-        <p className="resume-links no-print">
-          <a href={`mailto:${site.email}`}>{site.email}</a>
-          <a href={site.linkedin} rel="noreferrer" target="_blank">
+        <p className="resume-scan">{resume.scan}</p>
+        <p className="note measure">
+          {site.locationLine}. {site.authorization}. CEO title applies only to McFly Ads; at Black
+          Clover I report to the CEO; at Nutricost I reported to the CMO.
+        </p>
+        <div className="resume-tools pack-grid no-print">
+          <a className="btn btn-solid" href={site.pack.master} download>
+            MASTER PDF
+          </a>
+          <a className="btn" href={site.pack.science} download>
+            SCIENCE PDF
+          </a>
+          <a className="btn" href={site.pack.operator} download>
+            OPERATOR PDF
+          </a>
+        </div>
+        <p className="note no-print">
+          SCIENCE for measurement / MMM seats. OPERATOR for brand growth / paid. MASTER default.
+        </p>
+        <p className="actions no-print">
+          <a className="btn" href={`mailto:${site.email}`}>
+            Email
+          </a>
+          <a className="btn" href={site.linkedin} rel="noreferrer" target="_blank">
             LinkedIn
           </a>
-          <Link href="/contact">Contact</Link>
-        </p>
-        <p className="note no-print">Phone is on the printed PDF only.</p>
-        <div className="resume-tools no-print">
-          <PrintButton />
-          <a className="btn" href="/resume.md" download="marty-smithson-resume.md">
-            Markdown
-          </a>
+          <Link className="btn" href="/contact">
+            Contact
+          </Link>
           <a className="btn" href="/resume.doc" download="Marty-Smithson-Resume.doc">
             Word
           </a>
-        </div>
-        <h2>{resume.role}</h2>
-        <p className="resume-scan">{resume.scan}</p>
+        </p>
       </header>
 
-      <section className="band">
-        <h3 className="kicker">Summary</h3>
-        <p>{resume.summary}</p>
-      </section>
-
-      {resume.jobs.map((job) => (
-        <section className="resume-job" key={job.org}>
-          <h3>{job.title}</h3>
-          <p className="note">
-            {job.org} · {job.dates}
-          </p>
-          <p className="note">{job.meta}</p>
-          <ul>
-            {job.bullets.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </section>
-      ))}
-
-      <section className="band">
-        <h3 className="kicker">Skills</h3>
-        {resume.skills.map((group) => (
-          <p key={group.label}>
-            <strong>{group.label}:</strong> {group.items}
-          </p>
-        ))}
-      </section>
-
-      <section className="band">
-        <h3 className="kicker">Education</h3>
-        <p>{resume.education}</p>
+      <section className="band resume-scan-only">
+        <h2 className="kicker">On-page scan</h2>
+        <p className="measure">{resume.summary}</p>
+        <p className="note measure">
+          Full bullets live in the PDFs above so ATS and humans see the same pack Resume owns.
+        </p>
+        <h3>{resume.role}</h3>
+        <ul className="resume-desk-list">
+          {resume.jobs.map((job) => (
+            <li key={job.org}>
+              <strong>{job.title}</strong> — {job.org} · {job.dates}
+              <br />
+              <span className="note">{job.meta}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="measure">
+          <strong>Education:</strong> {resume.education}
+        </p>
       </section>
     </article>
   );
