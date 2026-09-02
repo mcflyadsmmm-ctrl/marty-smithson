@@ -17,19 +17,10 @@ export const hero = {
   line: "I’m Head of BI & Performance Marketing at Black Clover. I report to the CEO.",
 } as const;
 
-export const homeSections = [
-  {
-    title: "The warehouse",
-    body: "When I started, Domo was running the warehouse. I moved the whole thing onto Google Cloud Run, which kept the same work in place and took about $20,000 a month off the bill.",
-  },
-  {
-    title: "The partner portal",
-    body: "I built a partner portal on Cloud Run for about fifty people — executives, rep leads, and the reps. It uses live NetSuite, gives people access based on their role, and has messaging between them. There’s a hard cap on what it costs.",
-  },
-  {
-    title: "Wholesale, cash, retail, fulfillment",
-    body: "Leadership has one wholesale book. Cash is sales against what we actually spent. Retail is store net, with tax left out. Fulfillment sits on its own, so a partial order shows up as a partial.",
-  },
+export const homeParagraphs = [
+  "When I started, Domo was running the warehouse. I moved the whole thing onto Google Cloud Run, which kept the same work in place and took about $20,000 a month off the bill.",
+  "I also built a partner portal on Cloud Run for about fifty people — executives, rep leads, and the reps. It uses live NetSuite, gives people access based on their role, and has messaging between them. There’s a hard cap on what it costs.",
+  "Around that I keep the books that shouldn’t share a number. Leadership has one wholesale book. For cash I look at sales against what we actually spent. Retail I keep as store net, without tax in it. Fulfillment is its own view so a partial order stays a partial.",
 ] as const;
 
 export const homeAfter =
@@ -59,11 +50,11 @@ export const fleet = {
     },
     {
       title: "Retail",
-      body: "Retail is store net sales. We leave tax out of that number.",
+      body: "Retail I keep as store net sales, and we leave tax out of that number.",
     },
     {
       title: "Fulfillment",
-      body: "Fulfillment has its own book. If something ships partial, that’s what the number says.",
+      body: "Fulfillment has its own book, so if something ships partial, that’s what you see.",
     },
   ],
 } as const;
@@ -99,10 +90,10 @@ export const cases: CaseStudy[] = [
     role: "Performance Marketing & Analytics Lead",
     dates: "August 2024 — February 2025",
     reportsTo: "Reported to the CMO",
-    lead: "I helped get the data in order for thirteen sub-brands, and helped build the warehouse executives used for margins.",
+    lead: "I helped get the data in order, and helped build the place executives used to see margins.",
     body: [
-      "I was Performance Marketing & Analytics Lead at Nutricost, and I reported to the CMO. I helped organize a portfolio of data for thirteen unique sub-brands under the Nutricost main brand.",
-      "I also helped build the full data warehouse and the advertising data science analysis station where executives could see profit margins and COGS. The paid platforms were Amazon, Google, Meta, and TikTok.",
+      "I helped organize a portfolio of data for thirteen unique sub-brands under the Nutricost main brand. I also helped build the full data warehouse and the advertising analysis station where executives could see profit margins and COGS.",
+      "The paid platforms were Amazon, Google, Meta, and TikTok.",
     ],
   },
   {
@@ -141,19 +132,19 @@ export const resumePdfs = [
     key: "full",
     href: "/resumes/Marty_Smithson_Resume_MASTER.pdf",
     title: "Full resume",
-    note: "The whole thing.",
+    note: "Start here if you just want the file.",
   },
   {
     key: "measurement",
     href: "/resumes/Marty_Smithson_Resume_SCIENCE.pdf",
     title: "Measurement",
-    note: "Mix models and incrementality.",
+    note: "If you care more about mix models and incrementality.",
   },
   {
     key: "systems",
     href: "/resumes/Marty_Smithson_Resume_OPERATOR.pdf",
     title: "Systems and analytics",
-    note: "The warehouse, the portal, the BI work.",
+    note: "If you care more about the warehouse, the portal, and the BI work.",
   },
 ] as const;
 

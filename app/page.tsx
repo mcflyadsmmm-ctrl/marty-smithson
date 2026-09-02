@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { hero, homeAfter, homeSections } from "@/lib/content";
+import { hero, homeAfter, homeParagraphs } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
@@ -10,11 +10,8 @@ export default function HomePage() {
         <p className="open-line">{hero.line}</p>
       </header>
 
-      {homeSections.map((section) => (
-        <section key={section.title}>
-          <h2>{section.title}</h2>
-          <p>{section.body}</p>
-        </section>
+      {homeParagraphs.map((paragraph) => (
+        <p key={paragraph}>{paragraph}</p>
       ))}
 
       <p className="quiet after">{homeAfter}</p>
