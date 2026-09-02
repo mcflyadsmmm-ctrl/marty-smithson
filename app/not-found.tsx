@@ -1,0 +1,17 @@
+import Link from "next/link";
+
+export default function NotFound() {
+  return (
+    <article className="case-hero">
+      <h1>Missing page.</h1>
+      <p className="actions">
+        <Link className="btn" href="/">
+          Home
+        </Link>
+        <Link className="btn" href="/work">
+          Work
+        </Link>
+      </p>
+    </article>
+  );
+}
