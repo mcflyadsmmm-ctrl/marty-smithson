@@ -254,12 +254,6 @@ export const stack = [
   { name: "Causal", detail: "Inference, not last-click." },
 ] as const;
 
-export const budgetMoved = {
-  eyebrow: "Budget that moved",
-  title: "The mix moved against cash. Not a lift slide.",
-  body: "I allocated $1M/month across Google, Meta, and Microsoft for 18 months on a ~$45M year. Weekly against cash MER. Below break-even, we cut. That book is reported to the Black Clover CEO — no invented incrementality percentage.",
-} as const;
-
 export const evidenceItems = [
   {
     index: "01",

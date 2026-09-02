@@ -34,8 +34,8 @@ export default function EvidencePage() {
       </div>
       <section className="band">
         <p className="note measure">
-          SAMPLE Recast R memo and SAMPLE GeoLift notebooks are public method folders. They are not
-          client data and they are not a product comparison.
+          SAMPLE Recast R memo and SAMPLE GeoLift notebooks are public method folders — not client
+          data.
         </p>
         <p className="actions">
           <Link className="btn" href="/resume">

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { CaseCard } from "@/components/CaseCard";
-import { budgetMoved, cases } from "@/lib/content";
+import { cases } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -17,10 +17,6 @@ export default function WorkPage() {
         <p className="lede measure">
           Black Clover, Nutricost, and McFly Ads — problem, approach, outcome. The same jobs as the
           resume. No invented lifts.
-        </p>
-        <p className="budget-moved measure">
-          <span className="eyebrow">{budgetMoved.eyebrow}</span>
-          {budgetMoved.body}
         </p>
       </header>
       <section className="band band-flush">

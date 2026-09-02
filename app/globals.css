@@ -594,15 +594,6 @@ p {
   gap: 0;
 }
 
-.budget-moved {
-  margin: 1.15rem 0 1.5rem;
-  color: var(--text);
-}
-
-.budget-moved .eyebrow {
-  display: block;
-}
-
 .proof-row {
   display: grid;
   grid-template-columns: 2.2rem minmax(0, 1fr);
