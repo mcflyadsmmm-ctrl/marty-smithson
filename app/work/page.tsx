@@ -21,7 +21,7 @@ export default function WorkPage() {
 
       <section>
         <h2>{blackClover.title}</h2>
-        <p className="quiet">{blackClover.role}</p>
+        <p>{blackClover.role}</p>
         <p>{blackClover.body}</p>
         <p>
           <Link href={blackClover.href}>{blackClover.more}</Link>
@@ -30,13 +30,13 @@ export default function WorkPage() {
 
       <section>
         <h2>{nutricost.title}</h2>
-        <p className="quiet">{nutricost.role}</p>
+        <p>{nutricost.role}</p>
         <p>{nutricost.body}</p>
       </section>
 
       <section>
         <h2>{mcfly.title}</h2>
-        <p className="quiet">{mcfly.role}</p>
+        <p>{mcfly.role}</p>
         <p>{mcfly.body}</p>
         <p>
           <Link href={mcfly.href}>{mcfly.more}</Link>

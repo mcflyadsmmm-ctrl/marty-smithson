@@ -13,7 +13,9 @@ export default function ResumePage() {
     <article className="doc">
       <header className="open">
         <h1>Resume</h1>
-        <p className="open-line">A few PDFs, depending on what you want to look at.</p>
+        <p className="open-line">
+          You can download a PDF here. There are three versions if you want a different emphasis.
+        </p>
         <p className="quiet">{site.locationLine}</p>
       </header>
 

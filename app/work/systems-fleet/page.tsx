@@ -5,7 +5,7 @@ import { fleet } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Black Clover",
   description:
-    "I moved Black Clover’s warehouse off Domo onto Cloud Run and built a partner portal for about fifty people.",
+    "I moved Black Clover’s warehouse off Domo onto Cloud Run and built a partner portal on the same stack for about fifty people.",
   alternates: { canonical: "/work/systems-fleet" },
 };
 

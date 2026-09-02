@@ -2,7 +2,7 @@ export const site = {
   name: "Marty Smithson",
   title: "Marty Smithson — Head of BI & Performance Marketing",
   description:
-    "Head of BI & Performance Marketing at Black Clover. I report to the CEO. I moved the warehouse off Domo onto Cloud Run and built the partner portal.",
+    "I run BI and performance marketing at Black Clover, and I report to the CEO. I moved the warehouse off Domo onto Cloud Run and built the partner portal.",
   url: "https://marty-smithson.vercel.app",
   email: "martysmithson04@gmail.com",
   linkedin: "https://www.linkedin.com/in/marty-smithson",

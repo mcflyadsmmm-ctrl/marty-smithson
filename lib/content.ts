@@ -14,72 +14,60 @@ export type CaseStudy = {
 
 export const hero = {
   name: "Marty Smithson",
-  line: "I’m Head of BI & Performance Marketing at Black Clover. I report to the CEO.",
+  line: "I run BI and performance marketing at Black Clover, and I report to the CEO.",
 } as const;
 
 export const homeParagraphs = [
-  "When I started, Domo was running the warehouse. I moved the whole thing onto Google Cloud Run, which kept the same work in place and took about $20,000 a month off the bill.",
-  "I also built a partner portal on Cloud Run for about fifty people — executives, rep leads, and the reps. It uses live NetSuite, gives people access based on their role, and has messaging between them. There’s a hard cap on what it costs.",
-  "Around that I keep the books that shouldn’t share a number. Leadership has one wholesale book. For cash I look at sales against what we actually spent. Retail I keep as store net, without tax in it. Fulfillment is its own view so a partial order stays a partial.",
+  "When I got here the warehouse lived in Domo. I moved all of it onto Google Cloud Run, and we ended up about twenty thousand dollars a month cheaper without changing the work.",
+  "I built a partner portal on Cloud Run for the people who needed the same numbers in the field. About fifty of them use it — executives, rep leads, and the reps. It pulls live NetSuite, gives each person the access they should have, and they can message each other. We put a hard limit on what it can cost.",
+  "The quieter part is the books. Leadership has one wholesale number. When we look at cash, we look at what we sold against what we spent. Retail is store net. Fulfillment sits on its own so a partial order doesn’t get cleaned up into something prettier.",
 ] as const;
 
 export const homeAfter =
-  "Before this I was at Nutricost. That’s on the work page, with McFly Ads.";
+  "I was at Nutricost before Black Clover. If you want that story, and McFly Ads, they’re on the work page.";
 
 export const fleet = {
   title: "Black Clover",
   role: "Head of BI & Performance Marketing",
   reportsTo: "I report to the CEO.",
-  lead: "I moved the warehouse off Domo onto Google Cloud Run and built a partner portal on the same stack for about fifty people. I also keep separate books for wholesale, cash, retail, and fulfillment.",
+  lead: "The work I can talk about in public is the warehouse, the portal, and the books we use to decide.",
   sections: [
     {
-      title: "Warehouse",
-      body: "Domo was running the warehouse, and the bill was high. I moved the full data warehouse onto Google Cloud Run, which kept the same work in place and took about $20,000 a month off the bill.",
+      title: "The warehouse",
+      body: "It was on Domo when I arrived, and it was costing us. I moved the whole thing onto Google Cloud Run. About twenty thousand a month came off the bill, and the work didn’t have to change.",
     },
     {
-      title: "Partner portal",
-      body: "About fifty people needed a place to work from — executives, rep leads, and reps. I built it on Cloud Run. It pulls live NetSuite, gives each role the right access, and has messaging between them, with a hard cap on cost.",
+      title: "The portal",
+      body: "The field needed somewhere to work from, so I built a partner portal on Cloud Run. About fifty people are on it — executives, the rep leads, and the reps. It uses live NetSuite, access depends on the role, they can message each other, and there’s a hard cap on cost.",
     },
     {
-      title: "Wholesale",
-      body: "Leadership has one wholesale book, and one person who writes it. We lock it after we ship so two systems don’t start telling different stories.",
-    },
-    {
-      title: "Cash",
-      body: "For the mix I use cash MER: ledger sales against exact spend. That’s the number Google, Meta, and Microsoft get budget from.",
-    },
-    {
-      title: "Retail",
-      body: "Retail I keep as store net sales, and we leave tax out of that number.",
-    },
-    {
-      title: "Fulfillment",
-      body: "Fulfillment has its own book, so if something ships partial, that’s what you see.",
+      title: "The books",
+      body: "They’re separate on purpose. Leadership has one wholesale book, written by one person, and we lock it after we ship. For the mix I use cash — ledger sales against exact spend — and that’s what Google, Meta, and Microsoft get budget from. Retail is store net, with tax left out. Fulfillment has its own book so a partial shipment stays a partial shipment.",
     },
   ],
 } as const;
 
 export const workPage = {
-  lead: "Black Clover is the main one. Nutricost and McFly Ads are shorter notes below.",
+  lead: "Most of what I want to show is Black Clover. Nutricost and McFly Ads are further down if you keep reading.",
   blackClover: {
     title: "Black Clover",
     role: "Head of BI & Performance Marketing. I report to the CEO.",
-    body: "I moved the warehouse off Domo onto Cloud Run, built the partner portal, and keep the books for wholesale, cash, retail, and fulfillment.",
+    body: "I moved the warehouse off Domo onto Cloud Run, built the partner portal, and I keep the books for wholesale, cash, retail, and fulfillment.",
     href: "/work/systems-fleet",
-    more: "The longer version",
+    more: "Here’s the longer write-up.",
   },
   nutricost: {
     title: "Nutricost",
     role: "Performance Marketing & Analytics Lead. I reported to the CMO.",
     href: "/work/nutricost",
-    body: "I helped organize the data for thirteen sub-brands under the Nutricost main brand. I also helped build the data warehouse and the advertising analysis station where executives could see profit margins and COGS. The paid work sat on Amazon, Google, Meta, and TikTok.",
+    body: "I helped organize the data for thirteen sub-brands under the main brand, and I helped build the warehouse and the advertising analysis station where executives could see profit margins and COGS.",
   },
   mcfly: {
     title: "McFly Ads",
-    role: "CEO. I started it in 2020.",
+    role: "I started the company in 2020, and I’m CEO there.",
     href: "/work/mcfly",
-    body: "That’s the one place I’m CEO. I’ve spent those years doing marketing data science for ten brands.",
-    more: "The brands",
+    body: "I’ve spent those years doing marketing data science for ten brands.",
+    more: "The brand names",
   },
 } as const;
 
@@ -92,8 +80,7 @@ export const cases: CaseStudy[] = [
     reportsTo: "Reported to the CMO",
     lead: "I helped get the data in order, and helped build the place executives used to see margins.",
     body: [
-      "I helped organize a portfolio of data for thirteen unique sub-brands under the Nutricost main brand. I also helped build the full data warehouse and the advertising analysis station where executives could see profit margins and COGS.",
-      "The paid platforms were Amazon, Google, Meta, and TikTok.",
+      "I helped organize a portfolio of data for thirteen unique sub-brands under the Nutricost main brand. I also helped build the full data warehouse and the advertising analysis station where executives could see profit margins and COGS. The paid platforms were Amazon, Google, Meta, and TikTok.",
     ],
   },
   {
@@ -101,8 +88,8 @@ export const cases: CaseStudy[] = [
     brand: "McFly Ads",
     role: "CEO",
     dates: "April 2020 — present",
-    reportsTo: "Founder",
-    lead: "I started the company in 2020. That’s the one place I’m CEO.",
+    reportsTo: "I started the company",
+    lead: "I started McFly Ads in 2020, and I’m CEO there.",
     body: [
       "I’ve spent those years doing marketing data science for ten named brands — mix models, incrementality, dashboards, and paid allocation. I present that work to the people who run the companies.",
       "McFly Analytics is submitted to the Shopify App Store. The listing is still pending.",
@@ -132,19 +119,19 @@ export const resumePdfs = [
     key: "full",
     href: "/resumes/Marty_Smithson_Resume_MASTER.pdf",
     title: "Full resume",
-    note: "Start here if you just want the file.",
+    note: "The usual one.",
   },
   {
     key: "measurement",
     href: "/resumes/Marty_Smithson_Resume_SCIENCE.pdf",
     title: "Measurement",
-    note: "If you care more about mix models and incrementality.",
+    note: "Mix models and incrementality.",
   },
   {
     key: "systems",
     href: "/resumes/Marty_Smithson_Resume_OPERATOR.pdf",
     title: "Systems and analytics",
-    note: "If you care more about the warehouse, the portal, and the BI work.",
+    note: "The warehouse, the portal, and the BI work.",
   },
 ] as const;
 
