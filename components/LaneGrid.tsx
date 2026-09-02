@@ -7,8 +7,11 @@ export function LaneGrid() {
         <article className="lane-card" id={lane.id} key={lane.id}>
           <p className="label">{String(index + 1).padStart(2, "0")}</p>
           <h3>{lane.title}</h3>
+          <p className="lane-scan">{lane.scan}</p>
           {lane.body.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+            <p className="quiet" key={paragraph}>
+              {paragraph}
+            </p>
           ))}
         </article>
       ))}

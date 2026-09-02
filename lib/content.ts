@@ -55,6 +55,7 @@ export type FleetLane = {
   id: LaneId;
   title: string;
   short: string;
+  scan: string;
   body: string[];
 };
 
@@ -97,43 +98,45 @@ export const fleet = {
       id: "wholesale",
       title: "Wholesale decision net",
       short: "Exec wholesale",
+      scan: "One writer. After we ship, we lock it.",
       body: [
-        "Leadership gets one wholesale number. One person writes it. After we ship, we lock it. A second system is not allowed to edit the same fact — if it can, you do not have a book. You have an argument.",
-        "Identity stays isolated from the partner portal. A rep cannot drift the number the CEO is looking at. That is the whole point of a decision net: the exec book and the field book can agree, but they cannot share a writer.",
+        "A second system is not allowed to edit the same fact — if it can, you do not have a book. You have an argument. The exec book and the field book can agree, but they cannot share a writer.",
       ],
     },
     {
       id: "portal",
       title: "Partner portal",
       short: "Field portal",
+      scan: "About fifty people. Live NetSuite. They cannot rewrite the number.",
       body: [
-        "About fifty people needed the same facts without a copy they could rewrite. I built the portal on Cloud Run. It pulls live Oracle NetSuite. Executives, rep leads, and reps each get the slice their role is allowed to see, and they can message each other.",
-        "The portal never owns the fact. It can display the number. It cannot become a second writer. That rule is what keeps a fifty-person field from quietly inventing a second company.",
+        "I built the portal on Cloud Run. Executives, rep leads, and reps each get the slice their role is allowed to see, and they can message each other. The portal can display the number. It cannot become a second writer.",
       ],
     },
     {
       id: "cash",
       title: "Cash MER",
       short: "Cash MER",
+      scan: "Meridian on the mix. GeoLift or an RCT when two channels claim the same sale.",
       body: [
-        "When we look at the mix we look at cash: ledger sales against exact spend. Google, Meta, and Microsoft get budget from that. Platform ROAS is not the budget.",
-        "If we cannot close sales to spend, the mix does not move. Fail-closed. Below break-even, we cut. Meridian sits on the Google, Meta, and Microsoft mix. When two channels claim the same sale, GeoLift or an RCT decides — not the ad manager.",
+        "Budget is ledger sales against exact spend — Google, Meta, and Microsoft. Platform ROAS is not the budget. Fail-closed. Below break-even, we cut.",
       ],
     },
     {
       id: "retail",
       title: "Retail POS",
       short: "Retail POS",
+      scan: "Store net sales only. Tax is not a KPI.",
       body: [
-        "Store net sales only. Tax is not a KPI. The retail book does not borrow wholesale or paid numbers to look healthier, and it does not get folded into the exec wholesale number just because a store had a good week.",
+        "The retail book does not borrow wholesale or paid numbers to look healthier, and it does not get folded into the exec wholesale number just because a store had a good week.",
       ],
     },
     {
       id: "fulfillment",
       title: "Fulfillment",
       short: "Fulfillment",
+      scan: "A partial shipment stays a partial shipment.",
       body: [
-        "One customer story. A partial shipment stays a partial shipment. Fulfillment is told on its own book so operations cannot get cleaned up into wholesale, and wholesale cannot pretend a partial is a complete order.",
+        "Fulfillment is told on its own book so operations cannot get cleaned up into wholesale, and wholesale cannot pretend a partial is a complete order.",
       ],
     },
   ] as const satisfies readonly FleetLane[],
@@ -215,9 +218,8 @@ export const cases: CaseStudy[] = [
     role: "Performance Marketing & Analytics Lead",
     dates: "August 2024 — February 2025",
     reportsTo: "Reported to the CMO",
-    lead: "Thirteen sub-brands. One CMO desk for margins and COGS.",
+    lead: "One CMO desk for margins and COGS.",
     body: [
-      "The job was to get those books to sit together so a CMO desk could see the portfolio, not thirteen separate stories.",
       "I built the full data warehouse. I built the advertising data-science station where executives could see profit margins and COGS.",
     ],
   },

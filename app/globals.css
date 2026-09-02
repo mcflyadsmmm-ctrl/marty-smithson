@@ -299,6 +299,30 @@ p {
   margin-top: 1.25rem;
 }
 
+.case-block {
+  padding-top: 2.4rem;
+}
+
+.case-block > .label {
+  margin-bottom: 0.65rem;
+}
+
+.case-block > h2 {
+  margin-bottom: 0.85rem;
+}
+
+.lane-scan {
+  margin: 0 0 0.7rem;
+  font-size: 1.08rem;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+}
+
+.lane-card .quiet {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
 .page-head {
   padding: 2.8rem 0 1.8rem;
 }

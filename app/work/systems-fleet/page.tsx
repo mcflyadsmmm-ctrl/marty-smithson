@@ -25,42 +25,36 @@ export default function SystemsFleetPage() {
       </header>
 
       <div className="wrap">
-        <section className="section" aria-labelledby="arch-title">
+        <section className="case-block" aria-labelledby="arch-title">
+          <p className="label">01 / Architecture</p>
           <h2 id="arch-title" className="visually-hidden">
             Architecture
           </h2>
           <FleetMap />
         </section>
 
-        <section className="section-copy after-figure">
-          {fleet.open.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </section>
-
-        <section className="section">
+        <section className="case-block">
+          <p className="label">02 / Shift</p>
           <h2>{fleet.shift.title}</h2>
           <ShiftCompare />
-          <div className="section-copy">
-            <p>{fleet.shift.note}</p>
-          </div>
+          <p className="quiet after-figure">{fleet.shift.note}</p>
         </section>
 
-        <section className="section">
+        <section className="case-block">
+          <p className="label">03 / Identity</p>
           <h2>{fleet.identities.title}</h2>
           <PortalRoles />
-          <div className="section-copy">
-            <p>{fleet.identities.note}</p>
-          </div>
+          <p className="quiet after-figure">{fleet.identities.note}</p>
         </section>
 
-        <section className="section">
-          <p className="label">Lanes</p>
+        <section className="case-block">
+          <p className="label">04 / Lanes</p>
           <h2>Five isolated books</h2>
           <LaneGrid />
         </section>
 
-        <section className="section">
+        <section className="case-block">
+          <p className="label">05 / Constraint</p>
           <h2>{fleet.constraints.title}</h2>
           <ul className="constraint-grid">
             {fleet.constraints.items.map((item) => (
@@ -73,7 +67,7 @@ export default function SystemsFleetPage() {
         </section>
 
         <section className="band">
-          <p className="label">Mix</p>
+          <p className="label">06 / Mix</p>
           <h2>{fleet.mix.title}</h2>
           <p>{fleet.mix.body}</p>
         </section>
