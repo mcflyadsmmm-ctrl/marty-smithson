@@ -34,9 +34,83 @@ export const hero = {
   section: "01 / Signal",
   name: "Marty Smithson",
   pair: "Business intelligence × performance marketing",
-  claim: "Marketing measurement that finance will fund.",
-  lock: "I don't optimize for platform ROAS. I measure what actually happened to the business.",
+  claim: "Head of BI at Black Clover. I make numbers leadership can fund a call on.",
+  lock: "I build decision systems companies can trust.",
 } as const;
+
+export const homeLanes =
+  "At Black Clover I stood up isolated truth lanes so wholesale, partners, cash, retail, and fulfillment each had one honest book — and leadership could decide without platform theater.";
+
+export const homeBuilds = [
+  {
+    lead: "Partner portal on Google Cloud Run",
+    body: "for about 50 users — executives, rep leads, and reps. Live NetSuite, tiered access, CRM-style messaging, and a hard cost cap.",
+  },
+  {
+    lead: "Domo to Google Cloud Run",
+    body: "a complete data warehouse transition. About $20K a month saved.",
+  },
+  {
+    lead: "Certified decision desks",
+    body: "one writer, freeze after ship, fail-closed recon. Each lane keeps its own honest book.",
+  },
+  {
+    lead: "Cash MER over platform ROAS",
+    body: "ledger sales against paid. The ad manager does not run the mix.",
+  },
+] as const;
+
+export const workBuilds = [
+  {
+    lead: "Partner portal on Google Cloud Run",
+    body: "About 50 users — executives, rep leads, and reps. Live NetSuite, tiered access, CRM-style messaging, and a hard cost cap.",
+  },
+  {
+    lead: "Domo to Google Cloud Run",
+    body: "Complete data warehouse transition. About $20K a month saved.",
+  },
+  {
+    lead: "Decision Net",
+    body: "Certified wholesale book. One writer. Freeze after ship.",
+  },
+  {
+    lead: "Cash MER",
+    body: "Ledger sales after returns against paid. Platform ROAS never controls the mix.",
+  },
+  {
+    lead: "Retail and fulfillment",
+    body: "Isolated books so store Net and qty-fulfilled stay true — tax is not a KPI, and partials are told honestly.",
+  },
+] as const;
+
+export const fleetShipped = [
+  {
+    title: "Partner portal",
+    body: "Twin of the exec desk on Google Cloud Run for about 50 users — executives, rep leads, and reps. Live NetSuite, tiered access, CRM-style messaging. Never owns the fact.",
+  },
+  {
+    title: "Domo warehouse move",
+    body: "Complete data warehouse transition off Domo onto Google Cloud Run. About $20K a month saved.",
+  },
+  {
+    title: "Wholesale Decision Net",
+    body: "Certified wholesale book. One writer. Freeze after ship.",
+  },
+  {
+    title: "Cash MER",
+    body: "Ledger ÷ exact spend. Platform ROAS never controls.",
+  },
+  {
+    title: "Retail POS Net",
+    body: "Store Net sales identity. Tax is not a KPI.",
+  },
+  {
+    title: "Fulfillment isolate",
+    body: "One customer desk. Partials told truthfully.",
+  },
+] as const;
+
+export const fleetSteps = ["Measure", "Certify", "Freeze", "Decide", "Move"] as const;
 
 export const proofStats: ProofStat[] = [
   {

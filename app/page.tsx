@@ -1,88 +1,73 @@
 import Link from "next/link";
-import { CaseRow } from "@/components/CaseRow";
-import { cases, hero, methodPillars, resume } from "@/lib/content";
+import { cases, hero, homeBuilds, homeLanes } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
   return (
-    <article>
-      <header className="page-hero">
+    <article className="home-quiet home-personal">
+      <header className="page-hero home-hero-quiet">
+        <p className="hero-name">{hero.name}</p>
         <h1>{hero.lock}</h1>
-        <p className="lede">{hero.claim}</p>
-        <p className="hero-lead">
-          <span className="num">$30M+</span> media directed
-        </p>
-      </header>
-
-      <section className="band" id="about" aria-labelledby="about-title">
-        <h2 id="about-title">{hero.pair}</h2>
-        <p className="measure">{resume.summary}</p>
-        <p className="note measure">
-          I report to the Black Clover CEO. The CEO title applies only to McFly Ads.
-        </p>
-      </section>
-
-      <section className="band" id="experience" aria-labelledby="experience-title">
-        <h2 id="experience-title">Three desks</h2>
-        <p className="note measure">
-          Same jobs as the resume. Channels, duration, and reporting lines — no invented lifts.
-        </p>
-        <div className="exp-list">
-          {cases.map((study) => (
-            <CaseRow key={study.slug} study={study} />
-          ))}
-        </div>
-        <p className="mt-block">
-          <Link className="more" href="/work">
-            All case notes →
+        <p className="lede quiet-lede">{hero.claim}</p>
+        <p className="actions hero-cta">
+          <Link className="btn btn-solid btn-lg" href="/work/systems-fleet">
+            What I built
           </Link>
-        </p>
-      </section>
-
-      <section className="band" id="approach" aria-labelledby="approach-title">
-        <h2 id="approach-title">Cash first. Then the model.</h2>
-        <ol className="approach-rows">
-          {methodPillars.map((pillar, index) => (
-            <li key={pillar.title}>
-              <p className="exp-idx num">0{index + 1}</p>
-              <div>
-                <h3>{pillar.title}</h3>
-                <p>{pillar.body}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-        <p className="mt-block">
-          <Link className="more" href="/approach">
-            Full approach →
+          <Link className="btn-text" href="/resume">
+            Resume
           </Link>
-        </p>
-      </section>
-
-      <section className="band" id="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">Get in touch</h2>
-        <p className="note measure">{resume.scan}</p>
-        <p>
-          <a className="cta-mail" href={`mailto:${site.email}`}>
-            {site.email}
-          </a>
-        </p>
-        <p className="note">
-          {site.locationLine}
-          <br />
-          {site.authorization}
-        </p>
-        <p className="actions">
-          <a className="btn btn-solid" href={site.linkedin} rel="noreferrer" target="_blank">
-            LinkedIn
-          </a>
-          <Link className="btn" href="/resume">
-            Resume / PDF
-          </Link>
-          <a className="btn" href={`mailto:${site.email}`}>
+          <a className="btn-text" href={`mailto:${site.email}`}>
             Email
           </a>
         </p>
+      </header>
+
+      <section className="band" id="built" aria-labelledby="built-title">
+        <p className="eyebrow">What I built</p>
+        <h2 id="built-title">Concrete work</h2>
+        <p className="tight measure">{homeLanes}</p>
+        <ul className="build-list">
+          {homeBuilds.map((build) => (
+            <li key={build.lead}>
+              <strong>{build.lead}</strong> {build.body}
+            </li>
+          ))}
+        </ul>
+        <p className="actions">
+          <Link className="btn" href="/work/systems-fleet">
+            Read the case →
+          </Link>
+        </p>
+      </section>
+
+      <section className="band" id="sat" aria-labelledby="sat-title">
+        <p className="eyebrow">Where this sat</p>
+        <h2 id="sat-title">Backdrop</h2>
+        <ul className="context-list">
+          {cases.map((study) => (
+            <li key={study.slug}>
+              <Link href={`/work/${study.slug}`}>
+                {study.headline} · {study.role} · {study.brand} · {study.dates}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="band contact-strip-home" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Get in touch</h2>
+        <p className="actions">
+          <a className="btn btn-solid" href={`mailto:${site.email}`}>
+            {site.email}
+          </a>
+          <a className="btn" href={site.linkedin} rel="noreferrer" target="_blank">
+            LinkedIn
+          </a>
+          <Link className="btn" href="/resume">
+            Resume
+          </Link>
+        </p>
+        <p className="note tight footer-tiny-note">{site.locationLine}</p>
       </section>
     </article>
   );
