@@ -22,42 +22,44 @@ export function SiteHeader() {
   }, [open]);
 
   return (
-    <header className="site-header">
-      <div className="site-header-inner">
-        <Link className="wordmark" href="/">
-          Marty Smithson
-        </Link>
-        <nav className="nav nav-desktop" aria-label="Primary">
-          {nav.map((item) => {
-            const current =
-              pathname === item.href || pathname.startsWith(`${item.href}/`);
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                aria-current={current ? "page" : undefined}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
-        <div className="header-cta nav-desktop">
-          <a href={site.linkedin} rel="noreferrer" target="_blank">
-            LinkedIn
-          </a>
-          <Link href="/resume">Resume pack</Link>
+    <>
+      <header className="site-header">
+        <div className="site-header-inner">
+          <Link className="wordmark" href="/">
+            Marty Smithson
+          </Link>
+          <nav className="nav nav-desktop" aria-label="Primary">
+            {nav.map((item) => {
+              const current =
+                pathname === item.href || pathname.startsWith(`${item.href}/`);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  aria-current={current ? "page" : undefined}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
+          <div className="header-cta nav-desktop">
+            <a href={site.linkedin} rel="noreferrer" target="_blank">
+              LinkedIn
+            </a>
+            <Link href="/resume">Resume pack</Link>
+          </div>
+          <button
+            className="nav-toggle"
+            type="button"
+            aria-expanded={open}
+            aria-controls={overlayId}
+            onClick={() => setOpen(true)}
+          >
+            Menu
+          </button>
         </div>
-        <button
-          className="nav-toggle"
-          type="button"
-          aria-expanded={open}
-          aria-controls={overlayId}
-          onClick={() => setOpen(true)}
-        >
-          Menu
-        </button>
-      </div>
+      </header>
       <div
         className="nav-overlay"
         id={overlayId}
@@ -92,6 +94,6 @@ export function SiteHeader() {
           </li>
         </ul>
       </div>
-    </header>
+    </>
   );
 }
