@@ -5,7 +5,7 @@ import { homeLanes, workBuilds } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Partner portal on Cloud Run for ~50 users, Domo warehouse move (~$20K/month), Decision Net, cash MER, retail and fulfillment.",
+    "Domo warehouse move to Cloud Run (~$20K/month), partner portal for ~50 users, Decision Net, cash MER, retail and fulfillment.",
   alternates: { canonical: "/work" },
 };
 
