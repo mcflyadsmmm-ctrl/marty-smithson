@@ -1,8 +1,8 @@
 export const site = {
   name: "Marty Smithson",
-  title: "Marty Smithson — Head of BI & Performance Marketing",
+  title: "Marty Smithson — Head of BI · decision systems",
   description:
-    "Marketing measurement that finance will fund. Head of BI & Performance Marketing. MMM, GeoLift, cash MER. $30M+ media directed.",
+    "I build decision systems companies can trust. Head of BI at Black Clover — isolated truth lanes leadership can fund.",
   url: "https://marty-smithson.vercel.app",
   email: "martysmithson04@gmail.com",
   linkedin: "https://www.linkedin.com/in/marty-smithson",
