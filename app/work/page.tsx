@@ -1,44 +1,46 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { workIndex } from "@/lib/content";
+import { workPage } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Black Clover case: warehouse off Domo onto Cloud Run, partner portal for about 50 people, and the books leadership uses.",
+    "Black Clover — warehouse off Domo onto Cloud Run, the partner portal, and the books. Notes on Nutricost and McFly Ads.",
   alternates: { canonical: "/work" },
 };
 
 export default function WorkPage() {
-  const { case: lead, also } = workIndex;
+  const { blackClover, nutricost, mcfly } = workPage;
 
   return (
-    <article className="work">
-      <header className="page-head">
+    <article className="doc">
+      <header className="open">
         <h1>Work</h1>
-        <p className="lede">{workIndex.lead}</p>
+        <p className="open-line">{workPage.lead}</p>
       </header>
 
-      <Link className="lead-case" href={lead.href}>
-        <p className="kicker">{lead.role}</p>
-        <h2>{lead.title}</h2>
-        <p>{lead.body}</p>
-        <span className="more">Read the case</span>
-      </Link>
+      <section>
+        <h2>{blackClover.title}</h2>
+        <p>{blackClover.role}</p>
+        <p>{blackClover.body}</p>
+        <p>
+          <Link href={blackClover.href}>{blackClover.more}</Link>
+        </p>
+      </section>
 
-      <section className="also" aria-labelledby="also-title">
-        <h2 id="also-title">Also</h2>
-        <ul>
-          {also.map((item) => (
-            <li key={item.href}>
-              <Link href={item.href}>
-                <strong>{item.title}</strong>
-                <span>{item.role}</span>
-                {item.body}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <section>
+        <h2>{nutricost.title}</h2>
+        <p>{nutricost.role}</p>
+        <p>{nutricost.body}</p>
+      </section>
+
+      <section>
+        <h2>{mcfly.title}</h2>
+        <p>{mcfly.role}</p>
+        <p>{mcfly.body}</p>
+        <p>
+          <Link href={mcfly.href}>{mcfly.more}</Link>
+        </p>
       </section>
     </article>
   );

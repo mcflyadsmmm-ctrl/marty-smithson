@@ -4,31 +4,33 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: "Download Marty Smithson’s resume as a PDF.",
+  description: "Marty Smithson’s resume, as PDFs.",
   alternates: { canonical: "/resume" },
 };
 
 export default function ResumePage() {
   return (
-    <article className="resume">
-      <header className="page-head">
+    <article className="doc">
+      <header className="open">
         <h1>Resume</h1>
-        <p className="lede">Three PDFs. Same facts.</p>
-        <p className="note">{site.locationLine}</p>
+        <p className="open-line">
+          You can download a PDF here. There are three versions if you want a different emphasis.
+        </p>
+        <p className="quiet">{site.locationLine}</p>
       </header>
 
-      <ul className="pdf-cards">
+      <ul className="file-list">
         {resumePdfs.map((pdf) => (
           <li key={pdf.key}>
-            <a className="pdf-card" href={pdf.href} download>
-              <strong>{pdf.title}</strong>
-              <span>{pdf.note}</span>
+            <a href={pdf.href} download>
+              {pdf.title}
             </a>
+            <span>{pdf.note}</span>
           </li>
         ))}
       </ul>
 
-      <p className="resume-links">
+      <p className="close-links">
         <a href={`mailto:${site.email}`}>{site.email}</a>
         <a href={site.linkedin} rel="noreferrer" target="_blank">
           LinkedIn

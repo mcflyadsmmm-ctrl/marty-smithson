@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Newsreader } from "next/font/google";
+import { Inter, Source_Serif_4 } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -14,9 +14,9 @@ const sans = Inter({
   preload: true,
 });
 
-const display = Newsreader({
+const serif = Source_Serif_4({
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-serif",
   display: "optional",
   adjustFontFallback: true,
   preload: true,
@@ -51,8 +51,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sans.variable} ${display.variable}`}>
-      <body className={sans.className}>
+    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
+      <body className={serif.className}>
         <JsonLd />
         <div className="sheet">
           <SiteHeader />

@@ -1,13 +1,11 @@
 # Resume PDFs
 
-User-facing `/resume` shows these as cards. Filenames stay stable.
+`/resume` serves these paths. Filenames stay stable. User-facing labels stay human: Full resume / Measurement / Systems and analytics. No MASTER / SCIENCE / OPERATOR chrome on the page.
 
-User-facing labels: Full resume / Measurement focus / Systems & analytics.
+NEW FINAL md5s (Nutricost SoT rewritten). Old `31bedaf2` / `bbf49f5b` / `64835551` are obsolete.
 
-Target FINAL md5s (Resume agent — binaries not in this VM yet):
+- `Marty_Smithson_Resume_MASTER.pdf` → `529fbf25aebc5e2a7e90c50ef1fc586a`
+- `Marty_Smithson_Resume_SCIENCE.pdf` → `4d13437d4b91e002b50bfb8c2bf0a641`
+- `Marty_Smithson_Resume_OPERATOR.pdf` → `7605a9c0650e50644d5180abb791d0de`
 
-- MASTER `31bedaf26017d345b91fb50ffac370a2`
-- SCIENCE `bbf49f5b07aa0b48e0064fd2a37b9214`
-- OPERATOR `648355511eeb4ae0623f576894dbdf6e`
-
-Checked-in files still match the previous live pack (`3858405b` / `e4312d30` / `757e90cd`). Replace when the new bytes arrive.
+This branch already carries those exact bytes (copied from `main` Nutricost-FINAL sync). `/workspace/marty-resume/` is not readable in this VM. Do not invent PDF content. Portfolio may push replacement blobs onto this PR branch or `main` after merge if a later pack needs to land.

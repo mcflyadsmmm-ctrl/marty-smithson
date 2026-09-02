@@ -1,36 +1,35 @@
 import Link from "next/link";
-import { hero, homeNote, homeStories } from "@/lib/content";
+import { hero, homeAfter, homeParagraphs } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
   return (
-    <article className="home">
-      <header className="hero">
+    <article className="doc">
+      <header className="open">
         <h1>{hero.name}</h1>
-        <p className="lede">{hero.line}</p>
+        <p className="open-line">{hero.line}</p>
       </header>
 
-      <section className="stories" aria-label="What I built">
-        <div className="story-grid">
-          {homeStories.map((story) => (
-            <div className="story" key={story.title}>
-              <h2>{story.title}</h2>
-              <p>{story.body}</p>
-            </div>
-          ))}
-        </div>
-        <p className="story-more">
-          <Link href="/work/systems-fleet">The Black Clover case</Link>
-        </p>
-      </section>
+      {homeParagraphs.map((paragraph) => (
+        <p key={paragraph}>{paragraph}</p>
+      ))}
 
-      <p className="home-note">{homeNote}</p>
+      <p className="quiet after">{homeAfter}</p>
 
       <section className="close" aria-label="Contact">
-        <a className="mail" href={`mailto:${site.email}`}>
-          {site.email}
-        </a>
-        <p className="note">{site.locationLine}</p>
+        <p>
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+        </p>
+        <p className="quiet">
+          {site.location}. {site.education}.
+        </p>
+        <p className="close-links">
+          <Link href="/work">Work</Link>
+          <Link href="/resume">Resume</Link>
+          <a href={site.linkedin} rel="noreferrer" target="_blank">
+            LinkedIn
+          </a>
+        </p>
       </section>
     </article>
   );
