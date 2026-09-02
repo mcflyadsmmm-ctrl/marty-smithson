@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FleetMap } from "@/components/FleetMap";
 import { LaneGrid } from "@/components/LaneGrid";
 import { PortalRoles } from "@/components/PortalRoles";
+import { ProofRail } from "@/components/ProofRail";
 import { ShiftCompare } from "@/components/ShiftCompare";
 import { fleet } from "@/lib/content";
 
@@ -25,7 +26,9 @@ export default function SystemsFleetPage() {
       </header>
 
       <div className="wrap">
-        <section className="case-block" aria-labelledby="arch-title">
+        <ProofRail prefix="" lanesOnly />
+
+        <section className="case-block case-block-first" aria-labelledby="arch-title">
           <p className="label">01 / Architecture</p>
           <h2 id="arch-title" className="visually-hidden">
             Architecture

@@ -204,18 +204,19 @@ p {
 .hero {
   background: var(--bg-hero);
   color: var(--ink-hero);
-  padding: 3.4rem 0 3rem;
+  padding: 1.35rem 0 1.5rem;
 }
 
 .hero h1 {
-  margin: 0 0 1rem;
+  margin: 0 0 0.4rem;
   max-width: 18ch;
+  font-size: clamp(1.85rem, 4vw, 2.6rem);
 }
 
 .hero .lede {
   margin: 0;
-  max-width: 34rem;
-  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  max-width: 36rem;
+  font-size: 1.05rem;
   line-height: 1.4;
   letter-spacing: -0.02em;
   color: var(--ink-hero);
@@ -229,7 +230,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem 1.5rem;
-  margin: 2.4rem 0 0;
+  margin: 0.7rem 0 1.15rem;
   font-size: 0.95rem;
 }
 
@@ -248,50 +249,60 @@ p {
   outline-color: var(--ink-hero);
 }
 
-.hero-index {
+.hero .figure {
+  margin-top: 0;
+  color: var(--ink);
+}
+
+.hero .figure .label {
+  color: var(--faint);
+}
+
+.proof-rail {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0;
-  margin: 2.8rem 0 0;
+  gap: 0.65rem;
+}
+
+.proof-rail-lanes {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.4rem;
+  margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid #2e2e2a;
 }
 
-.hero-index a {
+.proof-rail-lanes a {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.3rem;
+  gap: 0.2rem;
   min-height: 44px;
-  padding: 1.15rem 1rem 0.2rem 0;
-  margin-right: 0.75rem;
-  border-right: 1px solid #2e2e2a;
+  padding: 0.55rem 0.6rem;
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--line);
   text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.proof-rail-lanes a:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.hero .proof-rail-lanes a {
+  background: #1a1a18;
   color: var(--ink-hero);
+  border-color: #2e2e2a;
 }
 
-.hero-index li:last-child a {
-  border-right: 0;
-}
-
-.hero-index a:hover {
+.hero .proof-rail-lanes a:hover {
+  border-color: var(--ink-hero);
   color: #fff;
 }
 
-.hero-index .label {
-  margin: 0;
-}
-
-.hero-index strong {
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-}
-
-.hero-index-note {
-  font-size: 0.86rem;
+.hero .proof-rail-lanes .arch-idx {
   color: var(--muted-hero);
 }
 
@@ -301,6 +312,10 @@ p {
 
 .case-block {
   padding-top: 2.4rem;
+}
+
+.case-block-first {
+  padding-top: 1rem;
 }
 
 .case-block > .label {
@@ -324,7 +339,7 @@ p {
 }
 
 .page-head {
-  padding: 2.8rem 0 1.8rem;
+  padding: 1.5rem 0 1rem;
 }
 
 .page-head h1 {
@@ -384,11 +399,12 @@ p {
 .case-band {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.25rem;
   min-height: 100%;
-  padding: 1.25rem 1.3rem 1.35rem;
+  padding: 1rem 1.1rem 1.05rem;
   background: var(--panel);
   border: 1px solid var(--line);
+  border-left: 2px solid var(--ink);
   text-decoration: none;
 }
 
@@ -854,15 +870,8 @@ a.resume-card:hover {
 }
 
 @media (max-width: 960px) {
-  .hero-index {
+  .proof-rail-lanes {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .hero-index a {
-    border-right: 0;
-    border-bottom: 1px solid #2e2e2a;
-    margin-right: 0;
-    padding-right: 0.85rem;
   }
 
   .arch-board,
@@ -919,11 +928,15 @@ a.resume-card:hover {
   }
 
   .hero {
-    padding: 2.2rem 0 2rem;
+    padding: 1.1rem 0 1.2rem;
   }
 
   .page-head {
-    padding-top: 2.2rem;
+    padding-top: 1.2rem;
+  }
+
+  .proof-rail-lanes {
+    grid-template-columns: 1fr;
   }
 
   .site-header-inner {
