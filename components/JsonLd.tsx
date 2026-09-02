@@ -20,8 +20,13 @@ const graph = {
           name: "Head of Business Intelligence & Performance Marketing",
           experienceRequirements: "6 years of experience in marketing data science",
           educationRequirements: "Bachelor of Science",
+          occupationLocation: { "@type": "Organization", name: "Black Clover" },
         },
-        { "@type": "Occupation", name: "Chief Executive Officer" },
+        {
+          "@type": "Occupation",
+          name: "Chief Executive Officer",
+          occupationLocation: { "@type": "Organization", name: "McFly Ads" },
+        },
       ],
       worksFor: [
         { "@type": "Organization", name: "Black Clover" },
