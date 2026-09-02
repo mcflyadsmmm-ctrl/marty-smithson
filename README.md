@@ -11,7 +11,7 @@ Warm paper, not a SaaS canvas.
 - Background: `#F3EFE6`
 - Ink: `#1B1814`
 - Link: `#1D4E89`
-- Type: Inter. No feature pills, no OS stepper, no monospace chrome.
+- Type: Newsreader for titles, Inter for body. No feature pills, no OS stepper, no monospace chrome.
 
 ## Stack
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Newsreader } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -9,6 +9,14 @@ import "./globals.css";
 const sans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "optional",
+  adjustFontFallback: true,
+  preload: true,
+});
+
+const display = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-display",
   display: "optional",
   adjustFontFallback: true,
   preload: true,
@@ -43,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={sans.variable}>
+    <html lang="en" className={`${sans.variable} ${display.variable}`}>
       <body className={sans.className}>
         <JsonLd />
         <div className="sheet">

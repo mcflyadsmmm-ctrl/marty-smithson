@@ -59,7 +59,7 @@ export const fleet = {
 } as const;
 
 export const workIndex = {
-  lead: "The case to read is Black Clover. The rest is context.",
+  lead: "Black Clover first. Nutricost and McFly Ads are shorter.",
   case: {
     href: "/work/systems-fleet",
     title: "Black Clover",
@@ -133,19 +133,19 @@ export const resumePdfs = [
     key: "full",
     href: "/resumes/Marty_Smithson_Resume_MASTER.pdf",
     title: "Full resume",
-    note: "Default. Same facts as the other two, without a tilt.",
+    note: "The default. Same facts as the other two.",
   },
   {
     key: "measurement",
     href: "/resumes/Marty_Smithson_Resume_SCIENCE.pdf",
     title: "Measurement",
-    note: "For mix-model and incrementality seats.",
+    note: "For mix-model and incrementality roles.",
   },
   {
     key: "systems",
     href: "/resumes/Marty_Smithson_Resume_OPERATOR.pdf",
     title: "Systems & analytics",
-    note: "For BI and the warehouse / portal work.",
+    note: "For BI, the warehouse, and the portal.",
   },
 ] as const;
 

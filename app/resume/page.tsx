@@ -13,7 +13,7 @@ export default function ResumePage() {
     <article className="resume">
       <header className="page-head">
         <h1>Resume</h1>
-        <p className="lede">Three PDFs. Same person. Different tilt.</p>
+        <p className="lede">Pick the PDF that fits the conversation.</p>
         <p className="note">{site.locationLine}</p>
       </header>
 

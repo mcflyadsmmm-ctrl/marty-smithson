@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { fleet, hero, homeNote, homeStories } from "@/lib/content";
+import { hero, homeNote, homeStories } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
@@ -23,7 +23,6 @@ export default function HomePage() {
       </section>
 
       <p className="home-note">{homeNote}</p>
-      <p className="home-note quiet">{fleet.dates}.</p>
 
       <section className="close" aria-label="Contact">
         <a className="mail" href={`mailto:${site.email}`}>
