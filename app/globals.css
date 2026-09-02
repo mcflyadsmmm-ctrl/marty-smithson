@@ -5,8 +5,9 @@
   --line: #e4e2dc;
   --font: var(--font-serif), "Source Serif 4", "Georgia", "Times New Roman", serif;
   --ui: var(--font-sans), "Inter", ui-sans-serif, system-ui, sans-serif;
-  --page: 38rem;
+  --page: 48rem;
   --gutter: 1.5rem;
+  --measure: 36rem;
 }
 
 *,
@@ -150,6 +151,134 @@ p {
   padding-top: 3.4rem;
 }
 
+.doc > p,
+.doc > .open,
+.doc > .after,
+.doc > .close {
+  max-width: var(--measure);
+}
+
+.doc section > :not(.fleet-map):not(.shift):not(.roles) {
+  max-width: var(--measure);
+}
+
+.first-screen {
+  min-height: calc(72dvh - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.proof section[id] {
+  scroll-margin-top: 1.25rem;
+}
+
+.fleet-map,
+.shift,
+.roles {
+  margin: 1.6rem 0 2rem;
+  padding: 1rem 0 1.15rem;
+  border-top: 1px solid var(--text);
+  border-bottom: 1px solid var(--line);
+}
+
+.fleet-map figcaption,
+.shift figcaption,
+.roles figcaption {
+  margin: 0 0 0.8rem;
+  font-family: var(--ui);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.fleet-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+  margin: 0 0 0.9rem;
+  padding: 0;
+  list-style: none;
+  font-family: var(--ui);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.fleet-lanes {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fleet-lanes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.45rem 0.35rem;
+  border: 1px solid var(--line);
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--ui);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.fleet-lanes a:hover {
+  border-color: var(--text);
+}
+
+.shift-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem 2.4rem;
+}
+
+.shift-label {
+  margin: 0 0 0.15rem;
+  font-family: var(--ui);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.shift h3,
+.roles h3,
+.constraint h3 {
+  margin-bottom: 0.35rem;
+}
+
+.shift ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.role-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.1rem 1.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.role-grid p {
+  margin: 0 0 0.35rem;
+}
+
+.role-rule {
+  color: var(--muted);
+}
+
+.constraint {
+  margin: 0 0 1.15rem;
+}
+
+.constraint p {
+  margin: 0;
+}
+
 .open {
   margin-bottom: 2.6rem;
 }
@@ -278,6 +407,14 @@ p {
   color: var(--text);
 }
 
+@media (max-width: 760px) {
+  .fleet-lanes,
+  .shift-grid,
+  .role-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 640px) {
   :root {
     --gutter: 1.2rem;
@@ -289,6 +426,10 @@ p {
 
   .doc {
     padding-top: 2.2rem;
+  }
+
+  .first-screen {
+    min-height: 0;
   }
 
   h1 {
