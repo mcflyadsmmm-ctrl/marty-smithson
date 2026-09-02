@@ -630,6 +630,66 @@ p {
   color: var(--muted);
 }
 
+.slot-list {
+  display: grid;
+  gap: 1.4rem;
+  margin-top: 1.4rem;
+}
+
+.slot-card {
+  padding: 1.2rem 0 0.4rem;
+  border-top: 1px dashed var(--line);
+}
+
+.slot-label {
+  margin: 0 0 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.slot-steps {
+  display: grid;
+  gap: 0;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slot-steps li {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: 0.7rem 1.2rem;
+  padding: 0.85rem 0;
+  border-top: 1px dashed var(--line);
+}
+
+.slot-steps li:last-child {
+  border-bottom: 1px dashed var(--line);
+}
+
+.slot-steps strong,
+.slot-steps h2 {
+  display: block;
+  margin: 0 0 0.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  color: var(--text);
+}
+
+.slot-steps p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.slot-steps-page {
+  margin-top: 1.8rem;
+}
+
 .brand-list {
   display: flex;
   flex-wrap: wrap;
@@ -889,7 +949,8 @@ p {
   }
 
   .exp-row,
-  .approach-rows li {
+  .approach-rows li,
+  .slot-steps li {
     grid-template-columns: 2rem 1fr;
   }
 

@@ -272,7 +272,7 @@ export const evidenceItems = [
   {
     index: "05",
     title: "Utah Valley University",
-    body: "Bachelor of Science. Coursework in information systems, data analytics, statistics, and digital marketing. Orem, Utah.",
+    body: "Bachelor of Science, emphasis Data Science and Statistics. Orem, Utah.",
   },
   {
     index: "06",
@@ -366,9 +366,45 @@ export const resume = {
     },
   ],
   education:
-    "Utah Valley University, Orem, Utah — Bachelor of Science. Coursework in information systems, data analytics, statistics, and digital marketing.",
+    "Utah Valley University, Orem, Utah — Bachelor of Science, emphasis Data Science and Statistics.",
 } as const;
+
+export const caseSlots = [
+  {
+    slug: "sample-science",
+    index: "A",
+    label: "SAMPLE / SLOT",
+    title: "Recast-shaped science case",
+    purpose:
+      "Skeleton only. Priors, model, experiment, budget action. Awaiting Marty facts. No brand, no lift, no invented priors.",
+    steps: [
+      { title: "Priors", note: "Awaiting Marty facts." },
+      { title: "Model", note: "Awaiting Marty facts." },
+      { title: "Experiment", note: "Awaiting Marty facts." },
+      { title: "Budget action", note: "Awaiting Marty facts." },
+    ],
+  },
+  {
+    slug: "operator-allocation",
+    index: "B",
+    label: "SLOT",
+    title: "Operator / allocation case",
+    purpose:
+      "Skeleton only. Cash MER / incrementality question, then cut or scale. Awaiting Marty facts. No invented numbers.",
+    steps: [
+      { title: "Cash MER / incrementality question", note: "Awaiting Marty facts." },
+      { title: "Cut or scale decision path", note: "Awaiting Marty facts." },
+    ],
+  },
+] as const;
+
+export type CaseSlot = (typeof caseSlots)[number];
+export type CaseSlotSlug = CaseSlot["slug"];
 
 export function caseBySlug(slug: string): CaseStudy | undefined {
   return cases.find((item) => item.slug === slug);
+}
+
+export function slotBySlug(slug: string): CaseSlot | undefined {
+  return caseSlots.find((item) => item.slug === slug);
 }

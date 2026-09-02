@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { CaseRow } from "@/components/CaseRow";
+import { CaseSlotCard } from "@/components/CaseSlotCard";
 import { IdentityNav } from "@/components/IdentityNav";
-import { cases, hero, methodPillars, resume } from "@/lib/content";
+import { caseSlots, cases, hero, methodPillars, resume } from "@/lib/content";
 import { nav, site } from "@/lib/site";
 
 export default function HomePage() {
@@ -56,6 +57,11 @@ export default function HomePage() {
               All case notes →
             </Link>
           </p>
+          <div className="slot-list mt-block-lg">
+            {caseSlots.map((slot) => (
+              <CaseSlotCard key={slot.slug} slot={slot} />
+            ))}
+          </div>
         </section>
 
         <section className="home-section" id="approach" aria-labelledby="approach-title">
