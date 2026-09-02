@@ -219,6 +219,13 @@ p {
   gap: 2.4rem 3.5rem;
 }
 
+@media (min-width: 760px) {
+  .story-grid .story + .story {
+    padding-left: 3.5rem;
+    border-left: 1px solid var(--line);
+  }
+}
+
 .story {
   max-width: none;
   padding: 0;
