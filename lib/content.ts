@@ -55,13 +55,13 @@ export const proofStats: ProofStat[] = [
     figure: "$1M",
     unit: "Monthly",
     line: "mix",
-    meta: "Black Clover · CEO",
+    meta: "Black Clover · reports to CEO",
   },
   {
     figure: "$2M",
     unit: "Monthly",
     line: "mix",
-    meta: "Nutricost · CMO",
+    meta: "Nutricost · reports to CMO",
   },
   {
     figure: "$50 → $1,000",
@@ -76,21 +76,21 @@ export const cases: CaseStudy[] = [
     slug: "black-clover",
     index: "01",
     brand: "Black Clover",
-    role: "Head of BI & Performance Marketing",
+    role: "Head of Business Intelligence & Performance Marketing",
     dates: "02/2025 — Present",
     datesShort: "2025—Present",
-    reportsTo: "Reports to CEO",
+    reportsTo: "I report to the CEO",
     headline: "Company analytics, then the mix.",
-    kicker: "01 / Desk · Black Clover USA · 02/2025 – Present",
+    kicker: "01 / Desk · Black Clover USA · 02/2025 – Present · I report to the CEO",
     stat: "$1M/month media mix",
     problem:
       "Platform ROAS told a cleaner story than cash. Spreadsheets lagged NetSuite. Sales and spend were not on one desk, so budget allocation was an argument instead of a MER call.",
     approach:
-      "Cash MER as the mix KPI: orders from NetSuite against paid. Meridian MMM on the Google, Meta, and Microsoft mix. When two channels claimed the same sale, GeoLift geo-holdouts and RCTs — causal inference for the CEO, then the mix moved.",
+      "Cash MER as the mix KPI: orders from NetSuite against paid. Meridian MMM on the Google, Meta, and Microsoft mix. When two channels claimed the same sale, GeoLift geo-holdouts and RCTs — causal inference I presented to the Black Clover CEO, then the mix moved.",
     outcome:
       "Direct $1M/month paid for 18 months on a ~$45M year. Weekly allocation against cash MER. Below break-even, we cut. A 50-person sales portal is what ran in production — not a dashboard screenshot deck.",
     situation: [
-      "Global apparel. ~$45M this year. Hundreds of employees. I run the company dashboards.",
+      "Global apparel. ~$45M this year. Hundreds of employees. I report to the CEO. I run the company dashboards — I am not the Black Clover CEO.",
       "Sales live in Oracle NetSuite. Paid lives in Google Ads, Meta Ads, and Microsoft Ads.",
       "Executives, rep leads, and a field of about fifty reps needed the same numbers with different access — that sales desk is not the company headcount.",
     ],
@@ -100,7 +100,7 @@ export const cases: CaseStudy[] = [
     ],
     method: [
       "Cash MER as the mix KPI: orders from NetSuite against paid. Meridian MMM on the Google, Meta, and Microsoft mix.",
-      "When two channels claimed the same sale, GeoLift geo-holdouts and RCTs — causal inference for the CEO, then the mix moved. Below cash MER break-even, we cut.",
+      "When two channels claimed the same sale, GeoLift geo-holdouts and RCTs — causal inference I presented to the Black Clover CEO, then the mix moved. Below cash MER break-even, we cut.",
       "GA4 for the site. Snowflake, dbt, and Airflow into Oracle NetSuite. BI in Looker, Domo, and Tableau. SQL, Python, and R. Google Cloud Run when the portal had to be an app, not a tile.",
     ],
     ran: [
@@ -118,16 +118,16 @@ export const cases: CaseStudy[] = [
     role: "Performance Marketing & Analytics Lead",
     dates: "08/2024 — 02/2025 · 7 months",
     datesShort: "2024—2025",
-    reportsTo: "Reports to CMO",
+    reportsTo: "I reported to the CMO",
     headline: "$2M/month, four platforms.",
-    kicker: "02 / Desk · Nutricost · 08/2024 – 02/2025",
+    kicker: "02 / Desk · Nutricost · 08/2024 – 02/2025 · I reported to the CMO",
     stat: "$2M/month media",
     problem:
       "Each platform wanted credit for the same order. Last-click and in-app ROAS could not answer mix. Executive stakeholders needed contribution, LTV, and cohorts — and a test when two channels claimed the same lift.",
     approach:
       "Robyn MMM on Amazon, Google, Meta, and TikTok. Multi-touch attribution, LTV, and cohorts in BigQuery, SQL, and R. GeoLift incrementality when Amazon, TikTok, and Meta claimed the same order — the test was the budget call, not last-click.",
     outcome:
-      "Owned $2M/month paid for 7 months. Mix across four platforms plus Ketologic and Primaforce ($50 → $1,000/day). Dashboards so the weekly CMO meeting started from one desk.",
+      "Owned $2M/month paid for 7 months. Mix across four platforms plus Ketologic and Primaforce ($50 → $1,000/day). Dashboards so the weekly meeting with the Nutricost CMO started from one desk.",
     situation: [
       "Supplement brand with a large paid book: Amazon Ads, Google Ads, Meta Ads, TikTok Ads.",
       "Sub-brands Ketologic and Primaforce sat in the same portfolio.",
@@ -138,14 +138,14 @@ export const cases: CaseStudy[] = [
     ],
     method: [
       "Multi-touch attribution, LTV, and cohorts in BigQuery, SQL, and R.",
-      "Robyn MMM on the four-platform book. GA4 and Looker Studio for the weekly CMO desk.",
+      "Robyn MMM on the four-platform book. GA4 and Looker Studio for the weekly desk I presented to the Nutricost CMO.",
       "GeoLift incrementality when Amazon, TikTok, and Meta claimed the same order — the test was the budget call, not last-click.",
     ],
     ran: [
       "Owned $2M/month paid for 7 months. Mix across four platforms plus Ketologic and Primaforce ($50 → $1,000/day).",
       "Dashboards for executive stakeholders so the weekly meeting started from one desk.",
     ],
-    next: "Cut or scale from GeoLift and cash MER, not from the platform that shouted loudest. Larger monthly spend than Black Clover; CMO reporting, four platforms, Robyn on the mix.",
+    next: "Cut or scale from GeoLift and cash MER, not from the platform that shouted loudest. Larger monthly spend than Black Clover; I reported to the CMO; four platforms; Robyn on the mix.",
   },
   {
     slug: "mcfly",
@@ -154,9 +154,9 @@ export const cases: CaseStudy[] = [
     role: "CEO · marketing data science",
     dates: "04/2020 — Present",
     datesShort: "2020—Present",
-    reportsTo: "Founder / CEO",
+    reportsTo: "CEO of McFly Ads",
     headline: "The gap was spend next to sales.",
-    kicker: "03 / Desk · McFly Ads · 04/2020 – Present",
+    kicker: "03 / Desk · McFly Ads · 04/2020 – Present · CEO of McFly Ads",
     stat: "10 named brands",
     problem:
       "Brands were buying Google, Meta, and the rest. Each platform reported a win. Shopify (or a ledger) held sales after returns. Finance asked a simpler question: did this period’s spend clear contribution?",
@@ -258,7 +258,7 @@ export const evidenceItems = [
   {
     index: "01",
     title: "2+ years as analyst / scientist",
-    body: "Six years McFly Ads, 04/2020–Present. Current W-2: Head of BI, 02/2025–Present.",
+    body: "Six years McFly Ads (CEO), 04/2020–Present. Current W-2: Head of Business Intelligence & Performance Marketing at Black Clover, 02/2025–Present. I report to the Black Clover CEO.",
     tag: "Work Experience",
   },
   {
@@ -276,13 +276,13 @@ export const evidenceItems = [
   {
     index: "04",
     title: "Present to technical and non-technical",
-    body: "Present the mix to the Black Clover CEO and the Nutricost CMO. McFly: brand operators.",
+    body: "I present the mix to the Black Clover CEO (I report to that CEO) and to the Nutricost CMO (I reported to that CMO). McFly: brand operators.",
     tag: "Work Experience",
   },
   {
     index: "05",
     title: "Bachelor’s",
-    body: "Utah Valley University, Orem, Utah — Bachelor of Science. Coursework in information systems, data analytics, statistics, and digital marketing.",
+    body: "Utah Valley University, Orem, Utah — Bachelor of Science, Information Systems (Data Analytics emphasis). Coursework in information systems, data analytics, statistics, and digital marketing.",
     tag: "Education",
   },
   {
@@ -306,7 +306,7 @@ export const evidenceItems = [
   {
     index: "09",
     title: "Years of experience",
-    body: "6 years of experience in marketing data science (04/2020 - Present). Concurrent CEO + W-2.",
+    body: "6 years of experience in marketing data science (04/2020 - Present). Concurrent CEO of McFly Ads + W-2 roles. Not the Black Clover CEO.",
     tag: "Scan line",
   },
   {
@@ -321,16 +321,16 @@ export const resume = {
   role: "Head of Business Intelligence & Performance Marketing",
   scan: "6 years of experience · $1M/month mix · $2M/month Nutricost · $30M+ media directed · Meridian, Robyn, GeoLift, R",
   summary:
-    "Head of Business Intelligence & Performance Marketing at Black Clover (~$45M this year). 6 years of experience in marketing data science. I report to the CEO and own the $1M/month paid mix. Bayesian MMM in Meridian. GeoLift incrementality. Cash MER, not platform ROAS. Previously $2M/month at Nutricost (Robyn, R, BigQuery). $30M+ media directed.",
+    "Head of Business Intelligence & Performance Marketing at Black Clover (~$45M this year). 6 years of experience in marketing data science. I report to the Black Clover CEO and own the $1M/month paid mix. Bayesian MMM in Meridian. GeoLift incrementality. Cash MER, not platform ROAS. Previously $2M/month at Nutricost (I reported to the CMO; Robyn, R, BigQuery). $30M+ media directed. CEO only of McFly Ads.",
   jobs: [
     {
       title: "Head of Business Intelligence & Performance Marketing",
       org: "Black Clover USA",
       dates: "02/2025 - Present",
-      meta: "W-2. Reports to the CEO. ~$45M this year. Hundreds of employees. Global. $1M/month mix for 18 months.",
+      meta: "W-2. I report to the CEO. ~$45M this year. Hundreds of employees. Global. $1M/month mix for 18 months.",
       bullets: [
         "Bayesian statistical modeling: Meridian MMM on Google, Meta, and Microsoft. GeoLift geo-holdouts, geo-testing, and RCTs when two channels claimed the same sale — experimental methods and causal inference. Below cash MER break-even, we cut.",
-        "Allocated $1M/month paid mix for 18 months across Google Ads, Meta Ads, and Microsoft Ads against cash MER for the CEO. Platform ROAS was not the budget.",
+        "Allocated $1M/month paid mix for 18 months across Google Ads, Meta Ads, and Microsoft Ads against cash MER for the Black Clover CEO I report to. Platform ROAS was not the budget.",
         "Built a 50-person sales portal from scratch for executives, rep leads, and reps — the sales desk, not company headcount. Live Oracle NetSuite, tiered access, CRM-style messaging.",
         "Finance desk: Snowflake warehouse, dbt models, and Airflow jobs into Oracle NetSuite. R for data cleaning and exploratory analysis, plus SQL and Python. BI in Looker, Domo, and Tableau.",
         "Led 1 social media manager, 1 graphic designer, and international advertising leads in Asia, the UK, Canada, and Australia.",
@@ -340,18 +340,18 @@ export const resume = {
       title: "Performance Marketing & Analytics Lead",
       org: "Nutricost",
       dates: "08/2024 - 02/2025 (7 months)",
-      meta: "W-2. Reported to the CMO.",
+      meta: "W-2. I reported to the CMO.",
       bullets: [
-        "Robyn MMM on Amazon, Google, Meta, and TikTok. GeoLift incrementality when those platforms claimed the same order. Presented results to the CMO. The test was the budget call — not last-click.",
+        "Robyn MMM on Amazon, Google, Meta, and TikTok. GeoLift incrementality when those platforms claimed the same order. Presented results to the Nutricost CMO I reported to. The test was the budget call — not last-click.",
         "Scaled Ketologic and Primaforce from $50/day to $1,000/day. Owned $2M/month paid for 7 months across the four platforms.",
-        "Multi-touch attribution, LTV, and cohorts in BigQuery, SQL, and R so the CMO could see contribution beyond last-click. GA4 and Looker Studio for the weekly desk.",
+        "Multi-touch attribution, LTV, and cohorts in BigQuery, SQL, and R so the Nutricost CMO could see contribution beyond last-click. GA4 and Looker Studio for the weekly desk.",
       ],
     },
     {
       title: "CEO",
       org: "McFly Ads",
       dates: "04/2020 - Present",
-      meta: "Marketing data-science company. 6 years of experience in this seat. W-2 roles held concurrently — the company did not pause.",
+      meta: "CEO of McFly Ads, a marketing data-science company. 6 years in this seat. W-2 roles held concurrently — the company did not pause. This is the only CEO title.",
       bullets: [
         "6 years of marketing data science for 10 named brands: Robyn and Meridian MMMs, GeoLift, causal inference, $10K data-science executive dashboards in Looker and Tableau, retail command centers, and paid allocation. Presented analyses to brand operators.",
         "Named brands: Marksman Construction, Malama Solar, Royal Peak Lighting, Stretch Labs, Kin Home, BatBridge Bookkeeping, Whirly Board, Arizona Gym Floors, Pure Air Solutions, Priority Mulching Services.",
@@ -382,7 +382,7 @@ export const resume = {
     },
   ],
   education:
-    "Utah Valley University, Orem, Utah — Bachelor of Science. Coursework in information systems, data analytics, statistics, and digital marketing.",
+    "Utah Valley University, Orem, Utah — Bachelor of Science, Information Systems (Data Analytics emphasis). Coursework in information systems, data analytics, statistics, and digital marketing.",
 } as const;
 
 export function caseBySlug(slug: string): CaseStudy | undefined {

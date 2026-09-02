@@ -2,7 +2,7 @@ export const site = {
   name: "Marty Smithson",
   title: "Marty Smithson — Head of BI & Performance Marketing",
   description:
-    "Marketing measurement that finance will fund. Head of BI & Performance Marketing. MMM, GeoLift, cash MER. $30M+ media directed.",
+    "Marketing measurement that finance will fund. Head of Business Intelligence & Performance Marketing at Black Clover (reports to the CEO — not the Black Clover CEO). CEO of McFly Ads. MMM, GeoLift, cash MER. $30M+ media directed.",
   url: "https://marty-smithson.vercel.app",
   email: "martysmithson04@gmail.com",
   linkedin: "https://www.linkedin.com/in/marty-smithson",

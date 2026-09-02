@@ -1,5 +1,17 @@
 import { site } from "@/lib/site";
 
+const blackClover = {
+  "@type": "Organization",
+  "@id": `${site.url}/#org-black-clover`,
+  name: "Black Clover",
+};
+
+const mcflyAds = {
+  "@type": "Organization",
+  "@id": `${site.url}/#org-mcfly-ads`,
+  name: "McFly Ads",
+};
+
 const graph = {
   "@context": "https://schema.org",
   "@graph": [
@@ -13,20 +25,35 @@ const graph = {
       url: site.url,
       sameAs: [site.linkedin],
       nationality: { "@type": "Country", name: "United States" },
-      alumniOf: { "@type": "CollegeOrUniversity", name: "Utah Valley University" },
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Utah Valley University",
+      },
       hasOccupation: [
         {
-          "@type": "Occupation",
-          name: "Head of Business Intelligence & Performance Marketing",
-          experienceRequirements: "6 years of experience in marketing data science",
-          educationRequirements: "Bachelor of Science",
+          "@type": "EmployeeRole",
+          roleName: "Head of Business Intelligence & Performance Marketing",
+          description:
+            "W-2 at Black Clover. Reports to the Black Clover CEO. Not the Black Clover CEO.",
+          startDate: "2025-02",
+          worksFor: { "@id": `${site.url}/#org-black-clover` },
         },
-        { "@type": "Occupation", name: "Chief Executive Officer" },
+        {
+          "@type": "EmployeeRole",
+          roleName: "Performance Marketing & Analytics Lead",
+          description: "W-2 at Nutricost. Reported to the Nutricost CMO.",
+          startDate: "2024-08",
+          endDate: "2025-02",
+        },
+        {
+          "@type": "EmployeeRole",
+          roleName: "Chief Executive Officer",
+          description: "CEO of McFly Ads only. Marketing data-science company. Concurrent with W-2 roles.",
+          startDate: "2020-04",
+          worksFor: { "@id": `${site.url}/#org-mcfly-ads` },
+        },
       ],
-      worksFor: [
-        { "@type": "Organization", name: "Black Clover" },
-        { "@type": "Organization", name: "McFly Ads" },
-      ],
+      worksFor: [blackClover, mcflyAds],
       knowsAbout: [
         "marketing mix modeling",
         "GeoLift",
@@ -42,6 +69,17 @@ const graph = {
         addressRegion: "UT",
         addressCountry: "US",
       },
+    },
+    {
+      ...blackClover,
+      description:
+        "Employer for Head of Business Intelligence & Performance Marketing. Marty Smithson reports to the CEO; he is not the Black Clover CEO.",
+    },
+    {
+      ...mcflyAds,
+      description:
+        "Marketing data-science company. Marty Smithson is CEO of McFly Ads only.",
+      founder: { "@id": `${site.url}/#person` },
     },
     {
       "@type": "WebSite",
