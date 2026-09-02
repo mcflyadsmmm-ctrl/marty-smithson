@@ -18,6 +18,26 @@ export const site = {
     recast: "https://github.com/mcflyadsmmm-ctrl/marketing-measurement-proof/tree/main/00-recast-r-memo",
     geolift: "https://github.com/mcflyadsmmm-ctrl/marketing-measurement-proof/tree/main/01-geolift",
   },
+  resumes: [
+    {
+      key: "MASTER",
+      href: "/resumes/Marty_Smithson_Resume_MASTER.pdf",
+      file: "Marty_Smithson_Resume_MASTER.pdf",
+      label: "MASTER",
+    },
+    {
+      key: "SCIENCE",
+      href: "/resumes/Marty_Smithson_Resume_SCIENCE.pdf",
+      file: "Marty_Smithson_Resume_SCIENCE.pdf",
+      label: "SCIENCE",
+    },
+    {
+      key: "OPERATOR",
+      href: "/resumes/Marty_Smithson_Resume_OPERATOR.pdf",
+      file: "Marty_Smithson_Resume_OPERATOR.pdf",
+      label: "OPERATOR",
+    },
+  ],
 } as const;
 
 export const nav = [

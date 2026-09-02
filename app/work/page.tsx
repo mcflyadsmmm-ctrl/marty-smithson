@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CaseCard } from "@/components/CaseCard";
-import { cases } from "@/lib/content";
+import { cases, mixCall } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -25,6 +26,11 @@ export default function WorkPage() {
           ))}
         </div>
       </section>
+      <p className="mt-block">
+        <Link className="more" href="/evidence#mix-call">
+          {mixCall.title} →
+        </Link>
+      </p>
     </article>
   );
 }

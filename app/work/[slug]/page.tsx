@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArtifactStrip } from "@/components/ArtifactStrip";
 import { BrandRoster } from "@/components/BrandRoster";
-import { caseBySlug, cases } from "@/lib/content";
+import { MixCall } from "@/components/MixCall";
+import { caseBySlug, cases, ceoClarifier, sampleMethodNote } from "@/lib/content";
 import { site } from "@/lib/site";
 
 type Props = {
@@ -44,6 +46,7 @@ export default async function CasePage({ params }: Props) {
         <p className="lede measure">
           {study.role}. {study.dates}. {study.reportsTo}.
         </p>
+        {study.slug === "mcfly" ? <p className="note measure">{ceoClarifier}</p> : null}
       </header>
 
       <aside className="case-artifact" aria-label="Case facts">
@@ -80,6 +83,13 @@ export default async function CasePage({ params }: Props) {
         </div>
       </div>
 
+      <section className="sample-desk" aria-labelledby="sample-desk-title">
+        <h2 id="sample-desk-title">SAMPLE method on this desk</h2>
+        <p className="note measure">{sampleMethodNote(study.slug)}</p>
+        <ArtifactStrip slug={study.slug} />
+        <MixCall compact />
+      </section>
+
       <div className="case-blocks">
         {blocks.map((block) => (
           <section className="case-block" key={block.title}>
@@ -112,6 +122,9 @@ export default async function CasePage({ params }: Props) {
         </Link>
         <Link className="btn" href="/approach">
           Approach
+        </Link>
+        <Link className="btn" href="/evidence">
+          How the mix call ships
         </Link>
         {study.slug === "mcfly" ? (
           <a className="btn" href={site.mcfly} rel="noreferrer" target="_blank">

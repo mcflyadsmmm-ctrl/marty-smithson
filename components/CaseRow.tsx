@@ -1,12 +1,12 @@
 import Link from "next/link";
 import type { CaseSlug, CaseStudy } from "@/lib/content";
 
-function caseMetrics(slug: CaseSlug): string[] {
+function caseChips(slug: CaseSlug): string[] {
   switch (slug) {
     case "black-clover":
-      return ["Google · Meta · Microsoft", "18 months", "Meridian · GeoLift"];
+      return ["Google · Meta · Microsoft", "18 months"];
     case "nutricost":
-      return ["$50 → $1,000/day", "7 months", "Amazon · Google · Meta · TikTok"];
+      return ["Amazon · Google · Meta · TikTok", "7 months"];
     case "mcfly":
       return ["10 named brands", "6 years"];
     default: {
@@ -17,7 +17,7 @@ function caseMetrics(slug: CaseSlug): string[] {
 }
 
 export function CaseRow({ study }: { study: CaseStudy }) {
-  const metrics = caseMetrics(study.slug);
+  const chips = caseChips(study.slug);
 
   return (
     <article>
@@ -30,11 +30,12 @@ export function CaseRow({ study }: { study: CaseStudy }) {
           <p className="exp-role">{study.role}</p>
           <p className="exp-meta">
             {study.reportsTo} · {study.dates}
-            <span className="exp-metrics">
-              {" · "}
-              {metrics.join(" · ")}
-            </span>
           </p>
+          <ul className="metric-chips">
+            {chips.map((chip) => (
+              <li key={chip}>{chip}</li>
+            ))}
+          </ul>
           <span className="more">Read case →</span>
         </div>
       </Link>

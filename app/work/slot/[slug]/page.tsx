@@ -30,7 +30,7 @@ export default async function CaseSlotPage({ params }: Props) {
 
   return (
     <article>
-      <header className="case-hero">
+      <header className="page-hero">
         <p className="eyebrow">{slot.label}</p>
         <h1>{slot.title}</h1>
         <p className="lede measure">{slot.purpose}</p>

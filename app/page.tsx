@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CaseRow } from "@/components/CaseRow";
-import { cases, hero, methodPillars, resume } from "@/lib/content";
-import { site } from "@/lib/site";
+import { ContactStrip } from "@/components/ContactStrip";
+import { cases, ceoClarifier, hero, methodPillars, mixCall, resume } from "@/lib/content";
 
 export default function HomePage() {
   return (
@@ -17,9 +17,7 @@ export default function HomePage() {
       <section className="band" id="about" aria-labelledby="about-title">
         <h2 id="about-title">{hero.pair}</h2>
         <p className="measure">{resume.summary}</p>
-        <p className="note measure">
-          I report to the Black Clover CEO. The CEO title applies only to McFly Ads.
-        </p>
+        <p className="note measure">{ceoClarifier}</p>
       </section>
 
       <section className="band" id="experience" aria-labelledby="experience-title">
@@ -53,36 +51,19 @@ export default function HomePage() {
           ))}
         </ol>
         <p className="mt-block">
+          <Link className="more" href="/evidence#mix-call">
+            {mixCall.title} →
+          </Link>
+        </p>
+        <p>
           <Link className="more" href="/approach">
             Full approach →
           </Link>
         </p>
       </section>
 
-      <section className="band" id="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">Get in touch</h2>
-        <p className="note measure">{resume.scan}</p>
-        <p>
-          <a className="cta-mail" href={`mailto:${site.email}`}>
-            {site.email}
-          </a>
-        </p>
-        <p className="note">
-          {site.locationLine}
-          <br />
-          {site.authorization}
-        </p>
-        <p className="actions">
-          <a className="btn btn-solid" href={site.linkedin} rel="noreferrer" target="_blank">
-            LinkedIn
-          </a>
-          <Link className="btn" href="/resume">
-            Resume / PDF
-          </Link>
-          <a className="btn" href={`mailto:${site.email}`}>
-            Email
-          </a>
-        </p>
+      <section className="band band-contact" id="contact" aria-labelledby="contact-title">
+        <ContactStrip showHeading />
       </section>
     </article>
   );

@@ -204,10 +204,32 @@ export const origin = {
   note: "Research agents and reporting loops sit behind the work. They are how it ships — not a job title.",
 } as const;
 
+export const ceoClarifier =
+  "CEO title applies only to McFly Ads. At Black Clover he reports to the CEO. At Nutricost he reported to the CMO.";
+
+export const mixCall = {
+  title: "How the mix call ships",
+  lede: "SAMPLE method — measurement, then the decision, then the budget that moved. Not a client extract. No invented lift.",
+  steps: [
+    {
+      title: "Measure",
+      body: "Cash MER from the ledger: sales after returns ÷ ad spend. Meridian or Robyn MMM on the mix. GeoLift when two channels claimed the same sale.",
+    },
+    {
+      title: "Decide",
+      body: "Below cash MER break-even, we cut. Above it, we can scale. The test is the budget call — not last-click, not platform ROAS.",
+    },
+    {
+      title: "Budget moved",
+      body: "The mix moves after the measurement. The artifact is the allocation, not a lift percentage. SAMPLE folders show how the write-up looks.",
+    },
+  ],
+} as const;
+
 export const methodSteps = [
   {
     title: "Data",
-    body: "Ledger sales after returns next to platform spend for the same period. NetSuite at Black Clover. The platforms do not get to define the period.",
+    body: "Ledger and platforms onto one desk: NetSuite or Shopify sales after returns sit next to ad-platform spend for the same period. Google, Meta, Microsoft, Amazon, TikTok — the platforms do not get to define the period.",
   },
   {
     title: "Warehouse",
@@ -418,6 +440,21 @@ export const caseSlots = [
 
 export type CaseSlot = (typeof caseSlots)[number];
 export type CaseSlotSlug = CaseSlot["slug"];
+
+export function sampleMethodNote(slug: CaseSlug): string {
+  switch (slug) {
+    case "black-clover":
+      return "Cash MER, Meridian MMM, and GeoLift on Google, Meta, and Microsoft. The public folders are SAMPLE method write-ups — not a Black Clover extract. No lift % invented for this page.";
+    case "nutricost":
+      return "Robyn MMM and GeoLift on Amazon, Google, Meta, and TikTok. The public folders are SAMPLE method write-ups — not a Nutricost extract. No lift % invented for this page.";
+    case "mcfly":
+      return "Robyn, Meridian, GeoLift, and the desk. The public folders are SAMPLE method write-ups — not a client extract. Harbor Home on the live demo is SAMPLE, not a client. No invented ROAS.";
+    default: {
+      const _exhaustive: never = slug;
+      return _exhaustive;
+    }
+  }
+}
 
 export function caseBySlug(slug: string): CaseStudy | undefined {
   return cases.find((item) => item.slug === slug);

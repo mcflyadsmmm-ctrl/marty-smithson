@@ -46,7 +46,7 @@ export function SiteHeader() {
           <a href={site.linkedin} rel="noreferrer" target="_blank">
             LinkedIn
           </a>
-          <Link href="/resume">Resume / PDF</Link>
+          <Link href="/resume">Resume pack</Link>
         </div>
         <button
           className="nav-toggle"
@@ -87,7 +87,7 @@ export function SiteHeader() {
           </li>
           <li>
             <Link href="/resume" onClick={() => setOpen(false)}>
-              Resume / PDF
+              Resume pack
             </Link>
           </li>
         </ul>

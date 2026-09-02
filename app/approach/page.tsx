@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { methodPillars, methodSteps, methodSystems } from "@/lib/content";
-import { site } from "@/lib/site";
+import { ArtifactStrip } from "@/components/ArtifactStrip";
+import { methodPillars, methodSteps, methodSystems, mixCall } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Approach",
@@ -59,13 +59,11 @@ export default function ApproachPage() {
         <p className="note measure">
           Public R work — not Black Clover, not Nutricost, not client extracts.
         </p>
-        <p className="actions">
-          <a className="btn" href={site.proof.recast} rel="noreferrer" target="_blank">
-            SAMPLE Recast memo
-          </a>
-          <a className="btn" href={site.proof.geolift} rel="noreferrer" target="_blank">
-            SAMPLE GeoLift
-          </a>
+        <ArtifactStrip />
+        <p className="actions mt-block">
+          <Link className="btn" href="/evidence#mix-call">
+            {mixCall.title}
+          </Link>
           <Link className="btn" href="/work">
             Work
           </Link>

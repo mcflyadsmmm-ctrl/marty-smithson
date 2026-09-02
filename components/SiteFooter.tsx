@@ -10,10 +10,7 @@ export function SiteFooter() {
           <a href={site.linkedin} rel="noreferrer" target="_blank">
             LinkedIn
           </a>
-          <Link href="/resume">Resume / PDF</Link>
-          <a href="/resume.doc" download="Marty-Smithson-Resume.doc">
-            Word
-          </a>
+          <Link href="/resume">Resume pack</Link>
           <a href={`mailto:${site.email}`}>Email</a>
         </span>
         <span>

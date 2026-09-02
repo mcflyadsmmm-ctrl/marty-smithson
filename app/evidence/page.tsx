@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArtifactStrip } from "@/components/ArtifactStrip";
+import { MixCall } from "@/components/MixCall";
 import { evidenceItems } from "@/lib/content";
-import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Evidence",
+  title: "How the mix call ships",
   description:
-    "The same facts as the resume, in one place. Public SAMPLE method folders — not client extracts. No invented lifts.",
+    "SAMPLE method — Cash MER / MMM / GeoLift, then cut or scale, then the budget that moved. Not client extracts. No invented lifts.",
   alternates: { canonical: "/evidence" },
 };
 
@@ -14,22 +15,16 @@ export default function EvidencePage() {
   return (
     <article>
       <header className="page-hero">
-        <h1>What’s on the desk</h1>
-        <p className="lede measure">
-          The same facts as the resume, in one place. No invented lifts. The public folders are
-          SAMPLE method work — not Black Clover, not Nutricost, not client extracts.
-        </p>
-        <div className="artifact-list">
-          <a className="artifact" href={site.proof.recast} rel="noreferrer" target="_blank">
-            <strong>SAMPLE Recast memo</strong>
-            <span>Public R write-up — method only, not client data</span>
-          </a>
-          <a className="artifact" href={site.proof.geolift} rel="noreferrer" target="_blank">
-            <strong>SAMPLE GeoLift</strong>
-            <span>Public geo-holdout notebooks — method only, not client data</span>
-          </a>
-        </div>
+        <MixCall asPageTitle showLink={false} />
+        <ArtifactStrip />
       </header>
+      <section className="band" aria-labelledby="desk-facts-title">
+        <h2 id="desk-facts-title">What’s on the desk</h2>
+        <p className="note measure">
+          The same facts as the resume, in one place. No invented lifts. The public folders above
+          are SAMPLE method work — not Black Clover, not Nutricost, not client extracts.
+        </p>
+      </section>
       <div className="proof-list">
         {evidenceItems.map((item) => (
           <article className="proof-row" key={item.index}>
@@ -44,10 +39,13 @@ export default function EvidencePage() {
       <section className="band">
         <p className="actions">
           <Link className="btn btn-solid" href="/resume">
-            Resume / PDF
+            Resume pack
           </Link>
           <Link className="btn" href="/approach">
             Approach
+          </Link>
+          <Link className="btn" href="/work">
+            Work
           </Link>
         </p>
       </section>
