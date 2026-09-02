@@ -2,8 +2,12 @@
 
 User-facing `/resume` shows these as cards. Filenames stay stable.
 
-Verified md5:
+User-facing labels: Full resume / Measurement focus / Systems & analytics.
 
-- `Marty_Smithson_Resume_MASTER.pdf` `3858405bbcf634941169c5501ac67e08`
-- `Marty_Smithson_Resume_SCIENCE.pdf` `e4312d30e42a2c7e0e916745802e4a46`
-- `Marty_Smithson_Resume_OPERATOR.pdf` `757e90cd59d0784b8c0c560a0ed766c0`
+Target FINAL md5s (Resume agent — binaries not in this VM yet):
+
+- MASTER `31bedaf26017d345b91fb50ffac370a2`
+- SCIENCE `bbf49f5b07aa0b48e0064fd2a37b9214`
+- OPERATOR `648355511eeb4ae0623f576894dbdf6e`
+
+Checked-in files still match the previous live pack (`3858405b` / `e4312d30` / `757e90cd`). Replace when the new bytes arrive.

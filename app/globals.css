@@ -328,6 +328,41 @@ p {
   font-size: 0.92rem;
 }
 
+.desk-flow-wrap {
+  margin: 2rem 0 0.6rem;
+  padding: 0;
+  max-width: var(--measure);
+}
+
+.desk-flow-wrap figcaption {
+  margin: 0 0 0.45rem;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.desk-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.15rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.desk-flow li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.desk-flow li:not(:last-child)::after {
+  content: "→";
+  color: #b3aa9c;
+}
+
 .case-section {
   padding: 1.7rem 0 0.2rem;
   max-width: var(--measure);

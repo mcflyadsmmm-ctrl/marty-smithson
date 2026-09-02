@@ -20,10 +20,24 @@ export default function SystemsFleetPage() {
         <p className="lede">{fleet.lead}</p>
       </header>
 
-      {fleet.sections.map((section) => (
-        <section className="case-section" key={section.title}>
-          <h2>{section.title}</h2>
-          <p>{section.body}</p>
+      <section className="case-section">
+        <h2>{fleet.warehouse.title}</h2>
+        <p>{fleet.warehouse.body}</p>
+      </section>
+
+      <figure className="desk-flow-wrap" aria-label="How a desk works">
+        <figcaption>How a desk works</figcaption>
+        <ol className="desk-flow">
+          {fleet.steps.map((step) => (
+            <li key={step}>{step}</li>
+          ))}
+        </ol>
+      </figure>
+
+      {fleet.lanes.map((lane) => (
+        <section className="case-section" key={lane.title}>
+          <h2>{lane.title}</h2>
+          <p>{lane.body}</p>
         </section>
       ))}
 

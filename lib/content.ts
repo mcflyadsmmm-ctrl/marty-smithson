@@ -37,29 +37,38 @@ export const fleet = {
   place: "Black Clover",
   role: "Head of BI & Performance Marketing · I report to the CEO",
   dates: "February 2025 — present",
-  lead: "I moved the warehouse off Domo onto Cloud Run and stood up a partner portal for about 50 people. Leadership gets one honest book per desk — wholesale, cash, retail, fulfillment — and can actually decide from it.",
-  sections: [
+  lead: "I moved the warehouse off Domo onto Cloud Run — about $20K a month less — and built a partner portal for about 50 people on the same stack. Wholesale, cash, retail, and fulfillment each keep their own honest book.",
+  steps: ["Measure", "Check", "Lock", "Decide", "Move"] as const,
+  warehouse: {
+    title: "Warehouse off Domo",
+    body: "Domo was holding the warehouse and the bill. I moved the full data warehouse onto Google Cloud Run. Same work. About $20K a month less.",
+  },
+  lanes: [
     {
-      title: "Warehouse off Domo",
-      body: "The company was paying Domo to hold the warehouse. I moved the full data warehouse onto Google Cloud Run. The work stayed. The bill dropped about $20K a month. That is a verified number, not a modeled lift.",
+      title: "Wholesale leadership book",
+      body: "One wholesale number for leadership. One owner. We lock it after we ship so two systems cannot quietly disagree.",
     },
     {
-      title: "Partner portal, ~50 people",
-      body: "Executives, rep leads, and reps needed the same facts with different access. I built the portal on Cloud Run, live to NetSuite, with messaging between users and a hard cost cap at peak. They can read the number. They cannot quietly rewrite it.",
+      title: "Partner portal",
+      body: "About 50 people — executives, rep leads, reps — on Cloud Run. Live NetSuite, the right access for each role, messaging between them, inside a hard cost cap. They can read the number. They cannot rewrite it.",
     },
     {
-      title: "The books leadership uses",
-      body: "Wholesale, cash MER, retail, and fulfillment each keep their own honest book. One person owns the number. We lock it after we ship. A bad reconcile does not go to the CEO. Store net sales do not treat tax as a KPI. Partials are told on their own fulfillment book.",
+      title: "Cash MER",
+      body: "Ledger sales against exact spend. Google, Meta, and Microsoft get budget from that, not from ad-platform ROAS. Below break-even, we cut.",
     },
     {
-      title: "The mix, from the ledger",
-      body: "Google, Meta, and Microsoft get budget from ledger sales against spend — cash MER — not from ad-platform ROAS. Below break-even, we cut. Marketing is the domain. The system is the job.",
+      title: "Retail POS",
+      body: "Store net sales only. Tax is not a KPI.",
+    },
+    {
+      title: "Fulfillment",
+      body: "One customer story. Partials are told on their own book.",
     },
   ],
 } as const;
 
 export const workIndex = {
-  lead: "Black Clover first. Nutricost and McFly Ads are shorter.",
+  lead: "Black Clover — warehouse off Domo, the portal, and the books leadership uses.",
   case: {
     href: "/work/systems-fleet",
     title: "Black Clover",
@@ -133,19 +142,19 @@ export const resumePdfs = [
     key: "full",
     href: "/resumes/Marty_Smithson_Resume_MASTER.pdf",
     title: "Full resume",
-    note: "The default. Same facts as the other two.",
+    note: "The default.",
   },
   {
     key: "measurement",
     href: "/resumes/Marty_Smithson_Resume_SCIENCE.pdf",
-    title: "Measurement",
-    note: "For mix-model and incrementality roles.",
+    title: "Measurement focus",
+    note: "Mix models and incrementality.",
   },
   {
     key: "systems",
     href: "/resumes/Marty_Smithson_Resume_OPERATOR.pdf",
     title: "Systems & analytics",
-    note: "For BI, the warehouse, and the portal.",
+    note: "BI, the warehouse, and the portal.",
   },
 ] as const;
 

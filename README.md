@@ -46,11 +46,15 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Do not invent lifts, ROAS, or titles. He reports to the Black Clover CEO. CEO applies only at McFly Ads. Education: UVU B.S., Data Science and Statistics emphasis.
 
-Resume PDFs in `public/resumes/` must keep these md5s:
+Resume PDFs live in `public/resumes/`. User-facing labels are Full resume / Measurement focus / Systems & analytics.
 
-- MASTER `3858405bbcf634941169c5501ac67e08`
-- SCIENCE `e4312d30e42a2c7e0e916745802e4a46`
-- OPERATOR `757e90cd59d0784b8c0c560a0ed766c0`
+Target FINAL md5s (Resume agent):
+
+- MASTER `31bedaf26017d345b91fb50ffac370a2`
+- SCIENCE `bbf49f5b07aa0b48e0064fd2a37b9214`
+- OPERATOR `648355511eeb4ae0623f576894dbdf6e`
+
+This branch still ships the previous live binaries until those bytes are available.
 
 ## Deploy
 
