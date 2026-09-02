@@ -40,34 +40,28 @@ export const hero = {
 
 export const proofStats: ProofStat[] = [
   {
-    figure: "06",
-    unit: "Years",
-    line: "of marketing data science",
-    meta: "2020 — 2026",
-  },
-  {
     figure: "$30M+",
     unit: "Media",
     line: "directed",
     meta: "Career",
   },
   {
-    figure: "$1M",
-    unit: "Monthly",
-    line: "mix",
-    meta: "Black Clover · reports to CEO",
+    figure: "06",
+    unit: "Years",
+    line: "of marketing data science",
+    meta: "2020 — 2026",
   },
   {
-    figure: "$2M",
-    unit: "Monthly",
-    line: "mix",
-    meta: "Nutricost · reports to CMO",
+    figure: "3",
+    unit: "Channels",
+    line: "Google, Meta, Microsoft",
+    meta: "Black Clover · reports to CEO",
   },
   {
     figure: "$50 → $1,000",
     unit: "Per day",
     line: "Ketologic / Primaforce",
-    meta: "Nutricost sub-brands",
+    meta: "Nutricost · reports to CMO",
   },
 ];
 
@@ -82,13 +76,13 @@ export const cases: CaseStudy[] = [
     reportsTo: "Reports to CEO",
     headline: "Company analytics, then the mix.",
     kicker: "01 / Desk · Black Clover USA · 02/2025 – Present",
-    stat: "$1M/month media mix",
+    stat: "Google, Meta, Microsoft · 18 months",
     problem:
       "Platform ROAS told a cleaner story than cash. Spreadsheets lagged NetSuite. Sales and spend were not on one desk, so budget allocation was an argument instead of a MER call.",
     approach:
       "Cash MER as the mix KPI: orders from NetSuite against paid. Meridian MMM on the Google, Meta, and Microsoft mix. When two channels claimed the same sale, GeoLift geo-holdouts and RCTs — causal inference for the CEO, then the mix moved.",
     outcome:
-      "Direct $1M/month paid for 18 months on a ~$45M year. Weekly allocation against cash MER. Below break-even, we cut. A 50-person sales portal is what ran in production — not a dashboard screenshot deck.",
+      "Allocated Google, Meta, and Microsoft for 18 months on a ~$45M year. Weekly against cash MER. Below break-even, we cut. A 50-person sales portal is what ran in production — not a dashboard screenshot deck.",
     situation: [
       "Global apparel. ~$45M this year. Hundreds of employees. I run the company dashboards.",
       "Sales live in Oracle NetSuite. Paid lives in Google Ads, Meta Ads, and Microsoft Ads.",
@@ -104,7 +98,7 @@ export const cases: CaseStudy[] = [
       "GA4 for the site. Snowflake, dbt, and Airflow into Oracle NetSuite. BI in Looker, Domo, and Tableau. SQL, Python, and R. Google Cloud Run when the portal had to be an app, not a tile.",
     ],
     ran: [
-      "Direct $1M/month paid for 18 months (Google, Meta, Microsoft) on a ~$45M year. Weekly budget allocation against cash MER.",
+      "Allocated Google, Meta, and Microsoft for 18 months on a ~$45M year. Weekly budget allocation against cash MER.",
       "A 50-person sales portal built from scratch. Tiered access for executives, rep leads, and reps. NetSuite for live data and updates. CRM-like messaging between users.",
       "Player-coach: led a social media manager, a graphic designer, and international advertising leads in Asia, the United Kingdom, Canada, and Australia.",
       "The fifty people on the portal are sales-desk users, not a team of fifty reports, and not the hundreds of employees in the company.",
@@ -119,15 +113,15 @@ export const cases: CaseStudy[] = [
     dates: "08/2024 — 02/2025 · 7 months",
     datesShort: "2024—2025",
     reportsTo: "Reports to CMO",
-    headline: "$2M/month, four platforms.",
+    headline: "Four platforms. One CMO desk.",
     kicker: "02 / Desk · Nutricost · 08/2024 – 02/2025",
-    stat: "$2M/month media",
+    stat: "Ketologic / Primaforce $50 → $1,000/day",
     problem:
       "Each platform wanted credit for the same order. Last-click and in-app ROAS could not answer mix. Executive stakeholders needed contribution, LTV, and cohorts — and a test when two channels claimed the same lift.",
     approach:
       "Robyn MMM on Amazon, Google, Meta, and TikTok. Multi-touch attribution, LTV, and cohorts in BigQuery, SQL, and R. GeoLift incrementality when Amazon, TikTok, and Meta claimed the same order — the test was the budget call, not last-click.",
     outcome:
-      "Owned $2M/month paid for 7 months. Mix across four platforms plus Ketologic and Primaforce ($50 → $1,000/day). Dashboards so the weekly CMO meeting started from one desk.",
+      "Owned the four-platform mix for 7 months plus Ketologic and Primaforce ($50 → $1,000/day). Dashboards so the weekly CMO meeting started from one desk.",
     situation: [
       "Supplement brand with a large paid book: Amazon Ads, Google Ads, Meta Ads, TikTok Ads.",
       "Sub-brands Ketologic and Primaforce sat in the same portfolio.",
@@ -142,7 +136,7 @@ export const cases: CaseStudy[] = [
       "GeoLift incrementality when Amazon, TikTok, and Meta claimed the same order — the test was the budget call, not last-click.",
     ],
     ran: [
-      "Owned $2M/month paid for 7 months. Mix across four platforms plus Ketologic and Primaforce ($50 → $1,000/day).",
+      "Owned the four-platform mix for 7 months plus Ketologic and Primaforce ($50 → $1,000/day).",
       "Dashboards for executive stakeholders so the weekly meeting started from one desk.",
     ],
     next: "Cut or scale from GeoLift and cash MER, not from the platform that shouted loudest. Larger monthly spend than Black Clover; CMO reporting, four platforms, Robyn on the mix.",
@@ -288,7 +282,7 @@ export const evidenceItems = [
   {
     index: "07",
     title: "The books I ran",
-    body: "$1M/month Black Clover mix, $2M/month Nutricost, $30M+ media directed. Cash MER, not platform ROAS.",
+    body: "$30M+ media directed. Black Clover: Google, Meta, and Microsoft for ~18 months, reported to the CEO. Nutricost: four platforms for 7 months, including Ketologic and Primaforce $50 → $1,000/day, reported to the CMO. Cash MER, not platform ROAS.",
   },
   {
     index: "08",
@@ -309,15 +303,15 @@ export const evidenceItems = [
 
 export const resume = {
   role: "Head of Business Intelligence & Performance Marketing",
-  scan: "6 years of experience · $1M/month mix · $2M/month Nutricost · $30M+ media directed · Meridian, Robyn, GeoLift, R",
+  scan: "$30M+ media directed · 6 years · Meridian, Robyn, GeoLift, R · reports to CEO / reported to CMO",
   summary:
-    "Head of Business Intelligence & Performance Marketing at Black Clover (~$45M this year). 6 years of experience in marketing data science. I report to the CEO and own the $1M/month paid mix. Bayesian MMM in Meridian. GeoLift incrementality. Cash MER, not platform ROAS. Previously $2M/month at Nutricost (Robyn, R, BigQuery). $30M+ media directed.",
+    "$30M+ media directed. Head of Business Intelligence & Performance Marketing at Black Clover (~$45M this year) — I report to the CEO. Six years of marketing data science. I allocate a seven-figure monthly paid mix across Google, Meta, and Microsoft: Meridian, GeoLift, cash MER; below break-even, we cut. In seat since Feb 2025 (~18 months). Previously reported to the CMO at Nutricost across Amazon, Google, Meta, and TikTok, including Ketologic and Primaforce from $50/day to $1,000/day.",
   jobs: [
     {
       title: "Head of Business Intelligence & Performance Marketing",
       org: "Black Clover USA",
       dates: "02/2025 - Present",
-      meta: "W-2. Reports to the CEO. ~$45M this year. Hundreds of employees. Global. $1M/month mix for 18 months.",
+      meta: "W-2. Reports to the CEO. ~$45M this year. Hundreds of employees. Global. 18 months on the paid mix (Feb 2025–Present).",
       bullets: [
         "Bayesian statistical modeling: Meridian MMM on Google, Meta, and Microsoft. GeoLift geo-holdouts, geo-testing, and RCTs when two channels claimed the same sale — experimental methods and causal inference. Below cash MER break-even, we cut.",
         "Allocated $1M/month paid mix for 18 months across Google Ads, Meta Ads, and Microsoft Ads against cash MER for the CEO. Platform ROAS was not the budget.",
