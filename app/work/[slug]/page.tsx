@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { brands, caseBySlug, cases } from "@/lib/content";
+import { BrandRoster } from "@/components/BrandRoster";
+import { caseBySlug, cases } from "@/lib/content";
 import { site } from "@/lib/site";
 
 type Props = {
@@ -38,7 +39,7 @@ export default async function CasePage({ params }: Props) {
   return (
     <article>
       <header className="case-hero">
-        <p className="sec-id">{study.kicker}</p>
+        <p className="eyebrow">{study.kicker}</p>
         <h1>{study.headline}</h1>
         <p className="lede measure">
           {study.role}. {study.dates}. {study.reportsTo}. {study.stat}.
@@ -56,15 +57,12 @@ export default async function CasePage({ params }: Props) {
         {study.slug === "mcfly" ? (
           <section className="case-block">
             <h2>Named brands</h2>
-            <p>Complete public roster. No larger unnamed book. No per-client ROAS invented for this page.</p>
-            <div className="brand-grid mt-block">
-              {brands.map((brand) => (
-                <div className="brand-tile" key={brand.mark}>
-                  <p className="brand-mark label">{brand.mark}</p>
-                  <p className="brand-name">{brand.name}</p>
-                  <p className="brand-cat label">McFly / {brand.category}</p>
-                </div>
-              ))}
+            <p>
+              Complete public roster. No larger unnamed book. No per-client ROAS invented for this
+              page.
+            </p>
+            <div className="mt-block">
+              <BrandRoster />
             </div>
           </section>
         ) : null}

@@ -12,17 +12,15 @@ export default function WorkPage() {
   return (
     <article>
       <header className="case-hero">
-        <p className="sec-id">
-          <strong>01</strong> / Work
-        </p>
-        <h1>Three desks.</h1>
+        <p className="eyebrow">Work</p>
+        <h1>Three desks</h1>
         <p className="lede measure">
-          Black Clover, Nutricost, and McFly Ads as portfolio pieces — problem, approach, outcome.
-          The same jobs as the resume. No invented lifts.
+          Black Clover, Nutricost, and McFly Ads — problem, approach, outcome. The same jobs as the
+          resume. No invented lifts.
         </p>
       </header>
       <section className="band band-flush">
-        <div className="case-list">
+        <div className="exp-list">
           {cases.map((study) => (
             <CaseCard key={study.slug} study={study} />
           ))}

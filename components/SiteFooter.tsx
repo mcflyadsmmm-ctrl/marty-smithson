@@ -5,11 +5,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-tiny">
-        <span>
-          Marty Smithson
-          <br />
-          Portfolio
-        </span>
+        <span>Marty Smithson</span>
         <span>
           <a href={`mailto:${site.email}`}>{site.email}</a>
           {" · "}
@@ -19,10 +15,8 @@ export function SiteFooter() {
           {" · "}
           <Link href="/resume">Resume</Link>
         </span>
-        <span className="footer-loc">
-          {site.location}
-          <br />
-          US remote · EST overlap
+        <span>
+          {site.location} · US remote · EST overlap
         </span>
       </div>
     </footer>

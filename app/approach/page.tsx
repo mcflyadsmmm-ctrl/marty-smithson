@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  methodPillars,
-  methodSteps,
-  methodSystems,
-  stack,
-} from "@/lib/content";
+import { methodPillars, methodSteps, methodSystems, stack } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -19,9 +14,7 @@ export default function ApproachPage() {
   return (
     <article>
       <header className="case-hero">
-        <p className="sec-id">
-          <strong>01</strong> / Approach
-        </p>
+        <p className="eyebrow">Approach</p>
         <h1>Cash MER. Bayesian MMM. GeoLift.</h1>
         <p className="lede measure">
           Finance funds what it can read. I own the budget. The model is how we argue with cash, not
@@ -38,7 +31,7 @@ export default function ApproachPage() {
       </ol>
       <section className="band split">
         <div>
-          <p className="kicker label">Measurement</p>
+          <p className="kicker">Measurement</p>
           {methodPillars.map((pillar) => (
             <article className="case-block" key={pillar.title}>
               <h2>{pillar.title}</h2>
@@ -47,7 +40,7 @@ export default function ApproachPage() {
           ))}
         </div>
         <div>
-          <p className="kicker label">Systems</p>
+          <p className="kicker">Systems</p>
           {methodSystems.map((item) => (
             <p key={item}>{item}</p>
           ))}
@@ -65,10 +58,8 @@ export default function ApproachPage() {
         </div>
       </section>
       <section className="band">
-        <p className="sec-id">
-          <strong>02</strong> / Stack
-        </p>
-        <h2 className="display">The system</h2>
+        <p className="eyebrow">Stack</p>
+        <h2>The system</h2>
         <ul className="stack-list">
           {stack.map((item) => (
             <li key={item.name}>

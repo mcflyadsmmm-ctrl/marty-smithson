@@ -1,17 +1,7 @@
 import Link from "next/link";
 import { BrandRoster } from "@/components/BrandRoster";
 import { CaseCard } from "@/components/CaseCard";
-import { MerChart } from "@/components/MerChart";
-import { ProofStats } from "@/components/ProofStats";
-import {
-  cases,
-  evidenceItems,
-  hero,
-  methodPillars,
-  methodSteps,
-  origin,
-  resume,
-} from "@/lib/content";
+import { cases, evidenceItems, hero, methodPillars, proofStats, resume } from "@/lib/content";
 import { site } from "@/lib/site";
 
 const homeEvidence = evidenceItems.filter((item) =>
@@ -22,75 +12,48 @@ export default function HomePage() {
   return (
     <article>
       <header className="hero">
-        <div>
-          <p className="sec-id">
-            <strong>01</strong> / Signal
-          </p>
-          <h1>{hero.name}</h1>
-          <p className="hero-pair">{hero.pair}</p>
-          <p className="hero-claim">{hero.claim}</p>
-          <p className="hero-lock">{hero.lock}</p>
-        </div>
-        <MerChart />
+        <p className="eyebrow">Portfolio</p>
+        <h1>{hero.name}</h1>
+        <p className="hero-role">{hero.pair}</p>
+        <p className="lede">{hero.claim}</p>
+        <p className="note measure">{hero.lock}</p>
+        <ul className="facts">
+          {proofStats.map((stat) => (
+            <li key={stat.unit + stat.figure}>
+              <strong>{stat.figure}</strong> {stat.unit.toLowerCase()} {stat.line} · {stat.meta}
+            </li>
+          ))}
+        </ul>
       </header>
-
-      <ProofStats />
 
       <section className="band" id="work" aria-labelledby="work-title">
         <div className="band-head">
           <div>
-            <p className="sec-id">
-              <strong>02</strong> / Work
-            </p>
-            <h2 className="display" id="work-title">
-              Three desks. Three stories.
-            </h2>
+            <p className="eyebrow">Experience</p>
+            <h2 id="work-title">Three desks</h2>
           </div>
           <p className="note">
-            Problem, approach, outcome — only facts already on the resume. No invented lifts.
+            Same jobs as the resume. Problem, approach, outcome — no invented lifts.
           </p>
         </div>
-        <div className="case-list">
+        <div className="exp-list">
           {cases.map((study) => (
             <CaseCard key={study.slug} study={study} />
           ))}
         </div>
       </section>
 
-      <section className="band" id="origin" aria-labelledby="origin-title">
-        <p className="sec-id">
-          <strong>03</strong> / Origin
-        </p>
-        <h2 className="display" id="origin-title">
-          {origin.lead}
-        </h2>
-        <p className="lede measure">{origin.copy}</p>
-        <p className="note measure">{origin.note}</p>
-      </section>
-
       <section className="band" id="approach" aria-labelledby="approach-title">
         <div className="band-head">
           <div>
-            <p className="sec-id">
-              <strong>04</strong> / Approach
-            </p>
-            <h2 className="display" id="approach-title">
-              Cash MER. Bayesian MMM. GeoLift.
-            </h2>
+            <p className="eyebrow">Approach</p>
+            <h2 id="approach-title">Cash MER. Bayesian MMM. GeoLift.</h2>
           </div>
           <p className="note">
             Finance funds what it can read. I own the budget. The model is how we argue with cash,
             not with path credit.
           </p>
         </div>
-        <ol className="steps">
-          {methodSteps.map((step, index) => (
-            <li key={step}>
-              <b>0{index + 1}</b>
-              {step}
-            </li>
-          ))}
-        </ol>
         <div className="pillars">
           {methodPillars.map((pillar) => (
             <article className="pillar" key={pillar.title}>
@@ -100,7 +63,7 @@ export default function HomePage() {
           ))}
         </div>
         <p className="mt-block">
-          <Link className="more label" href="/approach">
+          <Link className="more" href="/approach">
             Full approach →
           </Link>
         </p>
@@ -109,26 +72,20 @@ export default function HomePage() {
       <section className="band" id="evidence" aria-labelledby="evidence-title">
         <div className="band-head">
           <div>
-            <p className="sec-id">
-              <strong>05</strong> / Evidence
-            </p>
-            <h2 className="display" id="evidence-title">
-              What can be verified.
-            </h2>
+            <p className="eyebrow">Evidence</p>
+            <h2 id="evidence-title">What can be verified</h2>
           </div>
           <p className="note">
-            A screener can point at the resume. SAMPLE method work lives in public R folders — not
-            client extracts.
+            SAMPLE method work is public R folders — not client extracts.
           </p>
         </div>
         <div className="proof-list">
           {homeEvidence.map((item) => (
             <article className="proof-row" key={item.index}>
-              <p className="label">{item.index}</p>
+              <p className="exp-idx">{item.index}</p>
               <div>
                 <h3>{item.title}</h3>
                 <p>{item.body}</p>
-                <p className="proof-tag">{item.tag}</p>
               </div>
               <p className="verified">Verified</p>
             </article>
@@ -139,50 +96,41 @@ export default function HomePage() {
             Evidence map
           </Link>
           <a className="btn" href={site.proof.recast} rel="noreferrer" target="_blank">
-            SAMPLE · Recast memo
+            SAMPLE Recast memo
           </a>
           <a className="btn" href={site.proof.geolift} rel="noreferrer" target="_blank">
-            SAMPLE · GeoLift
+            SAMPLE GeoLift
           </a>
         </p>
       </section>
 
       <section className="band" id="brands" aria-labelledby="brands-title">
-        <p className="sec-id">
-          <strong>06</strong> / Roster
-        </p>
-        <h2 className="display" id="brands-title">
-          Ten named brands
-        </h2>
+        <p className="eyebrow">McFly Ads</p>
+        <h2 id="brands-title">Ten named brands</h2>
+        <p className="note">Complete public roster. No invented ROAS. CEO of McFly Ads only.</p>
         <BrandRoster />
       </section>
 
       <section className="band" id="contact" aria-labelledby="close-title">
-        <p className="sec-id">
-          <strong>07</strong> / Close
+        <p className="eyebrow">Contact</p>
+        <h2 id="close-title">Get in touch</h2>
+        <p className="note measure">{resume.scan}</p>
+        <p>
+          <a className="cta-mail" href={`mailto:${site.email}`}>
+            {site.email}
+          </a>
         </p>
-        <div className="cta">
-          <div>
-            <h2 className="display" id="close-title">
-              The desk is open.
-            </h2>
-            <p className="note measure">{resume.scan}</p>
-            <a className="cta-mail" href={`mailto:${site.email}`}>
-              {site.email}
-            </a>
-          </div>
-          <div className="actions">
-            <Link className="btn btn-solid" href="/contact">
-              Contact
-            </Link>
-            <Link className="btn" href="/resume">
-              Master resume
-            </Link>
-            <a className="btn" href={site.linkedin} rel="noreferrer" target="_blank">
-              LinkedIn
-            </a>
-          </div>
-        </div>
+        <p className="actions">
+          <Link className="btn btn-solid" href="/contact">
+            Contact
+          </Link>
+          <Link className="btn" href="/resume">
+            Resume
+          </Link>
+          <a className="btn" href={site.linkedin} rel="noreferrer" target="_blank">
+            LinkedIn
+          </a>
+        </p>
       </section>
     </article>
   );
