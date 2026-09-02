@@ -19,6 +19,16 @@ export default function EvidencePage() {
           The same facts as the resume, in one place. No invented lifts. The public folders are
           SAMPLE method work — not Black Clover, not Nutricost, not client extracts.
         </p>
+        <div className="artifact-list">
+          <a className="artifact" href={site.proof.recast} rel="noreferrer" target="_blank">
+            <strong>SAMPLE Recast memo</strong>
+            <span>Public R write-up — method only, not client data</span>
+          </a>
+          <a className="artifact" href={site.proof.geolift} rel="noreferrer" target="_blank">
+            <strong>SAMPLE GeoLift</strong>
+            <span>Public geo-holdout notebooks — method only, not client data</span>
+          </a>
+        </div>
       </header>
       <div className="proof-list">
         {evidenceItems.map((item) => (
@@ -32,21 +42,7 @@ export default function EvidencePage() {
         ))}
       </div>
       <section className="band">
-        <h2>SAMPLE method folders</h2>
-        <p className="note measure">
-          Public R notebooks. Method work only — not a client extract and not a product comparison.
-        </p>
-        <div className="artifact-list">
-          <a className="artifact" href={site.proof.recast} rel="noreferrer" target="_blank">
-            <strong>SAMPLE Recast memo</strong>
-            <span>R write-up in the public proof repo</span>
-          </a>
-          <a className="artifact" href={site.proof.geolift} rel="noreferrer" target="_blank">
-            <strong>SAMPLE GeoLift</strong>
-            <span>Geo-holdout notebooks in the public proof repo</span>
-          </a>
-        </div>
-        <p className="actions mt-block">
+        <p className="actions">
           <Link className="btn btn-solid" href="/resume">
             Resume / PDF
           </Link>
