@@ -47,7 +47,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Do not invent lifts, ROAS, or titles. He reports to the Black Clover CEO. CEO applies only at McFly Ads.
 
-Nutricost: Performance Marketing & Analytics Lead, reported to the CMO. Helped organize data for 13 sub-brands. Helped build the warehouse and advertising analysis station for margins and COGS. Do not use the old Ketologic / Primaforce spend ramp.
+Nutricost: Performance Marketing & Analytics Lead, reported to the CMO. Helped organize a data portfolio for 13 sub-brands. Helped build the warehouse and advertising data-science station for margins and COGS. Never use the Ketologic / Primaforce spend ramp.
 
 Education: UVU B.S., Data Science and Statistics emphasis.
 
