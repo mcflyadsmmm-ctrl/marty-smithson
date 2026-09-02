@@ -4,9 +4,9 @@ import type { CaseSlug, CaseStudy } from "@/lib/content";
 function caseMetrics(slug: CaseSlug): string[] {
   switch (slug) {
     case "black-clover":
-      return ["$1M/month mix", "~$45M year", "18 months"];
+      return ["Google · Meta · Microsoft", "18 months", "Meridian · GeoLift"];
     case "nutricost":
-      return ["$2M/month mix", "$50 → $1,000/day", "7 months"];
+      return ["$50 → $1,000/day", "7 months", "Amazon · Google · Meta · TikTok"];
     case "mcfly":
       return ["10 named brands", "6 years"];
     default: {
