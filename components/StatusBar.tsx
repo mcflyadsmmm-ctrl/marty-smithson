@@ -24,13 +24,13 @@ export function StatusBar() {
 
   return (
     <div className="status-bar" aria-hidden="true">
-      <span>Marty Smithson · Portfolio</span>
+      <span className="status-name">Marty Smithson · Portfolio</span>
       <span className="status-mid">
         <span className="chip">06 years</span>
         <span className="chip">US remote</span>
         <span className="chip">EST</span>
       </span>
-      <span>Local {clock} MT</span>
+      <span className="status-clock">Local {clock} MT</span>
     </div>
   );
 }

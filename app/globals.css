@@ -13,7 +13,7 @@
   --gutter: 1.5rem;
   --header-h: 4.1rem;
   --status-h: 2.75rem;
-  --status-pad: calc(var(--status-h) + 1.25rem);
+  --status-pad: calc(var(--status-h) + 2.25rem + env(safe-area-inset-bottom, 0px));
 }
 
 *,
@@ -80,6 +80,7 @@ button {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
+  padding-bottom: var(--status-h);
 }
 
 .site-main {
@@ -827,7 +828,7 @@ p {
 .site-footer {
   width: min(100%, var(--page));
   margin: 0 auto;
-  padding: 1.5rem var(--gutter) var(--status-pad);
+  padding: 1.5rem var(--gutter);
   border-top: 1px solid var(--line);
 }
 
@@ -863,10 +864,10 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0.75rem 1.25rem;
-  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
   min-height: var(--status-h);
-  padding: 0.5rem var(--gutter);
+  padding: 0.45rem var(--gutter);
+  padding-bottom: calc(0.45rem + env(safe-area-inset-bottom, 0px));
   border-top: 1px solid var(--line);
   background: rgba(8, 9, 8, 0.94);
   color: var(--muted);
@@ -890,7 +891,28 @@ p {
 @media (max-width: 860px) {
   :root {
     --gutter: 1.1rem;
-    --status-h: 4.6rem;
+    --status-h: 2.9rem;
+  }
+
+  .status-name {
+    display: none;
+  }
+
+  .status-bar {
+    flex-wrap: nowrap;
+    gap: 0.45rem;
+    font-size: 0.6rem;
+  }
+
+  .status-mid {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
+
+  .status-clock {
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
 
   .nav-desktop {
@@ -981,12 +1003,14 @@ p {
   }
 
   .footer-loc {
-    text-align: left;
+    display: none;
   }
 
-  .status-bar {
-    font-size: 0.62rem;
+  .site-footer {
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
   }
+
 }
 
 @media (max-width: 540px) {
