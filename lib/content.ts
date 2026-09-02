@@ -205,12 +205,30 @@ export const origin = {
 } as const;
 
 export const methodSteps = [
-  "Data",
-  "Warehouse",
-  "Model",
-  "Experiment",
-  "Decision",
-  "Budget",
+  {
+    title: "Data",
+    body: "Ledger sales after returns next to platform spend for the same period. NetSuite at Black Clover. The platforms do not get to define the period.",
+  },
+  {
+    title: "Warehouse",
+    body: "Snowflake, dbt, and Airflow into Oracle NetSuite on the Black Clover desk. BigQuery at Nutricost. SQL, Python, and R on the same books.",
+  },
+  {
+    title: "Model",
+    body: "Meridian Bayesian MMM on Google, Meta, and Microsoft. Robyn on Amazon, Google, Meta, and TikTok. The model estimates what each channel is pulling. It does not spend the money.",
+  },
+  {
+    title: "Experiment",
+    body: "GeoLift geo-holdouts and RCTs when two channels claimed the same sale. Causal inference for the person who owns the mix — the Black Clover CEO or the Nutricost CMO.",
+  },
+  {
+    title: "Decision",
+    body: "Cash MER is the allocation KPI: sales after returns ÷ ad spend. Break-even is 1 ÷ contribution margin. Platform ROAS is a channel report.",
+  },
+  {
+    title: "Budget",
+    body: "Below cash MER break-even, we cut. The mix moves after the test, not after the last-click deck. The model is a tool. The budget is the job.",
+  },
 ] as const;
 
 export const methodPillars = [

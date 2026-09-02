@@ -9,14 +9,18 @@ import "./globals.css";
 const sans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  display: "swap",
+  display: "optional",
+  adjustFontFallback: true,
+  preload: true,
 });
 
 const mono = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
   variable: "--font-mono",
-  display: "swap",
+  display: "optional",
+  adjustFontFallback: true,
+  preload: true,
 });
 
 export const metadata: Metadata = {

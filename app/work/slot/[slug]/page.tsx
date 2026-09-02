@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${slot.label} — ${slot.title}`,
     description: slot.purpose,
     alternates: { canonical: `/work/slot/${slot.slug}` },
+    robots: { index: false, follow: false },
   };
 }
 

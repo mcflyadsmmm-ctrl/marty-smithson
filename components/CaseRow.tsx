@@ -28,13 +28,10 @@ export function CaseRow({ study }: { study: CaseStudy }) {
           <p className="exp-role">{study.role}</p>
           <p className="exp-meta">
             {study.reportsTo} · {study.dates}
-          </p>
-          <p className="exp-metrics">
-            {metrics.map((metric) => (
-              <span className="num" key={metric}>
-                {metric}
-              </span>
-            ))}
+            <span className="exp-metrics">
+              {" · "}
+              {metrics.join(" · ")}
+            </span>
           </p>
           <span className="more">Read case →</span>
         </div>

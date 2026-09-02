@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
-import { nav } from "@/lib/site";
+import { nav, site } from "@/lib/site";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -20,10 +20,6 @@ export function SiteHeader() {
       document.body.style.overflow = "";
     };
   }, [open]);
-
-  if (pathname === "/") {
-    return null;
-  }
 
   return (
     <header className="site-header">
@@ -46,6 +42,12 @@ export function SiteHeader() {
             );
           })}
         </nav>
+        <div className="header-cta nav-desktop">
+          <a href={site.linkedin} rel="noreferrer" target="_blank">
+            LinkedIn
+          </a>
+          <Link href="/resume">Resume / PDF</Link>
+        </div>
         <button
           className="nav-toggle"
           type="button"
@@ -71,14 +73,23 @@ export function SiteHeader() {
           </button>
         </div>
         <ul className="nav-overlay-list">
-          {nav.map((item, index) => (
+          {nav.map((item) => (
             <li key={item.href}>
               <Link href={item.href} onClick={() => setOpen(false)}>
-                <span>0{index + 1}</span>
                 {item.label}
               </Link>
             </li>
           ))}
+          <li>
+            <a href={site.linkedin} rel="noreferrer" target="_blank" onClick={() => setOpen(false)}>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <Link href="/resume" onClick={() => setOpen(false)}>
+              Resume / PDF
+            </Link>
+          </li>
         </ul>
       </div>
     </header>

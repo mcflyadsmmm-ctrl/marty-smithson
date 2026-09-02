@@ -13,8 +13,7 @@ export const metadata: Metadata = {
 export default function EvidencePage() {
   return (
     <article>
-      <header className="case-hero">
-        <p className="eyebrow">Evidence</p>
+      <header className="page-hero">
         <h1>What’s on the desk</h1>
         <p className="lede measure">
           The same facts as the resume, in one place. No invented lifts. The public folders are
@@ -33,23 +32,27 @@ export default function EvidencePage() {
         ))}
       </div>
       <section className="band">
+        <h2>SAMPLE method folders</h2>
         <p className="note measure">
-          SAMPLE Recast R memo and SAMPLE GeoLift notebooks are public method folders — not client
-          data.
+          Public R notebooks. Method work only — not a client extract and not a product comparison.
         </p>
-        <p className="actions">
-          <Link className="btn" href="/resume">
-            Full resume
+        <div className="artifact-list">
+          <a className="artifact" href={site.proof.recast} rel="noreferrer" target="_blank">
+            <strong>SAMPLE Recast memo</strong>
+            <span>R write-up in the public proof repo</span>
+          </a>
+          <a className="artifact" href={site.proof.geolift} rel="noreferrer" target="_blank">
+            <strong>SAMPLE GeoLift</strong>
+            <span>Geo-holdout notebooks in the public proof repo</span>
+          </a>
+        </div>
+        <p className="actions mt-block">
+          <Link className="btn btn-solid" href="/resume">
+            Resume / PDF
           </Link>
           <Link className="btn" href="/approach">
             Approach
           </Link>
-          <a className="btn" href={site.proof.recast} rel="noreferrer" target="_blank">
-            SAMPLE Recast memo
-          </a>
-          <a className="btn" href={site.proof.geolift} rel="noreferrer" target="_blank">
-            SAMPLE GeoLift
-          </a>
         </p>
       </section>
     </article>
