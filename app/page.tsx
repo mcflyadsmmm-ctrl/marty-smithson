@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { FleetMap } from "@/components/FleetMap";
-import { PortalRoles } from "@/components/PortalRoles";
-import { ShiftCompare } from "@/components/ShiftCompare";
-import { hero, homeTease, workPage } from "@/lib/content";
+import { hero, homeIndex, homeTease, workPage } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
@@ -20,16 +18,23 @@ export default function HomePage() {
             <Link href="/work">Work</Link>
             <Link href="/resume">Resume</Link>
           </p>
+          <ul className="hero-index">
+            {homeIndex.map((item) => (
+              <li key={item.label}>
+                <Link href={item.href}>
+                  <span className="label">{item.label}</span>
+                  <strong>{item.value}</strong>
+                  <span className="hero-index-note">{item.note}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </header>
 
       <div className="wrap">
         <section className="section" aria-label="Black Clover">
           <p className="label">Black Clover</p>
-          <div className="proof-grid">
-            <ShiftCompare compact />
-            <PortalRoles compact />
-          </div>
           <FleetMap compact />
         </section>
 

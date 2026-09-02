@@ -1,15 +1,15 @@
 :root {
-  --bg: #d9d9d4;
+  --bg: #ecece8;
   --bg-hero: #111110;
   --ink: #111110;
   --ink-hero: #f3f2ec;
   --muted: #5a5a56;
   --muted-hero: #a8a79c;
   --faint: #7c7c76;
-  --line: #c4c4be;
+  --line: #c8c8c2;
   --line-strong: #111110;
-  --panel: #f5f5f2;
-  --panel-deep: #ecece7;
+  --panel: #f7f7f4;
+  --panel-deep: #e8e8e3;
   --sans: var(--font-sans), "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --mono: var(--font-mono), "IBM Plex Mono", ui-monospace, monospace;
   --page: 68rem;
@@ -136,32 +136,9 @@ p {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  background: color-mix(in srgb, var(--bg-hero) 92%, transparent);
   backdrop-filter: saturate(1.2) blur(10px);
-  border-bottom: 1px solid var(--line);
-}
-
-body:has(.hero) .site-header {
-  background: color-mix(in srgb, var(--bg-hero) 90%, transparent);
-  border-bottom-color: #2a2a28;
-}
-
-body:has(.hero) .wordmark,
-body:has(.hero) .wordmark:hover,
-body:has(.hero) .nav a[aria-current="page"] {
-  color: var(--ink-hero);
-}
-
-body:has(.hero) .nav a {
-  color: var(--muted-hero);
-}
-
-body:has(.hero) .nav a:hover {
-  color: var(--ink-hero);
-}
-
-body:has(.hero) .site-header a:focus-visible {
-  outline-color: var(--ink-hero);
+  border-bottom: 1px solid #2a2a28;
 }
 
 .site-header-inner {
@@ -179,11 +156,11 @@ body:has(.hero) .site-header a:focus-visible {
   font-weight: 500;
   letter-spacing: -0.02em;
   text-decoration: none;
-  color: var(--ink);
+  color: var(--ink-hero);
 }
 
 .wordmark:hover {
-  color: var(--ink);
+  color: #fff;
 }
 
 .nav {
@@ -193,7 +170,7 @@ body:has(.hero) .site-header a:focus-visible {
 }
 
 .nav a {
-  color: var(--muted);
+  color: var(--muted-hero);
   text-decoration: none;
   min-height: 44px;
   display: inline-flex;
@@ -202,7 +179,11 @@ body:has(.hero) .site-header a:focus-visible {
 
 .nav a:hover,
 .nav a[aria-current="page"] {
-  color: var(--ink);
+  color: var(--ink-hero);
+}
+
+.site-header a:focus-visible {
+  outline-color: var(--ink-hero);
 }
 
 .site-main {
@@ -265,6 +246,57 @@ body:has(.hero) .site-header a:focus-visible {
 
 .hero a:focus-visible {
   outline-color: var(--ink-hero);
+}
+
+.hero-index {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin: 2.8rem 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid #2e2e2a;
+}
+
+.hero-index a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  min-height: 44px;
+  padding: 1.15rem 1rem 0.2rem 0;
+  margin-right: 0.75rem;
+  border-right: 1px solid #2e2e2a;
+  text-decoration: none;
+  color: var(--ink-hero);
+}
+
+.hero-index li:last-child a {
+  border-right: 0;
+}
+
+.hero-index a:hover {
+  color: #fff;
+}
+
+.hero-index .label {
+  margin: 0;
+}
+
+.hero-index strong {
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.hero-index-note {
+  font-size: 0.86rem;
+  color: var(--muted-hero);
+}
+
+.after-figure {
+  margin-top: 1.25rem;
 }
 
 .page-head {
@@ -769,13 +801,14 @@ a.resume-card:hover {
 .site-footer {
   width: min(100%, var(--page));
   margin: 0 auto;
-  padding: 0 var(--gutter) 2rem;
+  padding: 0.5rem var(--gutter) 2rem;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
   font-size: 0.82rem;
   color: var(--muted);
+  border-top: 1px solid var(--line);
 }
 
 .footer-links {
@@ -797,6 +830,17 @@ a.resume-card:hover {
 }
 
 @media (max-width: 960px) {
+  .hero-index {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-index a {
+    border-right: 0;
+    border-bottom: 1px solid #2e2e2a;
+    margin-right: 0;
+    padding-right: 0.85rem;
+  }
+
   .arch-board,
   .arch.is-compact .arch-board,
   .shift-grid,

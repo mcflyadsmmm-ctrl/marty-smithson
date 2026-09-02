@@ -24,6 +24,33 @@ export const homeTease = {
   href: "/work/systems-fleet",
 } as const;
 
+export const homeIndex = [
+  {
+    label: "Shift",
+    value: "Domo → Cloud Run",
+    note: "~$20K a month off the bill",
+    href: "/work/systems-fleet",
+  },
+  {
+    label: "Class",
+    value: "~$30",
+    note: "GCP class held",
+    href: "/work/systems-fleet",
+  },
+  {
+    label: "Portal",
+    value: "~50",
+    note: "people. Live NetSuite.",
+    href: "/work/systems-fleet#portal",
+  },
+  {
+    label: "Books",
+    value: "5",
+    note: "isolated. One writer each.",
+    href: "/work/systems-fleet",
+  },
+] as const;
+
 export type FleetLane = {
   id: LaneId;
   title: string;

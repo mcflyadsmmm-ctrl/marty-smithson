@@ -25,12 +25,6 @@ export default function SystemsFleetPage() {
       </header>
 
       <div className="wrap">
-        <section className="section-copy">
-          {fleet.open.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </section>
-
         <section className="section" aria-labelledby="arch-title">
           <h2 id="arch-title" className="visually-hidden">
             Architecture
@@ -38,11 +32,14 @@ export default function SystemsFleetPage() {
           <FleetMap />
         </section>
 
+        <section className="section-copy after-figure">
+          {fleet.open.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </section>
+
         <section className="section">
           <h2>{fleet.shift.title}</h2>
-          <div className="section-copy">
-            <p>{fleet.shift.lead}</p>
-          </div>
           <ShiftCompare />
           <div className="section-copy">
             <p>{fleet.shift.note}</p>
@@ -51,9 +48,6 @@ export default function SystemsFleetPage() {
 
         <section className="section">
           <h2>{fleet.identities.title}</h2>
-          <div className="section-copy">
-            <p>{fleet.identities.lead}</p>
-          </div>
           <PortalRoles />
           <div className="section-copy">
             <p>{fleet.identities.note}</p>
@@ -62,15 +56,12 @@ export default function SystemsFleetPage() {
 
         <section className="section">
           <p className="label">Lanes</p>
-          <h2>Five books. One writer each.</h2>
+          <h2>Five isolated books</h2>
           <LaneGrid />
         </section>
 
         <section className="section">
           <h2>{fleet.constraints.title}</h2>
-          <div className="section-copy">
-            <p>{fleet.constraints.lead}</p>
-          </div>
           <ul className="constraint-grid">
             {fleet.constraints.items.map((item) => (
               <li className="constraint" key={item.title}>
