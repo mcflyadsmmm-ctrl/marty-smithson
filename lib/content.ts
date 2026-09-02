@@ -2,6 +2,8 @@ export type BrandCategory = "Trades" | "Professional" | "Product";
 
 export type CaseSlug = "nutricost" | "mcfly";
 
+export type LaneId = "wholesale" | "portal" | "cash" | "retail" | "fulfillment";
+
 export type CaseStudy = {
   slug: CaseSlug;
   brand: string;
@@ -17,57 +19,173 @@ export const hero = {
   line: "I run BI and performance marketing at Black Clover, and I report to the CEO.",
 } as const;
 
-export const homeParagraphs = [
-  "When I got here the warehouse lived in Domo. I moved all of it onto Google Cloud Run, and we ended up about twenty thousand dollars a month cheaper without changing the work.",
-  "I built a partner portal on Cloud Run for the people who needed the same numbers in the field. About fifty of them use it — executives, rep leads, and the reps. It pulls live NetSuite, gives each person the access they should have, and they can message each other. We put a hard limit on what it can cost.",
-  "The quieter part is the books. Leadership has one wholesale number. When we look at cash, we look at what we sold against what we spent. Retail is store net. Fulfillment sits on its own so a partial order doesn’t get cleaned up into something prettier.",
-] as const;
+export const homeTease = {
+  paragraphs: [
+    "When I got here the warehouse lived in Domo. I moved it onto Google Cloud Run — Cloud Run, BigQuery, and the Apps Script jobs a shop like this actually runs on — and about twenty thousand a month came off the bill. The new stack had to stay in a cheap GCP class, around thirty dollars.",
+    "I built a partner portal on that same stack for about fifty people in the field. Executives, rep leads, and the reps. Live NetSuite. Each role sees a different slice. They can message each other. They cannot rewrite the number.",
+    "Wholesale, cash, retail, and fulfillment each keep their own book. One writer. Isolated identity. If two lanes can quietly disagree, leadership is deciding on theater.",
+  ],
+  more: "The architecture, the Domo move, and the portal identity model.",
+  href: "/work/systems-fleet",
+} as const;
 
 export const homeAfter =
-  "I was at Nutricost before Black Clover. If you want that story, and McFly Ads, they’re on the work page.";
+  "I was at Nutricost before this. I organized the data portfolio for thirteen unique sub-brands, and I built the full data warehouse and the advertising data-science station executives used for profit margins and COGS. McFly Ads is the company I started in 2020.";
+
+export type FleetLane = {
+  id: LaneId;
+  title: string;
+  short: string;
+  body: string[];
+};
 
 export const fleet = {
   title: "Black Clover",
   role: "Head of BI & Performance Marketing",
   reportsTo: "I report to the CEO.",
-  lead: "The work I can talk about in public is the warehouse, the portal, and the books we use to decide.",
-  sections: [
-    {
-      title: "The warehouse",
-      body: "It was on Domo when I arrived, and it was costing us. I moved the whole thing onto Google Cloud Run. About twenty thousand a month came off the bill, and the work didn’t have to change.",
-    },
-    {
-      title: "The portal",
-      body: "The field needed somewhere to work from, so I built a partner portal on Cloud Run. About fifty people are on it — executives, the rep leads, and the reps. It uses live NetSuite, access depends on the role, they can message each other, and there’s a hard cap on cost.",
-    },
-    {
-      title: "The books",
-      body: "They’re separate on purpose. Leadership has one wholesale book, written by one person, and we lock it after we ship. For the mix I use cash — ledger sales against exact spend — and that’s what Google, Meta, and Microsoft get budget from. Retail is store net, with tax left out. Fulfillment has its own book so a partial shipment stays a partial shipment.",
-    },
+  dates: "February 2025 — present",
+  lead: "I moved the warehouse off Domo and built the isolated books the CEO and the field both use.",
+  open: [
+    "The resume can say Cloud Run and a partner portal. What it cannot show is how the company actually decides: five books that are not allowed to borrow from each other, a field of about fifty people who can read a number they cannot rewrite, and a warehouse that had to leave a vendor bill without landing on another one.",
   ],
+  shift: {
+    title: "Domo to Cloud Run",
+    lead: "The warehouse was in Domo when I arrived. One vendor held the tables and the dashboards, and the bill did not match the work.",
+    before: {
+      label: "Then",
+      title: "Domo",
+      points: [
+        "The full data warehouse sat on a BI vendor.",
+        "The work and the invoice had come apart.",
+      ],
+    },
+    after: {
+      label: "Now",
+      title: "Cloud Run",
+      points: [
+        "Same warehouse work, on Google Cloud Run.",
+        "Apps Script and BigQuery around it.",
+        "GCP class held around thirty dollars.",
+        "About twenty thousand a month off the bill.",
+      ],
+    },
+    note: "I did not change the work to make the move look good. The constraint was the envelope: a cheap GCP class, not a second vendor.",
+  },
+  mapCaption: "Five isolated books. Sources do not write the fact. Neither does the field.",
+  sources: ["Oracle NetSuite", "Google, Meta, Microsoft", "Retail POS", "Fulfillment"],
+  lanes: [
+    {
+      id: "wholesale",
+      title: "Wholesale decision net",
+      short: "Exec wholesale",
+      body: [
+        "Leadership gets one wholesale number. One person writes it. After we ship, we lock it. A second system is not allowed to edit the same fact — if it can, you do not have a book. You have an argument.",
+        "Identity stays isolated from the partner portal. A rep cannot drift the number the CEO is looking at. That is the whole point of a decision net: the exec book and the field book can agree, but they cannot share a writer.",
+      ],
+    },
+    {
+      id: "portal",
+      title: "Partner portal",
+      short: "Field portal",
+      body: [
+        "About fifty people needed the same facts without a copy they could rewrite. I built the portal on Cloud Run. It pulls live Oracle NetSuite. Executives, rep leads, and reps each get the slice their role is allowed to see, and they can message each other.",
+        "The portal never owns the fact. It can display the number. It cannot become a second writer. That rule is what keeps a fifty-person field from quietly inventing a second company.",
+      ],
+    },
+    {
+      id: "cash",
+      title: "Cash MER",
+      short: "Cash MER",
+      body: [
+        "When we look at the mix we look at cash: ledger sales against exact spend. Google, Meta, and Microsoft get budget from that. Platform ROAS is not the budget.",
+        "If we cannot close sales to spend, the mix does not move. Fail-closed. Below break-even, we cut. Meridian sits on the Google, Meta, and Microsoft mix. When two channels claim the same sale, GeoLift or an RCT decides — not the ad manager.",
+      ],
+    },
+    {
+      id: "retail",
+      title: "Retail POS",
+      short: "Retail POS",
+      body: [
+        "Store net sales only. Tax is not a KPI. The retail book does not borrow wholesale or paid numbers to look healthier, and it does not get folded into the exec wholesale number just because a store had a good week.",
+      ],
+    },
+    {
+      id: "fulfillment",
+      title: "Fulfillment",
+      short: "Fulfillment",
+      body: [
+        "One customer story. A partial shipment stays a partial shipment. Fulfillment is told on its own book so operations cannot get cleaned up into wholesale, and wholesale cannot pretend a partial is a complete order.",
+      ],
+    },
+  ] as const satisfies readonly FleetLane[],
+  identities: {
+    title: "Who sees what",
+    lead: "About fifty people on Cloud Run. Three roles. One live NetSuite. Nobody in this picture writes the fact.",
+    roles: [
+      {
+        title: "Executive",
+        sees: "The company book.",
+        rule: "Can read. Cannot rewrite.",
+      },
+      {
+        title: "Rep lead",
+        sees: "The team.",
+        rule: "Can read. Cannot rewrite.",
+      },
+      {
+        title: "Rep",
+        sees: "Their own book.",
+        rule: "Can read. Cannot rewrite.",
+      },
+    ],
+    note: "Messaging sits between them. Access is the role. The writer lives on the wholesale desk, not in the portal.",
+  },
+  constraints: {
+    title: "What made it hard",
+    lead: "The interesting part is not that a portal exists. It is what the portal was not allowed to become.",
+    items: [
+      {
+        title: "Identity isolation",
+        body: "The exec wholesale book and the field portal do not share a writer. Agreeing is allowed. Drifting is not.",
+      },
+      {
+        title: "One writer",
+        body: "Each lane has one owner. We freeze it after we ship. Dual-write is how two dashboards start telling two companies.",
+      },
+      {
+        title: "The GCP envelope",
+        body: "Cloud Run, BigQuery, Apps Script. The class had to stay around thirty dollars. A warehouse move that trades Domo for another fat bill is not a move.",
+      },
+    ],
+  },
+  mix: {
+    title: "The mix sits on this",
+    body: "I allocate a seven-figure monthly paid book across Google, Meta, and Microsoft against cash MER, for the CEO. The systems work is why that call is possible. Without isolated books, mix is a meeting.",
+  },
 } as const;
 
 export const workPage = {
-  lead: "Most of what I want to show is Black Clover. Nutricost and McFly Ads are further down if you keep reading.",
+  lead: "Most of what I want to show is Black Clover. Nutricost and McFly Ads are further down.",
   blackClover: {
     title: "Black Clover",
     role: "Head of BI & Performance Marketing. I report to the CEO.",
-    body: "I moved the warehouse off Domo onto Cloud Run, built the partner portal, and I keep the books for wholesale, cash, retail, and fulfillment.",
+    body: "Warehouse off Domo onto Cloud Run — about twenty thousand a month cheaper, held to a GCP class around thirty dollars. Partner portal for about fifty people. Five isolated books: wholesale, the field, cash MER, retail, and fulfillment.",
     href: "/work/systems-fleet",
-    more: "Here’s the longer write-up.",
+    more: "Architecture, the move, and the identity model.",
   },
   nutricost: {
     title: "Nutricost",
     role: "Performance Marketing & Analytics Lead. I reported to the CMO.",
     href: "/work/nutricost",
     body: "I organized the data portfolio for thirteen unique sub-brands under the main brand. I built the full data warehouse, and I built the advertising data-science station where executives could see profit margins and COGS.",
+    more: "The Nutricost note.",
   },
   mcfly: {
     title: "McFly Ads",
     role: "I started the company in 2020, and I’m CEO there.",
     href: "/work/mcfly",
     body: "I’ve spent those years doing marketing data science for ten brands.",
-    more: "The brand names",
+    more: "The brand names.",
   },
 } as const;
 
@@ -78,9 +196,10 @@ export const cases: CaseStudy[] = [
     role: "Performance Marketing & Analytics Lead",
     dates: "August 2024 — February 2025",
     reportsTo: "Reported to the CMO",
-    lead: "I organized the 13-brand data portfolio, and I built the warehouse and the ads station executives used for margins.",
+    lead: "Thirteen sub-brands. One CMO desk for margins and COGS.",
     body: [
-      "I organized the data portfolio for thirteen unique sub-brands under the Nutricost main brand. I built the full data warehouse. I built the advertising data-science station where executives could see profit margins and COGS.",
+      "I organized the data portfolio for thirteen unique sub-brands under the Nutricost main brand. The job was to get those books to sit together so a CMO desk could see the portfolio, not thirteen separate stories.",
+      "I built the full data warehouse. I built the advertising data-science station where executives could see profit margins and COGS.",
     ],
   },
   {
@@ -200,4 +319,23 @@ export const resume = {
 
 export function caseBySlug(slug: string): CaseStudy | undefined {
   return cases.find((item) => item.slug === slug);
+}
+
+export function laneHref(id: LaneId, prefix = ""): string {
+  switch (id) {
+    case "wholesale":
+      return `${prefix}#wholesale`;
+    case "portal":
+      return `${prefix}#portal`;
+    case "cash":
+      return `${prefix}#cash`;
+    case "retail":
+      return `${prefix}#retail`;
+    case "fulfillment":
+      return `${prefix}#fulfillment`;
+    default: {
+      const _never: never = id;
+      return _never;
+    }
+  }
 }

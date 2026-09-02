@@ -6,13 +6,13 @@ Live: [https://marty-smithson.vercel.app](https://marty-smithson.vercel.app)
 
 ## Visual system
 
-A short written page. Not a landing page.
+A personal read with systems proof. Not a landing page.
 
 - Background: `#FAF9F6`
 - Ink: `#161616`
-- Type: Source Serif 4 for the writing, Inter only in the header and footer
-- One column, narrow measure
-- No cards, pills, steppers, or display-name hero
+- Type: Source Serif 4 for the writing, Inter in the header, footer, and figures
+- Prose stays a narrow measure; architecture figures can use the wider page
+- No pills, no Measure→Move steppers, no display-name hero
 
 ## Stack
 
@@ -33,9 +33,9 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Path | Page |
 | --- | --- |
-| `/` | Name, then the Black Clover work in short paragraphs |
-| `/work` | Black Clover, Nutricost, McFly Ads |
-| `/work/systems-fleet` | The Black Clover work at length |
+| `/` | Name, then a tease of the Black Clover architecture |
+| `/work` | Black Clover proof first; Nutricost and McFly Ads |
+| `/work/systems-fleet` | Black Clover proof: lanes, Domo→Cloud Run, portal identity |
 | `/work/nutricost` | Short Nutricost note |
 | `/work/mcfly` | McFly Ads — CEO title is here |
 | `/resume` | PDF downloads |
@@ -53,7 +53,7 @@ Education: UVU B.S., Data Science and Statistics emphasis.
 
 Resume PDFs live in `public/resumes/`. User-facing labels: Full resume / Measurement / Systems and analytics.
 
-Ownership FINAL md5s (already on main via #16). Helped-era `529fbf25` / `4d13437d` / `7605a9c0` are obsolete.
+Ownership FINAL md5s (owned Nutricost verbs, already on main via #16). Helped-era `529fbf25` / `4d13437d` / `7605a9c0` are obsolete.
 
 - MASTER `28e46f6afed043de3a84d2937412a201`
 - SCIENCE `bf39d5feeef7d6631e8e907b905fea4d`

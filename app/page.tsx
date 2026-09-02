@@ -1,18 +1,25 @@
 import Link from "next/link";
-import { hero, homeAfter, homeParagraphs } from "@/lib/content";
+import { FleetMap } from "@/components/FleetMap";
+import { hero, homeAfter, homeTease } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
   return (
     <article className="doc">
-      <header className="open">
+      <header className="open first-screen">
         <h1>{hero.name}</h1>
         <p className="open-line">{hero.line}</p>
       </header>
 
-      {homeParagraphs.map((paragraph) => (
+      {homeTease.paragraphs.map((paragraph) => (
         <p key={paragraph}>{paragraph}</p>
       ))}
+
+      <FleetMap compact />
+
+      <p>
+        <Link href={homeTease.href}>{homeTease.more}</Link>
+      </p>
 
       <p className="quiet after">{homeAfter}</p>
 
