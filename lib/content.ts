@@ -8,87 +8,88 @@ export type CaseStudy = {
   role: string;
   dates: string;
   reportsTo: string;
-  headline: string;
   lead: string;
   body: string[];
 };
 
 export const hero = {
   name: "Marty Smithson",
-  line: "I moved Black Clover’s warehouse off Domo onto Cloud Run, and built the partner portal the field uses.",
+  line: "I’m Head of BI & Performance Marketing at Black Clover. I report to the CEO.",
 } as const;
 
-export const homeStories = [
+export const homeSections = [
   {
     title: "The warehouse",
-    body: "Domo was running the warehouse and the bill. I moved the full data warehouse onto Google Cloud Run. Same work. About $20K a month less.",
+    body: "When I started, Domo was running the warehouse. I moved the whole thing onto Google Cloud Run, which kept the same work in place and took about $20,000 a month off the bill.",
   },
   {
     title: "The partner portal",
-    body: "About 50 people needed the same numbers as leadership — executives, rep leads, reps — without rewriting them. I built that portal on Cloud Run: live NetSuite, the right access for each role, messaging between them, inside a hard cost cap.",
+    body: "I built a partner portal on Cloud Run for about fifty people — executives, rep leads, and the reps. It uses live NetSuite, gives people access based on their role, and has messaging between them. There’s a hard cap on what it costs.",
+  },
+  {
+    title: "Wholesale, cash, retail, fulfillment",
+    body: "Leadership has one wholesale book. Cash is sales against what we actually spent. Retail is store net, with tax left out. Fulfillment sits on its own, so a partial order shows up as a partial.",
   },
 ] as const;
 
-export const homeNote =
-  "Head of BI & Performance Marketing at Black Clover. I report to the CEO. Marketing is the domain I know; the work is the systems underneath it.";
+export const homeAfter =
+  "Before this I was at Nutricost. That’s on the work page, with McFly Ads.";
 
 export const fleet = {
-  title: "What I built",
-  place: "Black Clover",
-  role: "Head of BI & Performance Marketing · I report to the CEO",
-  dates: "February 2025 — present",
-  lead: "I moved the warehouse off Domo onto Cloud Run — about $20K a month less — and built a partner portal for about 50 people on the same stack. Wholesale, cash, retail, and fulfillment each keep their own honest book.",
-  steps: ["Measure", "Check", "Lock", "Decide", "Move"] as const,
-  warehouse: {
-    title: "Warehouse off Domo",
-    body: "Domo was holding the warehouse and the bill. I moved the full data warehouse onto Google Cloud Run. Same work. About $20K a month less.",
-  },
-  lanes: [
+  title: "Black Clover",
+  role: "Head of BI & Performance Marketing",
+  reportsTo: "I report to the CEO.",
+  lead: "I moved the warehouse off Domo onto Google Cloud Run and built a partner portal on the same stack for about fifty people. I also keep separate books for wholesale, cash, retail, and fulfillment.",
+  sections: [
     {
-      title: "Wholesale leadership book",
-      body: "One wholesale number for leadership. One owner. We lock it after we ship so two systems cannot quietly disagree.",
+      title: "Warehouse",
+      body: "Domo was running the warehouse, and the bill was high. I moved the full data warehouse onto Google Cloud Run, which kept the same work in place and took about $20,000 a month off the bill.",
     },
     {
       title: "Partner portal",
-      body: "About 50 people — executives, rep leads, reps — on Cloud Run. Live NetSuite, the right access for each role, messaging between them, inside a hard cost cap. They can read the number. They cannot rewrite it.",
+      body: "About fifty people needed a place to work from — executives, rep leads, and reps. I built it on Cloud Run. It pulls live NetSuite, gives each role the right access, and has messaging between them, with a hard cap on cost.",
     },
     {
-      title: "Cash MER",
-      body: "Ledger sales against exact spend. Google, Meta, and Microsoft get budget from that, not from ad-platform ROAS. Below break-even, we cut.",
+      title: "Wholesale",
+      body: "Leadership has one wholesale book, and one person who writes it. We lock it after we ship so two systems don’t start telling different stories.",
     },
     {
-      title: "Retail POS",
-      body: "Store net sales only. Tax is not a KPI.",
+      title: "Cash",
+      body: "For the mix I use cash MER: ledger sales against exact spend. That’s the number Google, Meta, and Microsoft get budget from.",
+    },
+    {
+      title: "Retail",
+      body: "Retail is store net sales. We leave tax out of that number.",
     },
     {
       title: "Fulfillment",
-      body: "One customer story. Partials are told on their own book.",
+      body: "Fulfillment has its own book. If something ships partial, that’s what the number says.",
     },
   ],
 } as const;
 
-export const workIndex = {
-  lead: "Black Clover — warehouse off Domo, the portal, and the books leadership uses.",
-  case: {
-    href: "/work/systems-fleet",
+export const workPage = {
+  lead: "Black Clover is the main one. Nutricost and McFly Ads are shorter notes below.",
+  blackClover: {
     title: "Black Clover",
-    role: "Head of BI & Performance Marketing · reports to the CEO",
-    body: "Full warehouse off Domo onto Cloud Run — about $20K a month saved. Partner portal on Cloud Run for about 50 people. Honest books for wholesale, cash, retail, and fulfillment.",
+    role: "Head of BI & Performance Marketing. I report to the CEO.",
+    body: "I moved the warehouse off Domo onto Cloud Run, built the partner portal, and keep the books for wholesale, cash, retail, and fulfillment.",
+    href: "/work/systems-fleet",
+    more: "The longer version",
   },
-  also: [
-    {
-      href: "/work/nutricost",
-      title: "Nutricost",
-      role: "Performance Marketing & Analytics Lead · reported to the CMO",
-      body: "Amazon, Google, Meta, and TikTok on one desk. Ketologic and Primaforce from $50 a day to $1,000 a day.",
-    },
-    {
-      href: "/work/mcfly",
-      title: "McFly Ads",
-      role: "CEO · marketing data science since 2020",
-      body: "My company. Ten named brands. The CEO title applies here only.",
-    },
-  ],
+  nutricost: {
+    title: "Nutricost",
+    role: "Performance Marketing & Analytics Lead. I reported to the CMO.",
+    href: "/work/nutricost",
+    body: "I helped organize the data for thirteen sub-brands under the Nutricost main brand. I also helped build the data warehouse and the advertising analysis station where executives could see profit margins and COGS. The paid work sat on Amazon, Google, Meta, and TikTok.",
+  },
+  mcfly: {
+    title: "McFly Ads",
+    role: "CEO. I started it in 2020.",
+    href: "/work/mcfly",
+    body: "That’s the one place I’m CEO. I’ve spent those years doing marketing data science for ten brands.",
+    more: "The brands",
+  },
 } as const;
 
 export const cases: CaseStudy[] = [
@@ -96,13 +97,12 @@ export const cases: CaseStudy[] = [
     slug: "nutricost",
     brand: "Nutricost",
     role: "Performance Marketing & Analytics Lead",
-    dates: "August 2024 — February 2025 · 7 months",
+    dates: "August 2024 — February 2025",
     reportsTo: "Reported to the CMO",
-    headline: "Four platforms. One CMO desk.",
-    lead: "Each platform wanted credit for the same order. Last-click could not answer the mix.",
+    lead: "I helped get the data in order for thirteen sub-brands, and helped build the warehouse executives used for margins.",
     body: [
-      "I owned Amazon, Google, Meta, and TikTok for seven months and presented the mix to the CMO. Robyn on the book. GeoLift when two channels claimed the same order. The test was the budget call.",
-      "Ketologic and Primaforce went from $50 a day to $1,000 a day. Multi-touch attribution, LTV, and cohorts in BigQuery, SQL, and R so contribution was visible past last-click.",
+      "I was Performance Marketing & Analytics Lead at Nutricost, and I reported to the CMO. I helped organize a portfolio of data for thirteen unique sub-brands under the Nutricost main brand.",
+      "I also helped build the full data warehouse and the advertising data science analysis station where executives could see profit margins and COGS. The paid platforms were Amazon, Google, Meta, and TikTok.",
     ],
   },
   {
@@ -110,12 +110,11 @@ export const cases: CaseStudy[] = [
     brand: "McFly Ads",
     role: "CEO",
     dates: "April 2020 — present",
-    reportsTo: "Founder / CEO",
-    headline: "Spend next to sales.",
-    lead: "I started the company in 2020. Brands were buying ads. Each platform reported a win. Finance wanted a simpler answer: did this period’s spend clear contribution?",
+    reportsTo: "Founder",
+    lead: "I started the company in 2020. That’s the one place I’m CEO.",
     body: [
-      "Six years of marketing data science for ten named brands — mix models, incrementality, executive dashboards, retail command centers, paid allocation. I present the work to operators.",
-      "McFly Analytics is submitted to the Shopify App Store (listing pending). That is the lab, not the Black Clover job. The CEO title applies only here.",
+      "I’ve spent those years doing marketing data science for ten named brands — mix models, incrementality, dashboards, and paid allocation. I present that work to the people who run the companies.",
+      "McFly Analytics is submitted to the Shopify App Store. The listing is still pending.",
     ],
   },
 ];
@@ -142,19 +141,19 @@ export const resumePdfs = [
     key: "full",
     href: "/resumes/Marty_Smithson_Resume_MASTER.pdf",
     title: "Full resume",
-    note: "The default.",
+    note: "The whole thing.",
   },
   {
     key: "measurement",
     href: "/resumes/Marty_Smithson_Resume_SCIENCE.pdf",
-    title: "Measurement focus",
+    title: "Measurement",
     note: "Mix models and incrementality.",
   },
   {
     key: "systems",
     href: "/resumes/Marty_Smithson_Resume_OPERATOR.pdf",
-    title: "Systems & analytics",
-    note: "BI, the warehouse, and the portal.",
+    title: "Systems and analytics",
+    note: "The warehouse, the portal, the BI work.",
   },
 ] as const;
 
@@ -162,7 +161,7 @@ export const resume = {
   role: "Head of Business Intelligence & Performance Marketing",
   scan: "Head of BI & Performance Marketing at Black Clover · reports to the CEO · UVU B.S. Data Science and Statistics",
   summary:
-    "Head of Business Intelligence & Performance Marketing at Black Clover — I report to the CEO. I moved the full data warehouse off Domo onto Google Cloud Run (about $20K a month saved) and built a partner portal on Cloud Run for about 50 people. I allocate a seven-figure monthly paid mix across Google, Meta, and Microsoft against cash MER. Previously reported to the CMO at Nutricost across Amazon, Google, Meta, and TikTok, including Ketologic and Primaforce from $50/day to $1,000/day. CEO of McFly Ads since 2020.",
+    "Head of Business Intelligence & Performance Marketing at Black Clover — I report to the CEO. I moved the full data warehouse off Domo onto Google Cloud Run (about $20K a month saved) and built a partner portal on Cloud Run for about 50 people. I allocate a seven-figure monthly paid mix across Google, Meta, and Microsoft against cash MER. Previously Performance Marketing & Analytics Lead at Nutricost, reporting to the CMO: I helped organize data for 13 sub-brands and helped build the warehouse and advertising analysis station executives used for profit margins and COGS. CEO of McFly Ads since 2020.",
   jobs: [
     {
       title: "Head of Business Intelligence & Performance Marketing",
@@ -171,7 +170,7 @@ export const resume = {
       meta: "Reports to the CEO.",
       bullets: [
         "Moved the full data warehouse off Domo onto Google Cloud Run. About $20K a month saved.",
-        "Built a partner portal on Cloud Run for about 50 people — executives, rep leads, and reps. Live Oracle NetSuite, tiered access, messaging between users.",
+        "Built a partner portal on Cloud Run for about 50 people — executives, rep leads, and reps. Live Oracle NetSuite, role-based access, messaging between users, hard cost cap.",
         "Meridian MMM on Google, Meta, and Microsoft. GeoLift and RCTs when two channels claimed the same sale. Below cash MER break-even, we cut.",
         "Directed a seven-figure monthly paid mix against cash MER for the CEO. Platform ROAS was not the budget.",
         "Snowflake, dbt, and Airflow into Oracle NetSuite. R, SQL, and Python. BI in Looker, Domo, and Tableau.",
@@ -184,16 +183,16 @@ export const resume = {
       dates: "08/2024 - 02/2025 (7 months)",
       meta: "Reported to the CMO.",
       bullets: [
-        "Robyn MMM on Amazon, Google, Meta, and TikTok. GeoLift when those platforms claimed the same order. Presented results to the CMO.",
-        "Scaled Ketologic and Primaforce from $50/day to $1,000/day. Owned a seven-figure monthly paid book for 7 months.",
-        "Multi-touch attribution, LTV, and cohorts in BigQuery, SQL, and R. GA4 and Looker Studio for the weekly desk.",
+        "Helped organize a portfolio of data for 13 unique sub-brands under the Nutricost main brand.",
+        "Helped build the full data warehouse and the advertising data science analysis station where executives could see profit margins and COGS.",
+        "Paid platforms: Amazon, Google, Meta, and TikTok.",
       ],
     },
     {
       title: "CEO",
       org: "McFly Ads",
       dates: "04/2020 - Present",
-      meta: "Marketing data-science company. Held alongside later roles. CEO title applies only here.",
+      meta: "I started the company in 2020.",
       bullets: [
         "6 years of marketing data science for 10 named brands: Robyn and Meridian, GeoLift, executive dashboards, retail command centers, and paid allocation.",
         "Named brands: Marksman Construction, Malama Solar, Royal Peak Lighting, Stretch Labs, Kin Home, BatBridge Bookkeeping, Whirly Board, Arizona Gym Floors, Pure Air Solutions, Priority Mulching Services.",

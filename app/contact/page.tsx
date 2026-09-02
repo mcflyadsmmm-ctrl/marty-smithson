@@ -10,18 +10,16 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <article className="contact">
-      <header className="page-head">
+    <article className="doc">
+      <header className="open">
         <h1>Contact</h1>
-        <p className="lede">{site.locationLine}</p>
+        <p className="open-line">{site.locationLine}</p>
       </header>
       <p>
-        <a className="mail" href={`mailto:${site.email}`}>
-          {site.email}
-        </a>
+        <a href={`mailto:${site.email}`}>{site.email}</a>
       </p>
-      <p className="note">{site.authorization}</p>
-      <p className="case-nav">
+      <p className="quiet">{site.authorization}</p>
+      <p className="close-links">
         <a href={site.linkedin} rel="noreferrer" target="_blank">
           LinkedIn
         </a>

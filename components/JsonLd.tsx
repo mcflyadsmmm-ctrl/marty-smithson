@@ -29,6 +29,7 @@ const graph = {
       ],
       worksFor: [
         { "@type": "Organization", name: "Black Clover" },
+        { "@type": "Organization", name: "Nutricost" },
         { "@type": "Organization", name: "McFly Ads" },
       ],
       knowsAbout: [

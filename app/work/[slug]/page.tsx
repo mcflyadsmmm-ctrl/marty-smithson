@@ -37,30 +37,27 @@ export default async function CasePage({ params }: Props) {
   if (!study) notFound();
 
   return (
-    <article className="case">
-      <header className="page-head">
-        <p className="kicker">
-          {study.role} · {study.dates} · {study.reportsTo}
-        </p>
+    <article className="doc">
+      <header className="open">
         <h1>{study.brand}</h1>
-        <p className="lede">{study.headline}</p>
+        <p className="quiet">
+          {study.role}. {study.reportsTo}. {study.dates}.
+        </p>
+        <p className="open-line">{study.lead}</p>
       </header>
 
-      <p className="case-lead">{study.lead}</p>
       {study.body.map((paragraph) => (
-        <p className="case-copy" key={paragraph}>
-          {paragraph}
-        </p>
+        <p key={paragraph}>{paragraph}</p>
       ))}
 
       {study.slug === "mcfly" ? (
-        <section className="case-section">
+        <section>
           <h2>Named brands</h2>
           <BrandRoster />
         </section>
       ) : null}
 
-      <p className="case-nav">
+      <p className="close-links">
         <Link href="/work">All work</Link>
         {study.slug === "mcfly" ? (
           <a href={site.mcfly} rel="noreferrer" target="_blank">
