@@ -13,6 +13,11 @@ export const site = {
     "American Fork, Utah, United States · Salt Lake metro hybrid / US remote · EST overlap",
   authorization: "US citizen. No visa sponsorship required.",
   mcfly: "https://mcflyads.com",
+  pack: {
+    master: "/resumes/Marty_Smithson_Resume_MASTER.pdf",
+    science: "/resumes/Marty_Smithson_Resume_SCIENCE.pdf",
+    operator: "/resumes/Marty_Smithson_Resume_OPERATOR.pdf",
+  },
   proof: {
     repo: "https://github.com/mcflyadsmmm-ctrl/marketing-measurement-proof",
     recast: "https://github.com/mcflyadsmmm-ctrl/marketing-measurement-proof/tree/main/00-recast-r-memo",

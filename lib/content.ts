@@ -207,7 +207,7 @@ export const origin = {
 export const methodSteps = [
   {
     title: "Data",
-    body: "Ledger sales after returns next to platform spend for the same period. NetSuite at Black Clover. The platforms do not get to define the period.",
+    body: "Pull ledger sales after returns onto the same desk as Google, Meta, Microsoft, Amazon, and TikTok spend for the same period — NetSuite at Black Clover, Shopify or BigQuery books elsewhere. Align the calendar; platforms do not get to define the period or invent the sale.",
   },
   {
     title: "Warehouse",
