@@ -34,12 +34,14 @@ export default function SystemsFleetPage() {
         </ol>
       </figure>
 
-      {fleet.lanes.map((lane) => (
-        <section className="case-section" key={lane.title}>
-          <h2>{lane.title}</h2>
-          <p>{lane.body}</p>
-        </section>
-      ))}
+      <div className="lane-grid">
+        {fleet.lanes.map((lane) => (
+          <section className="case-section" key={lane.title}>
+            <h2>{lane.title}</h2>
+            <p>{lane.body}</p>
+          </section>
+        ))}
+      </div>
 
       <p className="case-nav">
         <Link href="/work">All work</Link>

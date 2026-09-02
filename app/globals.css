@@ -7,8 +7,8 @@
   --accent: #1d4e89;
   --font: var(--font-sans), "Inter", ui-sans-serif, system-ui, sans-serif;
   --display: var(--font-display), "Newsreader", "Times New Roman", serif;
-  --page: 46rem;
-  --gutter: 1.6rem;
+  --page: 58rem;
+  --gutter: 1.75rem;
   --measure: 36rem;
 }
 
@@ -115,9 +115,10 @@ p {
 }
 
 .wordmark {
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: -0.02em;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: -0.03em;
   text-decoration: none;
   color: var(--text);
 }
@@ -161,18 +162,19 @@ p {
 }
 
 .hero h1 {
-  margin: 0 0 1.15rem;
-  max-width: 9ch;
+  margin: 0 0 1.35rem;
+  max-width: 8ch;
   font-family: var(--display);
   font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: 0.95;
+  font-size: clamp(3.2rem, 11vw, 6.2rem);
+  letter-spacing: -0.04em;
+  line-height: 0.9;
 }
 
 .lede {
-  font-size: 1.22rem;
+  font-size: 1.28rem;
   line-height: 1.5;
-  max-width: 28rem;
+  max-width: 32rem;
   color: #3d3933;
   margin: 0;
 }
@@ -207,20 +209,26 @@ p {
 }
 
 .stories {
-  padding: 3.6rem 0 0.4rem;
+  padding: 4rem 0 0.4rem;
   border-top: 1px solid var(--line);
 }
 
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.4rem 3.5rem;
+}
+
 .story {
-  max-width: var(--measure);
-  padding: 0 0 2.2rem;
+  max-width: none;
+  padding: 0;
 }
 
 .story h2 {
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.5rem;
   font-family: var(--display);
   font-weight: 500;
-  font-size: 1.7rem;
+  font-size: 1.85rem;
 }
 
 .story p {
@@ -229,7 +237,7 @@ p {
 }
 
 .story-more {
-  margin: 0.4rem 0 0;
+  margin: 2.2rem 0 0;
 }
 
 .story-more a {
@@ -258,13 +266,13 @@ p {
 
 .lead-case {
   display: block;
-  margin: 1.6rem 0 0;
-  padding: 1.5rem 0 1.7rem;
+  margin: 2rem 0 0;
+  padding: 1.8rem 0 2rem;
   border-top: 1px solid var(--text);
   border-bottom: 1px solid var(--line);
   text-decoration: none;
   color: inherit;
-  max-width: var(--measure);
+  max-width: 40rem;
 }
 
 .lead-case:hover {
@@ -328,10 +336,19 @@ p {
   font-size: 0.92rem;
 }
 
+.lane-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 3rem;
+  margin-top: 0.6rem;
+}
+
 .desk-flow-wrap {
-  margin: 2rem 0 0.6rem;
-  padding: 0;
-  max-width: var(--measure);
+  margin: 2.4rem 0 0.4rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  max-width: none;
 }
 
 .desk-flow-wrap figcaption {
@@ -397,9 +414,10 @@ p {
 
 .pdf-cards {
   list-style: none;
-  margin: 1.6rem 0 0;
+  margin: 2rem 0 0;
   padding: 0;
   display: grid;
+  grid-template-columns: 1fr;
   gap: 0.85rem;
 }
 
@@ -478,6 +496,20 @@ p {
   color: var(--text);
 }
 
+@media (min-width: 760px) {
+  .story-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lane-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pdf-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 640px) {
   :root {
     --gutter: 1.2rem;
@@ -487,6 +519,10 @@ p {
     min-height: calc(100dvh - 5rem);
     padding-top: 2rem;
     padding-bottom: 2.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 16vw, 3.6rem);
   }
 
   .site-header-inner {

@@ -11,12 +11,14 @@ export default function HomePage() {
       </header>
 
       <section className="stories" aria-label="What I built">
-        {homeStories.map((story) => (
-          <div className="story" key={story.title}>
-            <h2>{story.title}</h2>
-            <p>{story.body}</p>
-          </div>
-        ))}
+        <div className="story-grid">
+          {homeStories.map((story) => (
+            <div className="story" key={story.title}>
+              <h2>{story.title}</h2>
+              <p>{story.body}</p>
+            </div>
+          ))}
+        </div>
         <p className="story-more">
           <Link href="/work/systems-fleet">The Black Clover case</Link>
         </p>
