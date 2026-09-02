@@ -1,35 +1,44 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { homeLanes, workBuilds } from "@/lib/content";
+import { workIndex } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Domo warehouse move to Cloud Run (~$20K/month), partner portal for ~50 users, Decision Net, cash MER, retail and fulfillment.",
+    "Black Clover case: warehouse off Domo onto Cloud Run, partner portal for about 50 people, and the books leadership uses.",
   alternates: { canonical: "/work" },
 };
 
 export default function WorkPage() {
+  const { case: lead, also } = workIndex;
+
   return (
-    <article className="work-tight work-personal">
-      <header className="page-hero">
+    <article className="work">
+      <header className="page-head">
         <h1>Work</h1>
-        <p className="lede tight measure">{homeLanes}</p>
+        <p className="lede">{workIndex.lead}</p>
       </header>
 
-      <section className="band band-flush" aria-label="Builds">
-        <ul className="build-list">
-          {workBuilds.map((build) => (
-            <li key={build.lead}>
-              <strong>{build.lead}</strong> — {build.body}
+      <Link className="lead-case" href={lead.href}>
+        <p className="kicker">{lead.role}</p>
+        <h2>{lead.title}</h2>
+        <p>{lead.body}</p>
+        <span className="more">Read the case</span>
+      </Link>
+
+      <section className="also" aria-labelledby="also-title">
+        <h2 id="also-title">Also</h2>
+        <ul>
+          {also.map((item) => (
+            <li key={item.href}>
+              <Link href={item.href}>
+                <strong>{item.title}</strong>
+                <span>{item.role}</span>
+                {item.body}
+              </Link>
             </li>
           ))}
         </ul>
-        <p className="actions">
-          <Link className="btn btn-solid" href="/work/systems-fleet">
-            Read the full case
-          </Link>
-        </p>
       </section>
     </article>
   );

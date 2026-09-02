@@ -1,23 +1,23 @@
 # Marty Smithson
 
-Personal portfolio for Marty Smithson — Head of BI & Performance Marketing.
+Personal portfolio — a read about Marty, not a product page.
 
 Live: [https://marty-smithson.vercel.app](https://marty-smithson.vercel.app)
 
 ## Visual system
 
-Light professional canvas, not a dark terminal template.
+Warm paper, not a SaaS canvas.
 
-- Background: `#F5F7FA`
-- One accent: `#2563EB` (links, active nav, key numbers)
-- Type: Inter via `next/font`. IBM Plex Mono only on real numbers.
-- No lime, no serif display, no monospace chrome, no fixed status bar, no live clock, no hero charts.
+- Background: `#F3EFE6`
+- Ink: `#1B1814`
+- Link: `#1D4E89`
+- Type: Newsreader for titles, Inter for body. No feature pills, no OS stepper, no monospace chrome.
 
 ## Stack
 
 - Next.js 15 App Router
 - TypeScript
-- CSS (Swiss / Brittany Chiang–style layout)
+- CSS
 
 ## Local
 
@@ -28,35 +28,34 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-```bash
-npm run build
-npm start
-```
-
 ## Routes
 
 | Path | Page |
 | --- | --- |
-| `/` | Sentence-led home → about → experience → approach → contact |
-| `/work` | Three case studies |
-| `/work/black-clover` | Black Clover (reports to the CEO) |
-| `/work/nutricost` | Nutricost (reported to the CMO) |
-| `/work/mcfly` | McFly Ads (CEO) |
-| `/approach` | Measurement + systems |
-| `/method` | Permanent redirect to `/approach` |
-| `/evidence` | Evidence desk — same facts as the resume |
-| `/resume` | Master resume (print / save PDF) |
-| `/contact` | Contact |
+| `/` | Name, one line, then the two builds |
+| `/work` | Black Clover case first; Nutricost and McFly as context |
+| `/work/systems-fleet` | What he built at Black Clover |
+| `/work/nutricost` | Short Nutricost note |
+| `/work/mcfly` | McFly Ads — CEO title applies only here |
+| `/resume` | PDF cards only |
+| `/contact` | Email |
+
+`/approach`, `/evidence`, `/method`, and `/work/black-clover` redirect.
 
 ## Facts
 
-Do not invent lifts or executive titles. He reports to the Black Clover CEO. He reported to the Nutricost CMO. CEO applies only at McFly Ads.
+Do not invent lifts, ROAS, or titles. He reports to the Black Clover CEO. CEO applies only at McFly Ads. Education: UVU B.S., Data Science and Statistics emphasis.
 
-SAMPLE method pointers (not client data):
+Resume PDFs live in `public/resumes/`. User-facing labels are Full resume / Measurement focus / Systems & analytics.
 
-- [00-recast-r-memo](https://github.com/mcflyadsmmm-ctrl/marketing-measurement-proof/tree/main/00-recast-r-memo)
-- [01-geolift](https://github.com/mcflyadsmmm-ctrl/marketing-measurement-proof/tree/main/01-geolift)
+Target FINAL md5s (Resume agent):
 
-## Deploy on Vercel
+- MASTER `31bedaf26017d345b91fb50ffac370a2`
+- SCIENCE `bbf49f5b07aa0b48e0064fd2a37b9214`
+- OPERATOR `648355511eeb4ae0623f576894dbdf6e`
+
+This branch still ships the previous live binaries until those bytes are available.
+
+## Deploy
 
 Framework: Next.js. Build: `npm run build`. No environment variables.

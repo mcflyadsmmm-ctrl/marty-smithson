@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Inter } from "next/font/google";
+import { Inter, Newsreader } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -14,10 +14,9 @@ const sans = Inter({
   preload: true,
 });
 
-const mono = IBM_Plex_Mono({
+const display = Newsreader({
   subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono",
+  variable: "--font-display",
   display: "optional",
   adjustFontFallback: true,
   preload: true,
@@ -52,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sans.variable} ${mono.variable}`}>
+    <html lang="en" className={`${sans.variable} ${display.variable}`}>
       <body className={sans.className}>
         <JsonLd />
         <div className="sheet">

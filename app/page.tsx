@@ -1,58 +1,36 @@
 import Link from "next/link";
-import { hero, homeBuilds, homeLanes } from "@/lib/content";
+import { hero, homeNote, homeStories } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
   return (
-    <article className="home-quiet home-personal">
-      <header className="page-hero home-hero-quiet">
-        <p className="hero-name">{hero.name}</p>
-        <h1>{hero.lock}</h1>
-        <p className="lede quiet-lede">{hero.claim}</p>
-        <p className="actions hero-cta">
-          <Link className="btn btn-solid btn-lg" href="/work/systems-fleet">
-            What I built
-          </Link>
-          <Link className="btn-text" href="/resume">
-            Resume
-          </Link>
-          <a className="btn-text" href={`mailto:${site.email}`}>
-            Email
-          </a>
-        </p>
+    <article className="home">
+      <header className="hero">
+        <h1>{hero.name}</h1>
+        <p className="lede">{hero.line}</p>
       </header>
 
-      <section className="band" id="built" aria-labelledby="built-title">
-        <h2 id="built-title">What I built</h2>
-        <p className="tight measure">{homeLanes}</p>
-        <ul className="build-list">
-          {homeBuilds.map((build) => (
-            <li key={build.lead}>
-              <strong>{build.lead}</strong> {build.body}
-            </li>
+      <section className="stories" aria-label="What I built">
+        <div className="story-grid">
+          {homeStories.map((story) => (
+            <div className="story" key={story.title}>
+              <h2>{story.title}</h2>
+              <p>{story.body}</p>
+            </div>
           ))}
-        </ul>
-        <p className="actions">
-          <Link className="btn" href="/work/systems-fleet">
-            Read the case →
-          </Link>
+        </div>
+        <p className="story-more">
+          <Link href="/work/systems-fleet">The Black Clover case</Link>
         </p>
       </section>
 
-      <section className="band contact-strip-home" id="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">Get in touch</h2>
-        <p className="actions">
-          <a className="btn btn-solid" href={`mailto:${site.email}`}>
-            {site.email}
-          </a>
-          <a className="btn" href={site.linkedin} rel="noreferrer" target="_blank">
-            LinkedIn
-          </a>
-          <Link className="btn" href="/resume">
-            Resume
-          </Link>
-        </p>
-        <p className="note tight footer-tiny-note">{site.locationLine}</p>
+      <p className="home-note">{homeNote}</p>
+
+      <section className="close" aria-label="Contact">
+        <a className="mail" href={`mailto:${site.email}`}>
+          {site.email}
+        </a>
+        <p className="note">{site.locationLine}</p>
       </section>
     </article>
   );

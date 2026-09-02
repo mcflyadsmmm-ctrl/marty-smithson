@@ -1,257 +1,122 @@
 export type BrandCategory = "Trades" | "Professional" | "Product";
 
-export type CaseSlug = "black-clover" | "nutricost" | "mcfly";
-
-export type ProofStat = {
-  figure: string;
-  unit: string;
-  line: string;
-  meta: string;
-};
+export type CaseSlug = "nutricost" | "mcfly";
 
 export type CaseStudy = {
   slug: CaseSlug;
-  index: string;
   brand: string;
   role: string;
   dates: string;
-  datesShort: string;
   reportsTo: string;
   headline: string;
-  kicker: string;
-  stat: string;
-  problem: string;
-  approach: string;
-  outcome: string;
-  situation: string[];
-  broken: string[];
-  method: string[];
-  ran: string[];
-  next: string;
+  lead: string;
+  body: string[];
 };
 
 export const hero = {
-  section: "01 / Signal",
   name: "Marty Smithson",
-  pair: "Business intelligence × performance marketing",
-  claim: "Head of BI at Black Clover. I make numbers leadership can fund a call on.",
-  lock: "I build decision systems companies can trust.",
+  line: "I moved Black Clover’s warehouse off Domo onto Cloud Run, and built the partner portal the field uses.",
 } as const;
 
-export const homeLanes =
-  "At Black Clover I stood up isolated truth lanes so wholesale, partners, cash, retail, and fulfillment each had one honest book — and leadership could decide without platform theater.";
-
-export const homeBuilds = [
+export const homeStories = [
   {
-    lead: "Domo to Google Cloud Run",
-    body: "a complete data warehouse transition. About $20K a month saved.",
+    title: "The warehouse",
+    body: "Domo was running the warehouse and the bill. I moved the full data warehouse onto Google Cloud Run. Same work. About $20K a month less.",
   },
   {
-    lead: "Partner portal on Google Cloud Run",
-    body: "for about 50 users — executives, rep leads, and reps. Live NetSuite, tiered access, CRM-style messaging, and a hard cost cap.",
-  },
-  {
-    lead: "Certified decision desks",
-    body: "one writer, freeze after ship, fail-closed recon. Each lane keeps its own honest book.",
-  },
-  {
-    lead: "Cash MER over platform ROAS",
-    body: "ledger sales against paid. The ad manager does not run the mix.",
+    title: "The partner portal",
+    body: "About 50 people needed the same numbers as leadership — executives, rep leads, reps — without rewriting them. I built that portal on Cloud Run: live NetSuite, the right access for each role, messaging between them, inside a hard cost cap.",
   },
 ] as const;
 
-export const workBuilds = [
-  {
-    lead: "Domo to Google Cloud Run",
-    body: "Complete data warehouse transition. About $20K a month saved.",
-  },
-  {
-    lead: "Partner portal on Google Cloud Run",
-    body: "About 50 users — executives, rep leads, and reps. Live NetSuite, tiered access, CRM-style messaging, and a hard cost cap.",
-  },
-  {
-    lead: "Decision Net",
-    body: "Certified wholesale book. One writer. Freeze after ship.",
-  },
-  {
-    lead: "Cash MER",
-    body: "Ledger sales after returns against paid. Platform ROAS never controls the mix.",
-  },
-  {
-    lead: "Retail and fulfillment",
-    body: "Isolated books so store Net and qty-fulfilled stay true — tax is not a KPI, and partials are told honestly.",
-  },
-] as const;
+export const homeNote =
+  "Head of BI & Performance Marketing at Black Clover. I report to the CEO. Marketing is the domain I know; the work is the systems underneath it.";
 
-export const fleetShipped = [
-  {
-    title: "Domo warehouse move",
-    body: "Complete data warehouse transition off Domo onto Google Cloud Run. About $20K a month saved.",
+export const fleet = {
+  title: "What I built",
+  place: "Black Clover",
+  role: "Head of BI & Performance Marketing · I report to the CEO",
+  dates: "February 2025 — present",
+  lead: "I moved the warehouse off Domo onto Cloud Run — about $20K a month less — and built a partner portal for about 50 people on the same stack. Wholesale, cash, retail, and fulfillment each keep their own honest book.",
+  steps: ["Measure", "Check", "Lock", "Decide", "Move"] as const,
+  warehouse: {
+    title: "Warehouse off Domo",
+    body: "Domo was holding the warehouse and the bill. I moved the full data warehouse onto Google Cloud Run. Same work. About $20K a month less.",
   },
-  {
-    title: "Partner portal",
-    body: "Twin of the exec desk on Google Cloud Run for about 50 users — executives, rep leads, and reps. Live NetSuite, tiered access, CRM-style messaging. Never owns the fact.",
-  },
-  {
-    title: "Wholesale Decision Net",
-    body: "Certified wholesale book. One writer. Freeze after ship.",
-  },
-  {
-    title: "Cash MER",
-    body: "Ledger ÷ exact spend. Platform ROAS never controls.",
-  },
-  {
-    title: "Retail POS Net",
-    body: "Store Net sales identity. Tax is not a KPI.",
-  },
-  {
-    title: "Fulfillment isolate",
-    body: "One customer desk. Partials told truthfully.",
-  },
-] as const;
+  lanes: [
+    {
+      title: "Wholesale leadership book",
+      body: "One wholesale number for leadership. One owner. We lock it after we ship so two systems cannot quietly disagree.",
+    },
+    {
+      title: "Partner portal",
+      body: "About 50 people — executives, rep leads, reps — on Cloud Run. Live NetSuite, the right access for each role, messaging between them, inside a hard cost cap. They can read the number. They cannot rewrite it.",
+    },
+    {
+      title: "Cash MER",
+      body: "Ledger sales against exact spend. Google, Meta, and Microsoft get budget from that, not from ad-platform ROAS. Below break-even, we cut.",
+    },
+    {
+      title: "Retail POS",
+      body: "Store net sales only. Tax is not a KPI.",
+    },
+    {
+      title: "Fulfillment",
+      body: "One customer story. Partials are told on their own book.",
+    },
+  ],
+} as const;
 
-export const fleetSteps = ["Measure", "Certify", "Freeze", "Decide", "Move"] as const;
-
-export const proofStats: ProofStat[] = [
-  {
-    figure: "$30M+",
-    unit: "Media",
-    line: "directed",
-    meta: "Career",
+export const workIndex = {
+  lead: "Black Clover — warehouse off Domo, the portal, and the books leadership uses.",
+  case: {
+    href: "/work/systems-fleet",
+    title: "Black Clover",
+    role: "Head of BI & Performance Marketing · reports to the CEO",
+    body: "Full warehouse off Domo onto Cloud Run — about $20K a month saved. Partner portal on Cloud Run for about 50 people. Honest books for wholesale, cash, retail, and fulfillment.",
   },
-  {
-    figure: "06",
-    unit: "Years",
-    line: "of marketing data science",
-    meta: "2020 — 2026",
-  },
-  {
-    figure: "3",
-    unit: "Channels",
-    line: "Google, Meta, Microsoft",
-    meta: "Black Clover · reports to CEO",
-  },
-  {
-    figure: "$50 → $1,000",
-    unit: "Per day",
-    line: "Ketologic / Primaforce",
-    meta: "Nutricost · reports to CMO",
-  },
-];
+  also: [
+    {
+      href: "/work/nutricost",
+      title: "Nutricost",
+      role: "Performance Marketing & Analytics Lead · reported to the CMO",
+      body: "Amazon, Google, Meta, and TikTok on one desk. Ketologic and Primaforce from $50 a day to $1,000 a day.",
+    },
+    {
+      href: "/work/mcfly",
+      title: "McFly Ads",
+      role: "CEO · marketing data science since 2020",
+      body: "My company. Ten named brands. The CEO title applies here only.",
+    },
+  ],
+} as const;
 
 export const cases: CaseStudy[] = [
   {
-    slug: "black-clover",
-    index: "01",
-    brand: "Black Clover",
-    role: "Head of BI & Performance Marketing",
-    dates: "02/2025 — Present",
-    datesShort: "2025—Present",
-    reportsTo: "Reports to CEO",
-    headline: "Company analytics, then the mix.",
-    kicker: "01 / Desk · Black Clover USA · 02/2025 – Present",
-    stat: "Google, Meta, Microsoft · 18 months",
-    problem:
-      "Platform ROAS told a cleaner story than cash. Spreadsheets lagged NetSuite. Sales and spend were not on one desk, so budget allocation was an argument instead of a MER call.",
-    approach:
-      "Cash MER as the mix KPI: orders from NetSuite against paid. Meridian MMM on the Google, Meta, and Microsoft mix. When two channels claimed the same sale, GeoLift geo-holdouts and RCTs — causal inference for the CEO, then the mix moved.",
-    outcome:
-      "Allocated Google, Meta, and Microsoft for 18 months on a ~$45M year. Weekly against cash MER. Below break-even, we cut. A 50-person sales portal is what ran in production — not a dashboard screenshot deck.",
-    situation: [
-      "Global apparel. ~$45M this year. Hundreds of employees. I run the company dashboards.",
-      "Sales live in Oracle NetSuite. Paid lives in Google Ads, Meta Ads, and Microsoft Ads.",
-      "Executives, rep leads, and a field of about fifty reps needed the same numbers with different access — that sales desk is not the company headcount.",
-    ],
-    broken: [
-      "Platform ROAS told a cleaner story than cash. Spreadsheets lagged NetSuite.",
-      "Sales and spend were not on one desk, so budget allocation was an argument instead of a MER call.",
-    ],
-    method: [
-      "Cash MER as the mix KPI: orders from NetSuite against paid. Meridian MMM on the Google, Meta, and Microsoft mix.",
-      "When two channels claimed the same sale, GeoLift geo-holdouts and RCTs — causal inference for the CEO, then the mix moved. Below cash MER break-even, we cut.",
-      "GA4 for the site. Snowflake, dbt, and Airflow into Oracle NetSuite. BI in Looker, Domo, and Tableau. SQL, Python, and R. Google Cloud Run when the portal had to be an app, not a tile.",
-    ],
-    ran: [
-      "Allocated Google, Meta, and Microsoft for 18 months on a ~$45M year. Weekly budget allocation against cash MER.",
-      "A 50-person sales portal built from scratch. Tiered access for executives, rep leads, and reps. NetSuite for live data and updates. CRM-like messaging between users.",
-      "Player-coach: led a social media manager, a graphic designer, and international advertising leads in Asia, the United Kingdom, Canada, and Australia.",
-      "The fifty people on the portal are sales-desk users, not a team of fifty reports, and not the hundreds of employees in the company.",
-    ],
-    next: "Mix against cash, not path credit. If a channel is below break-even on MER, it does not get a ROAS defense. Incrementality tests decide whether to scale, not the ad manager’s last-click report.",
-  },
-  {
     slug: "nutricost",
-    index: "02",
     brand: "Nutricost",
     role: "Performance Marketing & Analytics Lead",
-    dates: "08/2024 — 02/2025 · 7 months",
-    datesShort: "2024—2025",
-    reportsTo: "Reports to CMO",
+    dates: "August 2024 — February 2025 · 7 months",
+    reportsTo: "Reported to the CMO",
     headline: "Four platforms. One CMO desk.",
-    kicker: "02 / Desk · Nutricost · 08/2024 – 02/2025",
-    stat: "Ketologic / Primaforce $50 → $1,000/day",
-    problem:
-      "Each platform wanted credit for the same order. Last-click and in-app ROAS could not answer mix. Executive stakeholders needed contribution, LTV, and cohorts — and a test when two channels claimed the same lift.",
-    approach:
-      "Robyn MMM on Amazon, Google, Meta, and TikTok. Multi-touch attribution, LTV, and cohorts in BigQuery, SQL, and R. GeoLift incrementality when Amazon, TikTok, and Meta claimed the same order — the test was the budget call, not last-click.",
-    outcome:
-      "Owned the four-platform mix for 7 months plus Ketologic and Primaforce ($50 → $1,000/day). Dashboards so the weekly CMO meeting started from one desk.",
-    situation: [
-      "Supplement brand with a large paid book: Amazon Ads, Google Ads, Meta Ads, TikTok Ads.",
-      "Sub-brands Ketologic and Primaforce sat in the same portfolio.",
+    lead: "Each platform wanted credit for the same order. Last-click could not answer the mix.",
+    body: [
+      "I owned Amazon, Google, Meta, and TikTok for seven months and presented the mix to the CMO. Robyn on the book. GeoLift when two channels claimed the same order. The test was the budget call.",
+      "Ketologic and Primaforce went from $50 a day to $1,000 a day. Multi-touch attribution, LTV, and cohorts in BigQuery, SQL, and R so contribution was visible past last-click.",
     ],
-    broken: [
-      "Each platform wanted credit for the same order. Last-click and in-app ROAS could not answer mix.",
-      "Executive stakeholders needed contribution, LTV, and cohorts — and a test when two channels claimed the same lift.",
-    ],
-    method: [
-      "Multi-touch attribution, LTV, and cohorts in BigQuery, SQL, and R.",
-      "Robyn MMM on the four-platform book. GA4 and Looker Studio for the weekly CMO desk.",
-      "GeoLift incrementality when Amazon, TikTok, and Meta claimed the same order — the test was the budget call, not last-click.",
-    ],
-    ran: [
-      "Owned the four-platform mix for 7 months plus Ketologic and Primaforce ($50 → $1,000/day).",
-      "Dashboards for executive stakeholders so the weekly meeting started from one desk.",
-    ],
-    next: "Cut or scale from GeoLift and cash MER, not from the platform that shouted loudest. Larger monthly spend than Black Clover; CMO reporting, four platforms, Robyn on the mix.",
   },
   {
     slug: "mcfly",
-    index: "03",
     brand: "McFly Ads",
-    role: "CEO · marketing data science",
-    dates: "04/2020 — Present",
-    datesShort: "2020—Present",
+    role: "CEO",
+    dates: "April 2020 — present",
     reportsTo: "Founder / CEO",
-    headline: "The gap was spend next to sales.",
-    kicker: "03 / Desk · McFly Ads · 04/2020 – Present",
-    stat: "10 named brands",
-    problem:
-      "Brands were buying Google, Meta, and the rest. Each platform reported a win. Shopify (or a ledger) held sales after returns. Finance asked a simpler question: did this period’s spend clear contribution?",
-    approach:
-      "A marketing data-science company since 2020: Robyn and Meridian MMMs, GeoLift and causal inference, custom $10K data-science executive dashboards in Looker and Tableau, retail store command centers, and paid allocation.",
-    outcome:
-      "Six years. Ten named brands. Complete public roster — no invented ROAS. McFly Analytics submitted to the Shopify App Store (listing pending). Harbor Home on the live demo is SAMPLE, not a client.",
-    situation: [
-      "A marketing data-science company since 2020 — six years. W-2 roles held concurrently — the company did not pause.",
-      "Brands were buying Google, Meta, and the rest. Each platform reported a win. Shopify (or a ledger) held sales after returns.",
-      "Finance asked a simpler question: did this period’s spend clear contribution — and what is LTV from the store’s own orders, not from a pixel?",
+    headline: "Spend next to sales.",
+    lead: "I started the company in 2020. Brands were buying ads. Each platform reported a win. Finance wanted a simpler answer: did this period’s spend clear contribution?",
+    body: [
+      "Six years of marketing data science for ten named brands — mix models, incrementality, executive dashboards, retail command centers, paid allocation. I present the work to operators.",
+      "McFly Analytics is submitted to the Shopify App Store (listing pending). That is the lab, not the Black Clover job. The CEO title applies only here.",
     ],
-    broken: [
-      "Pixels and path credit. Agency decks. No break-even from margin. No honest LTV from the Shopify API.",
-      "Operators — trades, solar, lighting, bookkeeping, product brands, and retail floors — did not need another attribution religion. They needed spend beside cash, and a desk executives would actually open.",
-    ],
-    method: [
-      "I was sure enough in the analytics that I cold-outreached lead-gen companies and offered to pay their ads myself — commission only if I closed. It worked. They started paying the ads and paying me.",
-      "Robyn and Meridian MMMs, GeoLift and causal inference, custom $10K data-science executive dashboards in Looker and Tableau, retail store command centers, paid allocation, workflow automation, and BI (Looker, Domo, Tableau, Looker Studio).",
-      "Shopify store builds happened; they are not the offer. The offer is the desk. Research agents and reporting loops sit behind the work. They are how it ships — not a job title.",
-    ],
-    ran: [
-      "6 years of marketing data science for 10 named brands. Presented analyses to brand operators.",
-      "McFly Analytics submitted to the Shopify App Store (listing pending): cash MER and Shopify-API LTV. The lab, not the job.",
-      "Sample Harbor Home Co on the live demo is not a client. Same math already run for companies, now a product stores can turn on.",
-    ],
-    next: "One allocation call per period: above or below break-even on cash. Then mix. Then, if needed, incrementality. The app is the productized version of the $10K desks and command centers — not a demo pretending to be a listed app.",
   },
 ];
 
@@ -272,166 +137,67 @@ export const brands: {
   { mark: "KH", name: "Kin Home", category: "Product" },
 ];
 
-export const origin = {
-  lead: "I bet on myself.",
-  copy: "I was sure enough in the analytics that I cold-outreached lead-gen companies and offered to pay their ads myself — commission only if I closed. It worked. They started paying the ads and paying me.",
-  note: "Research agents and reporting loops sit behind the work. They are how it ships — not a job title.",
-} as const;
-
-export const methodSteps = [
+export const resumePdfs = [
   {
-    title: "Data",
-    body: "Ledger sales after returns next to platform spend for the same period. NetSuite at Black Clover. The platforms do not get to define the period.",
+    key: "full",
+    href: "/resumes/Marty_Smithson_Resume_MASTER.pdf",
+    title: "Full resume",
+    note: "The default.",
   },
   {
-    title: "Warehouse",
-    body: "Snowflake, dbt, and Airflow into Oracle NetSuite on the Black Clover desk. BigQuery at Nutricost. SQL, Python, and R on the same books.",
+    key: "measurement",
+    href: "/resumes/Marty_Smithson_Resume_SCIENCE.pdf",
+    title: "Measurement focus",
+    note: "Mix models and incrementality.",
   },
   {
-    title: "Model",
-    body: "Meridian Bayesian MMM on Google, Meta, and Microsoft. Robyn on Amazon, Google, Meta, and TikTok. The model estimates what each channel is pulling. It does not spend the money.",
-  },
-  {
-    title: "Experiment",
-    body: "GeoLift geo-holdouts and RCTs when two channels claimed the same sale. Causal inference for the person who owns the mix — the Black Clover CEO or the Nutricost CMO.",
-  },
-  {
-    title: "Decision",
-    body: "Cash MER is the allocation KPI: sales after returns ÷ ad spend. Break-even is 1 ÷ contribution margin. Platform ROAS is a channel report.",
-  },
-  {
-    title: "Budget",
-    body: "Below cash MER break-even, we cut. The mix moves after the test, not after the last-click deck. The model is a tool. The budget is the job.",
-  },
-] as const;
-
-export const methodPillars = [
-  {
-    title: "Cash MER",
-    body: "Cash MER is sales (after returns, from the ledger) ÷ ad spend. Break-even is 1 ÷ contribution margin. Platform ROAS is a channel report. It is not the allocation.",
-  },
-  {
-    title: "Bayesian MMM",
-    body: "Marketing mix models I have built — Robyn and Bayesian Meridian, and mix work in SQL, Python, and R — how much each channel is pulling, with diminishing returns. The model is a tool. The budget is the job.",
-  },
-  {
-    title: "GeoLift",
-    body: "Incrementality testing — GeoLift, geo-holdouts, and RCTs — when the question is causal inference, not path credit. I do not publish a fake lift percentage. The artifact is the budget that moved.",
-  },
-] as const;
-
-export const methodSystems = [
-  "50-person sales portal at Black Clover. Live Oracle NetSuite, tiered access, CRM-like messaging.",
-  "McFly Ads since 2020. Robyn and Meridian. GeoLift. $10K executive dashboards. Retail command centers. Ten named brands. McFly Analytics submitted to the Shopify App Store. Harbor Home is SAMPLE, not a client.",
-] as const;
-
-export const stack = [
-  { name: "MMM", detail: "Robyn and Bayesian Meridian." },
-  { name: "MER", detail: "Cash sales after returns ÷ spend." },
-  { name: "GeoLift", detail: "Causal holdouts, not path credit." },
-  { name: "SQL", detail: "The warehouse language." },
-  { name: "Python", detail: "Cleaning, models, pipelines." },
-  { name: "R", detail: "EDA and statistical work." },
-  { name: "Snowflake", detail: "Warehouse." },
-  { name: "BigQuery", detail: "Warehouse." },
-  { name: "Budget", detail: "The job after the model." },
-  { name: "Looker", detail: "The executive desk." },
-  { name: "Meridian", detail: "Bayesian MMM." },
-  { name: "Causal", detail: "Inference, not last-click." },
-] as const;
-
-export const evidenceItems = [
-  {
-    index: "01",
-    title: "Six years on the desk",
-    body: "McFly Ads since 04/2020. Current W-2: Head of BI & Performance Marketing at Black Clover, 02/2025–Present.",
-  },
-  {
-    index: "02",
-    title: "R, SQL, and Python on the same desks",
-    body: "R for cleaning and exploratory analysis at Black Clover and Nutricost, with SQL and Python on those same books.",
-  },
-  {
-    index: "03",
-    title: "The test is the budget call",
-    body: "GeoLift geo-holdouts, geo-testing, and RCTs when two channels claimed the same sale. Incrementality decides whether the mix moves.",
-  },
-  {
-    index: "04",
-    title: "Same numbers for operators and the room",
-    body: "I present the mix to the Black Clover CEO and the Nutricost CMO. At McFly Ads, to brand operators.",
-  },
-  {
-    index: "05",
-    title: "Utah Valley University",
-    body: "Bachelor of Science, emphasis Data Science and Statistics. Orem, Utah.",
-  },
-  {
-    index: "06",
-    title: "Meridian on the live mix",
-    body: "Bayesian MMM in Meridian on the Google, Meta, and Microsoft mix at Black Clover.",
-  },
-  {
-    index: "07",
-    title: "The books I ran",
-    body: "$30M+ media directed. Black Clover: Google, Meta, and Microsoft for ~18 months, reported to the CEO. Nutricost: four platforms for 7 months, including Ketologic and Primaforce $50 → $1,000/day, reported to the CMO. Cash MER, not platform ROAS.",
-  },
-  {
-    index: "08",
-    title: "Where I work from",
-    body: "American Fork, Utah, United States. US remote. EST overlap.",
-  },
-  {
-    index: "09",
-    title: "Concurrent seats",
-    body: "6 years in marketing data science (04/2020–Present). McFly Ads CEO held with the Black Clover and Nutricost W-2 roles — the company did not pause.",
-  },
-  {
-    index: "10",
-    title: "Work authorization",
-    body: "US citizen. No visa sponsorship required.",
+    key: "systems",
+    href: "/resumes/Marty_Smithson_Resume_OPERATOR.pdf",
+    title: "Systems & analytics",
+    note: "BI, the warehouse, and the portal.",
   },
 ] as const;
 
 export const resume = {
   role: "Head of Business Intelligence & Performance Marketing",
-  scan: "$30M+ media directed · 6 years · Meridian, Robyn, GeoLift, R · reports to CEO / reported to CMO",
+  scan: "Head of BI & Performance Marketing at Black Clover · reports to the CEO · UVU B.S. Data Science and Statistics",
   summary:
-    "$30M+ media directed. Head of Business Intelligence & Performance Marketing at Black Clover (~$45M this year) — I report to the CEO. Six years of marketing data science. I allocate a seven-figure monthly paid mix across Google, Meta, and Microsoft: Meridian, GeoLift, cash MER; below break-even, we cut. In seat since Feb 2025 (~18 months). Previously reported to the CMO at Nutricost across Amazon, Google, Meta, and TikTok, including Ketologic and Primaforce from $50/day to $1,000/day.",
+    "Head of Business Intelligence & Performance Marketing at Black Clover — I report to the CEO. I moved the full data warehouse off Domo onto Google Cloud Run (about $20K a month saved) and built a partner portal on Cloud Run for about 50 people. I allocate a seven-figure monthly paid mix across Google, Meta, and Microsoft against cash MER. Previously reported to the CMO at Nutricost across Amazon, Google, Meta, and TikTok, including Ketologic and Primaforce from $50/day to $1,000/day. CEO of McFly Ads since 2020.",
   jobs: [
     {
       title: "Head of Business Intelligence & Performance Marketing",
       org: "Black Clover USA",
       dates: "02/2025 - Present",
-      meta: "W-2. Reports to the CEO. ~$45M this year. Hundreds of employees. Global. 18 months on the paid mix (Feb 2025–Present).",
+      meta: "Reports to the CEO.",
       bullets: [
-        "Bayesian statistical modeling: Meridian MMM on Google, Meta, and Microsoft. GeoLift geo-holdouts, geo-testing, and RCTs when two channels claimed the same sale — experimental methods and causal inference. Below cash MER break-even, we cut.",
-        "Directed a seven-figure monthly paid mix for ~18 months across Google Ads, Meta Ads, and Microsoft Ads against cash MER for the CEO. Platform ROAS was not the budget.",
-        "Built a 50-person sales portal from scratch for executives, rep leads, and reps — the sales desk, not company headcount. Live Oracle NetSuite, tiered access, CRM-style messaging.",
-        "Finance desk: Snowflake warehouse, dbt models, and Airflow jobs into Oracle NetSuite. R for data cleaning and exploratory analysis, plus SQL and Python. BI in Looker, Domo, and Tableau.",
-        "Led 1 social media manager, 1 graphic designer, and international advertising leads in Asia, the UK, Canada, and Australia.",
+        "Moved the full data warehouse off Domo onto Google Cloud Run. About $20K a month saved.",
+        "Built a partner portal on Cloud Run for about 50 people — executives, rep leads, and reps. Live Oracle NetSuite, tiered access, messaging between users.",
+        "Meridian MMM on Google, Meta, and Microsoft. GeoLift and RCTs when two channels claimed the same sale. Below cash MER break-even, we cut.",
+        "Directed a seven-figure monthly paid mix against cash MER for the CEO. Platform ROAS was not the budget.",
+        "Snowflake, dbt, and Airflow into Oracle NetSuite. R, SQL, and Python. BI in Looker, Domo, and Tableau.",
+        "Led a social media manager, a graphic designer, and international advertising leads in Asia, the UK, Canada, and Australia.",
       ],
     },
     {
       title: "Performance Marketing & Analytics Lead",
       org: "Nutricost",
       dates: "08/2024 - 02/2025 (7 months)",
-      meta: "W-2. Reported to the CMO.",
+      meta: "Reported to the CMO.",
       bullets: [
-        "Robyn MMM on Amazon, Google, Meta, and TikTok. GeoLift incrementality when those platforms claimed the same order. Presented results to the CMO. The test was the budget call — not last-click.",
-        "Scaled Ketologic and Primaforce from $50/day to $1,000/day. Owned a seven-figure monthly paid book for 7 months across the four platforms.",
-        "Multi-touch attribution, LTV, and cohorts in BigQuery, SQL, and R so the CMO could see contribution beyond last-click. GA4 and Looker Studio for the weekly desk.",
+        "Robyn MMM on Amazon, Google, Meta, and TikTok. GeoLift when those platforms claimed the same order. Presented results to the CMO.",
+        "Scaled Ketologic and Primaforce from $50/day to $1,000/day. Owned a seven-figure monthly paid book for 7 months.",
+        "Multi-touch attribution, LTV, and cohorts in BigQuery, SQL, and R. GA4 and Looker Studio for the weekly desk.",
       ],
     },
     {
       title: "CEO",
       org: "McFly Ads",
       dates: "04/2020 - Present",
-      meta: "Marketing data-science company. 6 years of experience in this seat. W-2 roles held concurrently — the company did not pause.",
+      meta: "Marketing data-science company. Held alongside later roles. CEO title applies only here.",
       bullets: [
-        "6 years of marketing data science for 10 named brands: Robyn and Meridian MMMs, GeoLift, causal inference, $10K data-science executive dashboards in Looker and Tableau, retail command centers, and paid allocation. Presented analyses to brand operators.",
+        "6 years of marketing data science for 10 named brands: Robyn and Meridian, GeoLift, executive dashboards, retail command centers, and paid allocation.",
         "Named brands: Marksman Construction, Malama Solar, Royal Peak Lighting, Stretch Labs, Kin Home, BatBridge Bookkeeping, Whirly Board, Arizona Gym Floors, Pure Air Solutions, Priority Mulching Services.",
-        "McFly Analytics submitted to the Shopify App Store (listing pending): cash MER and Shopify-API LTV. The lab, not the job. mcflyads.com.",
+        "McFly Analytics submitted to the Shopify App Store (listing pending). mcflyads.com.",
       ],
     },
   ],
@@ -439,64 +205,23 @@ export const resume = {
     {
       label: "Measurement",
       items:
-        "marketing mix modeling (MMM), Robyn, Meridian, Bayesian statistical modeling, incrementality testing, experimental methods, causal inference, GeoLift, multi-touch attribution (MTA), MER, marketing efficiency ratio, budget allocation, marketing data science",
+        "marketing mix modeling (MMM), Robyn, Meridian, incrementality testing, GeoLift, multi-touch attribution, cash MER, budget allocation",
     },
     {
       label: "Data & BI",
       items:
-        "SQL, Python, R, Snowflake, dbt, Airflow, BigQuery, Looker, Looker Studio, Domo, Tableau, GA4, Oracle NetSuite",
+        "SQL, Python, R, Snowflake, dbt, Airflow, BigQuery, Looker, Looker Studio, Domo, Tableau, GA4, Oracle NetSuite, Google Cloud Run",
     },
     {
       label: "Paid & commerce",
       items:
-        "Google Ads, Meta Ads, Amazon Ads, TikTok Ads, Microsoft Ads, Shopify, performance marketing, paid media",
-    },
-    {
-      label: "Leadership",
-      items:
-        "executive stakeholders, measurement consulting, international paid (Asia, UK, Canada, Australia)",
+        "Google Ads, Meta Ads, Amazon Ads, TikTok Ads, Microsoft Ads, Shopify, performance marketing",
     },
   ],
   education:
-    "Utah Valley University, Orem, Utah — Bachelor of Science, emphasis Data Science and Statistics.",
+    "Utah Valley University, Orem, Utah — Bachelor of Science, Data Science and Statistics emphasis.",
 } as const;
-
-export const caseSlots = [
-  {
-    slug: "sample-science",
-    index: "A",
-    label: "SAMPLE / SLOT",
-    title: "Recast-shaped science case",
-    purpose:
-      "Skeleton only. Priors, model, experiment, budget action. Awaiting Marty facts. No brand, no lift, no invented priors.",
-    steps: [
-      { title: "Priors", note: "Awaiting Marty facts." },
-      { title: "Model", note: "Awaiting Marty facts." },
-      { title: "Experiment", note: "Awaiting Marty facts." },
-      { title: "Budget action", note: "Awaiting Marty facts." },
-    ],
-  },
-  {
-    slug: "operator-allocation",
-    index: "B",
-    label: "SLOT",
-    title: "Operator / allocation case",
-    purpose:
-      "Skeleton only. Cash MER / incrementality question, then cut or scale. Awaiting Marty facts. No invented numbers.",
-    steps: [
-      { title: "Cash MER / incrementality question", note: "Awaiting Marty facts." },
-      { title: "Cut or scale decision path", note: "Awaiting Marty facts." },
-    ],
-  },
-] as const;
-
-export type CaseSlot = (typeof caseSlots)[number];
-export type CaseSlotSlug = CaseSlot["slug"];
 
 export function caseBySlug(slug: string): CaseStudy | undefined {
   return cases.find((item) => item.slug === slug);
-}
-
-export function slotBySlug(slug: string): CaseSlot | undefined {
-  return caseSlots.find((item) => item.slug === slug);
 }
