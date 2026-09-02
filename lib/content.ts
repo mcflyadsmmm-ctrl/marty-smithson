@@ -55,13 +55,13 @@ export const proofStats: ProofStat[] = [
     figure: "$1M",
     unit: "Monthly",
     line: "mix",
-    meta: "Black Clover · CEO",
+    meta: "Black Clover · reports to CEO",
   },
   {
     figure: "$2M",
     unit: "Monthly",
     line: "mix",
-    meta: "Nutricost · CMO",
+    meta: "Nutricost · reports to CMO",
   },
   {
     figure: "$50 → $1,000",
@@ -306,7 +306,7 @@ export const evidenceItems = [
   {
     index: "09",
     title: "Years of experience",
-    body: "6 years of experience in marketing data science (04/2020 - Present). Concurrent CEO + W-2.",
+    body: "6 years of experience in marketing data science (04/2020 - Present). Concurrent McFly Ads CEO + Black Clover / Nutricost W-2.",
     tag: "Scan line",
   },
   {
