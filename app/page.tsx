@@ -13,11 +13,13 @@ export default function HomePage() {
         <p className="lede">{hero.claim}</p>
         <IdentityNav />
         <div className="identity-pages">
-          {nav.map((item) => (
-            <Link key={item.href} href={item.href}>
-              {item.label}
-            </Link>
-          ))}
+          {nav
+            .filter((item) => item.href === "/work" || item.href === "/evidence" || item.href === "/resume")
+            .map((item) => (
+              <Link key={item.href} href={item.href}>
+                {item.label}
+              </Link>
+            ))}
         </div>
         <div className="identity-links">
           <a href={`mailto:${site.email}`}>{site.email}</a>
