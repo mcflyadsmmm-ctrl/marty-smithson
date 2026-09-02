@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CaseNav } from "@/components/CaseNav";
 import { FleetMap } from "@/components/FleetMap";
 import { LaneGrid } from "@/components/LaneGrid";
 import { PortalRoles } from "@/components/PortalRoles";
-import { ProofRail } from "@/components/ProofRail";
 import { ShiftCompare } from "@/components/ShiftCompare";
 import { fleet } from "@/lib/content";
 
@@ -25,38 +25,36 @@ export default function SystemsFleetPage() {
         <p className="lede">{fleet.lead}</p>
       </header>
 
-      <div className="wrap">
-        <ProofRail prefix="" lanesOnly />
+      <CaseNav />
 
-        <section className="case-block case-block-first" aria-labelledby="arch-title">
+      <div className="wrap">
+        <section className="case-block case-block-first" id="architecture">
           <p className="label">01 / Architecture</p>
-          <h2 id="arch-title" className="visually-hidden">
-            Architecture
-          </h2>
+          <h2 className="visually-hidden">Architecture</h2>
           <FleetMap />
         </section>
 
-        <section className="case-block">
+        <section className="case-block" id="shift">
           <p className="label">02 / Shift</p>
           <h2>{fleet.shift.title}</h2>
           <ShiftCompare />
           <p className="quiet after-figure">{fleet.shift.note}</p>
         </section>
 
-        <section className="case-block">
+        <section className="case-block" id="identity">
           <p className="label">03 / Identity</p>
           <h2>{fleet.identities.title}</h2>
           <PortalRoles />
           <p className="quiet after-figure">{fleet.identities.note}</p>
         </section>
 
-        <section className="case-block">
+        <section className="case-block" id="lanes">
           <p className="label">04 / Lanes</p>
           <h2>Five isolated books</h2>
           <LaneGrid />
         </section>
 
-        <section className="case-block">
+        <section className="case-block" id="constraint">
           <p className="label">05 / Constraint</p>
           <h2>{fleet.constraints.title}</h2>
           <ul className="constraint-grid">
@@ -69,7 +67,7 @@ export default function SystemsFleetPage() {
           </ul>
         </section>
 
-        <section className="band">
+        <section className="band" id="mix">
           <p className="label">06 / Mix</p>
           <h2>{fleet.mix.title}</h2>
           <p>{fleet.mix.body}</p>

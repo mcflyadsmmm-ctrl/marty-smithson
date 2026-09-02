@@ -10,15 +10,12 @@ export default function HomePage() {
     <article className="page">
       <header className="hero">
         <div className="wrap">
-          <p className="label">Head of BI & Performance Marketing · Black Clover</p>
           <h1>{hero.name}</h1>
           <p className="lede">{hero.line}</p>
+          <ProofRail showPortal />
           <p className="hero-paths">
             <Link href={homeTease.href}>{homeTease.more}</Link>
-            <Link href="/work">Work</Link>
-            <Link href="/resume">Resume</Link>
           </p>
-          <ProofRail />
         </div>
       </header>
 

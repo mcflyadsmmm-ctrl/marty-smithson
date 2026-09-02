@@ -26,7 +26,7 @@ export default function ResumePage() {
               <a className="resume-card" href={pdf.href} download>
                 <span className="label">PDF</span>
                 <strong>{pdf.title}</strong>
-                <span className="quiet">{pdf.note}</span>
+                <span className="quiet">{pdf.use}</span>
                 <span className="more">Download</span>
               </a>
             </li>

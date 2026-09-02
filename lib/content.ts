@@ -233,18 +233,21 @@ export const resumePdfs = [
     href: "/resumes/Marty_Smithson_Resume_MASTER.pdf",
     title: "Full resume",
     note: "The usual one.",
+    use: "Send this unless they asked for a lane.",
   },
   {
     key: "measurement",
     href: "/resumes/Marty_Smithson_Resume_SCIENCE.pdf",
     title: "Measurement",
     note: "Mix models and incrementality.",
+    use: "When the ask is mix models and incrementality.",
   },
   {
     key: "systems",
     href: "/resumes/Marty_Smithson_Resume_OPERATOR.pdf",
     title: "Systems and analytics",
     note: "The warehouse, the portal, and the BI work.",
+    use: "When the ask is the warehouse, the portal, and the BI work.",
   },
 ] as const;
 

@@ -5,10 +5,10 @@ const nextConfig: NextConfig = {
     return [
       { source: "/method", destination: "/work", permanent: true },
       { source: "/method/:path*", destination: "/work", permanent: true },
-      { source: "/approach", destination: "/work", permanent: true },
-      { source: "/approach/:path*", destination: "/work", permanent: true },
-      { source: "/evidence", destination: "/work", permanent: true },
-      { source: "/evidence/:path*", destination: "/work", permanent: true },
+      { source: "/approach", destination: "/work", statusCode: 301 },
+      { source: "/approach/:path*", destination: "/work", statusCode: 301 },
+      { source: "/evidence", destination: "/work", statusCode: 301 },
+      { source: "/evidence/:path*", destination: "/work", statusCode: 301 },
       { source: "/work/black-clover", destination: "/work/systems-fleet", permanent: true },
       { source: "/work/slot/:path*", destination: "/work", permanent: true },
     ];
