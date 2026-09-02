@@ -8,18 +8,18 @@ export default function HomePage() {
 
   return (
     <article className="page">
-      <header className="hero">
-        <div className="wrap">
-          <h1>{hero.name}</h1>
-          <p className="lede">{hero.line}</p>
-          <ProofRail showPortal />
-          <p className="hero-paths">
-            <Link href={homeTease.href}>{homeTease.more}</Link>
-          </p>
-        </div>
+      <header className="page-head wrap">
+        <p className="label">Head of BI · Black Clover</p>
+        <h1>{hero.name}</h1>
+        <p className="lede">{hero.line}</p>
       </header>
 
       <div className="wrap">
+        <ProofRail showPortal />
+        <p className="close-links">
+          <Link href={homeTease.href}>{homeTease.more}</Link>
+        </p>
+
         <section className="section" aria-label="Also">
           <p className="label">Also</p>
           <div className="later-grid">

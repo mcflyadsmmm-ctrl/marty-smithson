@@ -196,114 +196,13 @@ p {
 }
 
 .page > .wrap,
-.page > .hero .wrap,
 .page > .band .wrap {
   padding-top: 0;
-}
-
-.hero {
-  background: var(--bg-hero);
-  color: var(--ink-hero);
-  padding: 1.35rem 0 1.5rem;
-}
-
-.hero h1 {
-  margin: 0 0 0.4rem;
-  max-width: 18ch;
-  font-size: clamp(1.85rem, 4vw, 2.6rem);
-}
-
-.hero .lede {
-  margin: 0;
-  max-width: 36rem;
-  font-size: 1.05rem;
-  line-height: 1.4;
-  letter-spacing: -0.02em;
-  color: var(--ink-hero);
-}
-
-.hero .label {
-  color: var(--muted-hero);
-}
-
-.hero-paths {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 1.5rem;
-  margin: 1rem 0 0;
-  font-size: 0.95rem;
-}
-
-.hero-paths a {
-  color: var(--ink-hero);
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-}
-
-.hero-paths a:hover {
-  color: #fff;
-}
-
-.hero a:focus-visible {
-  outline-color: var(--ink-hero);
-}
-
-.hero .figure {
-  margin-top: 0;
-  color: var(--ink);
-}
-
-.hero .figure .label {
-  color: var(--faint);
 }
 
 .proof-rail {
   display: grid;
   gap: 0.65rem;
-}
-
-.proof-rail-lanes {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 0.4rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.proof-rail-lanes a {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  min-height: 44px;
-  padding: 0.55rem 0.6rem;
-  background: var(--panel);
-  color: var(--ink);
-  border: 1px solid var(--line);
-  text-decoration: none;
-  font-size: 0.88rem;
-  font-weight: 500;
-}
-
-.proof-rail-lanes a:hover {
-  border-color: var(--ink);
-  color: var(--ink);
-}
-
-.hero .proof-rail-lanes a {
-  background: #1a1a18;
-  color: var(--ink-hero);
-  border-color: #2e2e2a;
-}
-
-.hero .proof-rail-lanes a:hover {
-  border-color: var(--ink-hero);
-  color: #fff;
-}
-
-.hero .proof-rail-lanes .arch-idx {
-  color: var(--muted-hero);
 }
 
 .cost-strip {
@@ -344,16 +243,6 @@ p {
   font-weight: 500;
   letter-spacing: -0.05em;
   line-height: 1;
-}
-
-.hero .cost-strip,
-.hero .figure {
-  color: var(--ink);
-}
-
-.hero .cost-strip .label,
-.hero .figure .label {
-  color: var(--faint);
 }
 
 .case-nav {
@@ -463,18 +352,6 @@ p {
   margin-bottom: 0;
 }
 
-.proof-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.proof-grid .figure {
-  margin: 0;
-  height: 100%;
-}
-
 .later-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -482,8 +359,7 @@ p {
 }
 
 .work-entry,
-.resume-card,
-.case-band {
+.resume-card {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -616,12 +492,10 @@ a.resume-card:hover {
 .arch-sources,
 .arch-lanes,
 .brand-list,
-.file-list,
 .resume-chooser,
 .constraint-grid,
 .lane-grid,
-.role-matrix,
-.fleet-sources {
+.role-matrix {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -842,11 +716,6 @@ a.resume-card:hover {
   gap: 1rem;
 }
 
-.featured-head h2 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  margin-bottom: 0.45rem;
-}
-
 .close {
   padding-top: 2.4rem;
 }
@@ -957,10 +826,6 @@ a.resume-card:hover {
 }
 
 @media (max-width: 960px) {
-  .proof-rail-lanes {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .cost-strip {
     grid-template-columns: 1fr;
   }
@@ -976,8 +841,7 @@ a.resume-card:hover {
 
   .arch-board,
   .arch.is-compact .arch-board,
-  .shift-grid,
-  .proof-grid {
+  .shift-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1027,16 +891,8 @@ a.resume-card:hover {
     font-size: 16px;
   }
 
-  .hero {
-    padding: 1.1rem 0 1.2rem;
-  }
-
   .page-head {
     padding-top: 1.2rem;
-  }
-
-  .proof-rail-lanes {
-    grid-template-columns: 1fr;
   }
 
   .site-header-inner {
@@ -1068,14 +924,12 @@ a.resume-card:hover {
   }
 
   .site-header,
-  .site-footer,
-  .hero-paths {
+  .site-footer {
     display: none !important;
   }
 
   .sheet,
-  .site-main,
-  .hero {
+  .site-main {
     display: block;
     width: 100%;
     max-width: none;

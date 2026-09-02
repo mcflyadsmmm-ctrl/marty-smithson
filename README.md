@@ -8,11 +8,11 @@ Live: [https://marty-smithson.vercel.app](https://marty-smithson.vercel.app)
 
 A resume-extension portfolio. Not a blog, not a landing page.
 
-- Canvas: `#EFEEE9` · ink: `#111110` · proof plates: `#F7F6F1`
-- First screen is dark (`#111110`) — name, one line, path into the work
+- One theme end-to-end: dark header (`#111110`) · stone canvas (`#ecece8`) · cream plates (`#f7f7f4`)
 - Type: IBM Plex Sans + IBM Plex Mono
 - Wide grid (~68rem). Proof is figures (architecture, Domo→Cloud Run, identity matrix, lane cards)
-- No pills, no SaaS chrome, no ghost `/approach` or `/evidence` pages
+- No pills, no SaaS chrome, no mixed dark-hero / card-UI chrome
+- Ghost `/approach`, `/evidence`, `/method` 301 to `/` — they must not serve the Work body
 
 ## Stack
 
@@ -41,7 +41,7 @@ Open [http://localhost:3000](http://localhost:3000).
 | `/resume` | PDF downloads |
 | `/contact` | Email |
 
-`/approach`, `/evidence`, `/method`, and `/work/black-clover` redirect.
+`/approach`, `/evidence`, and `/method` 301 to `/`. `/work/black-clover` 301s to `/work/systems-fleet`.
 
 ## Facts
 
