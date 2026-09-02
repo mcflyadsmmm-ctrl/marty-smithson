@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <article className="case-hero">
-      <h1>Missing page.</h1>
+      <h1>Page not found</h1>
       <p className="actions">
         <Link className="btn" href="/">
           Home

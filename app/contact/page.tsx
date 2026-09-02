@@ -13,9 +13,7 @@ export default function ContactPage() {
   return (
     <article>
       <header className="case-hero">
-        <p className="sec-id">
-          <strong>07</strong> / Contact
-        </p>
+        <p className="eyebrow">Contact</p>
         <h1>Contact</h1>
         <p className="lede measure">
           {site.location}. US remote or Salt Lake hybrid. EST overlap. {site.authorization}
@@ -32,7 +30,7 @@ export default function ContactPage() {
         </p>
         <p className="actions">
           <Link className="btn" href="/resume">
-            Download PDF
+            Resume / PDF
           </Link>
           <a className="btn" href="/resume.doc">
             Word (Workday)

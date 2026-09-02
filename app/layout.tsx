@@ -1,27 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { IBM_Plex_Mono, Inter } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { StatusBar } from "@/components/StatusBar";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const sans = Geist({
+const sans = Inter({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  variable: "--font-sans",
+  display: "swap",
 });
 
-const mono = Geist_Mono({
+const mono = IBM_Plex_Mono({
   subsets: ["latin"],
-  variable: "--font-geist-mono",
-});
-
-const serif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-serif",
+  weight: ["400", "500"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -53,14 +48,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sans.variable} ${mono.variable} ${serif.variable}`}>
+    <html lang="en" className={`${sans.variable} ${mono.variable}`}>
       <body className={sans.className}>
         <JsonLd />
         <div className="sheet">
           <SiteHeader />
           <main className="site-main">{children}</main>
           <SiteFooter />
-          <StatusBar />
         </div>
       </body>
     </html>

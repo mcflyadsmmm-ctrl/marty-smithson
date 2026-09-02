@@ -14,10 +14,8 @@ export default function EvidencePage() {
   return (
     <article>
       <header className="case-hero">
-        <p className="sec-id">
-          <strong>02</strong> / Evidence
-        </p>
-        <h1>What can be verified.</h1>
+        <p className="eyebrow">Evidence</p>
+        <h1>What can be verified</h1>
         <p className="lede measure">
           A screener can point at the resume. This is that map. No invented lift. No graduation
           month — bachelor’s only.
@@ -26,7 +24,7 @@ export default function EvidencePage() {
       <div className="proof-list">
         {evidenceItems.map((item) => (
           <article className="proof-row" key={item.index}>
-            <p className="label">{item.index}</p>
+            <p className="exp-idx">{item.index}</p>
             <div>
               <h3>{item.title}</h3>
               <p>{item.body}</p>

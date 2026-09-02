@@ -14,7 +14,7 @@ export default function ResumePage() {
   return (
     <article>
       <header className="resume-top">
-        <p className="sec-id">Master resume · print or save as PDF</p>
+        <p className="eyebrow">Master resume</p>
         <h1>{site.name}</h1>
         <p className="note wide">
           {site.locationLine} · {site.authorization} ·{" "}
@@ -38,19 +38,19 @@ export default function ResumePage() {
             Contact
           </Link>
         </div>
-        <h2 className="display">{resume.role}</h2>
-        <p className="resume-scan label">{resume.scan}</p>
+        <h2>{resume.role}</h2>
+        <p className="resume-scan">{resume.scan}</p>
       </header>
 
       <section className="band">
-        <p className="kicker label">Summary</p>
+        <p className="kicker">Summary</p>
         <p className="measure">{resume.summary}</p>
       </section>
 
       {resume.jobs.map((job) => (
         <section className="resume-job" key={job.org}>
           <h3>{job.title}</h3>
-          <p className="label">
+          <p className="note">
             {job.org} · {job.dates}
           </p>
           <p className="note">{job.meta}</p>
@@ -63,7 +63,7 @@ export default function ResumePage() {
       ))}
 
       <section className="band">
-        <p className="kicker label">Skills</p>
+        <p className="kicker">Skills</p>
         {resume.skills.map((group) => (
           <p key={group.label} className="measure">
             <strong>{group.label}:</strong> {group.items}
@@ -72,7 +72,7 @@ export default function ResumePage() {
       </section>
 
       <section className="band">
-        <p className="kicker label">Education</p>
+        <p className="kicker">Education</p>
         <p className="measure">{resume.education}</p>
       </section>
     </article>

@@ -21,11 +21,15 @@ export function SiteHeader() {
     };
   }, [open]);
 
+  if (pathname === "/") {
+    return null;
+  }
+
   return (
     <header className="site-header">
       <div className="site-header-inner">
         <Link className="wordmark" href="/">
-          MS /
+          Marty Smithson
         </Link>
         <nav className="nav nav-desktop" aria-label="Primary">
           {nav.map((item) => {
@@ -49,7 +53,7 @@ export function SiteHeader() {
           aria-controls={overlayId}
           onClick={() => setOpen(true)}
         >
-          Index
+          Menu
         </button>
       </div>
       <div
@@ -60,13 +64,9 @@ export function SiteHeader() {
       >
         <div className="nav-overlay-bar">
           <Link className="wordmark" href="/" onClick={() => setOpen(false)}>
-            MS /
+            Marty Smithson
           </Link>
-          <button
-            className="nav-toggle"
-            type="button"
-            onClick={() => setOpen(false)}
-          >
+          <button className="nav-toggle" type="button" onClick={() => setOpen(false)}>
             Close
           </button>
         </div>

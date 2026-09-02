@@ -3,21 +3,16 @@ import type { CaseStudy } from "@/lib/content";
 
 export function CaseCard({ study }: { study: CaseStudy }) {
   return (
-    <article className="case-card-wrap">
-      <Link className="case-card" href={`/work/${study.slug}`}>
-        <p className="case-idx label">{study.index}</p>
+    <article>
+      <Link className="exp-row" href={`/work/${study.slug}`}>
+        <p className="exp-idx num">{study.index}</p>
         <div>
-          <p className="case-role">{study.role}</p>
-          <p className="case-meta label">
-            {study.datesShort} · {study.reportsTo}
+          <h3 className="exp-brand">{study.brand}</h3>
+          <p className="exp-role">{study.role}</p>
+          <p className="exp-meta">
+            {study.reportsTo} · {study.dates} · {study.stat}
           </p>
-        </div>
-        <div className="case-body">
-          <h3 className="case-brand">{study.brand}</h3>
-          <p className="note tight">
-            {study.headline}
-          </p>
-          <div className="case-story">
+          <div className="exp-story">
             <div>
               <h3>Problem</h3>
               <p>{study.problem}</p>
@@ -31,10 +26,7 @@ export function CaseCard({ study }: { study: CaseStudy }) {
               <p>{study.outcome}</p>
             </div>
           </div>
-          <div className="case-foot">
-            <p className="case-stat label">{study.stat}</p>
-            <span className="more label">Read →</span>
-          </div>
+          <span className="more">Read case →</span>
         </div>
       </Link>
     </article>
