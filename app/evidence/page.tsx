@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Evidence",
   description:
-    "What can be verified. A screener can point at the resume. No invented lift. No graduation month — bachelor’s only.",
+    "The same facts as the resume, in one place. Public SAMPLE method folders — not client extracts. No invented lifts.",
   alternates: { canonical: "/evidence" },
 };
 
@@ -15,29 +15,27 @@ export default function EvidencePage() {
     <article>
       <header className="case-hero">
         <p className="eyebrow">Evidence</p>
-        <h1>What can be verified</h1>
+        <h1>What’s on the desk</h1>
         <p className="lede measure">
-          A screener can point at the resume. This is that map. No invented lift. No graduation
-          month — bachelor’s only.
+          The same facts as the resume, in one place. No invented lifts. The public folders are
+          SAMPLE method work — not Black Clover, not Nutricost, not client extracts.
         </p>
       </header>
       <div className="proof-list">
         {evidenceItems.map((item) => (
           <article className="proof-row" key={item.index}>
-            <p className="exp-idx">{item.index}</p>
+            <p className="exp-idx num">{item.index}</p>
             <div>
               <h3>{item.title}</h3>
               <p>{item.body}</p>
-              <p className="proof-tag">{item.tag}</p>
             </div>
-            <p className="verified">Verified</p>
           </article>
         ))}
       </div>
       <section className="band">
         <p className="note measure">
-          Upload Word on myworkdayjobs.com. PDF on Greenhouse and Ashby. Same facts. Public SAMPLE
-          pointers only — not Black Clover, not Nutricost, not client data.
+          SAMPLE Recast R memo and SAMPLE GeoLift notebooks are public method folders. They are not
+          client data and they are not a product comparison.
         </p>
         <p className="actions">
           <Link className="btn" href="/resume">
@@ -47,10 +45,10 @@ export default function EvidencePage() {
             Approach
           </Link>
           <a className="btn" href={site.proof.recast} rel="noreferrer" target="_blank">
-            00-recast-r-memo
+            SAMPLE Recast memo
           </a>
           <a className="btn" href={site.proof.geolift} rel="noreferrer" target="_blank">
-            01-geolift
+            SAMPLE GeoLift
           </a>
         </p>
       </section>

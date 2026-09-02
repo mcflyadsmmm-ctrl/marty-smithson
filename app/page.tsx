@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CaseRow } from "@/components/CaseRow";
 import { IdentityNav } from "@/components/IdentityNav";
-import { cases, hero, methodPillars, resume } from "@/lib/content";
+import { budgetMoved, cases, hero, methodPillars, resume } from "@/lib/content";
 import { nav, site } from "@/lib/site";
 
 export default function HomePage() {
@@ -45,6 +45,10 @@ export default function HomePage() {
           <h2 id="experience-title">Three desks</h2>
           <p className="note measure">
             Same jobs as the resume. Real mix numbers — no invented lifts.
+          </p>
+          <p className="budget-moved measure">
+            <span className="eyebrow">{budgetMoved.eyebrow}</span>
+            {budgetMoved.body}
           </p>
           <div className="exp-list">
             {cases.map((study) => (

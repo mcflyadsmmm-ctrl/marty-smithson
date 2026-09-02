@@ -8,9 +8,9 @@ Live: [https://marty-smithson.vercel.app](https://marty-smithson.vercel.app)
 
 Light professional canvas, not a dark terminal template.
 
-- Background: `#F7F9FC`
+- Background: `#F5F7FA`
 - One accent: `#2563EB` (links, active nav, key numbers)
-- Type: Inter via `next/font`. Hierarchy by size and weight.
+- Type: Inter via `next/font`. IBM Plex Mono only on real numbers.
 - No lime, no serif display, no monospace chrome, no fixed status bar, no live clock, no hero charts.
 
 ## Stack
@@ -37,14 +37,14 @@ npm start
 
 | Path | Page |
 | --- | --- |
-| `/` | Intro → experience rows → approach → evidence → contact |
+| `/` | Sticky identity → about → experience → approach → contact |
 | `/work` | Three case studies |
 | `/work/black-clover` | Black Clover (reports to the CEO) |
 | `/work/nutricost` | Nutricost (reported to the CMO) |
 | `/work/mcfly` | McFly Ads (CEO) |
 | `/approach` | Measurement + systems |
 | `/method` | Permanent redirect to `/approach` |
-| `/evidence` | Verified claim map |
+| `/evidence` | Evidence desk — same facts as the resume |
 | `/resume` | Master resume (print / save PDF) |
 | `/contact` | Contact |
 

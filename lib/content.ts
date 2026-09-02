@@ -254,66 +254,62 @@ export const stack = [
   { name: "Causal", detail: "Inference, not last-click." },
 ] as const;
 
+export const budgetMoved = {
+  eyebrow: "Budget that moved",
+  title: "The mix moved against cash. Not a lift slide.",
+  body: "I allocated $1M/month across Google, Meta, and Microsoft for 18 months on a ~$45M year. Weekly against cash MER. Below break-even, we cut. That book is reported to the Black Clover CEO — no invented incrementality percentage.",
+} as const;
+
 export const evidenceItems = [
   {
     index: "01",
-    title: "2+ years as analyst / scientist",
-    body: "Six years McFly Ads, 04/2020–Present. Current W-2: Head of BI, 02/2025–Present.",
-    tag: "Work Experience",
+    title: "Six years on the desk",
+    body: "McFly Ads since 04/2020. Current W-2: Head of BI & Performance Marketing at Black Clover, 02/2025–Present.",
   },
   {
     index: "02",
-    title: "R for cleaning and EDA",
-    body: "Black Clover and Nutricost bullets: R for data cleaning and exploratory analysis. SQL and Python on the same desks.",
-    tag: "Work Experience",
+    title: "R, SQL, and Python on the same desks",
+    body: "R for cleaning and exploratory analysis at Black Clover and Nutricost, with SQL and Python on those same books.",
   },
   {
     index: "03",
-    title: "Experimental methods",
-    body: "GeoLift geo-holdouts, geo-testing, RCTs when two channels claimed the same sale. The test is the budget call.",
-    tag: "Work Experience · Approach",
+    title: "The test is the budget call",
+    body: "GeoLift geo-holdouts, geo-testing, and RCTs when two channels claimed the same sale. Incrementality decides whether the mix moves.",
   },
   {
     index: "04",
-    title: "Present to technical and non-technical",
-    body: "Present the mix to the Black Clover CEO and the Nutricost CMO. McFly: brand operators.",
-    tag: "Work Experience",
+    title: "Same numbers for operators and the room",
+    body: "I present the mix to the Black Clover CEO and the Nutricost CMO. At McFly Ads, to brand operators.",
   },
   {
     index: "05",
-    title: "Bachelor’s",
-    body: "Utah Valley University, Orem, Utah — Bachelor of Science. Coursework in information systems, data analytics, statistics, and digital marketing.",
-    tag: "Education",
+    title: "Utah Valley University",
+    body: "Bachelor of Science. Coursework in information systems, data analytics, statistics, and digital marketing. Orem, Utah.",
   },
   {
     index: "06",
-    title: "Bayesian statistical modeling",
-    body: "Meridian Bayesian MMM on the Google, Meta, and Microsoft mix at Black Clover. Not Recast’s 30k-parameter product.",
-    tag: "Work Experience · Skills",
+    title: "Meridian on the live mix",
+    body: "Bayesian MMM in Meridian on the Google, Meta, and Microsoft mix at Black Clover.",
   },
   {
     index: "07",
-    title: "Marketing data science / media measurement",
+    title: "The books I ran",
     body: "$1M/month Black Clover mix, $2M/month Nutricost, $30M+ media directed. Cash MER, not platform ROAS.",
-    tag: "Summary · Work",
   },
   {
     index: "08",
-    title: "EST overlap / US remote",
+    title: "Where I work from",
     body: "American Fork, Utah, United States. US remote. EST overlap.",
-    tag: "Contact line",
   },
   {
     index: "09",
-    title: "Years of experience",
-    body: "6 years of experience in marketing data science (04/2020 - Present). Concurrent McFly Ads CEO + Black Clover / Nutricost W-2.",
-    tag: "Scan line",
+    title: "Concurrent seats",
+    body: "6 years in marketing data science (04/2020–Present). McFly Ads CEO held with the Black Clover and Nutricost W-2 roles — the company did not pause.",
   },
   {
     index: "10",
     title: "Work authorization",
     body: "US citizen. No visa sponsorship required.",
-    tag: "Contact line",
   },
 ] as const;
 
