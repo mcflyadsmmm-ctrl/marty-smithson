@@ -42,6 +42,8 @@ npm start
 | `/work/black-clover` | Black Clover (reports to the CEO) |
 | `/work/nutricost` | Nutricost (reported to the CMO) |
 | `/work/mcfly` | McFly Ads (CEO) |
+| `/work/slot/sample-science` | SAMPLE / SLOT — Recast-shaped science (awaiting facts) |
+| `/work/slot/operator-allocation` | SLOT — operator / allocation (awaiting facts) |
 | `/approach` | Measurement + systems |
 | `/method` | Permanent redirect to `/approach` |
 | `/evidence` | Evidence desk — same facts as the resume |

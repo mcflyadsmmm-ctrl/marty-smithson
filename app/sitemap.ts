@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { cases } from "@/lib/content";
+import { caseSlots, cases } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -12,6 +12,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...cases.map((study) => ({
       url: `${site.url}/work/${study.slug}`,
+      lastModified: now,
+    })),
+    ...caseSlots.map((slot) => ({
+      url: `${site.url}/work/slot/${slot.slug}`,
       lastModified: now,
     })),
   ];

@@ -19,7 +19,7 @@ const graph = {
           "@type": "Occupation",
           name: "Head of Business Intelligence & Performance Marketing",
           experienceRequirements: "6 years of experience in marketing data science",
-          educationRequirements: "Bachelor of Science",
+          educationRequirements: "Bachelor of Science, emphasis Data Science and Statistics",
           occupationLocation: { "@type": "Organization", name: "Black Clover" },
         },
         {
