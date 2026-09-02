@@ -14,6 +14,13 @@ export function FleetMap({
         <span className="label">Architecture</span>
         {fleet.mapCaption}
       </figcaption>
+      {compact ? (
+        <ul className="arch-source-row">
+          {fleet.sources.map((source) => (
+            <li key={source}>{source}</li>
+          ))}
+        </ul>
+      ) : null}
       <div className="arch-board">
         <div className="arch-col arch-sources-col">
           <p className="label">Sources</p>

@@ -17,7 +17,6 @@ export default function WorkPage() {
   return (
     <article className="page">
       <header className="page-head wrap">
-        <p className="label">Work</p>
         <h1>Work</h1>
         <p className="lede">{workPage.lead}</p>
       </header>

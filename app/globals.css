@@ -1,15 +1,15 @@
 :root {
-  --bg: #efeee9;
+  --bg: #d9d9d4;
   --bg-hero: #111110;
   --ink: #111110;
   --ink-hero: #f3f2ec;
-  --muted: #5c5c56;
+  --muted: #5a5a56;
   --muted-hero: #a8a79c;
-  --faint: #8a8a82;
-  --line: #cfcfc6;
+  --faint: #7c7c76;
+  --line: #c4c4be;
   --line-strong: #111110;
-  --panel: #f7f6f1;
-  --panel-deep: #e6e5df;
+  --panel: #f5f5f2;
+  --panel-deep: #ecece7;
   --sans: var(--font-sans), "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --mono: var(--font-mono), "IBM Plex Mono", ui-monospace, monospace;
   --page: 68rem;
@@ -141,6 +141,29 @@ p {
   border-bottom: 1px solid var(--line);
 }
 
+body:has(.hero) .site-header {
+  background: color-mix(in srgb, var(--bg-hero) 90%, transparent);
+  border-bottom-color: #2a2a28;
+}
+
+body:has(.hero) .wordmark,
+body:has(.hero) .wordmark:hover,
+body:has(.hero) .nav a[aria-current="page"] {
+  color: var(--ink-hero);
+}
+
+body:has(.hero) .nav a {
+  color: var(--muted-hero);
+}
+
+body:has(.hero) .nav a:hover {
+  color: var(--ink-hero);
+}
+
+body:has(.hero) .site-header a:focus-visible {
+  outline-color: var(--ink-hero);
+}
+
 .site-header-inner {
   width: min(100%, var(--page));
   margin: 0 auto;
@@ -200,10 +223,7 @@ p {
 .hero {
   background: var(--bg-hero);
   color: var(--ink-hero);
-  display: flex;
-  align-items: center;
-  min-height: calc(100dvh - 3.7rem);
-  padding: 4.5rem 0 4rem;
+  padding: 3.4rem 0 3rem;
 }
 
 .hero h1 {
@@ -248,11 +268,12 @@ p {
 }
 
 .page-head {
-  padding: 3.6rem 0 2.2rem;
+  padding: 2.8rem 0 1.8rem;
 }
 
 .page-head h1 {
   margin-bottom: 0.85rem;
+  font-size: clamp(2.1rem, 5vw, 3.15rem);
 }
 
 .page-head .lede {
@@ -265,6 +286,10 @@ p {
 
 .section {
   padding: 2.6rem 0 0;
+}
+
+.page > .wrap > .section:first-of-type {
+  padding-top: 1.5rem;
 }
 
 .section > .label,
@@ -339,7 +364,7 @@ a.resume-card:hover {
 
 .figure {
   margin: 1rem 0 0;
-  padding: 1.2rem 1.3rem 1.35rem;
+  padding: 0 0 1.2rem;
   background: var(--panel);
   border: 1px solid var(--line);
 }
@@ -347,13 +372,26 @@ a.resume-card:hover {
 .figure > figcaption {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
-  margin: 0 0 1.1rem;
+  gap: 0.25rem;
+  margin: 0 0 1rem;
+  padding: 0.85rem 1.2rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel-deep);
   font-size: 0.95rem;
 }
 
 .figure > figcaption .label {
   margin: 0;
+}
+
+.figure .arch-board,
+.figure .shift-grid,
+.figure .matrix {
+  margin-inline: 1.2rem;
+}
+
+.figure .arch-source-row {
+  margin: 0 1.2rem 0.85rem;
 }
 
 .arch-board {
@@ -468,6 +506,22 @@ a.resume-card:hover {
   color: var(--faint);
 }
 
+.arch-source-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 0.85rem;
+  padding: 0;
+  list-style: none;
+}
+
+.arch-source-row li {
+  padding: 0.35rem 0.55rem;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  font-size: 0.78rem;
+}
+
 .arch.is-compact .arch-board {
   grid-template-columns: minmax(11rem, 0.9fr) auto 1fr;
 }
@@ -527,7 +581,7 @@ a.resume-card:hover {
   color: var(--muted);
 }
 
-.shift.is-compact .shift-col ul {
+.shift.is-compact .shift-col ul li:not(:first-child) {
   display: none;
 }
 
@@ -797,8 +851,7 @@ a.resume-card:hover {
   }
 
   .hero {
-    min-height: 0;
-    padding: 3.2rem 0 2.8rem;
+    padding: 2.2rem 0 2rem;
   }
 
   .page-head {

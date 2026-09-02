@@ -12,7 +12,6 @@ export default function ContactPage() {
   return (
     <article className="page">
       <header className="page-head wrap">
-        <p className="label">Contact</p>
         <h1>Contact</h1>
         <p className="lede">{site.locationLine}</p>
       </header>

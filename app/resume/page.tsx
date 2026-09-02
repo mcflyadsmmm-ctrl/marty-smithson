@@ -12,7 +12,6 @@ export default function ResumePage() {
   return (
     <article className="page">
       <header className="page-head wrap">
-        <p className="label">Resume</p>
         <h1>Resume</h1>
         <p className="lede">
           Three PDFs. Same facts, different emphasis.
