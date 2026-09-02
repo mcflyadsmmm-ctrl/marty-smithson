@@ -16,8 +16,8 @@ export default function SystemsFleetPage() {
         <p className="eyebrow">My case · Black Clover</p>
         <h1>Isolated truth lanes</h1>
         <p className="lede tight">
-          What I built so leadership could fund a call — including a partner portal on Google Cloud
-          Run for about 50 users. Not a product pitch.
+          Partner portal on Google Cloud Run for about 50 users. Domo warehouse moved to Cloud Run
+          — about $20K a month saved. Leadership funds a call from certified numbers.
         </p>
       </header>
 

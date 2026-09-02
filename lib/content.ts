@@ -43,12 +43,12 @@ export const homeLanes =
 
 export const homeBuilds = [
   {
-    lead: "Partner portal on Google Cloud Run",
-    body: "for about 50 users — executives, rep leads, and reps. Live NetSuite, tiered access, CRM-style messaging, and a hard cost cap.",
-  },
-  {
     lead: "Domo to Google Cloud Run",
     body: "a complete data warehouse transition. About $20K a month saved.",
+  },
+  {
+    lead: "Partner portal on Google Cloud Run",
+    body: "for about 50 users — executives, rep leads, and reps. Live NetSuite, tiered access, CRM-style messaging, and a hard cost cap.",
   },
   {
     lead: "Certified decision desks",
@@ -62,12 +62,12 @@ export const homeBuilds = [
 
 export const workBuilds = [
   {
-    lead: "Partner portal on Google Cloud Run",
-    body: "About 50 users — executives, rep leads, and reps. Live NetSuite, tiered access, CRM-style messaging, and a hard cost cap.",
-  },
-  {
     lead: "Domo to Google Cloud Run",
     body: "Complete data warehouse transition. About $20K a month saved.",
+  },
+  {
+    lead: "Partner portal on Google Cloud Run",
+    body: "About 50 users — executives, rep leads, and reps. Live NetSuite, tiered access, CRM-style messaging, and a hard cost cap.",
   },
   {
     lead: "Decision Net",
@@ -85,12 +85,12 @@ export const workBuilds = [
 
 export const fleetShipped = [
   {
-    title: "Partner portal",
-    body: "Twin of the exec desk on Google Cloud Run for about 50 users — executives, rep leads, and reps. Live NetSuite, tiered access, CRM-style messaging. Never owns the fact.",
-  },
-  {
     title: "Domo warehouse move",
     body: "Complete data warehouse transition off Domo onto Google Cloud Run. About $20K a month saved.",
+  },
+  {
+    title: "Partner portal",
+    body: "Twin of the exec desk on Google Cloud Run for about 50 users — executives, rep leads, and reps. Live NetSuite, tiered access, CRM-style messaging. Never owns the fact.",
   },
   {
     title: "Wholesale Decision Net",

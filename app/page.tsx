@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { cases, hero, homeBuilds, homeLanes } from "@/lib/content";
+import { hero, homeBuilds, homeLanes } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
@@ -23,8 +23,7 @@ export default function HomePage() {
       </header>
 
       <section className="band" id="built" aria-labelledby="built-title">
-        <p className="eyebrow">What I built</p>
-        <h2 id="built-title">Concrete work</h2>
+        <h2 id="built-title">What I built</h2>
         <p className="tight measure">{homeLanes}</p>
         <ul className="build-list">
           {homeBuilds.map((build) => (
@@ -38,20 +37,6 @@ export default function HomePage() {
             Read the case →
           </Link>
         </p>
-      </section>
-
-      <section className="band" id="sat" aria-labelledby="sat-title">
-        <p className="eyebrow">Where this sat</p>
-        <h2 id="sat-title">Backdrop</h2>
-        <ul className="context-list">
-          {cases.map((study) => (
-            <li key={study.slug}>
-              <Link href={`/work/${study.slug}`}>
-                {study.headline} · {study.role} · {study.brand} · {study.dates}
-              </Link>
-            </li>
-          ))}
-        </ul>
       </section>
 
       <section className="band contact-strip-home" id="contact" aria-labelledby="contact-title">
