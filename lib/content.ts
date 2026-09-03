@@ -20,7 +20,7 @@ export const hero = {
 } as const;
 
 export const homeTease = {
-  more: "The architecture, the Domo move, and the portal identity model.",
+  more: "The Black Clover case has the architecture, the Domo move, and the portal identity model.",
   href: "/work/systems-fleet",
 } as const;
 
@@ -36,7 +36,7 @@ export const fleet = {
   title: "Black Clover",
   role: "Head of BI & Performance Marketing",
   reportsTo: "I report to the CEO.",
-  dates: "February 2025 — present",
+  dates: "February 2025 to present",
   lead: "I moved the warehouse off Domo and built the isolated books the CEO and the field both use.",
   open: [
     "The resume can say Cloud Run and a partner portal. What it cannot show is how the company actually decides: five books that are not allowed to borrow from each other, a field of about fifty people who can read a number they cannot rewrite, and a warehouse that had to leave a vendor bill without landing on another one.",
@@ -166,20 +166,20 @@ export const workPage = {
     role: "Head of BI & Performance Marketing. I report to the CEO.",
     body: "Warehouse off Domo onto Cloud Run — about twenty thousand a month cheaper, held to a GCP class around thirty dollars. Partner portal for about fifty people. Five isolated books: wholesale, the field, cash MER, retail, and fulfillment.",
     href: "/work/systems-fleet",
-    more: "Architecture, the move, and the identity model.",
+    more: "The case has the architecture, the move, and the identity model.",
   },
   nutricost: {
     title: "Nutricost",
     role: "Performance Marketing & Analytics Lead. I reported to the CMO.",
     href: "/work/nutricost",
-    line: "Thirteen unique sub-brands. Warehouse and ads station for margins and COGS.",
+    line: "I organized the data portfolio for thirteen unique sub-brands, and I built the warehouse and the ads station executives used for margins and COGS.",
     more: "The Nutricost note.",
   },
   mcfly: {
     title: "McFly Ads",
     role: "I started the company in 2020, and I’m CEO there.",
     href: "/work/mcfly",
-    line: "Marketing data science for ten named brands.",
+    line: "The work is marketing data science for ten named brands.",
     more: "The brand names.",
   },
 } as const;
@@ -189,9 +189,9 @@ export const cases: CaseStudy[] = [
     slug: "nutricost",
     brand: "Nutricost",
     role: "Performance Marketing & Analytics Lead",
-    dates: "August 2024 — February 2025",
+    dates: "August 2024 to February 2025",
     reportsTo: "Reported to the CMO",
-    lead: "One CMO desk for margins and COGS.",
+    lead: "I reported to the CMO and ran one desk for margins and COGS.",
     body: [
       "I built the full data warehouse. I built the advertising data-science station where executives could see profit margins and COGS.",
     ],
@@ -200,7 +200,7 @@ export const cases: CaseStudy[] = [
     slug: "mcfly",
     brand: "McFly Ads",
     role: "CEO",
-    dates: "April 2020 — present",
+    dates: "April 2020 to present",
     reportsTo: "I started the company",
     lead: "I started McFly Ads in 2020, and I’m CEO there.",
     body: [

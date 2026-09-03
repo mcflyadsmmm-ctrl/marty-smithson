@@ -8,10 +8,14 @@ Live: [https://marty-smithson.vercel.app](https://marty-smithson.vercel.app)
 
 A resume-extension portfolio. Not a blog, not a landing page.
 
-- One theme end-to-end: dark header (`#111110`) · stone canvas (`#ecece8`) · cream plates (`#f7f7f4`)
-- Type: IBM Plex Sans + IBM Plex Mono
-- Wide grid (~68rem). Proof is figures (architecture, Domo→Cloud Run, identity matrix, lane cards)
-- No pills, no SaaS chrome, no mixed dark-hero / card-UI chrome
+The token brief lives in [`docs/design-tokens.md`](docs/design-tokens.md). Implement from that page.
+
+- One theme end-to-end: cool ledger paper (`#dfe6e2`) · cool plates (`#eef2ef`) · ink (`#141a17`)
+- Type: IBM Plex Sans + IBM Plex Mono, sentence-case field names
+- Wide grid (~68rem). Proof is figures (identity matrix, five books, architecture, Domo to Cloud Run)
+- Home fold leads with who-sees-what. The Domo bill is a verified note, not the first object
+- Resume is a pack ledger. Full resume is the take. Email is quieter. LinkedIn is secondary
+- No pills, no SaaS chrome, no cream/stone editorial cluster, no tracked ALL-CAPS eyebrows
 - Ghost `/approach`, `/evidence`, `/method` 301 to `/` — they must not serve the Work body
 
 ## Stack
@@ -33,12 +37,12 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Path | Page |
 | --- | --- |
-| `/` | Name, one line, then visual proof plates |
-| `/work` | Black Clover proof first; Nutricost and McFly Ads |
-| `/work/systems-fleet` | Black Clover proof: lanes, Domo→Cloud Run, portal identity |
+| `/` | Name, one line, identity matrix, then the Domo note |
+| `/work` | Black Clover books first; Nutricost and McFly Ads |
+| `/work/systems-fleet` | Black Clover proof: lanes, Domo to Cloud Run, portal identity |
 | `/work/nutricost` | Short Nutricost note |
 | `/work/mcfly` | McFly Ads — CEO title is here |
-| `/resume` | PDF downloads |
+| `/resume` | PDF pack chooser |
 | `/contact` | Email |
 
 `/approach`, `/evidence`, and `/method` 301 to `/`. `/work/black-clover` 301s to `/work/systems-fleet`.

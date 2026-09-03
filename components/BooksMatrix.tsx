@@ -25,29 +25,31 @@ export function BooksMatrix({
   return (
     <figure className="figure books">
       <figcaption>
-        <span className="label">Books</span>
+        <span className="field">Five books</span>
         {fleet.mapCaption}
       </figcaption>
-      <table className="matrix">
-        <thead>
-          <tr>
-            <th scope="col">Book</th>
-            <th scope="col">Writer</th>
-            <th scope="col">Field rewrite</th>
-          </tr>
-        </thead>
-        <tbody>
-          {fleet.lanes.map((lane) => (
-            <tr key={lane.id}>
-              <td>
-                <Link href={laneHref(lane.id, prefix)}>{lane.short}</Link>
-              </td>
-              <td>{writerFor(lane.id)}</td>
-              <td className="role-rule">No</td>
+      <div className="figure-body">
+        <table className="matrix">
+          <thead>
+            <tr>
+              <th scope="col">Book</th>
+              <th scope="col">Writer</th>
+              <th scope="col">Field rewrite</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {fleet.lanes.map((lane) => (
+              <tr key={lane.id}>
+                <td>
+                  <Link href={laneHref(lane.id, prefix)}>{lane.short}</Link>
+                </td>
+                <td>{writerFor(lane.id)}</td>
+                <td className="role-rule">No</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </figure>
   );
 }

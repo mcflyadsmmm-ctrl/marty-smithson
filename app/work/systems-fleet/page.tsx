@@ -18,44 +18,44 @@ export default function SystemsFleetPage() {
   return (
     <article className="page proof">
       <header className="page-head wrap">
-        <p className="label">
-          {fleet.role} · {fleet.dates}
-        </p>
         <h1>{fleet.title}</h1>
         <p className="lede">{fleet.lead}</p>
+        <p className="quiet">
+          {fleet.role}. {fleet.reportsTo} {fleet.dates}.
+        </p>
       </header>
 
       <CaseNav />
 
       <div className="wrap">
         <section className="case-block case-block-first" id="architecture">
-          <p className="label">01 / Architecture</p>
+          <p className="field">Architecture</p>
           <h2 className="visually-hidden">Architecture</h2>
           <FleetMap />
         </section>
 
         <section className="case-block" id="shift">
-          <p className="label">02 / Shift</p>
+          <p className="field">The move</p>
           <h2>{fleet.shift.title}</h2>
           <ShiftCompare />
           <p className="quiet after-figure">{fleet.shift.note}</p>
         </section>
 
         <section className="case-block" id="identity">
-          <p className="label">03 / Identity</p>
+          <p className="field">Identity</p>
           <h2>{fleet.identities.title}</h2>
           <PortalRoles />
           <p className="quiet after-figure">{fleet.identities.note}</p>
         </section>
 
         <section className="case-block" id="lanes">
-          <p className="label">04 / Lanes</p>
+          <p className="field">Lanes</p>
           <h2>Five isolated books</h2>
           <LaneGrid />
         </section>
 
         <section className="case-block" id="constraint">
-          <p className="label">05 / Constraint</p>
+          <p className="field">Constraint</p>
           <h2>{fleet.constraints.title}</h2>
           <ul className="constraint-grid">
             {fleet.constraints.items.map((item) => (
@@ -68,7 +68,7 @@ export default function SystemsFleetPage() {
         </section>
 
         <section className="band" id="mix">
-          <p className="label">06 / Mix</p>
+          <p className="field">Mix</p>
           <h2>{fleet.mix.title}</h2>
           <p>{fleet.mix.body}</p>
         </section>

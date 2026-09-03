@@ -39,14 +39,11 @@ export default async function CasePage({ params }: Props) {
   return (
     <article className="page">
       <header className="page-head wrap">
-        <p className="label">
-          {study.role} · {study.dates}
-        </p>
         <h1>{study.brand}</h1>
         <p className="lede">{study.lead}</p>
-        {study.slug === "mcfly" ? null : (
-          <p className="quiet">{study.reportsTo}.</p>
-        )}
+        <p className="quiet">
+          {study.role}. {study.reportsTo}. {study.dates}.
+        </p>
       </header>
 
       <div className="wrap">
@@ -68,7 +65,7 @@ export default async function CasePage({ params }: Props) {
 
         {study.slug === "mcfly" ? (
           <section className="section">
-            <p className="label">Roster</p>
+            <p className="field">Roster</p>
             <h2>Named brands</h2>
             <BrandRoster />
           </section>
