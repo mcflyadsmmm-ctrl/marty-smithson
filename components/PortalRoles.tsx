@@ -1,20 +1,36 @@
 import { fleet } from "@/lib/content";
 
-export function PortalRoles() {
+export function PortalRoles({
+  compact = false,
+}: {
+  compact?: boolean;
+}) {
   const { identities } = fleet;
 
   return (
-    <figure className="roles">
-      <figcaption>{identities.title}</figcaption>
-      <ul className="role-grid">
-        {identities.roles.map((role) => (
-          <li key={role.title}>
-            <h3>{role.title}</h3>
-            <p>{role.sees}</p>
-            <p className="role-rule">{role.rule}</p>
-          </li>
-        ))}
-      </ul>
+    <figure className={compact ? "figure roles is-compact" : "figure roles"}>
+      <figcaption>
+        <span className="label">Identity</span>
+        {identities.title}
+      </figcaption>
+      <table className="matrix">
+        <thead>
+          <tr>
+            <th scope="col">Role</th>
+            <th scope="col">Sees</th>
+            <th scope="col">Writes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {identities.roles.map((role) => (
+            <tr key={role.title}>
+              <td>{role.title}</td>
+              <td>{role.sees}</td>
+              <td className="role-rule">{role.rule}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </figure>
   );
 }

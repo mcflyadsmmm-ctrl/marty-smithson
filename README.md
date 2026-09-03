@@ -6,13 +6,13 @@ Live: [https://marty-smithson.vercel.app](https://marty-smithson.vercel.app)
 
 ## Visual system
 
-A personal read with systems proof. Not a landing page.
+A resume-extension portfolio. Not a blog, not a landing page.
 
-- Background: `#FAF9F6`
-- Ink: `#161616`
-- Type: Source Serif 4 for the writing, Inter in the header, footer, and figures
-- Prose stays a narrow measure; architecture figures can use the wider page
-- No pills, no Measure→Move steppers, no display-name hero
+- One theme end-to-end: dark header (`#111110`) · stone canvas (`#ecece8`) · cream plates (`#f7f7f4`)
+- Type: IBM Plex Sans + IBM Plex Mono
+- Wide grid (~68rem). Proof is figures (architecture, Domo→Cloud Run, identity matrix, lane cards)
+- No pills, no SaaS chrome, no mixed dark-hero / card-UI chrome
+- Ghost `/approach`, `/evidence`, `/method` 301 to `/` — they must not serve the Work body
 
 ## Stack
 
@@ -33,7 +33,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Path | Page |
 | --- | --- |
-| `/` | Name, then a tease of the Black Clover architecture |
+| `/` | Name, one line, then visual proof plates |
 | `/work` | Black Clover proof first; Nutricost and McFly Ads |
 | `/work/systems-fleet` | Black Clover proof: lanes, Domo→Cloud Run, portal identity |
 | `/work/nutricost` | Short Nutricost note |
@@ -41,7 +41,7 @@ Open [http://localhost:3000](http://localhost:3000).
 | `/resume` | PDF downloads |
 | `/contact` | Email |
 
-`/approach`, `/evidence`, `/method`, and `/work/black-clover` redirect.
+`/approach`, `/evidence`, and `/method` 301 to `/`. `/work/black-clover` 301s to `/work/systems-fleet`.
 
 ## Facts
 
