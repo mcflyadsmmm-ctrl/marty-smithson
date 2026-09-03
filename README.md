@@ -10,7 +10,7 @@ A resume-extension portfolio. Not a blog, not a landing page.
 
 The token brief lives in [`docs/design-tokens.md`](docs/design-tokens.md). Implement from that page.
 
-- One theme end-to-end: cool ledger paper (`#dfe6e2`) · cool plates (`#eef2ef`) · ink (`#141a17`)
+- One theme end-to-end: cool ledger paper (`#d0dbd4`) · cool plates (`#e7eee9`) · ink (`#141a17`)
 - Type: IBM Plex Sans + IBM Plex Mono, sentence-case field names
 - Wide grid (~68rem). Proof is figures (identity matrix, five books, architecture, Domo to Cloud Run)
 - Home fold leads with who-sees-what. The Domo bill is a verified note, not the first object

@@ -1,10 +1,10 @@
 :root {
-  --paper: #dfe6e2;
-  --plate: #eef2ef;
+  --paper: #d0dbd4;
+  --plate: #e7eee9;
   --ink: #141a17;
   --mute: #465049;
   --faint: #667068;
-  --rule: #b0bbb4;
+  --rule: #a8b4ac;
   --spine: #141a17;
   --spine-ink: #eef2ef;
   --spine-mute: #9aa69e;
@@ -207,16 +207,11 @@ p {
 }
 
 .site-main {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
+  flex: 0 1 auto;
   width: 100%;
 }
 
 .page {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
   padding-bottom: 2.5rem;
 }
 
@@ -764,9 +759,7 @@ a.work-entry:hover .more {
 }
 
 .resume-sheet {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
 .pack-ledger {
@@ -840,8 +833,8 @@ a.work-entry:hover .more {
 }
 
 .resume-sign {
-  margin-top: auto;
-  padding-top: 1.6rem;
+  margin-top: 1.6rem;
+  padding-top: 0;
 }
 
 .resume-sign p {

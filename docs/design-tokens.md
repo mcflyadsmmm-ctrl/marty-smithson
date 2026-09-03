@@ -20,12 +20,12 @@ Live (PR #19) used warm stone `#ecece8` and cream plates `#f7f7f4` — playbook 
 
 | Token | Value | Role |
 | --- | --- | --- |
-| `--paper` | `#dfe6e2` | Canvas. Cool green-gray stock. Not warm stone. |
-| `--plate` | `#eef2ef` | Figures and packs. Cool sheet. Not cream. |
+| `--paper` | `#d0dbd4` | Canvas. Cool ledger stock. Not warm stone `#ecece8`. |
+| `--plate` | `#e7eee9` | Figures and packs. Cool sheet. Not cream `#f7f7f4`. |
 | `--ink` | `#141a17` | Text, double-rules, warehouse spine. |
 | `--mute` | `#465049` | Secondary sentences. |
 | `--faint` | `#667068` | Field names only. |
-| `--rule` | `#b0bbb4` | Ledger lines inside figures. |
+| `--rule` | `#a8b4ac` | Ledger lines inside figures. |
 | `--spine` | `#141a17` | Warehouse book. |
 | `--spine-ink` | `#eef2ef` | Type on the spine. |
 | `--take` | `#141a17` | Primary resume control. Paper type on ink. Not green. |

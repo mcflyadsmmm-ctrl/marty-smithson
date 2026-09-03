@@ -16,17 +16,15 @@ export default function ContactPage() {
           Email is the direct path. LinkedIn is if you already live there.
         </p>
       </header>
-      <div className="wrap resume-sheet">
+      <div className="wrap">
         <p>
           <a href={`mailto:${site.email}`}>{site.email}</a>
         </p>
-        <div className="resume-sign">
-          <p>
-            <a href={site.linkedin} rel="noreferrer" target="_blank">
-              LinkedIn
-            </a>
-          </p>
-        </div>
+        <p className="close-links">
+          <a href={site.linkedin} rel="noreferrer" target="_blank">
+            LinkedIn
+          </a>
+        </p>
       </div>
     </article>
   );
