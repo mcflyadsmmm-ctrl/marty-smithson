@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -32,19 +32,27 @@ export const metadata: Metadata = {
   },
   description: site.description,
   authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
   alternates: { canonical: site.url },
   openGraph: {
     title: site.title,
     description: site.description,
     url: site.url,
     type: "website",
+    locale: "en_US",
     siteName: site.name,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: site.title,
     description: site.description,
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#d0dbd4",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -56,9 +64,14 @@ export default function RootLayout({
     <html lang="en" className={`${sans.variable} ${mono.variable}`}>
       <body className={sans.className}>
         <JsonLd />
+        <a className="skip" href="#content">
+          Skip to content
+        </a>
         <div className="sheet">
           <SiteHeader />
-          <main className="site-main">{children}</main>
+          <main id="content" className="site-main">
+            {children}
+          </main>
           <SiteFooter />
         </div>
       </body>

@@ -11,8 +11,8 @@ export function ProofRail({
 }) {
   return (
     <div className="proof-rail" aria-label="Black Clover proof">
-      <CostStrip />
       {showPortal ? <PortalRoles compact /> : <BooksMatrix prefix={prefix} />}
+      <CostStrip />
     </div>
   );
 }

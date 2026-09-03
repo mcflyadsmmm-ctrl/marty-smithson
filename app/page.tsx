@@ -9,7 +9,6 @@ export default function HomePage() {
   return (
     <article className="page">
       <header className="page-head wrap">
-        <p className="label">Head of BI · Black Clover</p>
         <h1>{hero.name}</h1>
         <p className="lede">{hero.line}</p>
       </header>
@@ -21,7 +20,7 @@ export default function HomePage() {
         </p>
 
         <section className="section" aria-label="Also">
-          <p className="label">Also</p>
+          <p className="field">Also</p>
           <div className="later-grid">
             <Link className="work-entry" href={nutricost.href}>
               <h2>{nutricost.title}</h2>
@@ -38,12 +37,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="close" aria-label="Contact">
+        <section className="close" aria-label="Email">
           <p>
             <a href={`mailto:${site.email}`}>{site.email}</a>
-          </p>
-          <p className="quiet">
-            {site.location}. {site.education}.
           </p>
         </section>
       </div>

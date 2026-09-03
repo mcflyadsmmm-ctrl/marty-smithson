@@ -7,18 +7,16 @@ export function CostStrip() {
     <figure className="cost-strip">
       <figcaption className="visually-hidden">{shift.title}</figcaption>
       <div className="cost-node">
-        <p className="label">{shift.before.label}</p>
+        <p className="field">{shift.before.label}</p>
         <p className="cost-title">{shift.before.title}</p>
+        <p className="quiet">{shift.before.points[0]}</p>
       </div>
-      <div className="cost-delta">
-        <p className="cost-delta-num">~$20K</p>
-        <p className="label">a month off the bill</p>
-      </div>
-      <div className="cost-node is-now">
-        <p className="label">{shift.after.label}</p>
+      <div className="cost-node">
+        <p className="field">{shift.after.label}</p>
         <p className="cost-title">{shift.after.title}</p>
-        <p className="label">GCP class ~$30</p>
+        <p className="quiet">Same warehouse work, held to a GCP class around $30.</p>
       </div>
+      <p className="cost-note">About $20K a month left the bill. The work did not change to make the move look good.</p>
     </figure>
   );
 }

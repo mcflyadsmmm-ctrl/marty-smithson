@@ -6,7 +6,7 @@ import { workPage } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Black Clover — warehouse off Domo onto Cloud Run, isolated books, and the partner portal. Notes on Nutricost and McFly Ads.",
+    "Black Clover — isolated books, a partner portal, and the warehouse off Domo onto Cloud Run. Notes on Nutricost and McFly Ads.",
   alternates: { canonical: "/work" },
 };
 
@@ -16,7 +16,6 @@ export default function WorkPage() {
   return (
     <article className="page">
       <header className="page-head wrap">
-        <p className="label">Work</p>
         <h1>{blackClover.title}</h1>
         <p className="lede">{blackClover.role}</p>
       </header>
@@ -33,7 +32,7 @@ export default function WorkPage() {
         </section>
 
         <section className="section" aria-label="Earlier work">
-          <p className="label">Earlier</p>
+          <p className="field">Earlier</p>
           <div className="later-grid">
             <Link className="work-entry" href={nutricost.href}>
               <h2>{nutricost.title}</h2>
