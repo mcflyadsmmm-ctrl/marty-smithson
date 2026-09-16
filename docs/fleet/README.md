@@ -10,4 +10,4 @@ Live site: https://marty-smithson.pages.dev/
 
 Mode: **scout-only** · stealth · zero applies until Marty reopens.
 
-Site locks (2026-09-16): Nutricost title is Advertising Data Scientist; education is Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025); McFly Analytics is LIVE (side project); homepage is Black Clover-first.
+Site locks (2026-09-16): Nutricost title is Advertising Data Scientist; education is Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025); product name is Mcfly Analytics Shopify App (LIVE at mcflyads.com); McFly Ads is consulting only; homepage is Black Clover-first.

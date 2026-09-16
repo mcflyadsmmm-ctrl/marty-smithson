@@ -28,15 +28,20 @@ export default function HomePage() {
 
         <section className="section" aria-label="Also now">
           <p className="field">Also now</p>
-          <Link className="work-entry work-entry-solo" href={mcfly.href}>
+          <article className="work-entry work-entry-solo">
             <h2>
-              {mcfly.title}{" "}
+              {site.mcflyProduct}{" "}
               <span className="live-mark">LIVE</span>
             </h2>
             <p className="quiet">{mcfly.role}</p>
             <p>{mcfly.line}</p>
-            <span className="more">{mcfly.more}</span>
-          </Link>
+            <p className="close-links">
+              <a href={site.mcfly} rel="noreferrer" target="_blank">
+                {site.mcflyProduct}
+              </a>
+              <Link href={mcfly.href}>{mcfly.more}</Link>
+            </p>
+          </article>
         </section>
 
         <section className="section" aria-label="Earlier">

@@ -11,7 +11,7 @@ const graph = {
       description: site.description,
       email: site.email,
       url: site.url,
-      sameAs: [site.linkedin],
+      sameAs: [site.linkedin, site.mcfly],
       nationality: { "@type": "Country", name: "United States" },
       alumniOf: { "@type": "CollegeOrUniversity", name: "Utah Valley University" },
       hasOccupation: [
@@ -39,6 +39,7 @@ const graph = {
         "data warehousing",
         "marketing mix modeling",
         "cash MER",
+        site.mcflyProduct,
       ],
       address: {
         "@type": "PostalAddress",
@@ -60,6 +61,15 @@ const graph = {
       "@id": `${site.url}/#profile`,
       url: site.url,
       mainEntity: { "@id": `${site.url}/#person` },
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${site.mcfly}/#app`,
+      name: site.mcflyProduct,
+      url: site.mcfly,
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Shopify",
+      creator: { "@id": `${site.url}/#person` },
     },
   ],
 };

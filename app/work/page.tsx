@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ProofRail } from "@/components/ProofRail";
 import { workPage } from "@/lib/content";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Black Clover first — isolated books, a partner portal, and the warehouse off Domo onto Cloud Run. McFly Analytics is LIVE. Nutricost is earlier.",
+    "Black Clover first — isolated books, a partner portal, and the warehouse off Domo onto Cloud Run. Mcfly Analytics Shopify App is LIVE. Nutricost is earlier.",
   alternates: { canonical: "/work" },
 };
 
@@ -33,15 +34,20 @@ export default function WorkPage() {
 
         <section className="section" aria-label="Also now">
           <p className="field">Also now</p>
-          <Link className="work-entry work-entry-solo" href={mcfly.href}>
+          <article className="work-entry work-entry-solo">
             <h2>
-              {mcfly.title}{" "}
+              {site.mcflyProduct}{" "}
               <span className="live-mark">LIVE</span>
             </h2>
             <p className="quiet">{mcfly.role}</p>
             <p>{mcfly.line}</p>
-            <span className="more">{mcfly.more}</span>
-          </Link>
+            <p className="close-links">
+              <a href={site.mcfly} rel="noreferrer" target="_blank">
+                {site.mcflyProduct}
+              </a>
+              <Link href={mcfly.href}>{mcfly.more}</Link>
+            </p>
+          </article>
         </section>
 
         <section className="section" aria-label="Earlier work">

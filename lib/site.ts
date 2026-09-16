@@ -12,6 +12,7 @@ export const site = {
   locationLine: "American Fork, Utah. Central Utah or US remote.",
   authorization: "US citizen. No visa sponsorship required.",
   mcfly: "https://mcflyads.com",
+  mcflyProduct: "Mcfly Analytics Shopify App",
   education:
     "Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)",
   resumes: {

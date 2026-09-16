@@ -9,10 +9,10 @@ You are building/maintaining **Marty Smithson’s** personal portfolio and caree
 
 ## Identity
 - Head of BI & Performance Marketing at Black Clover (~$45M), **reports to CEO** (started Feb 2025).
-- CEO of McFly Ads / McFly Analytics only (since 2020).
+- CEO of McFly Ads only (consulting practice, since 2020).
 - Prior: Advertising Data Scientist at Nutricost (reported to CMO).
 - Education (locked): Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025). American Fork, UT. Apps email: martysmithson04@gmail.com.
-- McFly Analytics / mcflyads.com is LIVE (shipped Shopify product). Cite as a personal/side project, not the homepage hero.
+- Product name (locked): Mcfly Analytics Shopify App. LIVE at https://mcflyads.com. Do not call the product “McFly” or “McFly Ads”. Cite as a personal/side project, not the homepage hero.
 - Comp bar: $140K+ or path to $200K+. Utah / Remote USA first.
 
 ## Standing laws (user-facing FAIL)

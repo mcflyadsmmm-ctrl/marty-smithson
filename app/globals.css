@@ -406,9 +406,13 @@ p {
   margin: 0;
 }
 
-.work-entry .more {
+.work-entry .more,
+.work-entry .close-links {
   margin-top: auto;
   padding-top: 1rem;
+}
+
+.work-entry .more {
   font-size: 0.9rem;
   text-decoration: underline;
 }

@@ -83,7 +83,7 @@ export default async function CasePage({ params }: Props) {
           <Link href="/work">All work</Link>
           {study.slug === "mcfly" ? (
             <a href={site.mcfly} rel="noreferrer" target="_blank">
-              mcflyads.com
+              {site.mcflyProduct}
             </a>
           ) : null}
         </p>

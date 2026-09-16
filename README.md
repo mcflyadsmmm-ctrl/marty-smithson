@@ -37,11 +37,11 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Path | Page |
 | --- | --- |
-| `/` | Black Clover first: name, role, location, education, identity matrix, then McFly LIVE and Nutricost |
-| `/work` | Black Clover books first; McFly LIVE; Nutricost earlier |
+| `/` | Black Clover first: name, role, location, education, identity matrix, then Mcfly Analytics Shopify App LIVE and Nutricost |
+| `/work` | Black Clover books first; Mcfly Analytics Shopify App LIVE; Nutricost earlier |
 | `/work/systems-fleet` | Black Clover proof: lanes, Domo to Cloud Run, portal identity |
 | `/work/nutricost` | Short Nutricost note — Advertising Data Scientist |
-| `/work/mcfly` | McFly Ads / McFly Analytics — LIVE shipped product |
+| `/work/mcfly` | Mcfly Analytics Shopify App — LIVE shipped product |
 | `/resume` | PDF pack chooser |
 | `/contact` | Email |
 
@@ -53,7 +53,7 @@ Do not invent lifts, ROAS, or titles. He reports to the Black Clover CEO. CEO ap
 
 Nutricost: Advertising Data Scientist, reported to the CMO. Organized a data portfolio for 13 unique sub-brands. Built the full warehouse and advertising data-science station for margins and COGS. Never use “helped.” Never use the Ketologic / Primaforce spend ramp.
 
-McFly Analytics / mcflyads.com is LIVE (shipped Shopify product). Cite as a personal/side project. Do not lead the homepage with it.
+Product name (locked): Mcfly Analytics Shopify App. LIVE at https://mcflyads.com. Do not call the product “McFly” or “McFly Ads”. McFly Ads is the consulting practice only. Do not lead the homepage with the product.
 
 Education: Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025).
 

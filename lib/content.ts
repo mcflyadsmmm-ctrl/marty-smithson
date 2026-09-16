@@ -164,7 +164,7 @@ export const fleet = {
 } as const;
 
 export const workPage = {
-  lead: "Most of what I want to show is Black Clover. McFly is a LIVE side project. Nutricost is earlier.",
+  lead: "Most of what I want to show is Black Clover. Mcfly Analytics Shopify App is a LIVE side project. Nutricost is earlier.",
   blackClover: {
     title: "Black Clover",
     role: "Head of BI & Performance Marketing. I report to the CEO.",
@@ -173,11 +173,11 @@ export const workPage = {
     more: "The case has the architecture, the move, and the identity model.",
   },
   mcfly: {
-    title: "McFly Ads / McFly Analytics",
-    role: "LIVE. Personal project — I started it in 2020, and I’m CEO there.",
+    title: "Mcfly Analytics Shopify App",
+    role: "LIVE personal project. Consulting through McFly Ads since 2020.",
     href: "/work/mcfly",
-    line: "Shipped product at mcflyads.com, plus consulting for named brands. Not the main career story.",
-    more: "The product and the brand names.",
+    line: "Shipped at mcflyads.com. Not the main career story.",
+    more: "The product note.",
     live: true,
   },
   nutricost: {
@@ -203,15 +203,15 @@ export const cases: CaseStudy[] = [
   },
   {
     slug: "mcfly",
-    brand: "McFly Ads / McFly Analytics",
-    role: "CEO",
+    brand: "Mcfly Analytics Shopify App",
+    role: "CEO, McFly Ads",
     dates: "April 2020 to present",
-    reportsTo: "Personal project. I started the company",
-    lead: "McFly Analytics is LIVE. I started McFly Ads in 2020, and I’m CEO there.",
+    reportsTo: "Personal project",
+    lead: "Mcfly Analytics Shopify App is LIVE at mcflyads.com.",
     live: true,
     body: [
       "This is a personal project I run next to the full-time seats — not the main story.",
-      "McFly Analytics is a shipped Shopify product at mcflyads.com. The consulting side is marketing data science for ten named brands — mix models, incrementality, dashboards, and paid allocation.",
+      "Mcfly Analytics Shopify App is the shipped product. The consulting practice is McFly Ads: marketing data science for ten named brands — mix models, incrementality, dashboards, and paid allocation.",
     ],
   },
 ];
@@ -261,7 +261,7 @@ export const resume = {
   role: "Head of Business Intelligence & Performance Marketing",
   scan: "Head of BI & Performance Marketing at Black Clover · reports to the CEO · Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)",
   summary:
-    "Head of Business Intelligence & Performance Marketing at Black Clover — I report to the CEO. I moved the full data warehouse off Domo onto Google Cloud Run (about $20K a month saved) and built a partner portal on Cloud Run for about 50 people. I allocate a seven-figure monthly paid mix across Google, Meta, and Microsoft against cash MER. Previously Advertising Data Scientist at Nutricost, reporting to the CMO: I organized a data portfolio for 13 unique sub-brands and built the full warehouse and advertising data-science station executives used for profit margins and COGS. CEO of McFly Ads since 2020 — McFly Analytics is LIVE at mcflyads.com.",
+    "Head of Business Intelligence & Performance Marketing at Black Clover — I report to the CEO. I moved the full data warehouse off Domo onto Google Cloud Run (about $20K a month saved) and built a partner portal on Cloud Run for about 50 people. I allocate a seven-figure monthly paid mix across Google, Meta, and Microsoft against cash MER. Previously Advertising Data Scientist at Nutricost, reporting to the CMO: I organized a data portfolio for 13 unique sub-brands and built the full warehouse and advertising data-science station executives used for profit margins and COGS. CEO of McFly Ads since 2020. Mcfly Analytics Shopify App is LIVE at mcflyads.com.",
   jobs: [
     {
       title: "Head of Business Intelligence & Performance Marketing",
@@ -289,11 +289,11 @@ export const resume = {
     },
     {
       title: "CEO",
-      org: "McFly Ads / McFly Analytics",
+      org: "McFly Ads",
       dates: "04/2020 - Present",
-      meta: "LIVE personal project. I started the company in 2020.",
+      meta: "Consulting practice. I started the company in 2020.",
       bullets: [
-        "McFly Analytics is LIVE at mcflyads.com — a shipped Shopify product. Personal project next to the full-time work, not the main seat.",
+        "Mcfly Analytics Shopify App is LIVE at mcflyads.com. Personal project next to the full-time work, not the main seat.",
         "6 years of marketing data science for 10 named brands: Robyn and Meridian, GeoLift, executive dashboards, retail command centers, and paid allocation.",
         "Named brands: Marksman Construction, Malama Solar, Royal Peak Lighting, Stretch Labs, Kin Home, BatBridge Bookkeeping, Whirly Board, Arizona Gym Floors, Pure Air Solutions, Priority Mulching Services.",
       ],
