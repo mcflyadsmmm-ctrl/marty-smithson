@@ -24,7 +24,7 @@ const graph = {
         },
         {
           "@type": "Occupation",
-          name: "Chief Executive Officer",
+          name: "Founder and Data Analytics Consultant",
           occupationLocation: { "@type": "Organization", name: "McFly Ads" },
         },
       ],

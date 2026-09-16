@@ -13,6 +13,7 @@ export const site = {
   authorization: "US citizen. No visa sponsorship required.",
   mcfly: "https://mcflyads.com",
   mcflyProduct: "Mcfly Analytics Shopify App",
+  mcflyTitle: "Founder and Data Analytics Consultant",
   education:
     "Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)",
   resumes: {

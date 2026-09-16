@@ -49,7 +49,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Facts
 
-Do not invent lifts, ROAS, or titles. He reports to the Black Clover CEO. CEO applies only at McFly Ads.
+Do not invent lifts, ROAS, or titles. He reports to the Black Clover CEO. McFly Ads consulting title is Founder and Data Analytics Consultant.
 
 Nutricost: Advertising Data Scientist, reported to the CMO. Organized a data portfolio for 13 unique sub-brands. Built the full warehouse and advertising data-science station for margins and COGS. Never use “helped.” Never use the Ketologic / Primaforce spend ramp.
 

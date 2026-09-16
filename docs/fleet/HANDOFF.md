@@ -31,7 +31,7 @@ Grok Bot / Orchestrator briefs and routes only. **All real site/repo/code/PDF pr
 | Email (apps) | martysmithson04@gmail.com |
 | Education | Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025) |
 | Current | Head of BI & Performance Marketing, Black Clover (~$45M apparel), reports to CEO · started Feb 2025 · ~18 mo as of Sep 2026 |
-| Also | CEO McFly Ads (consulting) since 2020; Mcfly Analytics Shopify App LIVE at mcflyads.com (side project) |
+| Also | Founder and Data Analytics Consultant, McFly Ads (consulting) since 2020; Mcfly Analytics Shopify App LIVE at mcflyads.com (side project) |
 | Prior | Advertising Data Scientist, Nutricost |
 | Comp bar | $140K+ to leave OR clear path to $200K+ |
 | Geo | Utah or Remote USA first; relocate only for significant package + higher PTO |
@@ -40,7 +40,7 @@ Grok Bot / Orchestrator briefs and routes only. **All real site/repo/code/PDF pr
 
 ### Titles (never invent)
 - Black Clover: Head of BI & Performance Marketing (reports to CEO) — not CEO of Black Clover
-- McFly Ads: CEO only there (consulting practice)
+- McFly Ads: Founder and Data Analytics Consultant (consulting practice)
 - Product: Mcfly Analytics Shopify App (never “McFly” or “McFly Ads”)
 - Nutricost: Advertising Data Scientist (reported to CMO)
 
@@ -752,7 +752,7 @@ Head of BI & Performance Marketing at Black Clover USA (~$45M apparel), reports 
 - Organized the data portfolio for 13 unique sub-brands under Nutricost.
 - Built the full data warehouse + advertising data science analysis station so executives could see profit margins and COGS. McFly Ads (CEO since 2020) stayed concurrent evenings-compatible through this seat.
 
-### CEO
+### Founder and Data Analytics Consultant
 **McFly Ads** · Apr 2020–Present · Concurrent (evenings-compatible; company did not pause)
 
 - Decision-systems desks for named brands: certified metrics (~$10K Looker/Tableau), retail command centers, locked metric definitions. Operators got readouts that drove decisions.
