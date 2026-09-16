@@ -3,8 +3,9 @@ import { site } from "@/lib/site";
 export function SiteFooter() {
   return (
     <footer className="site-footer">
-      <span>{site.location}</span>
+      <span>{site.locationLine}</span>
       <span className="footer-links">
+        <a href={`mailto:${site.email}`}>{site.email}</a>
         <a href={site.linkedin} rel="noreferrer" target="_blank">
           LinkedIn
         </a>

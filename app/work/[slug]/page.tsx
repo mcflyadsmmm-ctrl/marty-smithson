@@ -39,7 +39,15 @@ export default async function CasePage({ params }: Props) {
   return (
     <article className="page">
       <header className="page-head wrap">
-        <h1>{study.brand}</h1>
+        <h1>
+          {study.brand}
+          {study.live ? (
+            <>
+              {" "}
+              <span className="live-mark">LIVE</span>
+            </>
+          ) : null}
+        </h1>
         <p className="lede">{study.lead}</p>
         <p className="quiet">
           {study.role}. {study.reportsTo}. {study.dates}.

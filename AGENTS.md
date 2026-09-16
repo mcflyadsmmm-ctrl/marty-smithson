@@ -5,13 +5,14 @@ You are building/maintaining **Marty Smithson’s** personal portfolio and caree
 ## Hard mode
 - **Scout-only:** zero job applications until Marty reopens. No apply CTAs. Stealth from Black Clover (no Open to Work energy).
 - **Cursor builds** site/code here. Do not invent experience, lifts, ROAS, or SAMPLE demos.
-- Live site: https://marty-smithson.vercel.app/
+- Live site: https://marty-smithson.pages.dev/ (Cloudflare Pages project `marty-smithson`). Vercel alias 308s there.
 
 ## Identity
 - Head of BI & Performance Marketing at Black Clover (~$45M), **reports to CEO** (started Feb 2025).
 - CEO of McFly Ads / McFly Analytics only (since 2020).
-- Prior: Performance Marketing & Analytics Lead at Nutricost (reported to CMO).
-- UVU B.S. Data Science and Statistics. American Fork, UT. Apps email: martysmithson04@gmail.com.
+- Prior: Advertising Data Scientist at Nutricost (reported to CMO).
+- Education (locked): Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025). American Fork, UT. Apps email: martysmithson04@gmail.com.
+- McFly Analytics / mcflyads.com is LIVE (shipped Shopify product). Cite as a personal/side project, not the homepage hero.
 - Comp bar: $140K+ or path to $200K+. Utah / Remote USA first.
 
 ## Standing laws (user-facing FAIL)

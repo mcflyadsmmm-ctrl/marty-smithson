@@ -18,7 +18,8 @@ const graph = {
         {
           "@type": "Occupation",
           name: "Head of Business Intelligence & Performance Marketing",
-          educationRequirements: "Bachelor of Science, Data Science and Statistics emphasis",
+          educationRequirements:
+            "Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)",
           occupationLocation: { "@type": "Organization", name: "Black Clover" },
         },
         {

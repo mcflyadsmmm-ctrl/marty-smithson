@@ -6,7 +6,7 @@ import { workPage } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Black Clover — isolated books, a partner portal, and the warehouse off Domo onto Cloud Run. Notes on Nutricost and McFly Ads.",
+    "Black Clover first — isolated books, a partner portal, and the warehouse off Domo onto Cloud Run. McFly Analytics is LIVE. Nutricost is earlier.",
   alternates: { canonical: "/work" },
 };
 
@@ -31,22 +31,27 @@ export default function WorkPage() {
           </p>
         </section>
 
+        <section className="section" aria-label="Also now">
+          <p className="field">Also now</p>
+          <Link className="work-entry work-entry-solo" href={mcfly.href}>
+            <h2>
+              {mcfly.title}{" "}
+              <span className="live-mark">LIVE</span>
+            </h2>
+            <p className="quiet">{mcfly.role}</p>
+            <p>{mcfly.line}</p>
+            <span className="more">{mcfly.more}</span>
+          </Link>
+        </section>
+
         <section className="section" aria-label="Earlier work">
           <p className="field">Earlier</p>
-          <div className="later-grid">
-            <Link className="work-entry" href={nutricost.href}>
-              <h2>{nutricost.title}</h2>
-              <p className="quiet">{nutricost.role}</p>
-              <p>{nutricost.line}</p>
-              <span className="more">{nutricost.more}</span>
-            </Link>
-            <Link className="work-entry" href={mcfly.href}>
-              <h2>{mcfly.title}</h2>
-              <p className="quiet">{mcfly.role}</p>
-              <p>{mcfly.line}</p>
-              <span className="more">{mcfly.more}</span>
-            </Link>
-          </div>
+          <Link className="work-entry work-entry-solo" href={nutricost.href}>
+            <h2>{nutricost.title}</h2>
+            <p className="quiet">{nutricost.role}</p>
+            <p>{nutricost.line}</p>
+            <span className="more">{nutricost.more}</span>
+          </Link>
         </section>
       </div>
     </article>

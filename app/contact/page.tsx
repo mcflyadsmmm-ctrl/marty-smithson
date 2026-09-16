@@ -15,6 +15,7 @@ export default function ContactPage() {
         <p className="lede">
           Email is the direct path. LinkedIn is if you already live there.
         </p>
+        <p className="quiet">{site.locationLine}</p>
       </header>
       <div className="wrap">
         <p>

@@ -421,6 +421,51 @@ a.work-entry:hover .more {
   color: #000;
 }
 
+.work-entry-solo {
+  border: 1px solid var(--rule);
+  max-width: 38rem;
+}
+
+.live-mark {
+  display: inline-block;
+  margin-left: 0.35rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  vertical-align: middle;
+}
+
+.resume-jobs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.resume-jobs > li + li {
+  margin-top: 1.6rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.resume-jobs h3 {
+  margin-bottom: 0.25rem;
+}
+
+.resume-jobs ul {
+  margin: 0.7rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.resume-jobs li li {
+  margin-bottom: 0.4rem;
+}
+
+.resume-sheet > .section-copy {
+  margin-bottom: 1.6rem;
+}
+
 .figure {
   margin: 0;
   overflow: hidden;

@@ -2,7 +2,7 @@
 
 Personal site for Marty Smithson — Head of BI & Performance Marketing at Black Clover.
 
-Live: [https://marty-smithson.vercel.app](https://marty-smithson.vercel.app)
+Live: [https://marty-smithson.pages.dev](https://marty-smithson.pages.dev) (Cloudflare Pages project `marty-smithson`)
 
 ## Visual system
 
@@ -37,11 +37,11 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Path | Page |
 | --- | --- |
-| `/` | Name, one line, identity matrix, then the Domo note |
-| `/work` | Black Clover books first; Nutricost and McFly Ads |
+| `/` | Black Clover first: name, role, location, education, identity matrix, then McFly LIVE and Nutricost |
+| `/work` | Black Clover books first; McFly LIVE; Nutricost earlier |
 | `/work/systems-fleet` | Black Clover proof: lanes, Domo to Cloud Run, portal identity |
-| `/work/nutricost` | Short Nutricost note |
-| `/work/mcfly` | McFly Ads — CEO title is here |
+| `/work/nutricost` | Short Nutricost note — Advertising Data Scientist |
+| `/work/mcfly` | McFly Ads / McFly Analytics — LIVE shipped product |
 | `/resume` | PDF pack chooser |
 | `/contact` | Email |
 
@@ -51,9 +51,11 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Do not invent lifts, ROAS, or titles. He reports to the Black Clover CEO. CEO applies only at McFly Ads.
 
-Nutricost: Performance Marketing & Analytics Lead, reported to the CMO. Organized a data portfolio for 13 unique sub-brands. Built the full warehouse and advertising data-science station for margins and COGS. Never use “helped.” Never use the Ketologic / Primaforce spend ramp.
+Nutricost: Advertising Data Scientist, reported to the CMO. Organized a data portfolio for 13 unique sub-brands. Built the full warehouse and advertising data-science station for margins and COGS. Never use “helped.” Never use the Ketologic / Primaforce spend ramp.
 
-Education: UVU B.S., Data Science and Statistics emphasis.
+McFly Analytics / mcflyads.com is LIVE (shipped Shopify product). Cite as a personal/side project. Do not lead the homepage with it.
+
+Education: Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025).
 
 Resume PDFs live in `public/resumes/`. User-facing labels: Full resume / Measurement / Systems and analytics.
 
@@ -65,4 +67,6 @@ Ownership FINAL md5s (owned Nutricost verbs, already on main via #16). Helped-er
 
 ## Deploy
 
-Framework: Next.js. Build: `npm run build`. No environment variables.
+Cloudflare Pages project: `marty-smithson` → [https://marty-smithson.pages.dev](https://marty-smithson.pages.dev).
+
+Framework: Next.js. Build: `npm run build`. No environment variables. Source of truth is this repo root — not a nested `/agent/.../site` copy.
