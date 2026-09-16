@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CtaRow } from "@/components/CtaRow";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -15,17 +16,9 @@ export default function ContactPage() {
         <p className="lede">
           Email is the direct path. LinkedIn is if you already live there.
         </p>
+        <p className="quiet">{site.locationLine}</p>
+        <CtaRow />
       </header>
-      <div className="wrap">
-        <p>
-          <a href={`mailto:${site.email}`}>{site.email}</a>
-        </p>
-        <p className="close-links">
-          <a href={site.linkedin} rel="noreferrer" target="_blank">
-            LinkedIn
-          </a>
-        </p>
-      </div>
     </article>
   );
 }

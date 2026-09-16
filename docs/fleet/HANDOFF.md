@@ -2,7 +2,14 @@
 **Date:** 2026-09-02 (America/Denver)  
 **Marty order:** Send everything learned from the fleet to Cursor — moving there in full.  
 **Repo target:** `mcflyadsmmm-ctrl/marty-smithson`  
-**Live:** https://marty-smithson.vercel.app/ (PR #20 ledger craft LIVE PASS)  
+**Live:** https://marty-smithson.pages.dev/ (Cloudflare Pages project `marty-smithson`; Vercel 308s here)
+
+### Site locks (2026-09-16) — override older rows below on user-facing surfaces
+- Education: Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)
+- Nutricost title: Advertising Data Scientist
+- Product name (locked): Mcfly Analytics Shopify App — LIVE at https://mcflyads.com. Do not call the product “McFly” or “McFly Ads”.
+- McFly Ads: consulting practice / employer only
+- Homepage / selected work: Black Clover first; Mcfly Analytics Shopify App secondary, not the hero  
 **Mode:** Scout-only · zero applies · Recast PARKED · stealth from Black Clover
 
 This file is the knowledge SoT dump for Cursor agents. Install as:
@@ -22,10 +29,10 @@ Grok Bot / Orchestrator briefs and routes only. **All real site/repo/code/PDF pr
 | Age | 29 |
 | Location | American Fork, UT · Utah hybrid / US remote · EST overlap |
 | Email (apps) | martysmithson04@gmail.com |
-| Education | UVU B.S. — main emphasis Data Science and Statistics (not primarily IS/Data Analytics label) |
+| Education | Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025) |
 | Current | Head of BI & Performance Marketing, Black Clover (~$45M apparel), reports to CEO · started Feb 2025 · ~18 mo as of Sep 2026 |
-| Also | CEO McFly Ads / McFly Analytics (mcflyads.com) since 2020 |
-| Prior | Performance Marketing & Analytics Lead, Nutricost |
+| Also | Founder and Data Analytics Consultant, McFly Ads (consulting) since 2020; Mcfly Analytics Shopify App LIVE at mcflyads.com (side project) |
+| Prior | Advertising Data Scientist, Nutricost |
 | Comp bar | $140K+ to leave OR clear path to $200K+ |
 | Geo | Utah or Remote USA first; relocate only for significant package + higher PTO |
 | Stealth | Black Clover must not know he is looking — no Open to Work banner, no renegotiation outreach tipoffs |
@@ -33,8 +40,9 @@ Grok Bot / Orchestrator briefs and routes only. **All real site/repo/code/PDF pr
 
 ### Titles (never invent)
 - Black Clover: Head of BI & Performance Marketing (reports to CEO) — not CEO of Black Clover
-- McFly Ads: CEO only there
-- Nutricost: Performance Marketing & Analytics Lead (reported to CMO)
+- McFly Ads: Founder and Data Analytics Consultant (consulting practice)
+- Product: Mcfly Analytics Shopify App (never “McFly” or “McFly Ads”)
+- Nutricost: Advertising Data Scientist (reported to CMO)
 
 ---
 
@@ -736,7 +744,7 @@ Head of BI & Performance Marketing at Black Clover USA (~$45M apparel), reports 
 - Player-coach operators (social, design, intl paid leads)—not analytics MoM; lead analytics myself and partner with leadership.
 - When a causal call is required: Meridian Bayesian MMM and GeoLift geo-holdouts/RCTs; present → allocate; below cash MER break-even, cut.
 
-### Performance Marketing & Analytics Lead
+### Advertising Data Scientist
 **Nutricost** · Aug 2024–Feb 2025 (~7 months) · Reports to CMO
 
 - Built the CMO analytics desk: MTA, LTV, and cohorts in BigQuery (SQL / R); GA4 and Looker Studio—certified contribution beyond last-click.
@@ -744,11 +752,11 @@ Head of BI & Performance Marketing at Black Clover USA (~$45M apparel), reports 
 - Organized the data portfolio for 13 unique sub-brands under Nutricost.
 - Built the full data warehouse + advertising data science analysis station so executives could see profit margins and COGS. McFly Ads (CEO since 2020) stayed concurrent evenings-compatible through this seat.
 
-### CEO
+### Founder and Data Analytics Consultant
 **McFly Ads** · Apr 2020–Present · Concurrent (evenings-compatible; company did not pause)
 
 - Decision-systems desks for named brands: certified metrics (~$10K Looker/Tableau), retail command centers, locked metric definitions. Operators got readouts that drove decisions.
-- Named brands include Marksman Construction, Malama Solar, Stretch Labs, Kin Home, +6 more. McFly Analytics (mcflyads.com): cash MER + Shopify-API LTV.
+- Named brands include Marksman Construction, Malama Solar, Stretch Labs, Kin Home, +6 more. Mcfly Analytics Shopify App is LIVE at mcflyads.com.
 
 ## Skills
 
@@ -757,7 +765,7 @@ Head of BI & Performance Marketing at Black Clover USA (~$45M apparel), reports 
 
 ## Education
 
-Utah Valley University — Bachelor of Science (Data Science and Statistics emphasis)
+Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)
 ```
 
 ---

@@ -11,19 +11,20 @@ const graph = {
       description: site.description,
       email: site.email,
       url: site.url,
-      sameAs: [site.linkedin],
+      sameAs: [site.linkedin, site.mcfly],
       nationality: { "@type": "Country", name: "United States" },
       alumniOf: { "@type": "CollegeOrUniversity", name: "Utah Valley University" },
       hasOccupation: [
         {
           "@type": "Occupation",
           name: "Head of Business Intelligence & Performance Marketing",
-          educationRequirements: "Bachelor of Science, Data Science and Statistics emphasis",
+          educationRequirements:
+            "Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)",
           occupationLocation: { "@type": "Organization", name: "Black Clover" },
         },
         {
           "@type": "Occupation",
-          name: "Chief Executive Officer",
+          name: "Founder and Data Analytics Consultant",
           occupationLocation: { "@type": "Organization", name: "McFly Ads" },
         },
       ],
@@ -38,6 +39,7 @@ const graph = {
         "data warehousing",
         "marketing mix modeling",
         "cash MER",
+        site.mcflyProduct,
       ],
       address: {
         "@type": "PostalAddress",
@@ -59,6 +61,15 @@ const graph = {
       "@id": `${site.url}/#profile`,
       url: site.url,
       mainEntity: { "@id": `${site.url}/#person` },
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${site.mcfly}/#app`,
+      name: site.mcflyProduct,
+      url: site.mcfly,
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Shopify",
+      creator: { "@id": `${site.url}/#person` },
     },
   ],
 };

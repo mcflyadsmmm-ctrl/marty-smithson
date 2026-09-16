@@ -12,17 +12,45 @@ export type CaseStudy = {
   reportsTo: string;
   lead: string;
   body: string[];
+  live?: boolean;
 };
 
 export const hero = {
   name: "Marty Smithson",
-  line: "I run BI and performance marketing at Black Clover, and I report to the CEO.",
+  role: "Marketing analytics and measurement. BI for the call.",
+  line: "I run mix models, attribution, incrementality tests, and cash MER — then I put the number in front of the CEO. Head of BI & Performance Marketing at Black Clover.",
+  place: "American Fork, Utah. Central Utah or US remote.",
+  school:
+    "Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025).",
 } as const;
 
-export const homeTease = {
-  more: "The Black Clover case has the architecture, the Domo move, and the portal identity model.",
-  href: "/work/systems-fleet",
-} as const;
+export const featured = [
+  {
+    key: "black-clover",
+    title: "Black Clover",
+    role: "Head of BI & Performance Marketing. I report to the CEO.",
+    line: "Cash MER, Meridian MMM, and incrementality on the paid mix. Warehouse off Domo onto Cloud Run.",
+    href: "/work/systems-fleet",
+    more: "The Black Clover case",
+  },
+  {
+    key: "nutricost",
+    title: "Nutricost",
+    role: "Advertising Data Scientist. I reported to the CMO.",
+    line: "I organized the data portfolio for thirteen unique sub-brands, and I built the warehouse and the ads station executives used for margins and COGS.",
+    href: "/work/nutricost",
+    more: "The Nutricost case",
+  },
+  {
+    key: "mcfly",
+    title: "Mcfly Analytics Shopify App",
+    role: "LIVE desk. Founder and Data Analytics Consultant, McFly Ads.",
+    line: "Open the product at mcflyads.com. Consulting for the named brands on this page.",
+    href: "/work/mcfly",
+    more: "The product note",
+    live: true,
+  },
+] as const;
 
 export type FleetLane = {
   id: LaneId;
@@ -37,7 +65,7 @@ export const fleet = {
   role: "Head of BI & Performance Marketing",
   reportsTo: "I report to the CEO.",
   dates: "February 2025 to present",
-  lead: "I moved the warehouse off Domo and built the isolated books the CEO and the field both use.",
+  lead: "I run measurement for the CEO: cash MER, mix models, and incrementality. The warehouse left Domo for Cloud Run.",
   open: [
     "The resume can say Cloud Run and a partner portal. What it cannot show is how the company actually decides: five books that are not allowed to borrow from each other, a field of about fifty people who can read a number they cannot rewrite, and a warehouse that had to leave a vendor bill without landing on another one.",
   ],
@@ -160,27 +188,28 @@ export const fleet = {
 } as const;
 
 export const workPage = {
-  lead: "Most of what I want to show is Black Clover. Nutricost and McFly Ads are further down.",
+  lead: "Black Clover, Nutricost, and Mcfly Analytics Shopify App.",
   blackClover: {
     title: "Black Clover",
     role: "Head of BI & Performance Marketing. I report to the CEO.",
-    body: "Warehouse off Domo onto Cloud Run — about twenty thousand a month cheaper, held to a GCP class around thirty dollars. Partner portal for about fifty people. Five isolated books: wholesale, the field, cash MER, retail, and fulfillment.",
+    body: "Cash MER, Meridian MMM, and incrementality. Warehouse off Domo onto Cloud Run.",
     href: "/work/systems-fleet",
-    more: "The case has the architecture, the move, and the identity model.",
+    more: "The Black Clover case",
+  },
+  mcfly: {
+    title: "Mcfly Analytics Shopify App",
+    role: "Founder and Data Analytics Consultant, McFly Ads. LIVE personal project.",
+    href: "/work/mcfly",
+    line: "Open the desk at mcflyads.com.",
+    more: "The product note",
+    live: true,
   },
   nutricost: {
     title: "Nutricost",
-    role: "Performance Marketing & Analytics Lead. I reported to the CMO.",
+    role: "Advertising Data Scientist. I reported to the CMO.",
     href: "/work/nutricost",
     line: "I organized the data portfolio for thirteen unique sub-brands, and I built the warehouse and the ads station executives used for margins and COGS.",
-    more: "The Nutricost note.",
-  },
-  mcfly: {
-    title: "McFly Ads",
-    role: "I started the company in 2020, and I’m CEO there.",
-    href: "/work/mcfly",
-    line: "The work is marketing data science for ten named brands.",
-    more: "The brand names.",
+    more: "The Nutricost case",
   },
 } as const;
 
@@ -188,24 +217,26 @@ export const cases: CaseStudy[] = [
   {
     slug: "nutricost",
     brand: "Nutricost",
-    role: "Performance Marketing & Analytics Lead",
+    role: "Advertising Data Scientist",
     dates: "August 2024 to February 2025",
     reportsTo: "Reported to the CMO",
-    lead: "I reported to the CMO and ran one desk for margins and COGS.",
+    lead: "Advertising Data Scientist. I reported to the CMO and ran one desk for margins and COGS.",
     body: [
+      "I organized the data portfolio for thirteen unique sub-brands under the Nutricost main brand.",
       "I built the full data warehouse. I built the advertising data-science station where executives could see profit margins and COGS.",
     ],
   },
   {
     slug: "mcfly",
-    brand: "McFly Ads",
-    role: "CEO",
+    brand: "Mcfly Analytics Shopify App",
+    role: "Founder and Data Analytics Consultant, McFly Ads",
     dates: "April 2020 to present",
-    reportsTo: "I started the company",
-    lead: "I started McFly Ads in 2020, and I’m CEO there.",
+    reportsTo: "Personal project",
+    lead: "Mcfly Analytics Shopify App is LIVE at mcflyads.com.",
+    live: true,
     body: [
-      "I’ve spent those years doing marketing data science for ten named brands — mix models, incrementality, dashboards, and paid allocation. I present that work to the people who run the companies.",
-      "McFly Analytics is submitted to the Shopify App Store. The listing is still pending.",
+      "This is a personal project I run next to the full-time seats — not the main story.",
+      "Mcfly Analytics Shopify App is the shipped product. The consulting practice is McFly Ads: marketing data science for ten named brands — mix models, incrementality, dashboards, and paid allocation.",
     ],
   },
 ];
@@ -218,13 +249,13 @@ export const brands: {
   { mark: "MC", name: "Marksman Construction", category: "Trades" },
   { mark: "MS", name: "Malama Solar", category: "Trades" },
   { mark: "RP", name: "Royal Peak Lighting", category: "Trades" },
+  { mark: "SL", name: "Stretch Labs", category: "Product" },
+  { mark: "KH", name: "Kin Home", category: "Product" },
+  { mark: "BB", name: "BatBridge Bookkeeping", category: "Professional" },
+  { mark: "WB", name: "Whirly Board", category: "Product" },
   { mark: "AG", name: "Arizona Gym Floors", category: "Trades" },
   { mark: "PA", name: "Pure Air Solutions", category: "Trades" },
   { mark: "PM", name: "Priority Mulching Services", category: "Trades" },
-  { mark: "BB", name: "BatBridge Bookkeeping", category: "Professional" },
-  { mark: "WB", name: "Whirly Board", category: "Product" },
-  { mark: "SL", name: "Stretch Labs", category: "Product" },
-  { mark: "KH", name: "Kin Home", category: "Product" },
 ];
 
 export const resumePdfs = [
@@ -253,9 +284,9 @@ export const resumePdfs = [
 
 export const resume = {
   role: "Head of Business Intelligence & Performance Marketing",
-  scan: "Head of BI & Performance Marketing at Black Clover · reports to the CEO · UVU B.S. Data Science and Statistics",
+  scan: "Head of BI & Performance Marketing at Black Clover · reports to the CEO · Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)",
   summary:
-    "Head of Business Intelligence & Performance Marketing at Black Clover — I report to the CEO. I moved the full data warehouse off Domo onto Google Cloud Run (about $20K a month saved) and built a partner portal on Cloud Run for about 50 people. I allocate a seven-figure monthly paid mix across Google, Meta, and Microsoft against cash MER. Previously Performance Marketing & Analytics Lead at Nutricost, reporting to the CMO: I organized a data portfolio for 13 unique sub-brands and built the full warehouse and advertising data-science station executives used for profit margins and COGS. CEO of McFly Ads since 2020.",
+    "Head of Business Intelligence & Performance Marketing at Black Clover — I report to the CEO. I moved the full data warehouse off Domo onto Google Cloud Run (about $20K a month saved) and built a partner portal on Cloud Run for about 50 people. I allocate a seven-figure monthly paid mix across Google, Meta, and Microsoft against cash MER. Previously Advertising Data Scientist at Nutricost, reporting to the CMO: I organized a data portfolio for 13 unique sub-brands and built the full warehouse and advertising data-science station executives used for profit margins and COGS. Founder and Data Analytics Consultant at McFly Ads since 2020. Mcfly Analytics Shopify App is LIVE at mcflyads.com.",
   jobs: [
     {
       title: "Head of Business Intelligence & Performance Marketing",
@@ -272,7 +303,7 @@ export const resume = {
       ],
     },
     {
-      title: "Performance Marketing & Analytics Lead",
+      title: "Advertising Data Scientist",
       org: "Nutricost",
       dates: "08/2024 - 02/2025 (7 months)",
       meta: "Reported to the CMO.",
@@ -282,14 +313,14 @@ export const resume = {
       ],
     },
     {
-      title: "CEO",
+      title: "Founder and Data Analytics Consultant",
       org: "McFly Ads",
       dates: "04/2020 - Present",
-      meta: "I started the company in 2020.",
+      meta: "Consulting practice. I started the company in 2020.",
       bullets: [
+        "Mcfly Analytics Shopify App is LIVE at mcflyads.com. Personal project next to the full-time work, not the main seat.",
         "6 years of marketing data science for 10 named brands: Robyn and Meridian, GeoLift, executive dashboards, retail command centers, and paid allocation.",
         "Named brands: Marksman Construction, Malama Solar, Royal Peak Lighting, Stretch Labs, Kin Home, BatBridge Bookkeeping, Whirly Board, Arizona Gym Floors, Pure Air Solutions, Priority Mulching Services.",
-        "McFly Analytics submitted to the Shopify App Store (listing pending). mcflyads.com.",
       ],
     },
   ],
@@ -311,7 +342,7 @@ export const resume = {
     },
   ],
   education:
-    "Utah Valley University, Orem, Utah — Bachelor of Science, Data Science and Statistics emphasis.",
+    "Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)",
 } as const;
 
 export function caseBySlug(slug: string): CaseStudy | undefined {

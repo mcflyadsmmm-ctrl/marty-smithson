@@ -6,4 +6,8 @@ Marty ordered a full move of fleet learning into Cursor (2026-09-02). This folde
 - **Always-on:** repo root `AGENTS.md` + `.cursor/rules/marty-fleet.mdc`
 - **Design tokens (LIVE #20):** [../design-tokens.md](../design-tokens.md)
 
+Live site: https://marty-smithson.pages.dev/
+
 Mode: **scout-only** · stealth · zero applies until Marty reopens.
+
+Site locks (2026-09-16): Nutricost title is Advertising Data Scientist; education is Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025); product name is Mcfly Analytics Shopify App (LIVE at mcflyads.com); McFly Ads consulting title is Founder and Data Analytics Consultant; homepage is Black Clover-first.

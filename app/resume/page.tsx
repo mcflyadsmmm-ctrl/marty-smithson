@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { resumePdfs } from "@/lib/content";
+import { CtaRow } from "@/components/CtaRow";
+import { resume, resumePdfs } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: "Marty Smithson’s resume, as PDFs. Same facts, different emphasis.",
+  description: "Marty Smithson’s resume. Same facts, different PDF emphasis.",
   alternates: { canonical: "/resume" },
 };
 
@@ -13,10 +14,15 @@ export default function ResumePage() {
     <article className="page">
       <header className="page-head wrap">
         <h1>Resume</h1>
-        <p className="lede">Three PDFs. Same facts, different emphasis.</p>
+        <p className="lede">{resume.role}</p>
+        <p className="quiet">{site.locationLine}</p>
+        <p className="quiet">{resume.education}</p>
+        <CtaRow />
       </header>
 
       <div className="wrap resume-sheet">
+        <p className="section-copy">{resume.summary}</p>
+
         <table className="pack-ledger">
           <caption>
             If they did not ask for a lane, send the full resume.
@@ -51,6 +57,48 @@ export default function ResumePage() {
             })}
           </tbody>
         </table>
+
+        <section className="section" aria-labelledby="experience-title">
+          <p className="field">Experience</p>
+          <h2 id="experience-title" className="visually-hidden">
+            Experience
+          </h2>
+          <ol className="resume-jobs">
+            {resume.jobs.map((job) => (
+              <li key={`${job.org}-${job.title}`}>
+                <h3>{job.title}</h3>
+                <p className="quiet">
+                  {job.org} · {job.dates} · {job.meta}
+                </p>
+                <ul>
+                  {job.bullets.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="section" aria-labelledby="skills-title">
+          <p className="field">Skills</p>
+          <h2 id="skills-title" className="visually-hidden">
+            Skills
+          </h2>
+          {resume.skills.map((group) => (
+            <p key={group.label}>
+              <strong>{group.label}.</strong> {group.items}
+            </p>
+          ))}
+        </section>
+
+        <section className="section" aria-labelledby="school-title">
+          <p className="field">Education</p>
+          <h2 id="school-title" className="visually-hidden">
+            Education
+          </h2>
+          <p>{resume.education}</p>
+        </section>
 
         <div className="resume-sign">
           <p className="quiet">

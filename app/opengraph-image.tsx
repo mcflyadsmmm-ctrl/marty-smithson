@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "Marty Smithson. Head of BI and Performance Marketing at Black Clover.";
+  "Marty Smithson. Marketing analytics, measurement, and BI.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -45,8 +45,8 @@ export default function OpenGraphImage() {
               color: "#141a17",
             }}
           >
-            I run BI and performance marketing at Black Clover, and I report to
-            the CEO.
+            Marketing analytics and measurement. Mix models, attribution,
+            incrementality, cash MER.
           </div>
         </div>
         <div
@@ -58,7 +58,7 @@ export default function OpenGraphImage() {
             paddingTop: 22,
           }}
         >
-          Isolated books. One writer. The field cannot rewrite the fact.
+          Black Clover · Nutricost · Mcfly Analytics Shopify App
         </div>
       </div>
     ),
