@@ -17,16 +17,40 @@ export type CaseStudy = {
 
 export const hero = {
   name: "Marty Smithson",
-  line: "I run BI and performance marketing at Black Clover, and I report to the CEO.",
+  role: "Marketing analytics and measurement. BI for the call.",
+  line: "I run mix models, attribution, incrementality tests, and cash MER — then I put the number in front of the CEO. Head of BI & Performance Marketing at Black Clover.",
   place: "American Fork, Utah. Central Utah or US remote.",
   school:
     "Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025).",
 } as const;
 
-export const homeTease = {
-  more: "The Black Clover case has the architecture, the Domo move, and the portal identity model.",
-  href: "/work/systems-fleet",
-} as const;
+export const featured = [
+  {
+    key: "black-clover",
+    title: "Black Clover",
+    role: "Head of BI & Performance Marketing. I report to the CEO.",
+    line: "Cash MER, Meridian MMM, and incrementality on the paid mix. Warehouse off Domo onto Cloud Run.",
+    href: "/work/systems-fleet",
+    more: "The Black Clover case",
+  },
+  {
+    key: "nutricost",
+    title: "Nutricost",
+    role: "Advertising Data Scientist. I reported to the CMO.",
+    line: "I organized the data portfolio for thirteen unique sub-brands, and I built the warehouse and the ads station executives used for margins and COGS.",
+    href: "/work/nutricost",
+    more: "The Nutricost case",
+  },
+  {
+    key: "mcfly",
+    title: "Mcfly Analytics Shopify App",
+    role: "LIVE desk. Founder and Data Analytics Consultant, McFly Ads.",
+    line: "Open the product at mcflyads.com. Consulting for the named brands on this page.",
+    href: "/work/mcfly",
+    more: "The product note",
+    live: true,
+  },
+] as const;
 
 export type FleetLane = {
   id: LaneId;
@@ -41,7 +65,7 @@ export const fleet = {
   role: "Head of BI & Performance Marketing",
   reportsTo: "I report to the CEO.",
   dates: "February 2025 to present",
-  lead: "I moved the warehouse off Domo and built the isolated books the CEO and the field both use.",
+  lead: "I run measurement for the CEO: cash MER, mix models, and incrementality. The warehouse left Domo for Cloud Run.",
   open: [
     "The resume can say Cloud Run and a partner portal. What it cannot show is how the company actually decides: five books that are not allowed to borrow from each other, a field of about fifty people who can read a number they cannot rewrite, and a warehouse that had to leave a vendor bill without landing on another one.",
   ],
@@ -164,20 +188,20 @@ export const fleet = {
 } as const;
 
 export const workPage = {
-  lead: "Most of what I want to show is Black Clover. Mcfly Analytics Shopify App is a LIVE side project. Nutricost is earlier.",
+  lead: "Black Clover, Nutricost, and Mcfly Analytics Shopify App.",
   blackClover: {
     title: "Black Clover",
     role: "Head of BI & Performance Marketing. I report to the CEO.",
-    body: "Warehouse off Domo onto Cloud Run — about twenty thousand a month cheaper, held to a GCP class around thirty dollars. Partner portal for about fifty people. Five isolated books: wholesale, the field, cash MER, retail, and fulfillment.",
+    body: "Cash MER, Meridian MMM, and incrementality. Warehouse off Domo onto Cloud Run.",
     href: "/work/systems-fleet",
-    more: "The case has the architecture, the move, and the identity model.",
+    more: "The Black Clover case",
   },
   mcfly: {
     title: "Mcfly Analytics Shopify App",
     role: "Founder and Data Analytics Consultant, McFly Ads. LIVE personal project.",
     href: "/work/mcfly",
-    line: "Shipped at mcflyads.com. Not the main career story.",
-    more: "The product note.",
+    line: "Open the desk at mcflyads.com.",
+    more: "The product note",
     live: true,
   },
   nutricost: {
@@ -185,7 +209,7 @@ export const workPage = {
     role: "Advertising Data Scientist. I reported to the CMO.",
     href: "/work/nutricost",
     line: "I organized the data portfolio for thirteen unique sub-brands, and I built the warehouse and the ads station executives used for margins and COGS.",
-    more: "The Nutricost note.",
+    more: "The Nutricost case",
   },
 } as const;
 
@@ -196,8 +220,9 @@ export const cases: CaseStudy[] = [
     role: "Advertising Data Scientist",
     dates: "August 2024 to February 2025",
     reportsTo: "Reported to the CMO",
-    lead: "I reported to the CMO and ran one desk for margins and COGS.",
+    lead: "Advertising Data Scientist. I reported to the CMO and ran one desk for margins and COGS.",
     body: [
+      "I organized the data portfolio for thirteen unique sub-brands under the Nutricost main brand.",
       "I built the full data warehouse. I built the advertising data-science station where executives could see profit margins and COGS.",
     ],
   },
@@ -224,13 +249,13 @@ export const brands: {
   { mark: "MC", name: "Marksman Construction", category: "Trades" },
   { mark: "MS", name: "Malama Solar", category: "Trades" },
   { mark: "RP", name: "Royal Peak Lighting", category: "Trades" },
+  { mark: "SL", name: "Stretch Labs", category: "Product" },
+  { mark: "KH", name: "Kin Home", category: "Product" },
+  { mark: "BB", name: "BatBridge Bookkeeping", category: "Professional" },
+  { mark: "WB", name: "Whirly Board", category: "Product" },
   { mark: "AG", name: "Arizona Gym Floors", category: "Trades" },
   { mark: "PA", name: "Pure Air Solutions", category: "Trades" },
   { mark: "PM", name: "Priority Mulching Services", category: "Trades" },
-  { mark: "BB", name: "BatBridge Bookkeeping", category: "Professional" },
-  { mark: "WB", name: "Whirly Board", category: "Product" },
-  { mark: "SL", name: "Stretch Labs", category: "Product" },
-  { mark: "KH", name: "Kin Home", category: "Product" },
 ];
 
 export const resumePdfs = [

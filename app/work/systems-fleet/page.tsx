@@ -1,77 +1,46 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CaseNav } from "@/components/CaseNav";
-import { FleetMap } from "@/components/FleetMap";
-import { LaneGrid } from "@/components/LaneGrid";
-import { PortalRoles } from "@/components/PortalRoles";
-import { ShiftCompare } from "@/components/ShiftCompare";
+import { CtaRow } from "@/components/CtaRow";
 import { fleet } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Black Clover",
   description:
-    "I moved Black Clover’s warehouse off Domo onto Cloud Run, held the GCP class around thirty dollars, and built isolated books for wholesale, the field portal, cash, retail, and fulfillment.",
+    "Marketing measurement and BI at Black Clover. Cash MER, mix models, incrementality. I report to the CEO.",
   alternates: { canonical: "/work/systems-fleet" },
 };
 
 export default function SystemsFleetPage() {
   return (
-    <article className="page proof">
+    <article className="page">
       <header className="page-head wrap">
         <h1>{fleet.title}</h1>
         <p className="lede">{fleet.lead}</p>
         <p className="quiet">
           {fleet.role}. {fleet.reportsTo} {fleet.dates}.
         </p>
+        <CtaRow />
       </header>
 
-      <CaseNav />
-
       <div className="wrap">
-        <section className="case-block case-block-first" id="architecture">
-          <p className="field">Architecture</p>
-          <h2 className="visually-hidden">Architecture</h2>
-          <FleetMap />
-        </section>
-
-        <section className="case-block" id="shift">
-          <p className="field">The move</p>
-          <h2>{fleet.shift.title}</h2>
-          <ShiftCompare />
-          <p className="quiet after-figure">{fleet.shift.note}</p>
-        </section>
-
-        <section className="case-block" id="identity">
-          <p className="field">Identity</p>
-          <h2>{fleet.identities.title}</h2>
-          <PortalRoles />
-          <p className="quiet after-figure">{fleet.identities.note}</p>
-        </section>
-
-        <section className="case-block" id="lanes">
-          <p className="field">Lanes</p>
-          <h2>Five isolated books</h2>
-          <LaneGrid />
-        </section>
-
-        <section className="case-block" id="constraint">
-          <p className="field">Constraint</p>
-          <h2>{fleet.constraints.title}</h2>
-          <ul className="constraint-grid">
-            {fleet.constraints.items.map((item) => (
-              <li className="constraint" key={item.title}>
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="band" id="mix">
-          <p className="field">Mix</p>
-          <h2>{fleet.mix.title}</h2>
-          <p>{fleet.mix.body}</p>
-        </section>
+        <div className="section-copy">
+          <p>
+            The job is measurement the CEO can spend against. Cash MER is the
+            control. Meridian when the mix call is causal. GeoLift or an RCT
+            when two channels claim the same sale. Platform ROAS is not the
+            budget.
+          </p>
+          <p>
+            Attribution and incrementality sit on the same desk as the BI. I
+            allocate a seven-figure monthly paid mix across Google, Meta, and
+            Microsoft against cash MER.
+          </p>
+          <p>
+            The warehouse left Domo for Cloud Run. Same work. About $20K a
+            month left the bill. That cost is already on the resume — not a
+            dashboard, and not a walkthrough of the internals.
+          </p>
+        </div>
 
         <p className="close-links">
           <Link href="/work">All work</Link>

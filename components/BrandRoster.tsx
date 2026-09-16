@@ -1,13 +1,14 @@
 import { brands } from "@/lib/content";
 
-export function BrandRoster() {
+export function BrandRoster({
+  wall = false,
+}: {
+  wall?: boolean;
+}) {
   return (
-    <ul className="brand-list">
+    <ul className={wall ? "client-wall" : "brand-list"}>
       {brands.map((brand) => (
-        <li key={brand.mark}>
-          <span className="brand-mark">{brand.mark}</span>
-          <span>{brand.name}</span>
-        </li>
+        <li key={brand.name}>{brand.name}</li>
       ))}
     </ul>
   );

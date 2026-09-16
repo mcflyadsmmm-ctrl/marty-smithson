@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { BrandRoster } from "@/components/BrandRoster";
+import { CtaRow } from "@/components/CtaRow";
 import { caseBySlug, cases } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -52,19 +53,10 @@ export default async function CasePage({ params }: Props) {
         <p className="quiet">
           {study.role}. {study.reportsTo}. {study.dates}.
         </p>
+        <CtaRow />
       </header>
 
       <div className="wrap">
-        {study.slug === "nutricost" ? (
-          <div className="case-stat">
-            <p className="case-stat-num">13</p>
-            <p>
-              unique sub-brands. I organized the data portfolio under the
-              Nutricost main brand.
-            </p>
-          </div>
-        ) : null}
-
         <div className="section-copy">
           {study.body.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
@@ -72,10 +64,10 @@ export default async function CasePage({ params }: Props) {
         </div>
 
         {study.slug === "mcfly" ? (
-          <section className="section">
-            <p className="field">Roster</p>
-            <h2>Named brands</h2>
-            <BrandRoster />
+          <section className="section" aria-labelledby="clients-title">
+            <p className="field">McFly Ads clients</p>
+            <h2 id="clients-title">Named brands</h2>
+            <BrandRoster wall />
           </section>
         ) : null}
 

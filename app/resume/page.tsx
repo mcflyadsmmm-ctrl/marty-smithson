@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CtaRow } from "@/components/CtaRow";
 import { resume, resumePdfs } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -16,6 +17,7 @@ export default function ResumePage() {
         <p className="lede">{resume.role}</p>
         <p className="quiet">{site.locationLine}</p>
         <p className="quiet">{resume.education}</p>
+        <CtaRow />
       </header>
 
       <div className="wrap resume-sheet">

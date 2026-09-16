@@ -1,63 +1,75 @@
 import Link from "next/link";
-import { ProofRail } from "@/components/ProofRail";
-import { hero, homeTease, workPage } from "@/lib/content";
+import { BrandRoster } from "@/components/BrandRoster";
+import { CtaRow } from "@/components/CtaRow";
+import { featured, hero } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
-  const { nutricost, mcfly } = workPage;
-
   return (
     <article className="page">
       <header className="page-head wrap">
         <h1>{hero.name}</h1>
-        <p className="lede">{hero.line}</p>
+        <p className="lede">{hero.role}</p>
+        <p>{hero.line}</p>
         <p className="quiet">{hero.place}</p>
         <p className="quiet">{hero.school}</p>
+        <CtaRow />
       </header>
 
       <div className="wrap">
-        <section className="featured" aria-labelledby="black-clover-home">
-          <h2 id="black-clover-home" className="visually-hidden">
-            {workPage.blackClover.title}
+        <section className="desk" aria-labelledby="desk-title">
+          <p className="field">Live desk</p>
+          <h2 id="desk-title">
+            {site.mcflyProduct} <span className="live-mark">LIVE</span>
           </h2>
-          <ProofRail showPortal />
-          <p className="close-links">
-            <Link href={homeTease.href}>{homeTease.more}</Link>
-          </p>
-        </section>
-
-        <section className="section" aria-label="Also now">
-          <p className="field">Also now</p>
-          <article className="work-entry work-entry-solo">
-            <h2>
-              {site.mcflyProduct}{" "}
-              <span className="live-mark">LIVE</span>
-            </h2>
-            <p className="quiet">{mcfly.role}</p>
-            <p>{mcfly.line}</p>
-            <p className="close-links">
-              <a href={site.mcfly} rel="noreferrer" target="_blank">
-                {site.mcflyProduct}
-              </a>
-              <Link href={mcfly.href}>{mcfly.more}</Link>
-            </p>
-          </article>
-        </section>
-
-        <section className="section" aria-label="Earlier">
-          <p className="field">Earlier</p>
-          <Link className="work-entry work-entry-solo" href={nutricost.href}>
-            <h2>{nutricost.title}</h2>
-            <p className="quiet">{nutricost.role}</p>
-            <p>{nutricost.line}</p>
-            <span className="more">{nutricost.more}</span>
-          </Link>
-        </section>
-
-        <section className="close" aria-label="Email">
           <p>
-            <a href={`mailto:${site.email}`}>{site.email}</a>
+            The shipped Shopify desk is the demo. Open it. Founder and Data
+            Analytics Consultant at McFly Ads.
           </p>
+          <p className="close-links">
+            <a className="pack-take" href={site.mcfly} rel="noreferrer" target="_blank">
+              {site.mcflyProduct}
+            </a>
+            <Link href="/work/mcfly">The product note</Link>
+          </p>
+        </section>
+
+        <section className="section" aria-labelledby="clients-title">
+          <p className="field">McFly Ads clients</p>
+          <h2 id="clients-title">Named brands</h2>
+          <BrandRoster wall />
+        </section>
+
+        <section className="section" aria-labelledby="work-title">
+          <p className="field">Selected work</p>
+          <h2 id="work-title" className="visually-hidden">
+            Selected work
+          </h2>
+          <div className="case-grid">
+            {featured.map((item) => (
+              <article className="work-entry" key={item.key}>
+                <h3>
+                  {item.title}
+                  {"live" in item && item.live ? (
+                    <>
+                      {" "}
+                      <span className="live-mark">LIVE</span>
+                    </>
+                  ) : null}
+                </h3>
+                <p className="quiet">{item.role}</p>
+                <p>{item.line}</p>
+                <p className="close-links">
+                  {item.key === "mcfly" ? (
+                    <a href={site.mcfly} rel="noreferrer" target="_blank">
+                      {site.mcflyProduct}
+                    </a>
+                  ) : null}
+                  <Link href={item.href}>{item.more}</Link>
+                </p>
+              </article>
+            ))}
+          </div>
         </section>
       </div>
     </article>

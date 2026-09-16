@@ -37,11 +37,11 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Path | Page |
 | --- | --- |
-| `/` | Black Clover first: name, role, location, education, identity matrix, then Mcfly Analytics Shopify App LIVE and Nutricost |
-| `/work` | Black Clover books first; Mcfly Analytics Shopify App LIVE; Nutricost earlier |
-| `/work/systems-fleet` | Black Clover proof: lanes, Domo to Cloud Run, portal identity |
-| `/work/nutricost` | Short Nutricost note — Advertising Data Scientist |
-| `/work/mcfly` | Mcfly Analytics Shopify App — LIVE shipped product |
+| `/` | Measurement/BI hero, Mcfly Analytics Shopify App LIVE desk, 10-name client wall, three cases |
+| `/work` | LIVE desk, client wall, three cases |
+| `/work/systems-fleet` | Black Clover measurement case — no internal diagrams |
+| `/work/nutricost` | Nutricost — Advertising Data Scientist |
+| `/work/mcfly` | Mcfly Analytics Shopify App — LIVE + client names |
 | `/resume` | PDF pack chooser |
 | `/contact` | Email |
 
