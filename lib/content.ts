@@ -127,7 +127,7 @@ export const featured = [
     line: "Open the live SAMPLE desk at mcflyads.com/demo. Since 2020 I have run marketing data science for the ten named brands on this page.",
     href: "/work/mcfly",
     desk: "/work/desks/mcfly",
-    more: "Open live SAMPLE desk",
+    more: "Harbor SAMPLE",
     live: true,
     beats: {
       problem:
@@ -254,16 +254,60 @@ export const brands: {
   mark: string;
   name: (typeof CLIENT_NAMES)[number];
   category: BrandCategory;
+  href?: string;
+  logo?: string;
 }[] = [
   { mark: "MC", name: "Marksman Construction", category: "Trades" },
-  { mark: "MS", name: "Malama Solar", category: "Trades" },
-  { mark: "RP", name: "Royal Peak Lighting", category: "Trades" },
+  {
+    mark: "MS",
+    name: "Malama Solar",
+    category: "Trades",
+    href: "https://malamasolar.com",
+    logo: "/brands/malama-solar.png",
+  },
+  {
+    mark: "RP",
+    name: "Royal Peak Lighting",
+    category: "Trades",
+    href: "https://royalpeaklighting.com",
+    logo: "/brands/royal-peak-lighting.jpg",
+  },
   { mark: "SL", name: "Stretch Labs", category: "Product" },
-  { mark: "KH", name: "Kin Home", category: "Product" },
-  { mark: "BB", name: "BatBridge Bookkeeping", category: "Professional" },
-  { mark: "WB", name: "Whirly Board", category: "Product" },
-  { mark: "AG", name: "Arizona Gym Floors", category: "Trades" },
-  { mark: "PA", name: "Pure Air Solutions", category: "Trades" },
+  {
+    mark: "KH",
+    name: "Kin Home",
+    category: "Product",
+    href: "https://www.kinhome.com",
+    logo: "/brands/kin-home.png",
+  },
+  {
+    mark: "BB",
+    name: "BatBridge Bookkeeping",
+    category: "Professional",
+    href: "https://batbridgeas.com",
+    logo: "/brands/batbridge-bookkeeping.png",
+  },
+  {
+    mark: "WB",
+    name: "Whirly Board",
+    category: "Product",
+    href: "https://whirlyboard.com",
+    logo: "/brands/whirly-board.png",
+  },
+  {
+    mark: "AG",
+    name: "Arizona Gym Floors",
+    category: "Trades",
+    href: "https://azgymfloors.com",
+    logo: "/brands/arizona-gym-floors.png",
+  },
+  {
+    mark: "PA",
+    name: "Pure Air Solutions",
+    category: "Trades",
+    href: "https://pureairsolutionsaz.com",
+    logo: "/brands/pure-air-solutions.jpg",
+  },
   { mark: "PM", name: "Priority Mulching Services", category: "Trades" },
 ];
 

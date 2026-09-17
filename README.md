@@ -12,7 +12,7 @@ The token brief lives in [`docs/design-tokens.md`](docs/design-tokens.md). Imple
 
 - One theme end-to-end: sage paper (`#e4eee7`) · bright plates (`#f7fbf8`) · pine accent (`#1b6b4a`) · ink (`#102018`)
 - Type: IBM Plex Sans + IBM Plex Mono, sentence-case field names
-- Wide grid (~68rem). Home fold is hero → proof strip → Harbor Home Co SAMPLE desk + Open live SAMPLE desk CTA → three case cards → methods → ten-name client wall → credo → contact
+- Wide grid (~68rem). Home fold is hero → proof strip → ten-name client strip (logos + public sites) → three case cards with stacked beats → Harbor Home Co SAMPLE as one proof desk → methods → credo → contact
 - One spend headline: $25M+ in career-managed ad spend
 - Resume is a pack ledger. Full resume is the take. Email, LinkedIn, and the PDF sit on every page
 - No pills, no SaaS chrome, no cream/stone editorial cluster, no tracked ALL-CAPS eyebrows, no sample architecture diagrams

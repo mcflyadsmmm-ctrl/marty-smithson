@@ -17,7 +17,7 @@ You are building/maintaining **Marty Smithson’s** personal portfolio and caree
 
 ## Site locks (user-facing, 2026-09-17)
 - Hero: **Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — $25M+ paid mix.** Title/meta match. Not “I build the systems behind better decisions.”
-- Proof strip, then FEATURED Mcfly LIVE + Harbor SAMPLE at https://mcflyads.com/demo ($82,068 / $23,414 / 3.51×). Then three deep cases (problem→method→decision→outcome), method keywords, the 10-name wall, credo `platform ≠ incremental ≠ cash`, contact.
+- Proof strip, then the 10-name client strip (logos + public sites), then three deep cases with readable beats (not four skinny columns). Harbor Home Co SAMPLE at https://mcflyads.com/demo is one proof desk, not the homepage personality. Method keywords, credo `platform ≠ incremental ≠ cash`, contact.
 - All 10 McFly Ads clients as a visible name wall (exact spellings in `lib/content.ts`).
 - Three deep cases: Black Clover · Nutricost Advertising Data Scientist · Mcfly Analytics Shopify App LIVE.
 - One spend headline: **$25M+ in career-managed ad spend.** Do not invent $30M.
