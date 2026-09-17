@@ -1904,10 +1904,13 @@ a.work-entry:hover .more {
 
 @media (max-width: 640px) {
   .desk-rail,
-  .proof-strip,
-  .case-beats,
   .case-grid {
     grid-template-columns: 1fr;
+  }
+
+  .proof-strip,
+  .case-beats {
+    grid-template-columns: 1fr 1fr;
   }
 
   .desk-rail button,
