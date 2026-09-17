@@ -230,6 +230,104 @@ p {
   gap: 0.85rem;
 }
 
+.proof-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin: 0 0 1.15rem;
+}
+
+.proof-strip p {
+  margin: 0;
+  padding: 0.85rem 0.9rem 0.95rem;
+  background: var(--plate);
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--rule));
+  border-radius: var(--radius);
+  box-shadow: var(--lift);
+}
+
+.proof-strip strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.proof-strip .quiet {
+  display: block;
+  font-size: 0.88rem;
+}
+
+.case-beats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin: 0.85rem 0 0;
+}
+
+.case-card .case-beats {
+  margin-top: 0.85rem;
+}
+
+.wrap > .case-beats {
+  margin: 0 0 1.4rem;
+}
+
+.case-beats div {
+  padding: 0.75rem 0.8rem 0.85rem;
+  background: color-mix(in srgb, var(--accent-soft) 55%, var(--plate));
+  border: 1px solid color-mix(in srgb, var(--accent) 16%, var(--rule));
+  border-radius: var(--radius);
+}
+
+.case-beats dt {
+  margin: 0 0 0.28rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.case-beats dd {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.case-card {
+  border: 1px solid var(--rule);
+}
+
+.case-card h3 {
+  margin-top: 0.15rem;
+}
+
+.method-note p {
+  max-width: 46rem;
+}
+
+.credo {
+  margin: 2.2rem 0 1.2rem;
+  padding: 1.15rem 1.25rem 1.2rem;
+  background: linear-gradient(135deg, var(--accent-soft) 0%, var(--plate) 70%);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--rule));
+  border-radius: var(--radius);
+  box-shadow: var(--lift);
+}
+
+.credo h2 {
+  margin-bottom: 0.4rem;
+  color: var(--accent);
+  font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+}
+
+.credo p {
+  margin: 0;
+  max-width: 40rem;
+}
+
 .cost-strip {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -340,6 +438,16 @@ p {
 
 .page-head-tight {
   padding: 0.85rem 0 0.55rem;
+}
+
+.page-head-hero {
+  padding: 1.15rem 0 0.75rem;
+}
+
+.page-head-hero .lede {
+  max-width: 54rem;
+  font-size: clamp(1.12rem, 2.1vw, 1.38rem);
+  line-height: 1.35;
 }
 
 .page-head-tight h1 {
@@ -945,6 +1053,9 @@ p {
 
 .case-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  border: 0;
+  background: transparent;
 }
 
 .case-stack {
@@ -1689,6 +1800,12 @@ a.work-entry:hover .more {
     grid-template-columns: 1fr 1fr;
   }
 
+  .proof-strip,
+  .case-beats,
+  .case-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .desk-rail {
     grid-template-columns: 1fr 1fr;
   }
@@ -1786,7 +1903,10 @@ a.work-entry:hover .more {
 }
 
 @media (max-width: 640px) {
-  .desk-rail {
+  .desk-rail,
+  .proof-strip,
+  .case-beats,
+  .case-grid {
     grid-template-columns: 1fr;
   }
 

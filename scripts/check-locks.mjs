@@ -28,7 +28,8 @@ const PDF_MD5 = {
 };
 
 const REQUIRED = [
-  "Marketing analytics and measurement.",
+  "Marketing Analytics & Measurement Lead",
+  "Meridian MMM",
   "Mcfly Analytics Shopify App",
   "Founder and Data Analytics Consultant",
   "Advertising Data Scientist",
@@ -38,6 +39,20 @@ const REQUIRED = [
   "https://mcflyads.com/demo",
   "Harbor Home Co",
   "Open live SAMPLE desk",
+  "platform ≠ incremental ≠ cash",
+  "Google Meridian",
+  "incrementality",
+  "geo holdout",
+  "attribution",
+  "MTA",
+  "cash MER",
+  "iROAS",
+  "CAC",
+  "LTV",
+  "SQL",
+  "Python",
+  "Cloud Run",
+  "experimentation",
   "martysmithson04@gmail.com",
   "linkedin.com/in/marty-smithson",
 ];
@@ -106,13 +121,17 @@ for (const needle of REQUIRED) {
 for (const name of CLIENTS) {
   assert.match(content, new RegExp(escapeRegExp(name)), `missing client: ${name}`);
   assert.match(home, /BrandRoster/, "homepage must render the client wall");
-assert.match(home, /DeskShelf/, "homepage must lead with openable desks");
-assert.match(home, /HarborFeature/, "homepage must feature the live SAMPLE desk");
+  assert.match(home, /ProofStrip/, "homepage must render the proof strip");
+  assert.match(home, /HarborFeature/, "homepage must feature the live SAMPLE desk");
+  assert.match(home, /CaseCards/, "homepage must render the three case cards");
+  assert.match(home, /MethodNote/, "homepage must surface method keywords");
+  assert.match(home, /Credo/, "homepage must close with the credo");
 }
 
-assert.match(content, /role: "Marketing analytics and measurement\."/);
+assert.match(content, /Marketing Analytics & Measurement Lead/);
 assert.match(content, /Directed \$25M\+ in career-managed ad spend/);
 assert.doesNotMatch(content, /\$30M/);
+assert.match(site, /title: "Marty Smithson — Marketing Analytics & Measurement Lead"/);
 assert.match(site, /mcflyProduct: "Mcfly Analytics Shopify App"/);
 assert.match(site, /mcflyTitle: "Founder and Data Analytics Consultant"/);
 assert.match(site, /mcflyDemo: "https:\/\/mcflyads.com\/demo"/);

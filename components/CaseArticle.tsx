@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
+import { CaseBeats } from "@/components/CaseBeats";
 import { CtaRow } from "@/components/CtaRow";
-import type { CasePoint } from "@/lib/content";
+import type { CaseBeat, CasePoint } from "@/lib/content";
 
 type CaseArticleProps = {
   title: string;
@@ -8,9 +9,11 @@ type CaseArticleProps = {
   lede: string;
   meta: string;
   body: readonly string[];
+  beats?: CaseBeat;
   points?: readonly CasePoint[];
   children?: ReactNode;
   links?: ReactNode;
+  showDemo?: boolean;
 };
 
 export function CaseArticle({
@@ -19,9 +22,11 @@ export function CaseArticle({
   lede,
   meta,
   body,
+  beats,
   points,
   children,
   links,
+  showDemo = false,
 }: CaseArticleProps) {
   return (
     <article className="page">
@@ -37,10 +42,11 @@ export function CaseArticle({
         </h1>
         <p className="lede">{lede}</p>
         <p className="quiet">{meta}</p>
-        <CtaRow />
+        <CtaRow showDemo={showDemo} />
       </header>
 
       <div className="wrap">
+        {beats ? <CaseBeats beats={beats} /> : null}
         {children}
 
         <div className="section-copy">

@@ -18,6 +18,7 @@ export default function SystemsFleetPage() {
       title={fleet.title}
       lede={fleet.lead}
       meta={`${fleet.role}. ${fleet.reportsTo} ${fleet.dates}.`}
+      beats={fleet.beats}
       body={fleet.body}
       points={fleet.points}
       links={

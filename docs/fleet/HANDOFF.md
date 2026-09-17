@@ -5,9 +5,9 @@
 **Live:** https://marty-smithson.pages.dev/ (Cloudflare Pages project `marty-smithson`; Vercel 308s here)
 
 ### Site locks (2026-09-17) — override older rows below on user-facing surfaces
-- Hero brand: Marketing analytics and measurement. Not “I build the systems behind better decisions.”
-- LIVE desk first: Mcfly Analytics Shopify App LIVE at https://mcflyads.com
-- Feature Harbor Home Co SAMPLE at https://mcflyads.com/demo ($82,068 / $23,414 / 3.51×). Synthetic Black Clover / Nutricost books stay labeled as such.
+- Hero: Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — $25M+ paid mix. Title/meta match. Not “I build the systems behind better decisions.”
+- Home order: hero → proof strip → Harbor SAMPLE at https://mcflyads.com/demo → three case cards → method keywords → 10-name wall → credo (platform ≠ incremental ≠ cash) → contact
+- Feature Harbor Home Co SAMPLE ($82,068 / $23,414 / 3.51×). Synthetic Black Clover / Nutricost books stay labeled as such.
 - McFly Ads consulting title: Founder and Data Analytics Consultant (never CEO)
 - All 10 clients visible as a name wall (exact spellings)
 - Three deep cases: Black Clover (Head of BI & Performance Marketing) · Nutricost Advertising Data Scientist · Mcfly Analytics Shopify App LIVE

@@ -1,8 +1,8 @@
 export const site = {
   name: "Marty Smithson",
-  title: "Marty Smithson — Marketing Analytics, Measurement, and BI",
+  title: "Marty Smithson — Marketing Analytics & Measurement Lead",
   description:
-    "Marketing analytics and measurement. MMM, attribution, incrementality, and cash MER. Directed $25M+ in career-managed ad spend. Head of BI & Performance Marketing at Black Clover. American Fork, Utah. Central Utah or US remote.",
+    "Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — $25M+ paid mix. Head of BI & Performance Marketing at Black Clover. I report to the CEO. Mcfly Analytics Shopify App LIVE.",
   spendHeadline: "$25M+ in career-managed ad spend",
   url: "https://marty-smithson.pages.dev",
   email: "martysmithson04@gmail.com",

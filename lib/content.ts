@@ -7,6 +7,13 @@ export type CasePoint = {
   body: string;
 };
 
+export type CaseBeat = {
+  problem: string;
+  method: string;
+  decision: string;
+  outcome: string;
+};
+
 export type CaseStudy = {
   slug: CaseSlug;
   brand: string;
@@ -16,6 +23,7 @@ export type CaseStudy = {
   lead: string;
   body: string[];
   points: CasePoint[];
+  beats?: CaseBeat;
   live?: boolean;
 };
 
@@ -34,11 +42,43 @@ export const CLIENT_NAMES = [
 
 export const hero = {
   name: "Marty Smithson",
-  role: "Marketing analytics and measurement.",
-  line: "I run mix models, attribution, incrementality tests, and cash MER. Directed $25M+ in career-managed ad spend. Head of BI & Performance Marketing at Black Clover.",
+  role: "Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — $25M+ paid mix.",
+  line: "Head of BI & Performance Marketing at Black Clover. I report to the CEO. Founder and Data Analytics Consultant, McFly Ads.",
   place: "American Fork, Utah. Central Utah or US remote.",
   school:
     "Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025).",
+} as const;
+
+export const proof = [
+  {
+    label: "$25M+ spend",
+    note: "Career-managed paid mix on Google, Meta, and Microsoft.",
+  },
+  {
+    label: "CEO / CMO reporting",
+    note: "Black Clover CEO now. Nutricost CMO before that.",
+  },
+  {
+    label: "Meridian MMM",
+    note: "Google Meridian when the mix call has to be causal.",
+  },
+  {
+    label: "Shipped Shopify measurement desk",
+    note: "Mcfly Analytics Shopify App LIVE at mcflyads.com.",
+  },
+] as const;
+
+export const methods = {
+  title: "How the desk reads",
+  body: [
+    "I run marketing mix modeling (MMM) in Google Meridian when the mix call has to be causal. Incrementality is a geo holdout or an RCT when two channels claim the same sale — that incremental ROAS (iROAS) is the number, not platform ROAS.",
+    "Attribution and multi-touch attribution (MTA) sit next to cash MER, CAC, and LTV so finance and marketing share one desk. The warehouse work is SQL and Python on Cloud Run. Experimentation is how a cut gets made.",
+  ],
+} as const;
+
+export const credo = {
+  mark: "platform ≠ incremental ≠ cash",
+  line: "Platform ROAS is not the incrementality test. The test is not cash MER. The CEO spends against cash.",
 } as const;
 
 export const featured = [
@@ -49,7 +89,17 @@ export const featured = [
     line: "Cash MER, Meridian mix models, and incrementality on Google, Meta, and Microsoft. I moved the warehouse off Domo onto Cloud Run so the number finance recognizes is the number we spend against.",
     href: "/work/systems-fleet",
     desk: "/work/desks/cash-mer",
-    more: "Open the cash MER desk",
+    more: "Read the case",
+    beats: {
+      problem:
+        "Platform ROAS was treated as the budget. Finance and marketing did not share one sales number.",
+      method:
+        "Cash MER as the control. Google Meridian MMM when the mix call is causal. A geo holdout, GeoLift, or an RCT when two channels claim the same sale.",
+      decision:
+        "Below cash MER break-even, we cut. Meridian sets the mix. The holdout decides incrementality.",
+      outcome:
+        "The CEO spends against one cash MER desk. About $20K a month left the Domo bill. A Cloud Run partner portal for about fifty people sits under that seat.",
+    },
   },
   {
     key: "nutricost",
@@ -58,17 +108,37 @@ export const featured = [
     line: "I organized the data portfolio for thirteen unique sub-brands, and I built the warehouse and the advertising data-science station executives used for margins and COGS.",
     href: "/work/nutricost",
     desk: "/work/desks/nutricost",
-    more: "Open the measurement desk",
+    more: "Read the case",
+    beats: {
+      problem:
+        "Thirteen catalogs. No single place an executive could see contribution past last-click.",
+      method:
+        "I organized the thirteen-sub-brand data portfolio. I built the warehouse and the advertising data-science station. MTA, LTV, and cohorts in BigQuery. Robyn and GeoLift when platforms claimed the same order.",
+      decision:
+        "The causal check went to the CMO. Contribution past last-click was the weekly read.",
+      outcome:
+        "Executives could see profit margins and COGS on one station. Organized and built. I did not inherit a finished desk.",
+    },
   },
   {
     key: "mcfly",
     title: "Mcfly Analytics Shopify App",
     role: "LIVE desk. Founder and Data Analytics Consultant, McFly Ads.",
-    line: "Open the product at mcflyads.com. Since 2020 I have run marketing data science for the ten named brands on this page.",
+    line: "Open the live SAMPLE desk at mcflyads.com/demo. Since 2020 I have run marketing data science for the ten named brands on this page.",
     href: "/work/mcfly",
     desk: "/work/desks/mcfly",
     more: "Open live SAMPLE desk",
     live: true,
+    beats: {
+      problem:
+        "A shop already has Shopify orders. Most desks still want an ad-network login before they show sales, spend, and LTV.",
+      method:
+        "Read the order book. Typical order, returning dollars, days to second, LTV. Spend is optional. Cash MER when you add it. No pixels. No path credit.",
+      decision:
+        "Open the live SAMPLE at mcflyads.com/demo. Harbor Home Co SAMPLE — not a live client.",
+      outcome:
+        "Mcfly Analytics Shopify App is LIVE at mcflyads.com. The consulting title is Founder and Data Analytics Consultant. Ten named brands sit on this site.",
+    },
   },
 ] as const;
 
@@ -78,6 +148,7 @@ export const fleet = {
   reportsTo: "I report to the CEO.",
   dates: "February 2025 to present",
   lead: "I run measurement for the CEO: cash MER, mix models, and incrementality. The warehouse left Domo for Cloud Run so that desk could keep one number.",
+  beats: featured[0].beats,
   body: [
     "The job is the number the CEO spends against. Cash MER is the control — ledger sales over exact spend on Google, Meta, and Microsoft. Platform ROAS is not the budget. When the mix call is causal I run Meridian. When two channels claim the same sale I run GeoLift or an RCT. Below break-even, we cut.",
     "I allocate a seven-figure monthly paid mix on that desk. Attribution and incrementality sit next to the BI, not in a side deck. The warehouse work is underneath so finance and marketing are looking at the same sales number.",
@@ -119,6 +190,7 @@ export const cases: CaseStudy[] = [
     dates: "August 2024 to February 2025",
     reportsTo: "Reported to the CMO",
     lead: "Advertising Data Scientist. I reported to the CMO and ran one desk for margins and COGS.",
+    beats: featured[1].beats,
     body: [
       "I organized the data portfolio for thirteen unique sub-brands under the Nutricost main brand. That was the job on day one — one company, thirteen catalogs, and no single place an executive could see contribution.",
       "I built the full data warehouse. I built the advertising data-science station where executives could see profit margins and COGS. Organized and built. I did not inherit a finished desk.",
@@ -155,10 +227,11 @@ export const cases: CaseStudy[] = [
     reportsTo: "Personal project and consulting practice",
     lead: "Mcfly Analytics Shopify App is LIVE at mcflyads.com.",
     live: true,
+    beats: featured[2].beats,
     body: [
       "The product is live. Install it. It reads the Shopify orders a shop already has and shows typical order, returning dollars, time to a second purchase, and LTV. Add spend when you want sales divided by spend. There is no ad-network login.",
       "I built Mcfly Analytics Shopify App as a personal project next to the full-time seats. The consulting practice is McFly Ads. The title there is Founder and Data Analytics Consultant — since 2020.",
-      "The consulting work is marketing data science for ten named brands: mix models, incrementality, dashboards, and paid allocation. The names are on this page. That is the proof, not a sample store.",
+      "The public SAMPLE desk is Harbor Home Co at mcflyads.com/demo. The consulting work is marketing data science for ten named brands: mix models, incrementality, dashboards, and paid allocation. The names are on this page.",
     ],
     points: [
       {

@@ -16,8 +16,8 @@ You are building/maintaining **Marty Smithson’s** personal portfolio and caree
 - Comp bar: $140K+ or path to $200K+. Utah / Remote USA first.
 
 ## Site locks (user-facing, 2026-09-17)
-- Hero brand: **Marketing analytics and measurement.** Not “I build the systems behind better decisions.”
-- LIVE desk first after the hero: Mcfly Analytics Shopify App LIVE at mcflyads.com. Feature the public Harbor Home Co SAMPLE desk at https://mcflyads.com/demo ($82,068 / $23,414 / 3.51×). Home/work then open synthetic Black Clover cash MER / incrementality desks and a Nutricost measurement desk.
+- Hero: **Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — $25M+ paid mix.** Title/meta match. Not “I build the systems behind better decisions.”
+- Proof strip, then FEATURED Mcfly LIVE + Harbor SAMPLE at https://mcflyads.com/demo ($82,068 / $23,414 / 3.51×). Then three deep cases (problem→method→decision→outcome), method keywords, the 10-name wall, credo `platform ≠ incremental ≠ cash`, contact.
 - All 10 McFly Ads clients as a visible name wall (exact spellings in `lib/content.ts`).
 - Three deep cases: Black Clover · Nutricost Advertising Data Scientist · Mcfly Analytics Shopify App LIVE.
 - One spend headline: **$25M+ in career-managed ad spend.** Do not invent $30M.

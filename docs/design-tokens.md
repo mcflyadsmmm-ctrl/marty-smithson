@@ -47,7 +47,7 @@ IBM Plex Sans (400/500) and IBM Plex Mono (400/500), via `next/font`. Systems fa
 - Header sits on paper. Double hairline under it (ledger total), not a dark app bar.
 - Figures are cards: 12px radius, light lift, hover. Pine accent on the live take. Copper SAMPLE mark.
 - Matrices live inside a padded figure body. Rules must not escape the plate.
-- Home fold: short identity, then the Harbor Home Co SAMPLE desk with a big Open live SAMPLE desk CTA to mcflyads.com/demo. Other desks (cash MER, incrementality, Nutricost) sit under that. Client wall after. Thin case jumps. One spend headline ($25M+).
+- Home fold: hero (Marketing Analytics & Measurement Lead + $25M+ paid mix), proof strip, then the Harbor Home Co SAMPLE desk with a big Open live SAMPLE desk CTA to mcflyads.com/demo. Three case cards with problem→method→decision→outcome. Method keywords. Client wall. Credo. Contact. One spend headline ($25M+).
 - Resume is a pack ledger, not three equal cards over a void. Full resume is the take. The other two packs are lanes.
 - One theme on every route.
 

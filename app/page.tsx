@@ -1,63 +1,39 @@
-import Link from "next/link";
 import { BrandRoster } from "@/components/BrandRoster";
+import { CaseCards } from "@/components/CaseCards";
+import { Credo } from "@/components/Credo";
 import { CtaRow } from "@/components/CtaRow";
-import { DeskShelf } from "@/components/desks/DeskShelf";
 import { HarborFeature } from "@/components/desks/HarborFeature";
-import { featured, hero } from "@/lib/content";
-import { site } from "@/lib/site";
+import { MethodNote } from "@/components/MethodNote";
+import { ProofStrip } from "@/components/ProofStrip";
+import { hero } from "@/lib/content";
 
 export default function HomePage() {
   return (
     <article className="page">
-      <header className="page-head page-head-tight wrap">
+      <header className="page-head page-head-hero wrap">
         <h1>{hero.name}</h1>
         <p className="lede">{hero.role}</p>
+        <p className="quiet">
+          {hero.line} {hero.place} {hero.school}
+        </p>
       </header>
 
       <div className="wrap">
+        <ProofStrip />
         <HarborFeature />
-        <p className="quiet after-harbor">
-          {hero.line} {hero.place} {hero.school}
-        </p>
-        <CtaRow showDemo />
-        <DeskShelf />
-
+        <section className="section" aria-labelledby="work-title">
+          <p className="field">Cases</p>
+          <h2 id="work-title">Black Clover, Nutricost, and the live desk</h2>
+          <CaseCards />
+        </section>
+        <MethodNote />
         <section className="section" aria-labelledby="clients-title">
           <p className="field">McFly Ads clients</p>
           <h2 id="clients-title">Named brands</h2>
           <BrandRoster wall />
         </section>
-
-        <section className="section" aria-labelledby="work-title">
-          <p className="field">Cases</p>
-          <h2 id="work-title" className="visually-hidden">
-            Cases
-          </h2>
-          <div className="case-stack case-stack-thin">
-            {featured.map((item) => (
-              <article className="work-entry" key={item.key}>
-                <h3>
-                  {item.title}
-                  {"live" in item && item.live ? (
-                    <>
-                      {" "}
-                      <span className="live-mark">LIVE</span>
-                    </>
-                  ) : null}
-                </h3>
-                <p className="quiet">{item.role}</p>
-                <p className="close-links">
-                  {item.key === "mcfly" ? (
-                    <a href={site.mcfly} rel="noreferrer" target="_blank">
-                      {site.mcflyProduct}
-                    </a>
-                  ) : null}
-                  <Link href={item.desk}>{item.more}</Link>
-                </p>
-              </article>
-            ))}
-          </div>
-        </section>
+        <Credo />
+        <CtaRow showDemo />
       </div>
     </article>
   );

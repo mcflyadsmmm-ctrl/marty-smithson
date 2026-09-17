@@ -1,6 +1,6 @@
 # Marty Smithson
 
-Personal site for Marty Smithson — marketing analytics and measurement. Head of BI & Performance Marketing at Black Clover.
+Personal site for Marty Smithson — Marketing Analytics & Measurement Lead. Head of BI & Performance Marketing at Black Clover.
 
 Live: [https://marty-smithson.pages.dev](https://marty-smithson.pages.dev) (Cloudflare Pages project `marty-smithson`)
 
@@ -12,7 +12,7 @@ The token brief lives in [`docs/design-tokens.md`](docs/design-tokens.md). Imple
 
 - One theme end-to-end: sage paper (`#e4eee7`) · bright plates (`#f7fbf8`) · pine accent (`#1b6b4a`) · ink (`#102018`)
 - Type: IBM Plex Sans + IBM Plex Mono, sentence-case field names
-- Wide grid (~68rem). Home fold is short identity → Harbor Home Co SAMPLE desk + Open live SAMPLE desk CTA → other desks → ten-name client wall → thin case jumps
+- Wide grid (~68rem). Home fold is hero → proof strip → Harbor Home Co SAMPLE desk + Open live SAMPLE desk CTA → three case cards → methods → ten-name client wall → credo → contact
 - One spend headline: $25M+ in career-managed ad spend
 - Resume is a pack ledger. Full resume is the take. Email, LinkedIn, and the PDF sit on every page
 - No pills, no SaaS chrome, no cream/stone editorial cluster, no tracked ALL-CAPS eyebrows, no sample architecture diagrams
@@ -42,8 +42,8 @@ npm run build
 
 | Path | Page |
 | --- | --- |
-| `/` | Short identity, then openable desks first (Mcfly LIVE, cash MER, incrementality, Nutricost), client wall, thin cases |
-| `/work` | Same desks first, then client wall and cases |
+| `/` | Hero, proof strip, Harbor SAMPLE, three case cards, methods, client wall, credo, contact |
+| `/work` | Harbor SAMPLE, case cards, desk shelf, client wall |
 | `/work/desks` | Desk shelf |
 | `/work/desks/mcfly` | Mcfly Analytics Shopify App LIVE peek |
 | `/work/desks/cash-mer` | Black Clover cash MER synthetic book |
