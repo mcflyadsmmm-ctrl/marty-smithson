@@ -2,7 +2,8 @@ export const site = {
   name: "Marty Smithson",
   title: "Marty Smithson — Marketing Analytics, Measurement, and BI",
   description:
-    "Marketing analytics and measurement. MMM, attribution, incrementality, and cash MER. Head of BI & Performance Marketing at Black Clover. American Fork, Utah. Central Utah or US remote.",
+    "Marketing analytics and measurement. MMM, attribution, incrementality, and cash MER. Directed $25M+ in career-managed ad spend. Head of BI & Performance Marketing at Black Clover. American Fork, Utah. Central Utah or US remote.",
+  spendHeadline: "$25M+ in career-managed ad spend",
   url: "https://marty-smithson.pages.dev",
   email: "martysmithson04@gmail.com",
   linkedin: "https://www.linkedin.com/in/marty-smithson",

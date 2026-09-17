@@ -401,12 +401,20 @@ p {
   font-size: 0.95rem;
 }
 
-.case-grid {
+.case-grid,
+.case-stack {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
   border: 1px solid var(--rule);
   background: var(--rule);
+}
+
+.case-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.case-stack {
+  grid-template-columns: 1fr;
 }
 
 .case-grid .work-entry {
@@ -415,6 +423,36 @@ p {
 
 .case-grid .work-entry + .work-entry {
   border-left: 1px solid var(--rule);
+}
+
+.case-stack .work-entry + .work-entry {
+  border-top: 1px solid var(--rule);
+}
+
+.case-points {
+  list-style: none;
+  margin: 1.6rem 0 0;
+  padding: 0;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+}
+
+.case-points li {
+  padding: 1.05rem 1.15rem 1.1rem;
+  background: var(--plate);
+}
+
+.case-points li + li {
+  border-top: 1px solid var(--rule);
+}
+
+.case-points h3 {
+  margin: 0 0 0.35rem;
+}
+
+.case-points p {
+  margin: 0;
+  max-width: 42rem;
 }
 
 .section {

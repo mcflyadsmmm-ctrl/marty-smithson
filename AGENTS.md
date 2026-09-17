@@ -12,22 +12,33 @@ You are building/maintaining **Marty Smithson’s** personal portfolio and caree
 - Founder and Data Analytics Consultant at McFly Ads (consulting practice, since 2020). Not Marketing Analytics Consultant. Not CEO of McFly Ads.
 - Prior: Advertising Data Scientist at Nutricost (reported to CMO).
 - Education (locked): Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025). American Fork, UT. Apps email: martysmithson04@gmail.com.
-- Product name (locked): Mcfly Analytics Shopify App. LIVE at https://mcflyads.com. Do not call the product “McFly” or “McFly Ads”. Cite as a personal/side project, not the homepage hero.
+- Product name (locked): Mcfly Analytics Shopify App. LIVE at https://mcflyads.com. Do not call the product “McFly” or “McFly Ads”. McFly Ads is the consulting practice only.
 - Comp bar: $140K+ or path to $200K+. Utah / Remote USA first.
 
-## Standing laws (user-facing FAIL)
-Human voice · builds-first · personal read not SaaS · systems-fleet only proof · process>dollars · no meta/AI slop · no W-2/crew jargon · Nutricost **organized/built** never helped · Domo→Cloud Run ~$20K/mo + ~50-partner portal verified but **identity before dollars on first fold** · Northline SAMPLE dead · no invented metrics.
+## Site locks (user-facing, 2026-09-17)
+- Hero brand: **Marketing analytics and measurement.** Not “I build the systems behind better decisions.”
+- LIVE desk first after the hero: Mcfly Analytics Shopify App LIVE at mcflyads.com.
+- All 10 McFly Ads clients as a visible name wall (exact spellings in `lib/content.ts`).
+- Three deep cases: Black Clover · Nutricost Advertising Data Scientist · Mcfly Analytics Shopify App LIVE.
+- One spend headline: **$25M+ in career-managed ad spend.** Do not invent $30M.
+- Domo→Cloud Run (~$20K/mo) and the partner portal support the Black Clover case. They do not own the site identity.
+- No sample architecture diagrams as the homepage brand. No sample-disclaimer theater. No Harbor Home SAMPLE numbers on this site.
+- CTAs: email, LinkedIn, resume PDF (product link may sit with them).
+- `/resume` titles: Nutricost **Advertising Data Scientist**; McFly **Founder and Data Analytics Consultant**; education line locked; product LIVE, not “listing pending.”
 
-Banned phrases: "Concrete work, not a seat list" · "Where this sat" · "Company names are backdrop…"
+## Standing laws (user-facing FAIL)
+Human voice · builds-first · personal read not SaaS · process>dollars · no meta/AI slop · no W-2/crew jargon · Nutricost **organized/built** never helped · Northline SAMPLE dead · no invented metrics.
+
+Banned phrases: "Concrete work, not a seat list" · "Where this sat" · "Company names are backdrop…" · "I build the systems behind better decisions" · "BI for the call"
 
 ## Resume FINAL MD5s (do not drift without SoT change)
 MASTER `28e46f6afed043de3a84d2937412a201` · SCIENCE `bf39d5feeef7d6631e8e907b905fea4d` · OPERATOR `c074515643580a7e077087d0c55a6b28`
 
 ## Positioning
-Decision systems / company OS operator primary. Portfolio hero = `/work/systems-fleet`. OPERATOR/MASTER for Head Analytics + AE; SCIENCE secondary.
+Public site = marketing analytics / measurement for a $150k+ search. `/work/systems-fleet` is the Black Clover case, not the homepage brand. OPERATOR/MASTER for Head Analytics + AE; SCIENCE secondary.
 
 ## Craft state
-PR #20 ledger LIVE: paper `#d0dbd4` / plate `#e7eee9` / ink `#141a17`. See `docs/design-tokens.md` and `docs/fleet/`.
+Ledger paper `#d0dbd4` / plate `#e7eee9` / ink `#141a17`. See `docs/design-tokens.md` and `docs/fleet/`.
 
 ## Full knowledge
-Read `docs/fleet/HANDOFF.md` and siblings before material changes.
+Read `docs/fleet/HANDOFF.md` and siblings before material changes. 2026-09-17 site locks above override older “company OS / architecture-first homepage” rows on user-facing surfaces.

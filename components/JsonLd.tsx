@@ -27,6 +27,11 @@ const graph = {
           name: "Founder and Data Analytics Consultant",
           occupationLocation: { "@type": "Organization", name: "McFly Ads" },
         },
+        {
+          "@type": "Occupation",
+          name: "Advertising Data Scientist",
+          occupationLocation: { "@type": "Organization", name: "Nutricost" },
+        },
       ],
       worksFor: [
         { "@type": "Organization", name: "Black Clover" },

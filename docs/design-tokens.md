@@ -4,15 +4,15 @@ One-page brief. Implement these tokens; do not restyle from taste.
 
 ## Reader
 
-Head or director of analytics, or an AE screening decision-systems work, at a mid-market company (~$30–100M). They are deciding whether Marty can be trusted with company truth systems.
+A hiring manager or recruiter screening a $150k+ marketing analytics / measurement seat. They need a person, a live desk, named brands, and three cases — not an architecture poem.
 
-**Leave-with:** he builds isolated, fail-closed decision systems companies can trust.
+**Leave-with:** he runs mix models, attribution, incrementality, and cash MER, and he has a live Shopify measurement product.
 
-**Stealth CTA:** Resume download is primary. Email is available and quieter. LinkedIn is secondary. No apply language.
+**Stealth CTA:** Email, LinkedIn, and the resume PDF sit on every page. No apply language.
 
 ## Why this system
 
-The subject is books, writers, roles, and a warehouse that is not allowed to lie. The site should look like that: ruled paper, a matrix, a spine. It should not look like a cream editorial blog, a terracotta-serif magazine, a neon terminal, or a SaaS card kit.
+The subject is marketing analytics and measurement. The site should look like a personal ledger: ruled paper, named brands, a live desk. It should not look like a cream editorial blog, a terracotta-serif magazine, a neon terminal, a SaaS card kit, or a sample architecture diagram.
 
 Live (PR #19) used warm stone `#ecece8` and cream plates `#f7f7f4` — playbook tell #1. This pass leaves that cluster.
 
@@ -47,7 +47,7 @@ IBM Plex Sans (400/500) and IBM Plex Mono (400/500), via `next/font`. Systems fa
 - Header sits on paper. Double hairline under it (ledger total), not a dark app bar.
 - Figures are sharp plates with a 1px rule. No radius, no shadow, no gradient.
 - Matrices live inside a padded figure body. Rules must not escape the plate.
-- Home fold: identity (who sees what) before the Domo cost note. Architecture and process lead; dollars remain as a verified footnote, not the first object.
+- Home fold: measurement hero, then the LIVE Mcfly desk, then the ten-name client wall, then three cases. One spend headline ($25M+ career-managed). Domo→Cloud Run stays in the Black Clover case.
 - Resume is a pack ledger, not three equal cards over a void. Full resume is the take. The other two packs are lanes.
 - One theme on every route.
 
