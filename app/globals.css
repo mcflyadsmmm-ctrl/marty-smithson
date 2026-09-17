@@ -703,6 +703,10 @@ p {
   margin: 0.55rem 0 0;
 }
 
+.harbor-board .desk-note {
+  margin-top: 0.7rem;
+}
+
 .metric-row {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
