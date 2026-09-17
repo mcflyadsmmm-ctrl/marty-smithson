@@ -6,8 +6,8 @@
 
 ### Site locks (2026-09-17) — override older rows below on user-facing surfaces
 - Hero: Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — $25M+ paid mix. Title/meta match. Not “I build the systems behind better decisions.”
-- Home order: hero → proof strip → Harbor SAMPLE at https://mcflyads.com/demo → three case cards → method keywords → 10-name wall → credo (platform ≠ incremental ≠ cash) → contact
-- Feature Harbor Home Co SAMPLE ($82,068 / $23,414 / 3.51×). Synthetic Black Clover / Nutricost books stay labeled as such.
+- Home order: hero → proof strip → 10-name client strip (logos + public sites) → three readable case cards → Harbor SAMPLE as one proof desk → method keywords → credo (platform ≠ incremental ≠ cash) → contact
+- Harbor Home Co SAMPLE ($82,068 / $23,414 / 3.51×) is one proof desk, not the site personality. Synthetic Black Clover / Nutricost books stay labeled as such. Case-card beats stack — never four skinny columns inside a third-width card.
 - McFly Ads consulting title: Founder and Data Analytics Consultant (never CEO)
 - All 10 clients visible as a name wall (exact spellings)
 - Three deep cases: Black Clover (Head of BI & Performance Marketing) · Nutricost Advertising Data Scientist · Mcfly Analytics Shopify App LIVE

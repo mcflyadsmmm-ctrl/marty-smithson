@@ -7,9 +7,17 @@ const labels = [
   ["outcome", "Outcome"],
 ] as const;
 
-export function CaseBeats({ beats }: { beats: CaseBeat }) {
+type CaseBeatsLayout = "card" | "page";
+
+export function CaseBeats({
+  beats,
+  layout = "page",
+}: {
+  beats: CaseBeat;
+  layout?: CaseBeatsLayout;
+}) {
   return (
-    <dl className="case-beats">
+    <dl className={`case-beats is-${layout}`}>
       {labels.map(([key, label]) => (
         <div key={key}>
           <dt>{label}</dt>

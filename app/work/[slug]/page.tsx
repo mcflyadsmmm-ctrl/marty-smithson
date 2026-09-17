@@ -55,7 +55,7 @@ export default async function CasePage({ params }: Props) {
           {study.slug === "mcfly" ? (
             <>
               <a href={site.mcflyDemo} rel="noreferrer" target="_blank">
-                Open live SAMPLE desk
+                Harbor SAMPLE
               </a>
               <a href={site.mcfly} rel="noreferrer" target="_blank">
                 {site.mcflyProduct}

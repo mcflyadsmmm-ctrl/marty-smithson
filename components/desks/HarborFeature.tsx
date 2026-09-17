@@ -47,8 +47,8 @@ export function HarborFeature() {
           </p>
         </div>
         <p className="harbor-actions">
-          <a className="pack-take" href={site.mcflyDemo} rel="noreferrer" target="_blank">
-            Open live SAMPLE desk
+          <a href={site.mcflyDemo} rel="noreferrer" target="_blank">
+            Harbor SAMPLE
           </a>
           <a href={site.mcfly} rel="noreferrer" target="_blank">
             {site.mcflyProduct}

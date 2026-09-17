@@ -21,7 +21,7 @@ export function CtaRow({
       </a>
       {showDemo ? (
         <a href={site.mcflyDemo} rel="noreferrer" target="_blank">
-          Open live SAMPLE desk
+          Harbor SAMPLE
         </a>
       ) : null}
     </p>

@@ -38,7 +38,7 @@ const REQUIRED = [
   "https://mcflyads.com",
   "https://mcflyads.com/demo",
   "Harbor Home Co",
-  "Open live SAMPLE desk",
+  "Harbor SAMPLE",
   "platform ≠ incremental ≠ cash",
   "Google Meridian",
   "incrementality",
@@ -122,10 +122,43 @@ for (const name of CLIENTS) {
   assert.match(content, new RegExp(escapeRegExp(name)), `missing client: ${name}`);
   assert.match(home, /BrandRoster/, "homepage must render the client wall");
   assert.match(home, /ProofStrip/, "homepage must render the proof strip");
-  assert.match(home, /HarborFeature/, "homepage must feature the live SAMPLE desk");
+  assert.match(home, /HarborFeature/, "homepage must include Harbor SAMPLE as a proof desk");
   assert.match(home, /CaseCards/, "homepage must render the three case cards");
   assert.match(home, /MethodNote/, "homepage must surface method keywords");
   assert.match(home, /Credo/, "homepage must close with the credo");
+}
+
+const cards = readFileSync(join(root, "components/CaseCards.tsx"), "utf8");
+assert.match(cards, /layout="card"/, "homepage case cards must use stacked card beats");
+assert.doesNotMatch(
+  cards,
+  /Open live SAMPLE desk/,
+  "case cards must not use the SaaS demo CTA",
+);
+
+const beatsCss = readFileSync(join(root, "app/globals.css"), "utf8");
+assert.match(
+  beatsCss,
+  /\.case-beats\.is-card \{[\s\S]*grid-template-columns: 1fr;/,
+  "card beats must stack, not sit in four skinny columns",
+);
+assert.doesNotMatch(
+  beatsCss,
+  /\.case-beats \{\s*display: grid;\s*grid-template-columns: repeat\(4/,
+  "default case-beats must not be four equal columns",
+);
+
+const linkedClients = [
+  "https://malamasolar.com",
+  "https://royalpeaklighting.com",
+  "https://www.kinhome.com",
+  "https://batbridgeas.com",
+  "https://whirlyboard.com",
+  "https://azgymfloors.com",
+  "https://pureairsolutionsaz.com",
+];
+for (const href of linkedClients) {
+  assert.match(content, new RegExp(escapeRegExp(href)), `missing client site: ${href}`);
 }
 
 assert.match(content, /Marketing Analytics & Measurement Lead/);
