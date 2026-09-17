@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { brands } from "@/lib/content";
 
 export function BrandRoster({
@@ -11,7 +12,7 @@ export function BrandRoster({
         const mark = (
           <>
             {brand.logo ? (
-              <img
+              <Image
                 className="client-logo"
                 src={brand.logo}
                 alt=""
