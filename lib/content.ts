@@ -127,7 +127,7 @@ export const featured = [
     line: "Open the live SAMPLE desk at mcflyads.com/demo. Since 2020 I have run marketing data science for the ten named brands on this page.",
     href: "/work/mcfly",
     desk: "/work/desks/mcfly",
-    more: "Open live SAMPLE desk",
+    more: "Read the case",
     live: true,
     beats: {
       problem:
@@ -250,21 +250,81 @@ export const cases: CaseStudy[] = [
   },
 ];
 
-export const brands: {
+export type Brand = {
   mark: string;
   name: (typeof CLIENT_NAMES)[number];
   category: BrandCategory;
-}[] = [
-  { mark: "MC", name: "Marksman Construction", category: "Trades" },
-  { mark: "MS", name: "Malama Solar", category: "Trades" },
-  { mark: "RP", name: "Royal Peak Lighting", category: "Trades" },
-  { mark: "SL", name: "Stretch Labs", category: "Product" },
-  { mark: "KH", name: "Kin Home", category: "Product" },
-  { mark: "BB", name: "BatBridge Bookkeeping", category: "Professional" },
-  { mark: "WB", name: "Whirly Board", category: "Product" },
-  { mark: "AG", name: "Arizona Gym Floors", category: "Trades" },
-  { mark: "PA", name: "Pure Air Solutions", category: "Trades" },
-  { mark: "PM", name: "Priority Mulching Services", category: "Trades" },
+  href?: string;
+  logo?: string;
+};
+
+export const brands: Brand[] = [
+  {
+    mark: "MC",
+    name: "Marksman Construction",
+    category: "Trades",
+    href: "https://www.marksmanconstructionco.com",
+    logo: "/clients/marksman-construction.png",
+  },
+  {
+    mark: "MS",
+    name: "Malama Solar",
+    category: "Trades",
+    href: "https://malamasolar.com",
+    logo: "/clients/malama-solar.png",
+  },
+  {
+    mark: "RP",
+    name: "Royal Peak Lighting",
+    category: "Trades",
+    href: "https://royalpeaklighting.com",
+    logo: "/clients/royal-peak-lighting.png",
+  },
+  {
+    mark: "SL",
+    name: "Stretch Labs",
+    category: "Product",
+  },
+  {
+    mark: "KH",
+    name: "Kin Home",
+    category: "Product",
+    href: "https://www.kinhome.com",
+    logo: "/clients/kin-home.png",
+  },
+  {
+    mark: "BB",
+    name: "BatBridge Bookkeeping",
+    category: "Professional",
+    href: "https://batbridgeas.com",
+    logo: "/clients/batbridge-bookkeeping.png",
+  },
+  {
+    mark: "WB",
+    name: "Whirly Board",
+    category: "Product",
+    href: "https://whirlyboard.com",
+    logo: "/clients/whirly-board.png",
+  },
+  {
+    mark: "AG",
+    name: "Arizona Gym Floors",
+    category: "Trades",
+    href: "https://azgymfloors.com",
+    logo: "/clients/arizona-gym-floors.png",
+  },
+  {
+    mark: "PA",
+    name: "Pure Air Solutions",
+    category: "Trades",
+    href: "https://pureairsolutionsaz.com",
+    logo: "/clients/pure-air-solutions.png",
+  },
+  {
+    mark: "PM",
+    name: "Priority Mulching Services",
+    category: "Trades",
+  },
 ];
 
 export const resumePdfs = [

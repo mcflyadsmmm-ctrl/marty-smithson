@@ -260,9 +260,6 @@ p {
 }
 
 .case-beats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.55rem;
   margin: 0.85rem 0 0;
 }
 
@@ -272,13 +269,6 @@ p {
 
 .wrap > .case-beats {
   margin: 0 0 1.4rem;
-}
-
-.case-beats div {
-  padding: 0.75rem 0.8rem 0.85rem;
-  background: color-mix(in srgb, var(--accent-soft) 55%, var(--plate));
-  border: 1px solid color-mix(in srgb, var(--accent) 16%, var(--rule));
-  border-radius: var(--radius);
 }
 
 .case-beats dt {
@@ -291,9 +281,56 @@ p {
 
 .case-beats dd {
   margin: 0;
+  min-width: 0;
   font-size: 0.92rem;
-  line-height: 1.4;
+  line-height: 1.45;
   color: var(--ink);
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* Homepage cards sit at ~1/3 viewport. Four columns here wrap one word
+   per line and clip. Stack the beats as labeled rows. */
+.case-beats-stack {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+}
+
+.case-beats-stack div {
+  min-width: 0;
+  padding: 0.7rem 0 0.75rem;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--rule);
+  border-radius: 0;
+}
+
+.case-beats-stack div:first-child {
+  border-top: 0;
+  padding-top: 0.2rem;
+}
+
+/* Deep case pages have the full wrap. 2×2 by default; four across only
+   when each beat still has room to read. */
+.case-beats-board {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.55rem;
+}
+
+.case-beats-board div {
+  min-width: 0;
+  padding: 0.75rem 0.85rem 0.85rem;
+  background: color-mix(in srgb, var(--accent-soft) 55%, var(--plate));
+  border: 1px solid color-mix(in srgb, var(--accent) 16%, var(--rule));
+  border-radius: var(--radius);
+}
+
+@media (min-width: 1100px) {
+  .case-beats-board {
+    grid-template-columns: repeat(4, minmax(12rem, 1fr));
+  }
 }
 
 .case-card {
@@ -840,7 +877,7 @@ p {
 .harbor {
   display: grid;
   gap: 0;
-  margin: 0.15rem 0 0.4rem;
+  margin: 2.4rem 0 0.4rem;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--rule));
   border-radius: var(--radius);
@@ -1021,13 +1058,63 @@ p {
   color: var(--take-ink);
 }
 
+.client-wall,
+.client-rail {
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0;
+}
+
 .client-wall {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0.55rem;
-  margin: 0.85rem 0 0;
-  list-style: none;
-  padding: 0;
+}
+
+.client-rail {
+  display: flex;
+  gap: 0.55rem;
+  overflow-x: auto;
+  padding-bottom: 0.55rem;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.client-rail li {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.brand-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.45rem 0.8rem 0.45rem 0.55rem;
+  background: var(--plate);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.brand-chip:hover {
+  border-color: var(--ink);
+  color: inherit;
+}
+
+.brand-chip-plain {
+  color: var(--ink);
+}
+
+.brand-logo {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 4px;
+  object-fit: contain;
+  background: var(--paper);
 }
 
 .client-wall li {
@@ -1045,6 +1132,10 @@ p {
   transform: translateY(-2px);
   border-color: var(--accent);
   box-shadow: var(--lift-hover);
+}
+
+.brand-list .brand-chip {
+  width: 100%;
 }
 
 .case-grid,
@@ -1070,7 +1161,9 @@ p {
 }
 
 .case-grid .work-entry {
+  min-width: 0;
   min-height: 16rem;
+  overflow: visible;
 }
 
 .case-grid .work-entry + .work-entry {
@@ -1805,9 +1898,12 @@ a.work-entry:hover .more {
   }
 
   .proof-strip,
-  .case-beats,
   .case-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .case-beats-board {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 
   .desk-rail {
@@ -1912,9 +2008,12 @@ a.work-entry:hover .more {
     grid-template-columns: 1fr;
   }
 
-  .proof-strip,
-  .case-beats {
+  .proof-strip {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .case-beats-board {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .desk-rail button,

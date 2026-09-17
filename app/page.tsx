@@ -20,12 +20,12 @@ export default function HomePage() {
 
       <div className="wrap">
         <ProofStrip />
-        <HarborFeature />
         <section className="section" aria-labelledby="work-title">
-          <p className="field">Cases</p>
-          <h2 id="work-title">Black Clover, Nutricost, and the live desk</h2>
+          <p className="field">Selected work</p>
+          <h2 id="work-title">Black Clover, Nutricost, and Mcfly Analytics Shopify App</h2>
           <CaseCards />
         </section>
+        <HarborFeature />
         <MethodNote />
         <section className="section" aria-labelledby="clients-title">
           <p className="field">McFly Ads clients</p>
@@ -33,7 +33,7 @@ export default function HomePage() {
           <BrandRoster wall />
         </section>
         <Credo />
-        <CtaRow showDemo />
+        <CtaRow />
       </div>
     </article>
   );
