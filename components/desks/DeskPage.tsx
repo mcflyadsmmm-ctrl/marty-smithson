@@ -22,7 +22,7 @@ export function DeskPage({ slug }: { slug: DeskSlug }) {
         <p className="lede">{desk.blurb}</p>
         <p className="quiet">{desk.role}</p>
         <p className="quiet">{desk.field}</p>
-        <CtaRow />
+        <CtaRow showDemo={desk.slug === "mcfly"} />
       </header>
       <div className="wrap">
         <DeskInstrument slug={desk.slug} />

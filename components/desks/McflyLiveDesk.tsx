@@ -64,13 +64,7 @@ export function McflyLiveDesk() {
         </div>
       </div>
 
-      <SalesChart
-        current={current.sales}
-        lastYear={current.lastYear}
-        label="Harbor Home Co SAMPLE against last year"
-      />
-
-      <dl className="metric-row">
+      <dl className="harbor-spend">
         <div>
           <dt>Ad spend</dt>
           <dd>{money(harborSample.spend)}</dd>
@@ -90,6 +84,13 @@ export function McflyLiveDesk() {
           <dd>{percent(harborSample.weekendShare)}</dd>
         </div>
       </dl>
+
+      <SalesChart
+        compact
+        current={current.sales}
+        lastYear={current.lastYear}
+        label="Harbor Home Co SAMPLE against last year"
+      />
 
       <p className="desk-note">
         SAMPLE · not a live client. Spend is optional. No ad-network login.

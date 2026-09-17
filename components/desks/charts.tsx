@@ -193,10 +193,12 @@ export function SalesChart({
   current,
   lastYear,
   label,
+  compact = false,
 }: {
   current: number;
   lastYear: number;
   label: string;
+  compact?: boolean;
 }) {
   const width = 640;
   const height = 120;
@@ -216,7 +218,7 @@ export function SalesChart({
 
   return (
     <svg
-      className="desk-chart desk-chart-wide"
+      className={compact ? "desk-chart desk-chart-harbor" : "desk-chart desk-chart-wide"}
       viewBox={`0 0 ${width} ${height}`}
       role="img"
       aria-label={label}

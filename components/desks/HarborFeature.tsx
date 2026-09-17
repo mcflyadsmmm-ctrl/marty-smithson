@@ -31,6 +31,20 @@ export function HarborFeature() {
             Harbor Home Co · {harborSample.window}. Founder and Data Analytics
             Consultant, McFly Ads. Not a live client.
           </p>
+          <p className="harbor-glance">
+            <span>
+              <em>This month</em>
+              {money(harborSample.periods.month.sales)}
+            </span>
+            <span>
+              <em>Ad spend</em>
+              {money(harborSample.spend)}
+            </span>
+            <span>
+              <em>Sales ÷ spend</em>
+              {multiple(mcflyRoas())}
+            </span>
+          </p>
         </div>
         <p className="harbor-actions">
           <a className="pack-take" href={site.mcflyDemo} rel="noreferrer" target="_blank">
@@ -62,6 +76,27 @@ export function HarborFeature() {
           </div>
         </div>
 
+        <dl className="harbor-spend">
+          <div>
+            <dt>Ad spend</dt>
+            <dd>{money(harborSample.spend)}</dd>
+          </div>
+          <div>
+            <dt>Sales ÷ spend</dt>
+            <dd>{multiple(mcflyRoas())}</dd>
+          </div>
+          <div>
+            <dt>Break-even</dt>
+            <dd>
+              {multiple(harborSample.breakEven)} @ {percent(harborSample.margin)}
+            </dd>
+          </div>
+          <div>
+            <dt>Weekend mix</dt>
+            <dd>{percent(harborSample.weekendShare)}</dd>
+          </div>
+        </dl>
+
         <div className="kpi-strip">
           <div className="kpi">
             <p className="field">{periods.find((item) => item.id === period)?.label}</p>
@@ -92,31 +127,11 @@ export function HarborFeature() {
         </div>
 
         <SalesChart
+          compact
           current={current.sales}
           lastYear={current.lastYear}
           label="Harbor Home Co SAMPLE against last year"
         />
-
-        <dl className="harbor-spend">
-          <div>
-            <dt>Ad spend</dt>
-            <dd>{money(harborSample.spend)}</dd>
-          </div>
-          <div>
-            <dt>Sales ÷ spend</dt>
-            <dd>{multiple(mcflyRoas())}</dd>
-          </div>
-          <div>
-            <dt>Break-even</dt>
-            <dd>
-              {multiple(harborSample.breakEven)} @ {percent(harborSample.margin)}
-            </dd>
-          </div>
-          <div>
-            <dt>Weekend mix</dt>
-            <dd>{percent(harborSample.weekendShare)}</dd>
-          </div>
-        </dl>
       </div>
     </section>
   );

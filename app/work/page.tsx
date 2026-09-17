@@ -20,7 +20,7 @@ export default function WorkPage() {
       <header className="page-head wrap">
         <h1>Work</h1>
         <p className="lede">Open a desk. Black Clover, Nutricost, and the live Shopify product.</p>
-        <CtaRow />
+        <CtaRow showDemo />
       </header>
 
       <div className="wrap">

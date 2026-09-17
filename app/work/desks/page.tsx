@@ -16,7 +16,7 @@ export default function DesksIndexPage() {
       <header className="page-head wrap">
         <h1>Desks</h1>
         <p className="lede">The live product is first. Then the measurement books.</p>
-        <CtaRow />
+        <CtaRow showDemo />
       </header>
       <div className="wrap">
         <HarborFeature />

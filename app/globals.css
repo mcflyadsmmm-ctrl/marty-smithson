@@ -450,6 +450,10 @@ p {
   background: color-mix(in srgb, var(--paper) 40%, var(--plate));
 }
 
+.desk-rail button.is-live {
+  background: color-mix(in srgb, var(--accent-soft) 55%, var(--plate));
+}
+
 .desk-rail button:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: -3px;
@@ -466,6 +470,7 @@ p {
   font-weight: 500;
   letter-spacing: -0.03em;
   line-height: 1;
+  color: var(--accent);
 }
 
 .desk-open {
@@ -490,6 +495,10 @@ p {
 
 .desk-stage {
   padding: 1rem 1.15rem 1.2rem;
+}
+
+.desk-stage .harbor-spend {
+  margin: 0 0 0.85rem;
 }
 
 .desk-toolbar {
@@ -579,6 +588,11 @@ p {
 .desk-chart-wide {
   height: 10.5rem;
   margin: 0.2rem 0 0.85rem;
+}
+
+.desk-chart-harbor {
+  height: 5.5rem;
+  margin: 0.55rem 0 0;
 }
 
 .metric-row {
@@ -727,7 +741,7 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem 1.5rem;
-  padding: 1.15rem 1.3rem 1.1rem;
+  padding: 1.05rem 1.25rem 1.1rem;
   background: linear-gradient(135deg, var(--accent-soft) 0%, var(--plate) 55%, var(--sample-soft) 140%);
 }
 
@@ -755,16 +769,67 @@ p {
   align-items: center;
 }
 
+.harbor-glance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0.85rem 0 0;
+}
+
+.harbor-glance span {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  min-width: 7.4rem;
+  padding: 0.5rem 0.75rem 0.55rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--rule));
+  border-radius: 10px;
+  background: var(--plate);
+  box-shadow: var(--lift);
+  color: var(--accent);
+  font-size: 1.28rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.harbor-glance em {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--faint);
+}
+
+.harbor-glance span:last-child {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--take-ink);
+}
+
+.harbor-glance span:last-child em {
+  color: color-mix(in srgb, var(--take-ink) 78%, var(--accent));
+}
+
 .harbor-board {
-  padding: 1.05rem 1.2rem 1.2rem;
+  padding: 1.05rem 1.2rem 1.15rem;
   border-top: 1px solid var(--rule);
+}
+
+.harbor-board .kpi-strip {
+  margin-top: 0.85rem;
+  margin-bottom: 0;
+}
+
+.harbor-board .kpi:first-child {
+  background: color-mix(in srgb, var(--accent-soft) 70%, var(--plate));
 }
 
 .harbor-spend {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0;
-  margin: 0.35rem 0 0;
+  margin: 0 0 0.15rem;
   border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--rule));
   border-radius: var(--radius);
   background: var(--accent-soft);
@@ -1640,6 +1705,11 @@ a.work-entry:hover .more {
   .metric-row,
   .harbor-spend {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .harbor-glance span {
+    min-width: 6.4rem;
+    font-size: 1.15rem;
   }
 
   .harbor-spend div + div {

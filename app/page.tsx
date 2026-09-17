@@ -19,7 +19,7 @@ export default function HomePage() {
         <p className="quiet after-harbor">
           {hero.line} {hero.place} {hero.school}
         </p>
-        <CtaRow />
+        <CtaRow showDemo />
         <DeskShelf />
 
         <section className="section" aria-labelledby="clients-title">
