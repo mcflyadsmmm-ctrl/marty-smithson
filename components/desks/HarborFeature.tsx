@@ -59,7 +59,7 @@ export function HarborFeature() {
       <div className="harbor-board">
         <div className="desk-toolbar">
           <p className="field">
-            {harborSample.shop} · as-of {harborSample.asOf}
+            {harborSample.shop} SAMPLE · as-of {harborSample.asOf}
           </p>
           <div className="week-rail" role="tablist" aria-label="Window">
             {periods.map((item) => (
@@ -132,6 +132,9 @@ export function HarborFeature() {
           lastYear={current.lastYear}
           label="Harbor Home Co SAMPLE against last year"
         />
+        <p className="desk-note">
+          SAMPLE · Harbor Home Co · not a live client.
+        </p>
       </div>
     </section>
   );

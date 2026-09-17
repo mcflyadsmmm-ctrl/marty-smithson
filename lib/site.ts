@@ -1,6 +1,7 @@
 export const site = {
   name: "Marty Smithson",
-  title: "Marty Smithson — Marketing Analytics & Measurement Lead",
+  title:
+    "Marty Smithson — Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — $25M+ paid mix.",
   description:
     "Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — $25M+ paid mix. Head of BI & Performance Marketing at Black Clover. I report to the CEO. Mcfly Analytics Shopify App LIVE.",
   spendHeadline: "$25M+ in career-managed ad spend",

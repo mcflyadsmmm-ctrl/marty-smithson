@@ -131,7 +131,10 @@ for (const name of CLIENTS) {
 assert.match(content, /Marketing Analytics & Measurement Lead/);
 assert.match(content, /Directed \$25M\+ in career-managed ad spend/);
 assert.doesNotMatch(content, /\$30M/);
-assert.match(site, /title: "Marty Smithson — Marketing Analytics & Measurement Lead"/);
+assert.match(
+  site,
+  /title:\s*"Marty Smithson — Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — \$25M\+ paid mix."/,
+);
 assert.match(site, /mcflyProduct: "Mcfly Analytics Shopify App"/);
 assert.match(site, /mcflyTitle: "Founder and Data Analytics Consultant"/);
 assert.match(site, /mcflyDemo: "https:\/\/mcflyads.com\/demo"/);
