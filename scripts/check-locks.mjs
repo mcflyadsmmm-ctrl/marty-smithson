@@ -128,6 +128,34 @@ for (const name of CLIENTS) {
   assert.match(home, /Credo/, "homepage must close with the credo");
 }
 
+const cards = readFileSync(join(root, "components/CaseCards.tsx"), "utf8");
+const beatsCss = readFileSync(join(root, "app/globals.css"), "utf8");
+assert.match(cards, /<CaseBeats compact/, "homepage case cards must stack beats");
+assert.match(
+  beatsCss,
+  /\.case-beats-stack \{[\s\S]*?grid-template-columns:\s*minmax\(0,\s*1fr\)/,
+  "card beats must be a single readable column",
+);
+assert.doesNotMatch(
+  beatsCss,
+  /\.case-card[\s\S]{0,120}repeat\(4/,
+  "do not keep four beat columns inside homepage cards",
+);
+
+const CLIENT_SITES = [
+  "marksmanconstructionco.com",
+  "malamasolar.com",
+  "royalpeaklighting.com",
+  "kinhome.com",
+  "batbridgeas.com",
+  "whirlyboard.com",
+  "azgymfloors.com",
+  "pureairsolutionsaz.com",
+];
+for (const host of CLIENT_SITES) {
+  assert.match(content, new RegExp(escapeRegExp(host)), `missing client site: ${host}`);
+}
+
 assert.match(content, /Marketing Analytics & Measurement Lead/);
 assert.match(content, /Directed \$25M\+ in career-managed ad spend/);
 assert.doesNotMatch(content, /\$30M/);

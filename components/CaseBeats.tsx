@@ -7,9 +7,15 @@ const labels = [
   ["outcome", "Outcome"],
 ] as const;
 
-export function CaseBeats({ beats }: { beats: CaseBeat }) {
+export function CaseBeats({
+  beats,
+  compact = false,
+}: {
+  beats: CaseBeat;
+  compact?: boolean;
+}) {
   return (
-    <dl className="case-beats">
+    <dl className={compact ? "case-beats case-beats-stack" : "case-beats case-beats-board"}>
       {labels.map(([key, label]) => (
         <div key={key}>
           <dt>{label}</dt>

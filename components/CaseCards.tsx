@@ -19,16 +19,14 @@ export function CaseCards() {
           </p>
           <h3>{item.title}</h3>
           <p className="quiet">{item.role}</p>
-          <CaseBeats beats={item.beats} />
+          <CaseBeats compact beats={item.beats} />
           <p className="close-links">
             <Link href={item.href}>Read the case</Link>
             {item.key === "mcfly" ? (
-              <a href={site.mcflyDemo} rel="noreferrer" target="_blank">
-                Open live SAMPLE desk
+              <a href={site.mcfly} rel="noreferrer" target="_blank">
+                {site.mcflyProduct}
               </a>
-            ) : (
-              <Link href={item.desk}>Open the desk</Link>
-            )}
+            ) : null}
           </p>
         </article>
       ))}
