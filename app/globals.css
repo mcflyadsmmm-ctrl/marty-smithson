@@ -330,7 +330,7 @@ p {
 }
 
 .page-head {
-  padding: 1.6rem 0 1.15rem;
+  padding: 1.15rem 0 0.85rem;
 }
 
 .page-head h1 {
@@ -384,29 +384,29 @@ p {
 }
 
 .showcase {
-  padding-top: 0.35rem;
+  padding-top: 0.15rem;
 }
 
 .showcase > h2 {
-  margin-bottom: 1rem;
-  font-size: clamp(1.45rem, 3vw, 2rem);
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
 }
 
-.desk-shelf {
+.desk-rail {
   display: grid;
-  grid-template-columns: 1.35fr 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0;
   border: 1px solid var(--rule);
   background: var(--rule);
 }
 
-.desk-tile {
+.desk-rail button {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  gap: 0.35rem;
-  min-height: 12.5rem;
-  padding: 1rem 1.1rem 1.15rem;
+  align-items: flex-start;
+  gap: 0.2rem;
+  min-height: 7.4rem;
+  padding: 0.75rem 0.85rem 0.85rem;
   border: 0;
   background: var(--plate);
   color: inherit;
@@ -415,35 +415,34 @@ p {
   font: inherit;
 }
 
-.desk-tile + .desk-tile,
-.desk-tile.is-live + .desk-tile {
-  border-top: 1px solid var(--rule);
+.desk-rail button + button {
+  border-left: 1px solid var(--rule);
 }
 
-.desk-tile.is-live {
-  grid-row: span 3;
-  border-top: 0;
-  border-right: 1px solid var(--rule);
-}
-
-.desk-tile h3 {
-  margin: 0;
-  font-size: 1.15rem;
-}
-
-.desk-tile .quiet {
-  margin-top: auto;
-  padding-top: 0.55rem;
-}
-
-.desk-tile[aria-pressed="true"] {
+.desk-rail button.is-live {
   box-shadow: inset 3px 0 0 var(--ink);
-  background: color-mix(in srgb, var(--paper) 45%, var(--plate));
 }
 
-.desk-tile:focus-visible {
+.desk-rail button[aria-selected="true"] {
+  background: color-mix(in srgb, var(--paper) 40%, var(--plate));
+}
+
+.desk-rail button:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: -3px;
+}
+
+.desk-rail strong {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.desk-rail-num {
+  margin-top: 0.35rem;
+  font-size: 1.45rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
 }
 
 .desk-open {
@@ -1429,13 +1428,16 @@ a.work-entry:hover .more {
     grid-template-columns: 1fr 1fr;
   }
 
-  .desk-shelf {
-    grid-template-columns: 1fr;
+  .desk-rail {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .desk-tile.is-live {
-    grid-row: auto;
-    border-right: 0;
+  .desk-rail button:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .desk-rail button:nth-child(n + 3) {
+    border-top: 1px solid var(--rule);
   }
 
   .kpi-strip,
@@ -1505,6 +1507,20 @@ a.work-entry:hover .more {
 }
 
 @media (max-width: 640px) {
+  .desk-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .desk-rail button,
+  .desk-rail button:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .desk-rail button + button,
+  .desk-rail button:nth-child(n + 3) {
+    border-top: 1px solid var(--rule);
+  }
+
   .kpi-strip,
   .metric-row {
     grid-template-columns: 1fr;

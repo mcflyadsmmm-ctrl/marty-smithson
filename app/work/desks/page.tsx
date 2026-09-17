@@ -14,7 +14,7 @@ export default function DesksIndexPage() {
     <article className="page">
       <header className="page-head wrap">
         <h1>Desks</h1>
-        <p className="lede">Open one. The live product is first.</p>
+        <p className="lede">The live product is first. Then the measurement books.</p>
         <CtaRow />
       </header>
       <div className="wrap">

@@ -10,6 +10,8 @@ export type DeskMeta = {
   role: string;
   blurb: string;
   href: string;
+  headline: string;
+  headlineNote: string;
 };
 
 export const desks: DeskMeta[] = [
@@ -21,6 +23,8 @@ export const desks: DeskMeta[] = [
     role: "Founder and Data Analytics Consultant, McFly Ads.",
     blurb: "The shipped Shopify desk. Open it.",
     href: "/work/desks/mcfly",
+    headline: "$55k",
+    headlineNote: "This month, career peek",
   },
   {
     slug: "cash-mer",
@@ -30,6 +34,8 @@ export const desks: DeskMeta[] = [
     role: "Head of BI & Performance Marketing. I report to the CEO.",
     blurb: "Ledger sales over exact spend. Platform ROAS is not the budget.",
     href: "/work/desks/cash-mer",
+    headline: "2.69×",
+    headlineNote: "Cash MER, W1",
   },
   {
     slug: "incrementality",
@@ -39,6 +45,8 @@ export const desks: DeskMeta[] = [
     role: "Head of BI & Performance Marketing. I report to the CEO.",
     blurb: "Two channels claim the same sale. The holdout decides the call.",
     href: "/work/desks/incrementality",
+    headline: "52%",
+    headlineNote: "Meta kept share",
   },
   {
     slug: "nutricost",
@@ -48,6 +56,8 @@ export const desks: DeskMeta[] = [
     role: "Advertising Data Scientist. I reported to the CMO.",
     blurb: "Thirteen catalogs. One station for contribution past last-click.",
     href: "/work/desks/nutricost",
+    headline: "13",
+    headlineNote: "Catalogs on one station",
   },
 ];
 

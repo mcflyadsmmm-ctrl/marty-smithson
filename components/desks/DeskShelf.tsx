@@ -2,32 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Sparkline } from "@/components/desks/charts";
 import { DeskInstrument } from "@/components/desks/DeskInstrument";
-import {
-  cashMer,
-  cashMerWeeks,
-  desks,
-  incrementalityChannels,
-  mcflyPeek,
-  nutricostCatalogs,
-  type DeskSlug,
-} from "@/lib/desks";
-
-const previews: Record<DeskSlug, Array<number | null>> = {
-  mcfly: [
-    mcflyPeek.periods.month.lastYear / 12,
-    mcflyPeek.periods.month.sales / 10,
-    mcflyPeek.periods.month.sales / 8,
-    mcflyPeek.periods.month.sales / 7,
-    mcflyPeek.periods.month.sales / 6,
-  ],
-  "cash-mer": cashMerWeeks.map((week) => cashMer(week)),
-  incrementality: incrementalityChannels.map(
-    (item) => item.incremental / item.claimed,
-  ),
-  nutricost: nutricostCatalogs.map((item) => (item.sales - item.cogs) / item.sales),
-};
+import { desks, type DeskSlug } from "@/lib/desks";
 
 export function DeskShelf({
   initial = "mcfly",
@@ -41,22 +17,19 @@ export function DeskShelf({
     <section className="showcase" aria-labelledby="desks-title">
       <p className="field">Desks</p>
       <h2 id="desks-title">Open a desk</h2>
-      <div className="desk-shelf">
+      <div className="desk-rail" role="tablist" aria-label="Desks">
         {desks.map((desk) => {
           const selected = desk.slug === open;
           return (
             <button
               key={desk.slug}
               type="button"
-              className={
-                desk.slug === "mcfly"
-                  ? "desk-tile is-live"
-                  : "desk-tile"
-              }
-              aria-pressed={selected}
+              role="tab"
+              aria-selected={selected}
+              className={desk.kind === "live" ? "is-live" : undefined}
               onClick={() => setOpen(desk.slug)}
             >
-              <p className="field">
+              <span className="field">
                 {desk.field}
                 {desk.kind === "live" ? (
                   <>
@@ -64,10 +37,10 @@ export function DeskShelf({
                     <span className="live-mark">LIVE</span>
                   </>
                 ) : null}
-              </p>
-              <h3>{desk.title}</h3>
-              <Sparkline values={previews[desk.slug]} label={`${desk.title} preview`} />
-              <p className="quiet">{desk.blurb}</p>
+              </span>
+              <strong>{desk.title}</strong>
+              <span className="desk-rail-num">{desk.headline}</span>
+              <span className="quiet">{desk.headlineNote}</span>
             </button>
           );
         })}

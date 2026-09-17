@@ -18,7 +18,7 @@ export default function WorkPage() {
     <article className="page">
       <header className="page-head wrap">
         <h1>Work</h1>
-        <p className="lede">Desks first. Cases after.</p>
+        <p className="lede">Open a desk. Black Clover, Nutricost, and the live Shopify product.</p>
         <CtaRow />
       </header>
 
