@@ -17,6 +17,9 @@ export function CtaRow({
       <a href={site.mcfly} rel="noreferrer" target="_blank">
         {site.mcflyProduct}
       </a>
+      <a href={site.mcflyDemo} rel="noreferrer" target="_blank">
+        Open live SAMPLE desk
+      </a>
     </p>
   );
 }

@@ -18,13 +18,13 @@ export const desks: DeskMeta[] = [
   {
     slug: "mcfly",
     kind: "live",
-    field: "Live product",
+    field: "Live SAMPLE desk",
     title: "Mcfly Analytics Shopify App",
     role: "Founder and Data Analytics Consultant, McFly Ads.",
-    blurb: "The shipped Shopify desk. Open it.",
+    blurb: "Harbor Home Co SAMPLE. Open the live desk.",
     href: "/work/desks/mcfly",
-    headline: "$55k",
-    headlineNote: "This month, career peek",
+    headline: "$82,068",
+    headlineNote: "Harbor Home Co · this month",
   },
   {
     slug: "cash-mer",
@@ -290,26 +290,31 @@ export const nutricostCatalogs: NutricostCatalog[] = [
 
 export type McflyPeriod = "month" | "quarter" | "year";
 
-export const mcflyPeek = {
-  asOf: "Career peek",
+export const harborSample = {
+  shop: "Harbor Home Co",
+  asOf: "Sep 16, 2026",
+  window: "Sep 1–16, 2026",
   periods: {
-    month: { sales: 54_920, lastYear: 49_110, orders: 808 },
-    quarter: { sales: 161_400, lastYear: 148_220, orders: 2_374 },
-    year: { sales: 492_180, lastYear: 451_060, orders: 7_216 },
+    month: { sales: 82_068, lastYear: 73_410, orders: 892 },
+    quarter: { sales: 246_210, lastYear: 221_040, orders: 2_676 },
+    year: { sales: 718_420, lastYear: 649_810, orders: 7_809 },
   },
-  typicalOrder: 68,
-  returningDollars: 16_200,
-  returningShare: 0.29,
-  weekendShare: 0.22,
-  daysToSecond: 21,
-  ltv90: 119,
-  spend: 16_400,
-  breakEven: 2.2,
-  margin: 0.45,
+  typicalOrder: 92,
+  returningDollars: 28_724,
+  returningShare: 0.35,
+  newBuyers: 312,
+  weekendShare: 0.24,
+  daysToSecond: 19,
+  ltv90: 156,
+  spend: 23_414,
+  breakEven: 2.5,
+  margin: 0.4,
 } as const;
 
+export const mcflyPeek = harborSample;
+
 export function mcflyRoas(): number {
-  return mcflyPeek.periods.month.sales / mcflyPeek.spend;
+  return harborSample.periods.month.sales / harborSample.spend;
 }
 
 export function catalogMargin(row: NutricostCatalog): number {

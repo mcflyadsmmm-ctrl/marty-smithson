@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BrandRoster } from "@/components/BrandRoster";
 import { CtaRow } from "@/components/CtaRow";
 import { DeskShelf } from "@/components/desks/DeskShelf";
+import { HarborFeature } from "@/components/desks/HarborFeature";
 import { featured } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -23,6 +24,7 @@ export default function WorkPage() {
       </header>
 
       <div className="wrap">
+        <HarborFeature />
         <DeskShelf />
 
         <section className="section" aria-labelledby="clients-title">

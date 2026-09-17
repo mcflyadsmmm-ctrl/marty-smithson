@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CtaRow } from "@/components/CtaRow";
 import { DeskShelf } from "@/components/desks/DeskShelf";
+import { HarborFeature } from "@/components/desks/HarborFeature";
 
 export const metadata: Metadata = {
   title: "Desks",
@@ -18,6 +19,7 @@ export default function DesksIndexPage() {
         <CtaRow />
       </header>
       <div className="wrap">
+        <HarborFeature />
         <DeskShelf />
       </div>
     </article>

@@ -67,7 +67,7 @@ export const featured = [
     line: "Open the product at mcflyads.com. Since 2020 I have run marketing data science for the ten named brands on this page.",
     href: "/work/mcfly",
     desk: "/work/desks/mcfly",
-    more: "Open the live desk",
+    more: "Open live SAMPLE desk",
     live: true,
   },
 ] as const;

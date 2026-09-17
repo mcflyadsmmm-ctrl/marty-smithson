@@ -20,15 +20,15 @@ Live (PR #19) used warm stone `#ecece8` and cream plates `#f7f7f4` — playbook 
 
 | Token | Value | Role |
 | --- | --- | --- |
-| `--paper` | `#d0dbd4` | Canvas. Cool ledger stock. Not warm stone `#ecece8`. |
-| `--plate` | `#e7eee9` | Figures and packs. Cool sheet. Not cream `#f7f7f4`. |
-| `--ink` | `#141a17` | Text, double-rules, warehouse spine. |
-| `--mute` | `#465049` | Secondary sentences. |
-| `--faint` | `#667068` | Field names only. |
-| `--rule` | `#a8b4ac` | Ledger lines inside figures. |
-| `--spine` | `#141a17` | Warehouse book. |
-| `--spine-ink` | `#eef2ef` | Type on the spine. |
-| `--take` | `#141a17` | Primary resume control. Paper type on ink. Not green. |
+| `--paper` | `#e4eee7` | Canvas. Cool sage, brighter than the old ledger stock. Not warm stone `#ecece8`. |
+| `--plate` | `#f7fbf8` | Cards and desks. Near-white sheet. Not cream `#f7f7f4`. |
+| `--ink` | `#102018` | Text. |
+| `--mute` | `#3d4f45` | Secondary sentences. |
+| `--faint` | `#5c6e64` | Field names only. |
+| `--rule` | `#c5d4cb` | Card edges. |
+| `--accent` | `#1b6b4a` | Live marks, selected chips, primary take. |
+| `--sample` | `#b45309` | SAMPLE mark only. |
+| `--take` | `#1b6b4a` | Primary control. Paper type on pine. |
 
 Print inverts to white paper / black ink. No dark-mode skin.
 
@@ -45,9 +45,9 @@ IBM Plex Sans (400/500) and IBM Plex Mono (400/500), via `next/font`. Systems fa
 
 - Measure `--page: 68rem`. Gutter `1.75rem` / `1.15rem` on small screens.
 - Header sits on paper. Double hairline under it (ledger total), not a dark app bar.
-- Figures are sharp plates with a 1px rule. No radius, no shadow, no gradient.
+- Figures are cards: 12px radius, light lift, hover. Pine accent on the live take. Copper SAMPLE mark.
 - Matrices live inside a padded figure body. Rules must not escape the plate.
-- Home fold: short measurement identity, then openable desks first (Mcfly LIVE, Black Clover cash MER, incrementality, Nutricost). Client wall after the desks. Thin case jumps, not essays. One spend headline ($25M+ career-managed). Domo→Cloud Run stays in the Black Clover case. Synthetic books are labeled as such. No Harbor Home numbers.
+- Home fold: short identity, then the Harbor Home Co SAMPLE desk with a big Open live SAMPLE desk CTA to mcflyads.com/demo. Other desks (cash MER, incrementality, Nutricost) sit under that. Client wall after. Thin case jumps. One spend headline ($25M+).
 - Resume is a pack ledger, not three equal cards over a void. Full resume is the take. The other two packs are lanes.
 - One theme on every route.
 

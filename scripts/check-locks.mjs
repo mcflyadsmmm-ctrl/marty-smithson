@@ -35,6 +35,9 @@ const REQUIRED = [
   "Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)",
   "$25M+ in career-managed ad spend",
   "https://mcflyads.com",
+  "https://mcflyads.com/demo",
+  "Harbor Home Co",
+  "Open live SAMPLE desk",
   "martysmithson04@gmail.com",
   "linkedin.com/in/marty-smithson",
 ];
@@ -51,15 +54,10 @@ const BANNED = [
   "$30M",
   "$30M+",
   "Northline",
-  "Harbor Home",
-  "$82,068",
-  "$23,414",
-  "3.51×",
   "BI for the call",
   "not the main story",
   "not the main seat",
   "sample-disclaimer",
-  "SAMPLE Harbor",
 ];
 
 const DEAD_ARCHITECTURE = [
@@ -109,6 +107,7 @@ for (const name of CLIENTS) {
   assert.match(content, new RegExp(escapeRegExp(name)), `missing client: ${name}`);
   assert.match(home, /BrandRoster/, "homepage must render the client wall");
 assert.match(home, /DeskShelf/, "homepage must lead with openable desks");
+assert.match(home, /HarborFeature/, "homepage must feature the live SAMPLE desk");
 }
 
 assert.match(content, /role: "Marketing analytics and measurement\."/);
@@ -116,6 +115,7 @@ assert.match(content, /Directed \$25M\+ in career-managed ad spend/);
 assert.doesNotMatch(content, /\$30M/);
 assert.match(site, /mcflyProduct: "Mcfly Analytics Shopify App"/);
 assert.match(site, /mcflyTitle: "Founder and Data Analytics Consultant"/);
+assert.match(site, /mcflyDemo: "https:\/\/mcflyads.com\/demo"/);
 assert.match(site, /spendHeadline: "\$25M\+ in career-managed ad spend"/);
 
 assert.match(content, /title: "Advertising Data Scientist"/);
@@ -165,7 +165,9 @@ assert.match(deskSource, /slug: "incrementality"/);
 assert.match(deskSource, /slug: "nutricost"/);
 assert.match(deskSource, /kind: "synthetic"/);
 assert.match(deskSource, /Advertising Data Scientist/);
-assert.doesNotMatch(deskSource, /Harbor Home/);
+assert.match(deskSource, /Harbor Home Co/);
+assert.match(deskSource, /82_068/);
+assert.match(deskSource, /23_414/);
 
 console.log("locks ok");
 

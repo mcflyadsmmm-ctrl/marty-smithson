@@ -10,9 +10,9 @@ A resume-extension portfolio. Not a blog, not a landing page, not an architectur
 
 The token brief lives in [`docs/design-tokens.md`](docs/design-tokens.md). Implement from that page.
 
-- One theme end-to-end: cool ledger paper (`#d0dbd4`) · cool plates (`#e7eee9`) · ink (`#141a17`)
+- One theme end-to-end: sage paper (`#e4eee7`) · bright plates (`#f7fbf8`) · pine accent (`#1b6b4a`) · ink (`#102018`)
 - Type: IBM Plex Sans + IBM Plex Mono, sentence-case field names
-- Wide grid (~68rem). Home fold is short identity → openable desks (Mcfly LIVE first, then synthetic Black Clover / Nutricost books) → ten-name client wall → thin case jumps
+- Wide grid (~68rem). Home fold is short identity → Harbor Home Co SAMPLE desk + Open live SAMPLE desk CTA → other desks → ten-name client wall → thin case jumps
 - One spend headline: $25M+ in career-managed ad spend
 - Resume is a pack ledger. Full resume is the take. Email, LinkedIn, and the PDF sit on every page
 - No pills, no SaaS chrome, no cream/stone editorial cluster, no tracked ALL-CAPS eyebrows, no sample architecture diagrams

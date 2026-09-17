@@ -17,12 +17,12 @@ You are building/maintaining **Marty Smithson’s** personal portfolio and caree
 
 ## Site locks (user-facing, 2026-09-17)
 - Hero brand: **Marketing analytics and measurement.** Not “I build the systems behind better decisions.”
-- LIVE desk first after the hero: Mcfly Analytics Shopify App LIVE at mcflyads.com. Home/work then open synthetic Black Clover cash MER / incrementality desks and a Nutricost measurement desk. No Harbor Home numbers.
+- LIVE desk first after the hero: Mcfly Analytics Shopify App LIVE at mcflyads.com. Feature the public Harbor Home Co SAMPLE desk at https://mcflyads.com/demo ($82,068 / $23,414 / 3.51×). Home/work then open synthetic Black Clover cash MER / incrementality desks and a Nutricost measurement desk.
 - All 10 McFly Ads clients as a visible name wall (exact spellings in `lib/content.ts`).
 - Three deep cases: Black Clover · Nutricost Advertising Data Scientist · Mcfly Analytics Shopify App LIVE.
 - One spend headline: **$25M+ in career-managed ad spend.** Do not invent $30M.
 - Domo→Cloud Run (~$20K/mo) and the partner portal support the Black Clover case. They do not own the site identity.
-- No sample architecture diagrams as the homepage brand. No sample-disclaimer theater. No Harbor Home SAMPLE numbers on this site.
+- No sample architecture diagrams as the homepage brand. Harbor Home Co SAMPLE is the featured live product demo only — do not invent other SAMPLE shops.
 - CTAs: email, LinkedIn, resume PDF (product link may sit with them).
 - `/resume` titles: Nutricost **Advertising Data Scientist**; McFly **Founder and Data Analytics Consultant**; education line locked; product LIVE, not “listing pending.”
 
