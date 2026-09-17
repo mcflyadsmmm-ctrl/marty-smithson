@@ -41,6 +41,8 @@ export function CaseArticle({
       </header>
 
       <div className="wrap">
+        {children}
+
         <div className="section-copy">
           {body.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
@@ -57,8 +59,6 @@ export function CaseArticle({
             ))}
           </ol>
         ) : null}
-
-        {children}
 
         {links ? <p className="close-links">{links}</p> : null}
       </div>

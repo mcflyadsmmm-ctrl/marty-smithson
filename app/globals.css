@@ -383,6 +383,306 @@ p {
   margin-bottom: 0;
 }
 
+.showcase {
+  padding-top: 0.35rem;
+}
+
+.showcase > h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.desk-shelf {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 0;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+}
+
+.desk-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.35rem;
+  min-height: 12.5rem;
+  padding: 1rem 1.1rem 1.15rem;
+  border: 0;
+  background: var(--plate);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.desk-tile + .desk-tile,
+.desk-tile.is-live + .desk-tile {
+  border-top: 1px solid var(--rule);
+}
+
+.desk-tile.is-live {
+  grid-row: span 3;
+  border-top: 0;
+  border-right: 1px solid var(--rule);
+}
+
+.desk-tile h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.desk-tile .quiet {
+  margin-top: auto;
+  padding-top: 0.55rem;
+}
+
+.desk-tile[aria-pressed="true"] {
+  box-shadow: inset 3px 0 0 var(--ink);
+  background: color-mix(in srgb, var(--paper) 45%, var(--plate));
+}
+
+.desk-tile:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: -3px;
+}
+
+.desk-open {
+  margin-top: 1rem;
+  background: var(--plate);
+  border: 1px solid var(--rule);
+}
+
+.desk-open-head {
+  padding: 1rem 1.15rem 0.85rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.desk-open-head h3 {
+  margin-bottom: 0.25rem;
+  font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+}
+
+.desk-open-head .close-links {
+  margin-top: 0.55rem;
+}
+
+.desk-stage {
+  padding: 1rem 1.15rem 1.2rem;
+}
+
+.desk-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.7rem 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.desk-toolbar .field {
+  margin: 0;
+  align-self: center;
+}
+
+.week-rail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border: 1px solid var(--rule);
+}
+
+.week-rail button {
+  min-height: 44px;
+  padding: 0 0.75rem;
+  border: 0;
+  background: var(--paper);
+  color: var(--mute);
+  font: inherit;
+  cursor: pointer;
+}
+
+.week-rail button + button {
+  border-left: 1px solid var(--rule);
+}
+
+.week-rail button[aria-pressed="true"],
+.week-rail button[aria-selected="true"] {
+  background: var(--ink);
+  color: var(--take-ink);
+}
+
+.week-rail button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin-bottom: 0.9rem;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+}
+
+.kpi {
+  padding: 0.85rem 0.9rem 0.95rem;
+  background: color-mix(in srgb, var(--paper) 55%, var(--plate));
+}
+
+.kpi .field {
+  margin-bottom: 0.3rem;
+}
+
+.kpi-num {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.kpi .quiet {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+.desk-chart {
+  display: block;
+  width: 100%;
+  height: 3.5rem;
+  color: var(--ink);
+}
+
+.desk-chart-wide {
+  height: 10.5rem;
+  margin: 0.2rem 0 0.85rem;
+}
+
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin: 0 0 0.85rem;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+}
+
+.metric-row div {
+  padding: 0.7rem 0.85rem;
+  background: var(--plate);
+}
+
+.metric-row dt {
+  margin: 0 0 0.2rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--faint);
+}
+
+.metric-row dd {
+  margin: 0;
+  font-weight: 500;
+}
+
+.desk-note {
+  margin: 0;
+  color: var(--mute);
+}
+
+.desk-table {
+  width: 100%;
+  margin: 0.9rem 0 0;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.desk-table caption {
+  caption-side: top;
+  padding: 0 0 0.45rem;
+  text-align: left;
+  color: var(--mute);
+  font-size: 0.9rem;
+}
+
+.desk-table th,
+.desk-table td {
+  padding: 0.55rem 0.45rem;
+  border-top: 1px solid var(--rule);
+  text-align: left;
+}
+
+.desk-table thead th {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--faint);
+  border-top: 0;
+}
+
+.desk-table tbody th {
+  font-weight: 500;
+}
+
+.desk-table .is-active {
+  background: color-mix(in srgb, var(--paper) 55%, var(--plate));
+}
+
+.desk-table-click tbody th button {
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+  cursor: pointer;
+}
+
+.desk-table-click tbody th button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.split-bars {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0.2rem 0 0.4rem;
+}
+
+.split-row {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.split-track {
+  display: block;
+  height: 0.7rem;
+  background: color-mix(in srgb, var(--paper) 70%, var(--plate));
+  border: 1px solid var(--rule);
+}
+
+.split-track span {
+  display: block;
+  height: 100%;
+  background: color-mix(in srgb, var(--ink) 35%, var(--plate));
+}
+
+.split-track.is-ink span {
+  background: var(--ink);
+}
+
+.case-stack-thin .work-entry {
+  min-height: 0;
+}
+
+.page > .wrap > .showcase {
+  padding-top: 0.25rem;
+}
+
 .client-wall {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1129,6 +1429,25 @@ a.work-entry:hover .more {
     grid-template-columns: 1fr 1fr;
   }
 
+  .desk-shelf {
+    grid-template-columns: 1fr;
+  }
+
+  .desk-tile.is-live {
+    grid-row: auto;
+    border-right: 0;
+  }
+
+  .kpi-strip,
+  .metric-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .split-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
   .work-entry + .work-entry,
   .constraint + .constraint,
   .case-grid .work-entry + .work-entry {
@@ -1186,6 +1505,27 @@ a.work-entry:hover .more {
 }
 
 @media (max-width: 640px) {
+  .kpi-strip,
+  .metric-row {
+    grid-template-columns: 1fr;
+  }
+
+  .desk-table thead {
+    display: none;
+  }
+
+  .desk-table tr {
+    display: block;
+    padding: 0.7rem 0;
+  }
+
+  .desk-table th,
+  .desk-table td {
+    display: block;
+    border: 0;
+    padding: 0.1rem 0;
+  }
+
   :root {
     --gutter: 1.15rem;
   }

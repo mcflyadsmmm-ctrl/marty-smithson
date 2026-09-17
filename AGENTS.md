@@ -17,7 +17,7 @@ You are building/maintaining **Marty Smithson’s** personal portfolio and caree
 
 ## Site locks (user-facing, 2026-09-17)
 - Hero brand: **Marketing analytics and measurement.** Not “I build the systems behind better decisions.”
-- LIVE desk first after the hero: Mcfly Analytics Shopify App LIVE at mcflyads.com.
+- LIVE desk first after the hero: Mcfly Analytics Shopify App LIVE at mcflyads.com. Home/work then open synthetic Black Clover cash MER / incrementality desks and a Nutricost measurement desk. No Harbor Home numbers.
 - All 10 McFly Ads clients as a visible name wall (exact spellings in `lib/content.ts`).
 - Three deep cases: Black Clover · Nutricost Advertising Data Scientist · Mcfly Analytics Shopify App LIVE.
 - One spend headline: **$25M+ in career-managed ad spend.** Do not invent $30M.

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BrandRoster } from "@/components/BrandRoster";
 import { CtaRow } from "@/components/CtaRow";
+import { DeskShelf } from "@/components/desks/DeskShelf";
 import { featured, hero } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -17,22 +18,7 @@ export default function HomePage() {
       </header>
 
       <div className="wrap">
-        <section className="desk" aria-labelledby="desk-title">
-          <p className="field">Live desk</p>
-          <h2 id="desk-title">
-            {site.mcflyProduct} <span className="live-mark">LIVE</span>
-          </h2>
-          <p>
-            The product is live at mcflyads.com. Founder and Data Analytics
-            Consultant at McFly Ads.
-          </p>
-          <p className="close-links">
-            <a className="pack-take" href={site.mcfly} rel="noreferrer" target="_blank">
-              {site.mcflyProduct}
-            </a>
-            <Link href="/work/mcfly">The product note</Link>
-          </p>
-        </section>
+        <DeskShelf />
 
         <section className="section" aria-labelledby="clients-title">
           <p className="field">McFly Ads clients</p>
@@ -41,11 +27,11 @@ export default function HomePage() {
         </section>
 
         <section className="section" aria-labelledby="work-title">
-          <p className="field">Selected work</p>
+          <p className="field">Cases</p>
           <h2 id="work-title" className="visually-hidden">
-            Selected work
+            Cases
           </h2>
-          <div className="case-stack">
+          <div className="case-stack case-stack-thin">
             {featured.map((item) => (
               <article className="work-entry" key={item.key}>
                 <h3>
@@ -58,14 +44,13 @@ export default function HomePage() {
                   ) : null}
                 </h3>
                 <p className="quiet">{item.role}</p>
-                <p>{item.line}</p>
                 <p className="close-links">
                   {item.key === "mcfly" ? (
                     <a href={site.mcfly} rel="noreferrer" target="_blank">
                       {site.mcflyProduct}
                     </a>
                   ) : null}
-                  <Link href={item.href}>{item.more}</Link>
+                  <Link href={item.desk}>{item.more}</Link>
                 </p>
               </article>
             ))}

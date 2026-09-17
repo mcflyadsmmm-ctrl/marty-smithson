@@ -52,6 +52,9 @@ const BANNED = [
   "$30M+",
   "Northline",
   "Harbor Home",
+  "$82,068",
+  "$23,414",
+  "3.51×",
   "BI for the call",
   "not the main story",
   "not the main seat",
@@ -105,6 +108,7 @@ for (const needle of REQUIRED) {
 for (const name of CLIENTS) {
   assert.match(content, new RegExp(escapeRegExp(name)), `missing client: ${name}`);
   assert.match(home, /BrandRoster/, "homepage must render the client wall");
+assert.match(home, /DeskShelf/, "homepage must lead with openable desks");
 }
 
 assert.match(content, /role: "Marketing analytics and measurement\."/);
@@ -153,6 +157,15 @@ for (const [file, expected] of Object.entries(PDF_MD5)) {
 }
 
 assert.equal(CLIENTS.length, 10, "exactly ten named clients");
+
+const deskSource = readFileSync(join(root, "lib/desks.ts"), "utf8");
+assert.match(deskSource, /slug: "mcfly"/);
+assert.match(deskSource, /slug: "cash-mer"/);
+assert.match(deskSource, /slug: "incrementality"/);
+assert.match(deskSource, /slug: "nutricost"/);
+assert.match(deskSource, /kind: "synthetic"/);
+assert.match(deskSource, /Advertising Data Scientist/);
+assert.doesNotMatch(deskSource, /Harbor Home/);
 
 console.log("locks ok");
 

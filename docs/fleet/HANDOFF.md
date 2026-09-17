@@ -7,6 +7,7 @@
 ### Site locks (2026-09-17) — override older rows below on user-facing surfaces
 - Hero brand: Marketing analytics and measurement. Not “I build the systems behind better decisions.”
 - LIVE desk first: Mcfly Analytics Shopify App LIVE at https://mcflyads.com
+- Home/work lead with openable desks (Mcfly LIVE, synthetic Black Clover cash MER + incrementality, synthetic Nutricost station). No Harbor Home numbers. Synthetic books stay labeled as such.
 - McFly Ads consulting title: Founder and Data Analytics Consultant (never CEO)
 - All 10 clients visible as a name wall (exact spellings)
 - Three deep cases: Black Clover (Head of BI & Performance Marketing) · Nutricost Advertising Data Scientist · Mcfly Analytics Shopify App LIVE

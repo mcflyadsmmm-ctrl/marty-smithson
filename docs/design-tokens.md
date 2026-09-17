@@ -47,7 +47,7 @@ IBM Plex Sans (400/500) and IBM Plex Mono (400/500), via `next/font`. Systems fa
 - Header sits on paper. Double hairline under it (ledger total), not a dark app bar.
 - Figures are sharp plates with a 1px rule. No radius, no shadow, no gradient.
 - Matrices live inside a padded figure body. Rules must not escape the plate.
-- Home fold: measurement hero, then the LIVE Mcfly desk, then the ten-name client wall, then three cases. One spend headline ($25M+ career-managed). Domo→Cloud Run stays in the Black Clover case.
+- Home fold: short measurement identity, then openable desks first (Mcfly LIVE, Black Clover cash MER, incrementality, Nutricost). Client wall after the desks. Thin case jumps, not essays. One spend headline ($25M+ career-managed). Domo→Cloud Run stays in the Black Clover case. Synthetic books are labeled as such. No Harbor Home numbers.
 - Resume is a pack ledger, not three equal cards over a void. Full resume is the take. The other two packs are lanes.
 - One theme on every route.
 

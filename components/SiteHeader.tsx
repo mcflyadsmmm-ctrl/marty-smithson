@@ -16,7 +16,11 @@ export function SiteHeader() {
         <nav className="nav" aria-label="Primary">
           {nav.map((item) => {
             const current =
-              pathname === item.href || pathname.startsWith(`${item.href}/`);
+              item.href === "/work"
+                ? pathname === "/work" ||
+                  (pathname.startsWith("/work/") &&
+                    !pathname.startsWith("/work/desks"))
+                : pathname === item.href || pathname.startsWith(`${item.href}/`);
             return (
               <Link
                 key={item.href}

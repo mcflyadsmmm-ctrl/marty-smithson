@@ -12,7 +12,7 @@ The token brief lives in [`docs/design-tokens.md`](docs/design-tokens.md). Imple
 
 - One theme end-to-end: cool ledger paper (`#d0dbd4`) · cool plates (`#e7eee9`) · ink (`#141a17`)
 - Type: IBM Plex Sans + IBM Plex Mono, sentence-case field names
-- Wide grid (~68rem). Home fold is measurement hero → LIVE desk → ten-name client wall → three cases
+- Wide grid (~68rem). Home fold is short identity → openable desks (Mcfly LIVE first, then synthetic Black Clover / Nutricost books) → ten-name client wall → thin case jumps
 - One spend headline: $25M+ in career-managed ad spend
 - Resume is a pack ledger. Full resume is the take. Email, LinkedIn, and the PDF sit on every page
 - No pills, no SaaS chrome, no cream/stone editorial cluster, no tracked ALL-CAPS eyebrows, no sample architecture diagrams
@@ -42,11 +42,16 @@ npm run build
 
 | Path | Page |
 | --- | --- |
-| `/` | Marketing analytics / measurement hero, Mcfly Analytics Shopify App LIVE desk, 10-name client wall, three cases |
-| `/work` | LIVE desk, client wall, three cases |
-| `/work/systems-fleet` | Black Clover measurement case — Domo→Cloud Run as support |
-| `/work/nutricost` | Nutricost — Advertising Data Scientist |
-| `/work/mcfly` | Mcfly Analytics Shopify App — LIVE + client names |
+| `/` | Short identity, then openable desks first (Mcfly LIVE, cash MER, incrementality, Nutricost), client wall, thin cases |
+| `/work` | Same desks first, then client wall and cases |
+| `/work/desks` | Desk shelf |
+| `/work/desks/mcfly` | Mcfly Analytics Shopify App LIVE peek |
+| `/work/desks/cash-mer` | Black Clover cash MER synthetic book |
+| `/work/desks/incrementality` | Black Clover incrementality synthetic book |
+| `/work/desks/nutricost` | Nutricost margins / COGS synthetic book |
+| `/work/systems-fleet` | Black Clover case with both desks — Domo→Cloud Run as support |
+| `/work/nutricost` | Nutricost — Advertising Data Scientist + desk |
+| `/work/mcfly` | Mcfly Analytics Shopify App — LIVE desk + client names |
 | `/resume` | HTML resume + PDF pack chooser |
 | `/contact` | Email |
 

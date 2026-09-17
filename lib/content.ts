@@ -48,7 +48,8 @@ export const featured = [
     role: "Head of BI & Performance Marketing. I report to the CEO.",
     line: "Cash MER, Meridian mix models, and incrementality on Google, Meta, and Microsoft. I moved the warehouse off Domo onto Cloud Run so the number finance recognizes is the number we spend against.",
     href: "/work/systems-fleet",
-    more: "The Black Clover case",
+    desk: "/work/desks/cash-mer",
+    more: "Open the cash MER desk",
   },
   {
     key: "nutricost",
@@ -56,7 +57,8 @@ export const featured = [
     role: "Advertising Data Scientist. I reported to the CMO.",
     line: "I organized the data portfolio for thirteen unique sub-brands, and I built the warehouse and the advertising data-science station executives used for margins and COGS.",
     href: "/work/nutricost",
-    more: "The Nutricost case",
+    desk: "/work/desks/nutricost",
+    more: "Open the measurement desk",
   },
   {
     key: "mcfly",
@@ -64,7 +66,8 @@ export const featured = [
     role: "LIVE desk. Founder and Data Analytics Consultant, McFly Ads.",
     line: "Open the product at mcflyads.com. Since 2020 I have run marketing data science for the ten named brands on this page.",
     href: "/work/mcfly",
-    more: "The product note",
+    desk: "/work/desks/mcfly",
+    more: "Open the live desk",
     live: true,
   },
 ] as const;
@@ -105,7 +108,7 @@ export const fleet = {
 } as const;
 
 export const workPage = {
-  lead: "Black Clover, Nutricost, and Mcfly Analytics Shopify App.",
+  lead: "Desks first. Black Clover, Nutricost, and Mcfly Analytics Shopify App.",
 } as const;
 
 export const cases: CaseStudy[] = [
