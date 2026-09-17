@@ -12,15 +12,14 @@ export default function HomePage() {
       <header className="page-head page-head-tight wrap">
         <h1>{hero.name}</h1>
         <p className="lede">{hero.role}</p>
-        <p className="quiet">{hero.line}</p>
-        <p className="quiet">
-          {hero.place} {hero.school}
-        </p>
-        <CtaRow />
       </header>
 
       <div className="wrap">
         <HarborFeature />
+        <p className="quiet after-harbor">
+          {hero.line} {hero.place} {hero.school}
+        </p>
+        <CtaRow />
         <DeskShelf />
 
         <section className="section" aria-labelledby="clients-title">

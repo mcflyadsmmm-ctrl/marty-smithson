@@ -19,22 +19,19 @@ export function HarborFeature() {
 
   return (
     <section className="harbor" aria-labelledby="harbor-title">
-      <div className="harbor-copy">
-        <p className="field">
-          Live SAMPLE desk <span className="sample-mark">SAMPLE</span>
-        </p>
-        <h2 id="harbor-title">
-          {site.mcflyProduct} <span className="live-mark">LIVE</span>
-        </h2>
-        <p className="lede">
-          Harbor Home Co. {money(harborSample.periods.month.sales)} sales ·{" "}
-          {money(harborSample.spend)} spend · {multiple(mcflyRoas())}. Same
-          Overview as the Shopify app.
-        </p>
-        <p className="quiet">
-          Founder and Data Analytics Consultant, McFly Ads. Not a live client.
-          As-of {harborSample.asOf}.
-        </p>
+      <div className="harbor-mast">
+        <div>
+          <p className="field">
+            Live SAMPLE desk <span className="sample-mark">SAMPLE</span>
+          </p>
+          <h2 id="harbor-title">
+            {site.mcflyProduct} <span className="live-mark">LIVE</span>
+          </h2>
+          <p className="quiet">
+            Harbor Home Co · {harborSample.window}. Founder and Data Analytics
+            Consultant, McFly Ads. Not a live client.
+          </p>
+        </div>
         <p className="harbor-actions">
           <a className="pack-take" href={site.mcflyDemo} rel="noreferrer" target="_blank">
             Open live SAMPLE desk
@@ -48,7 +45,7 @@ export function HarborFeature() {
       <div className="harbor-board">
         <div className="desk-toolbar">
           <p className="field">
-            {harborSample.shop} · {harborSample.window}
+            {harborSample.shop} · as-of {harborSample.asOf}
           </p>
           <div className="week-rail" role="tablist" aria-label="Window">
             {periods.map((item) => (
@@ -100,7 +97,7 @@ export function HarborFeature() {
           label="Harbor Home Co SAMPLE against last year"
         />
 
-        <dl className="metric-row">
+        <dl className="harbor-spend">
           <div>
             <dt>Ad spend</dt>
             <dd>{money(harborSample.spend)}</dd>

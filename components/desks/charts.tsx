@@ -222,17 +222,16 @@ export function SalesChart({
       aria-label={label}
     >
       <path
+        className="chart-prior"
         d={polyline(lastPoints)}
         fill="none"
-        stroke="currentColor"
-        strokeWidth="1.25"
-        opacity="0.35"
+        strokeWidth="1.5"
       />
       <path
+        className="chart-now"
         d={polyline(currentPoints)}
         fill="none"
-        stroke="currentColor"
-        strokeWidth="1.75"
+        strokeWidth="2.25"
       />
     </svg>
   );
