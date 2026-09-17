@@ -1,5 +1,7 @@
 import { resumeMarkdown } from "@/lib/resume-markdown";
 
+export const dynamic = "force-static";
+
 export function GET() {
   return new Response(resumeMarkdown(), {
     headers: {

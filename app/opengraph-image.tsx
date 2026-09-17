@@ -1,5 +1,7 @@
 import { ImageResponse } from "next/og";
 
+export const dynamic = "force-static";
+
 export const alt =
   "Marty Smithson. Marketing analytics, measurement, and BI.";
 export const size = { width: 1200, height: 630 };
