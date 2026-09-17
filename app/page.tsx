@@ -9,12 +9,13 @@ import { site } from "@/lib/site";
 export default function HomePage() {
   return (
     <article className="page">
-      <header className="page-head wrap">
+      <header className="page-head page-head-tight wrap">
         <h1>{hero.name}</h1>
         <p className="lede">{hero.role}</p>
-        <p>{hero.line}</p>
-        <p className="quiet">{hero.place}</p>
-        <p className="quiet">{hero.school}</p>
+        <p className="quiet">{hero.line}</p>
+        <p className="quiet">
+          {hero.place} {hero.school}
+        </p>
         <CtaRow />
       </header>
 
