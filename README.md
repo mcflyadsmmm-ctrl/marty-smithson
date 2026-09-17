@@ -1,6 +1,6 @@
 # Marty Smithson
 
-Personal site for Marty Smithson — marketing analytics and measurement. Head of BI & Performance Marketing at Black Clover.
+Personal site for Marty Smithson — Marketing Analytics & Measurement Lead. Head of BI & Performance Marketing at Black Clover.
 
 Live: [https://marty-smithson.pages.dev](https://marty-smithson.pages.dev) (Cloudflare Pages project `marty-smithson`)
 
@@ -10,9 +10,9 @@ A resume-extension portfolio. Not a blog, not a landing page, not an architectur
 
 The token brief lives in [`docs/design-tokens.md`](docs/design-tokens.md). Implement from that page.
 
-- One theme end-to-end: cool ledger paper (`#d0dbd4`) · cool plates (`#e7eee9`) · ink (`#141a17`)
+- One theme end-to-end: sage paper (`#e4eee7`) · bright plates (`#f7fbf8`) · pine accent (`#1b6b4a`) · ink (`#102018`)
 - Type: IBM Plex Sans + IBM Plex Mono, sentence-case field names
-- Wide grid (~68rem). Home fold is measurement hero → LIVE desk → ten-name client wall → three cases
+- Wide grid (~68rem). Home fold is hero → proof strip → Harbor Home Co SAMPLE desk + Open live SAMPLE desk CTA → three case cards → methods → ten-name client wall → credo → contact
 - One spend headline: $25M+ in career-managed ad spend
 - Resume is a pack ledger. Full resume is the take. Email, LinkedIn, and the PDF sit on every page
 - No pills, no SaaS chrome, no cream/stone editorial cluster, no tracked ALL-CAPS eyebrows, no sample architecture diagrams
@@ -42,11 +42,16 @@ npm run build
 
 | Path | Page |
 | --- | --- |
-| `/` | Marketing analytics / measurement hero, Mcfly Analytics Shopify App LIVE desk, 10-name client wall, three cases |
-| `/work` | LIVE desk, client wall, three cases |
-| `/work/systems-fleet` | Black Clover measurement case — Domo→Cloud Run as support |
-| `/work/nutricost` | Nutricost — Advertising Data Scientist |
-| `/work/mcfly` | Mcfly Analytics Shopify App — LIVE + client names |
+| `/` | Hero, proof strip, Harbor SAMPLE, three case cards, methods, client wall, credo, contact |
+| `/work` | Harbor SAMPLE, case cards, desk shelf, client wall |
+| `/work/desks` | Desk shelf |
+| `/work/desks/mcfly` | Mcfly Analytics Shopify App LIVE peek |
+| `/work/desks/cash-mer` | Black Clover cash MER synthetic book |
+| `/work/desks/incrementality` | Black Clover incrementality synthetic book |
+| `/work/desks/nutricost` | Nutricost margins / COGS synthetic book |
+| `/work/systems-fleet` | Black Clover case with both desks — Domo→Cloud Run as support |
+| `/work/nutricost` | Nutricost — Advertising Data Scientist + desk |
+| `/work/mcfly` | Mcfly Analytics Shopify App — LIVE desk + client names |
 | `/resume` | HTML resume + PDF pack chooser |
 | `/contact` | Email |
 

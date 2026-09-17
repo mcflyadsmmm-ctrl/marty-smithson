@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { BrandRoster } from "@/components/BrandRoster";
 import { CaseArticle } from "@/components/CaseArticle";
+import { McflyLiveDesk } from "@/components/desks/McflyLiveDesk";
+import { NutricostDesk } from "@/components/desks/NutricostDesk";
 import { caseBySlug, cases } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -43,24 +45,47 @@ export default async function CasePage({ params }: Props) {
       live={study.live}
       lede={study.lead}
       meta={`${study.role}. ${study.reportsTo}. ${study.dates}.`}
+      beats={study.beats}
+      showDemo={study.slug === "mcfly"}
       body={study.body}
       points={study.points}
       links={
         <>
           <Link href="/work">All work</Link>
           {study.slug === "mcfly" ? (
-            <a href={site.mcfly} rel="noreferrer" target="_blank">
-              {site.mcflyProduct}
-            </a>
+            <>
+              <a href={site.mcflyDemo} rel="noreferrer" target="_blank">
+                Open live SAMPLE desk
+              </a>
+              <a href={site.mcfly} rel="noreferrer" target="_blank">
+                {site.mcflyProduct}
+              </a>
+            </>
           ) : null}
         </>
       }
     >
       {study.slug === "mcfly" ? (
-        <section className="section" aria-labelledby="clients-title">
-          <p className="field">McFly Ads clients</p>
-          <h2 id="clients-title">Named brands</h2>
-          <BrandRoster wall />
+        <>
+          <section className="section" aria-labelledby="mcfly-desk">
+            <p className="field">Live product</p>
+            <h2 id="mcfly-desk">
+              {site.mcflyProduct} <span className="live-mark">LIVE</span>
+            </h2>
+            <McflyLiveDesk />
+          </section>
+          <section className="section" aria-labelledby="clients-title">
+            <p className="field">McFly Ads clients</p>
+            <h2 id="clients-title">Named brands</h2>
+            <BrandRoster wall />
+          </section>
+        </>
+      ) : null}
+      {study.slug === "nutricost" ? (
+        <section className="section" aria-labelledby="nutricost-desk">
+          <p className="field">Nutricost · synthetic book</p>
+          <h2 id="nutricost-desk">Margins and COGS</h2>
+          <NutricostDesk />
         </section>
       ) : null}
     </CaseArticle>

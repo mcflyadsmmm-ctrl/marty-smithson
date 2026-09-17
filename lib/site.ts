@@ -1,8 +1,9 @@
 export const site = {
   name: "Marty Smithson",
-  title: "Marty Smithson — Marketing Analytics, Measurement, and BI",
+  title:
+    "Marty Smithson — Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — $25M+ paid mix.",
   description:
-    "Marketing analytics and measurement. MMM, attribution, incrementality, and cash MER. Directed $25M+ in career-managed ad spend. Head of BI & Performance Marketing at Black Clover. American Fork, Utah. Central Utah or US remote.",
+    "Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — $25M+ paid mix. Head of BI & Performance Marketing at Black Clover. I report to the CEO. Mcfly Analytics Shopify App LIVE.",
   spendHeadline: "$25M+ in career-managed ad spend",
   url: "https://marty-smithson.pages.dev",
   email: "martysmithson04@gmail.com",
@@ -13,6 +14,7 @@ export const site = {
   locationLine: "American Fork, Utah. Central Utah or US remote.",
   authorization: "US citizen. No visa sponsorship required.",
   mcfly: "https://mcflyads.com",
+  mcflyDemo: "https://mcflyads.com/demo",
   mcflyProduct: "Mcfly Analytics Shopify App",
   mcflyTitle: "Founder and Data Analytics Consultant",
   education:
@@ -25,6 +27,7 @@ export const site = {
 } as const;
 
 export const nav = [
+  { href: "/work/desks", label: "Desks" },
   { href: "/work", label: "Work" },
   { href: "/resume", label: "Resume" },
 ] as const;

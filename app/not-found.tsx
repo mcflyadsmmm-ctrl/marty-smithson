@@ -9,7 +9,7 @@ export default function NotFound() {
       </header>
       <div className="wrap resume-sheet">
         <p className="quiet">
-          Home is the short read. Work is the three cases and the live desk.
+          Home opens the desks. Work keeps the three cases.
         </p>
         <p className="close-links">
           <Link href="/">Home</Link>
