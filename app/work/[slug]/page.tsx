@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { BrandRoster } from "@/components/BrandRoster";
-import { CtaRow } from "@/components/CtaRow";
+import { CaseArticle } from "@/components/CaseArticle";
 import { caseBySlug, cases } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -38,48 +38,31 @@ export default async function CasePage({ params }: Props) {
   if (!study) notFound();
 
   return (
-    <article className="page">
-      <header className="page-head wrap">
-        <h1>
-          {study.brand}
-          {study.live ? (
-            <>
-              {" "}
-              <span className="live-mark">LIVE</span>
-            </>
-          ) : null}
-        </h1>
-        <p className="lede">{study.lead}</p>
-        <p className="quiet">
-          {study.role}. {study.reportsTo}. {study.dates}.
-        </p>
-        <CtaRow />
-      </header>
-
-      <div className="wrap">
-        <div className="section-copy">
-          {study.body.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
-
-        {study.slug === "mcfly" ? (
-          <section className="section" aria-labelledby="clients-title">
-            <p className="field">McFly Ads clients</p>
-            <h2 id="clients-title">Named brands</h2>
-            <BrandRoster wall />
-          </section>
-        ) : null}
-
-        <p className="close-links">
+    <CaseArticle
+      title={study.brand}
+      live={study.live}
+      lede={study.lead}
+      meta={`${study.role}. ${study.reportsTo}. ${study.dates}.`}
+      body={study.body}
+      points={study.points}
+      links={
+        <>
           <Link href="/work">All work</Link>
           {study.slug === "mcfly" ? (
             <a href={site.mcfly} rel="noreferrer" target="_blank">
               {site.mcflyProduct}
             </a>
           ) : null}
-        </p>
-      </div>
-    </article>
+        </>
+      }
+    >
+      {study.slug === "mcfly" ? (
+        <section className="section" aria-labelledby="clients-title">
+          <p className="field">McFly Ads clients</p>
+          <h2 id="clients-title">Named brands</h2>
+          <BrandRoster wall />
+        </section>
+      ) : null}
+    </CaseArticle>
   );
 }

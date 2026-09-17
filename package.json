@@ -2,11 +2,16 @@
   "name": "marty-smithson",
   "version": "2.0.0",
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "node scripts/check-locks.mjs",
+    "check:locks": "node scripts/check-locks.mjs"
   },
   "dependencies": {
     "next": "^15.5.4",

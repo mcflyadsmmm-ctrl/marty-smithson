@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BrandRoster } from "@/components/BrandRoster";
 import { CtaRow } from "@/components/CtaRow";
-import { featured } from "@/lib/content";
+import { featured, workPage } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -17,9 +17,7 @@ export default function WorkPage() {
     <article className="page">
       <header className="page-head wrap">
         <h1>Work</h1>
-        <p className="lede">
-          Black Clover, Nutricost, and Mcfly Analytics Shopify App.
-        </p>
+        <p className="lede">{workPage.lead}</p>
         <CtaRow />
       </header>
 
@@ -29,7 +27,7 @@ export default function WorkPage() {
           <h2 id="desk-title">
             {site.mcflyProduct} <span className="live-mark">LIVE</span>
           </h2>
-          <p>The shipped Shopify desk is the demo. Open it at mcflyads.com.</p>
+          <p>The product is live. Open it at mcflyads.com.</p>
           <p className="close-links">
             <a className="pack-take" href={site.mcfly} rel="noreferrer" target="_blank">
               {site.mcflyProduct}
@@ -48,7 +46,7 @@ export default function WorkPage() {
           <h2 id="cases-title" className="visually-hidden">
             Cases
           </h2>
-          <div className="case-grid">
+          <div className="case-stack">
             {featured.map((item) => (
               <article className="work-entry" key={item.key}>
                 <h3>

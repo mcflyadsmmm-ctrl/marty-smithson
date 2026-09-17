@@ -2,7 +2,10 @@ export type BrandCategory = "Trades" | "Professional" | "Product";
 
 export type CaseSlug = "nutricost" | "mcfly";
 
-export type LaneId = "wholesale" | "portal" | "cash" | "retail" | "fulfillment";
+export type CasePoint = {
+  title: string;
+  body: string;
+};
 
 export type CaseStudy = {
   slug: CaseSlug;
@@ -12,13 +15,27 @@ export type CaseStudy = {
   reportsTo: string;
   lead: string;
   body: string[];
+  points: CasePoint[];
   live?: boolean;
 };
 
+export const CLIENT_NAMES = [
+  "Marksman Construction",
+  "Malama Solar",
+  "Royal Peak Lighting",
+  "Stretch Labs",
+  "Kin Home",
+  "BatBridge Bookkeeping",
+  "Whirly Board",
+  "Arizona Gym Floors",
+  "Pure Air Solutions",
+  "Priority Mulching Services",
+] as const;
+
 export const hero = {
   name: "Marty Smithson",
-  role: "Marketing analytics and measurement. BI for the call.",
-  line: "I run mix models, attribution, incrementality tests, and cash MER — then I put the number in front of the CEO. Head of BI & Performance Marketing at Black Clover.",
+  role: "Marketing analytics and measurement.",
+  line: "I run mix models, attribution, incrementality tests, and cash MER. Directed $25M+ in career-managed ad spend. Head of BI & Performance Marketing at Black Clover.",
   place: "American Fork, Utah. Central Utah or US remote.",
   school:
     "Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025).",
@@ -29,7 +46,7 @@ export const featured = [
     key: "black-clover",
     title: "Black Clover",
     role: "Head of BI & Performance Marketing. I report to the CEO.",
-    line: "Cash MER, Meridian MMM, and incrementality on the paid mix. Warehouse off Domo onto Cloud Run.",
+    line: "Cash MER, Meridian mix models, and incrementality on Google, Meta, and Microsoft. I moved the warehouse off Domo onto Cloud Run so the number finance recognizes is the number we spend against.",
     href: "/work/systems-fleet",
     more: "The Black Clover case",
   },
@@ -37,7 +54,7 @@ export const featured = [
     key: "nutricost",
     title: "Nutricost",
     role: "Advertising Data Scientist. I reported to the CMO.",
-    line: "I organized the data portfolio for thirteen unique sub-brands, and I built the warehouse and the ads station executives used for margins and COGS.",
+    line: "I organized the data portfolio for thirteen unique sub-brands, and I built the warehouse and the advertising data-science station executives used for margins and COGS.",
     href: "/work/nutricost",
     more: "The Nutricost case",
   },
@@ -45,172 +62,50 @@ export const featured = [
     key: "mcfly",
     title: "Mcfly Analytics Shopify App",
     role: "LIVE desk. Founder and Data Analytics Consultant, McFly Ads.",
-    line: "Open the product at mcflyads.com. Consulting for the named brands on this page.",
+    line: "Open the product at mcflyads.com. Since 2020 I have run marketing data science for the ten named brands on this page.",
     href: "/work/mcfly",
     more: "The product note",
     live: true,
   },
 ] as const;
 
-export type FleetLane = {
-  id: LaneId;
-  title: string;
-  short: string;
-  scan: string;
-  body: string[];
-};
-
 export const fleet = {
   title: "Black Clover",
   role: "Head of BI & Performance Marketing",
   reportsTo: "I report to the CEO.",
   dates: "February 2025 to present",
-  lead: "I run measurement for the CEO: cash MER, mix models, and incrementality. The warehouse left Domo for Cloud Run.",
-  open: [
-    "The resume can say Cloud Run and a partner portal. What it cannot show is how the company actually decides: five books that are not allowed to borrow from each other, a field of about fifty people who can read a number they cannot rewrite, and a warehouse that had to leave a vendor bill without landing on another one.",
+  lead: "I run measurement for the CEO: cash MER, mix models, and incrementality. The warehouse left Domo for Cloud Run so that desk could keep one number.",
+  body: [
+    "The job is the number the CEO spends against. Cash MER is the control — ledger sales over exact spend on Google, Meta, and Microsoft. Platform ROAS is not the budget. When the mix call is causal I run Meridian. When two channels claim the same sale I run GeoLift or an RCT. Below break-even, we cut.",
+    "I allocate a seven-figure monthly paid mix on that desk. Attribution and incrementality sit next to the BI, not in a side deck. The warehouse work is underneath so finance and marketing are looking at the same sales number.",
+    "The warehouse was in Domo when I arrived. I moved it to Google Cloud Run. Same work. About $20K a month left the bill. I also built a partner portal on Cloud Run for about fifty people — executives, rep leads, and reps — live Oracle NetSuite, role-based access, messaging between users. That cost and that portal are on the resume. They support the measurement seat.",
   ],
-  shift: {
-    title: "Domo to Cloud Run",
-    lead: "The warehouse was in Domo when I arrived. One vendor held the tables and the dashboards, and the bill did not match the work.",
-    before: {
-      label: "Then",
-      title: "Domo",
-      points: [
-        "The full data warehouse sat on a BI vendor.",
-        "The work and the invoice had come apart.",
-      ],
-    },
-    after: {
-      label: "Now",
-      title: "Cloud Run",
-      points: [
-        "Same warehouse work, on Google Cloud Run.",
-        "Apps Script and BigQuery around it.",
-        "GCP class held around thirty dollars.",
-        "About twenty thousand a month off the bill.",
-      ],
-    },
-    note: "I did not change the work to make the move look good. The constraint was the envelope: a cheap GCP class, not a second vendor.",
-  },
-  mapCaption: "Five isolated books. Sources do not write the fact. Neither does the field.",
-  sources: ["Oracle NetSuite", "Google, Meta, Microsoft", "Retail POS", "Fulfillment"],
-  lanes: [
+  points: [
     {
-      id: "wholesale",
-      title: "Wholesale decision net",
-      short: "Exec wholesale",
-      scan: "One writer. After we ship, we lock it.",
-      body: [
-        "A second system is not allowed to edit the same fact — if it can, you do not have a book. You have an argument. The exec book and the field book can agree, but they cannot share a writer.",
-      ],
-    },
-    {
-      id: "portal",
-      title: "Partner portal",
-      short: "Field portal",
-      scan: "About fifty people. Live NetSuite. They cannot rewrite the number.",
-      body: [
-        "I built the portal on Cloud Run. Executives, rep leads, and reps each get the slice their role is allowed to see, and they can message each other. The portal can display the number. It cannot become a second writer.",
-      ],
-    },
-    {
-      id: "cash",
       title: "Cash MER",
-      short: "Cash MER",
-      scan: "Meridian on the mix. GeoLift or an RCT when two channels claim the same sale.",
-      body: [
-        "Budget is ledger sales against exact spend — Google, Meta, and Microsoft. Platform ROAS is not the budget. Fail-closed. Below break-even, we cut.",
-      ],
+      body: "Ledger sales against exact spend. Google, Meta, and Microsoft. Fail-closed. Below break-even, we cut.",
     },
     {
-      id: "retail",
-      title: "Retail POS",
-      short: "Retail POS",
-      scan: "Store net sales only. Tax is not a KPI.",
-      body: [
-        "The retail book does not borrow wholesale or paid numbers to look healthier, and it does not get folded into the exec wholesale number just because a store had a good week.",
-      ],
+      title: "Mix models",
+      body: "Meridian when the mix call is causal. I put the number in front of the CEO.",
     },
     {
-      id: "fulfillment",
-      title: "Fulfillment",
-      short: "Fulfillment",
-      scan: "A partial shipment stays a partial shipment.",
-      body: [
-        "Fulfillment is told on its own book so operations cannot get cleaned up into wholesale, and wholesale cannot pretend a partial is a complete order.",
-      ],
+      title: "Incrementality",
+      body: "GeoLift or an RCT when two channels claim the same sale. The test decides the call.",
     },
-  ] as const satisfies readonly FleetLane[],
-  identities: {
-    title: "Who sees what",
-    lead: "About fifty people on Cloud Run. Three roles. One live NetSuite. Nobody in this picture writes the fact.",
-    roles: [
-      {
-        title: "Executive",
-        sees: "The company book.",
-        rule: "Can read. Cannot rewrite.",
-      },
-      {
-        title: "Rep lead",
-        sees: "The team.",
-        rule: "Can read. Cannot rewrite.",
-      },
-      {
-        title: "Rep",
-        sees: "Their own book.",
-        rule: "Can read. Cannot rewrite.",
-      },
-    ],
-    note: "Messaging sits between them. Access is the role. The writer lives on the wholesale desk, not in the portal.",
-  },
-  constraints: {
-    title: "What made it hard",
-    lead: "The interesting part is not that a portal exists. It is what the portal was not allowed to become.",
-    items: [
-      {
-        title: "Identity isolation",
-        body: "The exec wholesale book and the field portal do not share a writer. Agreeing is allowed. Drifting is not.",
-      },
-      {
-        title: "One writer",
-        body: "Each lane has one owner. We freeze it after we ship. Dual-write is how two dashboards start telling two companies.",
-      },
-      {
-        title: "The GCP envelope",
-        body: "Cloud Run, BigQuery, Apps Script. The class had to stay around thirty dollars. A warehouse move that trades Domo for another fat bill is not a move.",
-      },
-    ],
-  },
-  mix: {
-    title: "The mix sits on this",
-    body: "I allocate a seven-figure monthly paid book across Google, Meta, and Microsoft against cash MER, for the CEO. The systems work is why that call is possible. Without isolated books, mix is a meeting.",
-  },
+    {
+      title: "Warehouse move",
+      body: "Full data warehouse off Domo onto Google Cloud Run. About $20K a month saved. Apps Script and BigQuery around it.",
+    },
+    {
+      title: "Partner portal",
+      body: "Cloud Run desk for about fifty people. Live NetSuite. They can read the number they are allowed to see. They cannot rewrite it.",
+    },
+  ],
 } as const;
 
 export const workPage = {
   lead: "Black Clover, Nutricost, and Mcfly Analytics Shopify App.",
-  blackClover: {
-    title: "Black Clover",
-    role: "Head of BI & Performance Marketing. I report to the CEO.",
-    body: "Cash MER, Meridian MMM, and incrementality. Warehouse off Domo onto Cloud Run.",
-    href: "/work/systems-fleet",
-    more: "The Black Clover case",
-  },
-  mcfly: {
-    title: "Mcfly Analytics Shopify App",
-    role: "Founder and Data Analytics Consultant, McFly Ads. LIVE personal project.",
-    href: "/work/mcfly",
-    line: "Open the desk at mcflyads.com.",
-    more: "The product note",
-    live: true,
-  },
-  nutricost: {
-    title: "Nutricost",
-    role: "Advertising Data Scientist. I reported to the CMO.",
-    href: "/work/nutricost",
-    line: "I organized the data portfolio for thirteen unique sub-brands, and I built the warehouse and the ads station executives used for margins and COGS.",
-    more: "The Nutricost case",
-  },
 } as const;
 
 export const cases: CaseStudy[] = [
@@ -222,8 +117,31 @@ export const cases: CaseStudy[] = [
     reportsTo: "Reported to the CMO",
     lead: "Advertising Data Scientist. I reported to the CMO and ran one desk for margins and COGS.",
     body: [
-      "I organized the data portfolio for thirteen unique sub-brands under the Nutricost main brand.",
-      "I built the full data warehouse. I built the advertising data-science station where executives could see profit margins and COGS.",
+      "I organized the data portfolio for thirteen unique sub-brands under the Nutricost main brand. That was the job on day one — one company, thirteen catalogs, and no single place an executive could see contribution.",
+      "I built the full data warehouse. I built the advertising data-science station where executives could see profit margins and COGS. Organized and built. I did not inherit a finished desk.",
+      "The weekly read was contribution past last-click: multi-touch attribution, LTV, and cohorts in BigQuery, with GA4 and Looker Studio on the same view. When two platforms claimed the same order I ran Robyn and GeoLift and presented the call to the CMO.",
+    ],
+    points: [
+      {
+        title: "Thirteen sub-brands",
+        body: "I organized the data portfolio under the Nutricost main brand so the CMO desk had one map.",
+      },
+      {
+        title: "Warehouse",
+        body: "I built the full data warehouse the advertising work sat on.",
+      },
+      {
+        title: "Ads station",
+        body: "I built the analysis station executives used for profit margins and COGS.",
+      },
+      {
+        title: "Contribution",
+        body: "MTA, LTV, and cohorts in BigQuery. SQL and R. GA4 and Looker Studio.",
+      },
+      {
+        title: "Causal check",
+        body: "Robyn and GeoLift when platforms claimed the same order. The test went to the CMO.",
+      },
     ],
   },
   {
@@ -231,19 +149,34 @@ export const cases: CaseStudy[] = [
     brand: "Mcfly Analytics Shopify App",
     role: "Founder and Data Analytics Consultant, McFly Ads",
     dates: "April 2020 to present",
-    reportsTo: "Personal project",
+    reportsTo: "Personal project and consulting practice",
     lead: "Mcfly Analytics Shopify App is LIVE at mcflyads.com.",
     live: true,
     body: [
-      "This is a personal project I run next to the full-time seats — not the main story.",
-      "Mcfly Analytics Shopify App is the shipped product. The consulting practice is McFly Ads: marketing data science for ten named brands — mix models, incrementality, dashboards, and paid allocation.",
+      "The product is live. Install it. It reads the Shopify orders a shop already has and shows typical order, returning dollars, time to a second purchase, and LTV. Add spend when you want sales divided by spend. There is no ad-network login.",
+      "I built Mcfly Analytics Shopify App as a personal project next to the full-time seats. The consulting practice is McFly Ads. The title there is Founder and Data Analytics Consultant — since 2020.",
+      "The consulting work is marketing data science for ten named brands: mix models, incrementality, dashboards, and paid allocation. The names are on this page. That is the proof, not a sample store.",
+    ],
+    points: [
+      {
+        title: "LIVE product",
+        body: "Mcfly Analytics Shopify App is live at mcflyads.com. Shopify Admin install. Cash MER when you add spend. LTV from the order history.",
+      },
+      {
+        title: "Consulting title",
+        body: "Founder and Data Analytics Consultant at McFly Ads. The product name and the consulting practice are not the same thing.",
+      },
+      {
+        title: "Ten named brands",
+        body: "Marksman Construction, Malama Solar, Royal Peak Lighting, Stretch Labs, Kin Home, BatBridge Bookkeeping, Whirly Board, Arizona Gym Floors, Pure Air Solutions, Priority Mulching Services.",
+      },
     ],
   },
 ];
 
 export const brands: {
   mark: string;
-  name: string;
+  name: (typeof CLIENT_NAMES)[number];
   category: BrandCategory;
 }[] = [
   { mark: "MC", name: "Marksman Construction", category: "Trades" },
@@ -286,7 +219,7 @@ export const resume = {
   role: "Head of Business Intelligence & Performance Marketing",
   scan: "Head of BI & Performance Marketing at Black Clover · reports to the CEO · Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)",
   summary:
-    "Head of Business Intelligence & Performance Marketing at Black Clover — I report to the CEO. I moved the full data warehouse off Domo onto Google Cloud Run (about $20K a month saved) and built a partner portal on Cloud Run for about 50 people. I allocate a seven-figure monthly paid mix across Google, Meta, and Microsoft against cash MER. Previously Advertising Data Scientist at Nutricost, reporting to the CMO: I organized a data portfolio for 13 unique sub-brands and built the full warehouse and advertising data-science station executives used for profit margins and COGS. Founder and Data Analytics Consultant at McFly Ads since 2020. Mcfly Analytics Shopify App is LIVE at mcflyads.com.",
+    "Head of Business Intelligence & Performance Marketing at Black Clover — I report to the CEO. Directed $25M+ in career-managed ad spend. I moved the full data warehouse off Domo onto Google Cloud Run (about $20K a month saved) and built a partner portal on Cloud Run for about 50 people. I allocate a seven-figure monthly paid mix across Google, Meta, and Microsoft against cash MER. Previously Advertising Data Scientist at Nutricost, reporting to the CMO: I organized a data portfolio for 13 unique sub-brands and built the full warehouse and advertising data-science station executives used for profit margins and COGS. Founder and Data Analytics Consultant at McFly Ads since 2020. Mcfly Analytics Shopify App is LIVE at mcflyads.com.",
   jobs: [
     {
       title: "Head of Business Intelligence & Performance Marketing",
@@ -318,7 +251,7 @@ export const resume = {
       dates: "04/2020 - Present",
       meta: "Consulting practice. I started the company in 2020.",
       bullets: [
-        "Mcfly Analytics Shopify App is LIVE at mcflyads.com. Personal project next to the full-time work, not the main seat.",
+        "Mcfly Analytics Shopify App is LIVE at mcflyads.com. Personal project I run next to the full-time seats.",
         "6 years of marketing data science for 10 named brands: Robyn and Meridian, GeoLift, executive dashboards, retail command centers, and paid allocation.",
         "Named brands: Marksman Construction, Malama Solar, Royal Peak Lighting, Stretch Labs, Kin Home, BatBridge Bookkeeping, Whirly Board, Arizona Gym Floors, Pure Air Solutions, Priority Mulching Services.",
       ],
@@ -347,23 +280,4 @@ export const resume = {
 
 export function caseBySlug(slug: string): CaseStudy | undefined {
   return cases.find((item) => item.slug === slug);
-}
-
-export function laneHref(id: LaneId, prefix = ""): string {
-  switch (id) {
-    case "wholesale":
-      return `${prefix}#wholesale`;
-    case "portal":
-      return `${prefix}#portal`;
-    case "cash":
-      return `${prefix}#cash`;
-    case "retail":
-      return `${prefix}#retail`;
-    case "fulfillment":
-      return `${prefix}#fulfillment`;
-    default: {
-      const _never: never = id;
-      return _never;
-    }
-  }
 }

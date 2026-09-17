@@ -23,8 +23,8 @@ export default function HomePage() {
             {site.mcflyProduct} <span className="live-mark">LIVE</span>
           </h2>
           <p>
-            The shipped Shopify desk is the demo. Open it. Founder and Data
-            Analytics Consultant at McFly Ads.
+            The product is live at mcflyads.com. Founder and Data Analytics
+            Consultant at McFly Ads.
           </p>
           <p className="close-links">
             <a className="pack-take" href={site.mcfly} rel="noreferrer" target="_blank">
@@ -45,7 +45,7 @@ export default function HomePage() {
           <h2 id="work-title" className="visually-hidden">
             Selected work
           </h2>
-          <div className="case-grid">
+          <div className="case-stack">
             {featured.map((item) => (
               <article className="work-entry" key={item.key}>
                 <h3>

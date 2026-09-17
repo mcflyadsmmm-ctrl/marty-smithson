@@ -1,3 +1,6 @@
 # Cloudflare Pages — https://marty-smithson.pages.dev
+# Git-connected project. Framework: Next.js. Build: npm run build.
+# Do not point Pages at a static out/ folder. Leave output to the Next adapter.
 name = "marty-smithson"
 compatibility_date = "2026-09-16"
+

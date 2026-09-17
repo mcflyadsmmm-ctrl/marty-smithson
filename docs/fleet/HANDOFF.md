@@ -4,12 +4,22 @@
 **Repo target:** `mcflyadsmmm-ctrl/marty-smithson`  
 **Live:** https://marty-smithson.pages.dev/ (Cloudflare Pages project `marty-smithson`; Vercel 308s here)
 
-### Site locks (2026-09-16) — override older rows below on user-facing surfaces
+### Site locks (2026-09-17) — override older rows below on user-facing surfaces
+- Hero brand: Marketing analytics and measurement. Not “I build the systems behind better decisions.”
+- LIVE desk first: Mcfly Analytics Shopify App LIVE at https://mcflyads.com
+- McFly Ads consulting title: Founder and Data Analytics Consultant (never CEO)
+- All 10 clients visible as a name wall (exact spellings)
+- Three deep cases: Black Clover (Head of BI & Performance Marketing) · Nutricost Advertising Data Scientist · Mcfly Analytics Shopify App LIVE
+- Education: Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)
+- One spend headline: $25M+ in career-managed ad spend. Do not invent $30M.
+- Domo→Cloud Run supports the Black Clover case only. It must not own the site identity.
+- No sample architecture diagrams as homepage brand. No sample-disclaimer theater.
+
+### Site locks (2026-09-16) — titles still locked; homepage brand superseded by 2026-09-17
 - Education: Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)
 - Nutricost title: Advertising Data Scientist
 - Product name (locked): Mcfly Analytics Shopify App — LIVE at https://mcflyads.com. Do not call the product “McFly” or “McFly Ads”.
 - McFly Ads: consulting practice / employer only
-- Homepage / selected work: Black Clover first; Mcfly Analytics Shopify App secondary, not the hero  
 **Mode:** Scout-only · zero applies · Recast PARKED · stealth from Black Clover
 
 This file is the knowledge SoT dump for Cursor agents. Install as:
