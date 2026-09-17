@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
+  images: { unoptimized: true },
+  trailingSlash: true,
   async redirects() {
     // Retired IA. 301 to home — never to /work (that served the Work body).
     return [
