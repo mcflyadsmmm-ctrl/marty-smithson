@@ -1,4 +1,4 @@
-import { brands, credo, featured, hero } from "@/lib/content";
+import { brands, credo, featured, gtmBridge, hero, methods, proof } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export function llmsText(): string {
@@ -23,6 +23,22 @@ ${hero.place}
 ${hero.school}
 
 ${site.spendHeadline}.
+
+## Measurement
+
+${proof.map((item) => `- ${item.label}. ${item.note}`).join("\n")}
+
+${methods.body.join("\n\n")}
+
+${methods.terms.map((term) => `- ${term.name}: ${term.note}`).join("\n")}
+
+## GTM analytics
+
+${gtmBridge.title}. ${gtmBridge.body}
+
+Tools on that path: SQL, Snowflake, Python, dbt, BigQuery, Google Cloud Run, Oracle NetSuite.
+
+## Credo
 
 ${credo.mark}. ${credo.line}
 

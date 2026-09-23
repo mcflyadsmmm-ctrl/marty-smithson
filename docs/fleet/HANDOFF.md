@@ -4,6 +4,11 @@
 **Repo target:** `mcflyadsmmm-ctrl/marty-smithson`  
 **Live:** https://marty-smithson.pages.dev/ (Cloudflare Pages project `marty-smithson`; Vercel 308s here)
 
+### Site locks (2026-09-23) — applied-role weight on the 2026-09-17 page
+- First screen still proves Marketing Analytics & Measurement Lead: Meridian MMM, incrementality (geo holdout or RCT), cash MER versus platform ROAS, $25M+ paid mix.
+- After the three cases, one GTM analytics bridge uses existing Black Clover facts only: warehouse off Domo onto Cloud Run, then the executive and partner portal. SQL and Snowflake. Not a RevOps title.
+- Crawler copy (visible DOM, JSON-LD, `/llms.txt`, meta) may name marketing science, MMM, incrementality, attribution, MER, GTM analytics, marketing data science, and decision science. Those are labels for work already on the page. Do not invent lifts, titles, or a RevOps identity.
+
 ### Site locks (2026-09-17) — override older rows below on user-facing surfaces
 - Hero: Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — $25M+ paid mix. Title/meta match. Not “I build the systems behind better decisions.”
 - Home order: hero → proof strip → 10-name client strip (logos + public sites) → three readable case cards → Harbor SAMPLE as one proof desk → method keywords → credo (platform ≠ incremental ≠ cash) → contact

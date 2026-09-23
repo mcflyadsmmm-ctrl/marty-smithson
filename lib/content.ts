@@ -55,25 +55,49 @@ export const proof = [
     note: "Career-managed paid mix on Google, Meta, and Microsoft.",
   },
   {
-    label: "CEO / CMO reporting",
-    note: "Black Clover CEO now. Nutricost CMO before that.",
-  },
-  {
     label: "Meridian MMM",
     note: "Google Meridian when the mix call has to be causal.",
   },
   {
-    label: "Shipped Shopify measurement desk",
-    note: "Mcfly Analytics Shopify App LIVE at mcflyads.com.",
+    label: "Incrementality",
+    note: "Geo holdout or RCT when two channels claim the same sale.",
+  },
+  {
+    label: "Cash MER",
+    note: "Versus platform ROAS. Ledger sales over exact spend.",
   },
 ] as const;
 
 export const methods = {
   title: "How the desk reads",
   body: [
-    "I run marketing mix modeling (MMM) in Google Meridian when the mix call has to be causal. Incrementality is a geo holdout or an RCT when two channels claim the same sale — that incremental ROAS (iROAS) is the number, not platform ROAS.",
-    "Attribution and multi-touch attribution (MTA) sit next to cash MER, CAC, and LTV so finance and marketing share one desk. The warehouse work is SQL and Python on Cloud Run. Experimentation is how a cut gets made.",
+    "The marketing science on this desk is marketing mix modeling (MMM) in Google Meridian when the mix call has to be causal. Incrementality is a geo holdout or an RCT when two channels claim the same sale. Incremental ROAS (iROAS) is what the test returns. Platform ROAS stays the platform's number.",
+    "Attribution and multi-touch attribution (MTA) sit next to cash MER, CAC, and LTV so finance and marketing share one desk. Marketing data science is that desk, and decision science is the call after it: which dollar caused the sale, and which dollar stays. The warehouse work is SQL and Python on Cloud Run. Experimentation is how a cut gets made.",
   ],
+  terms: [
+    {
+      name: "Marketing science",
+      note: "Google Meridian MMM. A geo holdout or an RCT for incrementality.",
+    },
+    {
+      name: "Attribution",
+      note: "MTA beside cash MER, CAC, and LTV. iROAS when the test decides.",
+    },
+    {
+      name: "GTM analytics",
+      note: "Warehouse to the executive and partner portal. SQL and Snowflake.",
+    },
+    {
+      name: "Marketing data science",
+      note: "Nutricost for the CMO. Decision science on contribution past last-click.",
+    },
+  ],
+} as const;
+
+export const gtmBridge = {
+  field: "GTM analytics",
+  title: "From the warehouse to the partner desk",
+  body: "At Black Clover I moved the warehouse off Domo onto Google Cloud Run. The same numbers feed an executive and partner portal for about fifty people — executives, rep leads, and reps — with live Oracle NetSuite and role-based access. SQL and Snowflake sit under that path. That path is how GTM analytics shows up on this seat: the measurement number, then the desk leadership and partners open.",
 } as const;
 
 export const credo = {
@@ -94,7 +118,7 @@ export const featured = [
       problem:
         "Platform ROAS was treated as the budget. Finance and marketing did not share one sales number.",
       method:
-        "Cash MER as the control. Google Meridian MMM when the mix call is causal. A geo holdout, GeoLift, or an RCT when two channels claim the same sale.",
+        "Marketing science for the CEO. Cash MER as the control. Google Meridian MMM when the mix call is causal. A geo holdout, GeoLift, or an RCT when two channels claim the same sale.",
       decision:
         "Below cash MER break-even, we cut. Meridian sets the mix. The holdout decides incrementality.",
       outcome:
@@ -152,7 +176,7 @@ export const fleet = {
   body: [
     "The job is the number the CEO spends against. Cash MER is the control — ledger sales over exact spend on Google, Meta, and Microsoft. Platform ROAS is not the budget. When the mix call is causal I run Meridian. When two channels claim the same sale I run GeoLift or an RCT. Below break-even, we cut.",
     "I allocate a seven-figure monthly paid mix on that desk. Attribution and incrementality sit next to the BI, not in a side deck. The warehouse work is underneath so finance and marketing are looking at the same sales number.",
-    "The warehouse was in Domo when I arrived. I moved it to Google Cloud Run. Same work. About $20K a month left the bill. I also built a partner portal on Cloud Run for about fifty people — executives, rep leads, and reps — live Oracle NetSuite, role-based access, messaging between users. That cost and that portal are on the resume. They support the measurement seat.",
+    "The warehouse was in Domo when I arrived. I moved it to Google Cloud Run. Same work. About $20K a month left the bill. I also built a partner portal on Cloud Run for about fifty people — executives, rep leads, and reps — live Oracle NetSuite, role-based access, messaging between users. SQL and Snowflake sit under that path. That warehouse-to-portal path is the GTM analytics on this seat. The cost and the portal are on the resume. They support the measurement seat.",
   ],
   points: [
     {
@@ -194,7 +218,7 @@ export const cases: CaseStudy[] = [
     body: [
       "I organized the data portfolio for thirteen unique sub-brands under the Nutricost main brand. That was the job on day one — one company, thirteen catalogs, and no single place an executive could see contribution.",
       "I built the full data warehouse. I built the advertising data-science station where executives could see profit margins and COGS. Organized and built. I did not inherit a finished desk.",
-      "The weekly read was contribution past last-click: multi-touch attribution, LTV, and cohorts in BigQuery, with GA4 and Looker Studio on the same view. When two platforms claimed the same order I ran Robyn and GeoLift and presented the call to the CMO.",
+      "The weekly read was marketing data science for the CMO: contribution past last-click, multi-touch attribution, LTV, and cohorts in BigQuery, with GA4 and Looker Studio on the same view. When two platforms claimed the same order I ran Robyn and GeoLift and presented the call to the CMO. That causal check is the decision science on the seat.",
     ],
     points: [
       {

@@ -3,12 +3,13 @@ import { BrandRoster } from "@/components/BrandRoster";
 import { CaseCards } from "@/components/CaseCards";
 import { CtaRow } from "@/components/CtaRow";
 import { DeskShelf } from "@/components/desks/DeskShelf";
+import { GtmBridge } from "@/components/GtmBridge";
 import { HarborFeature } from "@/components/desks/HarborFeature";
 
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Open the desks. Black Clover, Nutricost, and Mcfly Analytics Shopify App.",
+    "Black Clover measurement: Meridian MMM, incrementality, cash MER, and GTM analytics from the warehouse to the partner portal. Nutricost marketing data science. Mcfly Analytics Shopify App.",
   alternates: { canonical: "/work" },
 };
 
@@ -30,6 +31,8 @@ export default function WorkPage() {
           <h2 id="cases-title">Black Clover, Nutricost, and the live desk</h2>
           <CaseCards />
         </section>
+
+        <GtmBridge />
 
         <HarborFeature />
 

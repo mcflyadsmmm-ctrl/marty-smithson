@@ -28,6 +28,7 @@ export const siteGraph = {
       email: site.email,
       description: site.description,
       jobTitle: [
+        "Marketing Analytics & Measurement Lead",
         "Head of BI & Performance Marketing",
         "Founder and Data Analytics Consultant",
       ],
@@ -60,39 +61,22 @@ export const siteGraph = {
         {
           "@type": "Occupation",
           name: "Head of BI & Performance Marketing",
-          description: "Black Clover. Reports to the CEO.",
+          description:
+            "Black Clover. Reports to the CEO. Meridian MMM, incrementality, cash MER, and GTM analytics from the warehouse to an executive and partner portal.",
         },
         {
           "@type": "Occupation",
           name: "Advertising Data Scientist",
-          description: "Nutricost. Reported to the CMO.",
+          description:
+            "Nutricost. Reported to the CMO. Organized a 13-sub-brand data portfolio and built the warehouse and advertising data-science station for margins and COGS.",
         },
         {
           "@type": "Occupation",
           name: "Founder and Data Analytics Consultant",
-          description: "McFly Ads.",
+          description: "McFly Ads. Mcfly Analytics Shopify App is LIVE.",
         },
       ],
-      knowsAbout: [
-        "marketing mix modeling",
-        "MMM",
-        "Google Meridian",
-        "incrementality",
-        "geo holdout",
-        "attribution",
-        "MTA",
-        "cash MER",
-        "iROAS",
-        "CAC",
-        "LTV",
-        "SQL",
-        "Python",
-        "warehouse",
-        "Google Cloud Run",
-        "experimentation",
-        "executive BI",
-        site.mcflyProduct,
-      ],
+      knowsAbout: [...site.keywords, site.mcflyProduct],
       sameAs: [site.linkedin],
       subjectOf: [
         ...resumePdfs.map((pdf) => ({

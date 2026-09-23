@@ -14,8 +14,8 @@
   --spine-mute: #9aa69e;
   --take: #1b6b4a;
   --take-ink: #f4fff8;
-  --lift: 0 10px 28px rgba(16, 32, 24, 0.08);
-  --lift-hover: 0 14px 32px rgba(16, 32, 24, 0.12);
+  --lift: 0 1px 2px rgba(16, 32, 24, 0.05);
+  --lift-hover: 0 1px 2px rgba(16, 32, 24, 0.08);
   --radius: 12px;
   --sans: var(--font-sans), "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --mono: var(--font-mono), "IBM Plex Mono", ui-monospace, monospace;
@@ -166,9 +166,8 @@ p {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: color-mix(in srgb, var(--plate) 88%, transparent);
-  backdrop-filter: saturate(1.1) blur(10px);
-  box-shadow: 0 1px 0 var(--rule);
+  background: var(--paper);
+  border-bottom: 3px double var(--ink);
 }
 
 .site-header-inner {
@@ -239,19 +238,26 @@ p {
 .proof-strip {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.55rem;
-  margin: 0 0 1.15rem;
+  gap: 0;
+  margin: 0.2rem 0 0.35rem;
   padding: 0;
   list-style: none;
+  background: var(--plate);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
 }
 
 .proof-strip li {
   margin: 0;
-  padding: 0.85rem 0.9rem 0.95rem;
-  background: var(--plate);
-  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--rule));
-  border-radius: var(--radius);
-  box-shadow: var(--lift);
+  padding: 0.85rem 1rem 0.95rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.proof-strip li + li {
+  border-left: 1px solid var(--rule);
 }
 
 .proof-strip strong {
@@ -343,17 +349,46 @@ p {
   margin-top: 0.15rem;
 }
 
-.method-note p {
+.method-note p,
+.gtm-bridge p {
   max-width: 46rem;
+}
+
+.method-terms {
+  list-style: none;
+  margin: 1.15rem 0 0;
+  padding: 0;
+  max-width: 46rem;
+  border-top: 1px solid var(--rule);
+}
+
+.method-terms li {
+  display: grid;
+  grid-template-columns: 12.5rem 1fr;
+  gap: 0.85rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.method-terms strong {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.method-terms span {
+  color: var(--mute);
+  font-size: 0.95rem;
 }
 
 .credo {
   margin: 2.2rem 0 1.2rem;
-  padding: 1.15rem 1.25rem 1.2rem;
-  background: linear-gradient(135deg, var(--accent-soft) 0%, var(--plate) 70%);
-  border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--rule));
-  border-radius: var(--radius);
-  box-shadow: var(--lift);
+  padding: 0.15rem 0 0.15rem 1rem;
+  background: transparent;
+  border: 0;
+  border-left: 3px solid var(--accent);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .credo h2 {
@@ -907,7 +942,8 @@ p {
   justify-content: space-between;
   gap: 1rem 1.5rem;
   padding: 1.05rem 1.25rem 1.1rem;
-  background: linear-gradient(135deg, var(--accent-soft) 0%, var(--plate) 55%, var(--sample-soft) 140%);
+  background: var(--plate);
+  border-bottom: 1px solid var(--rule);
 }
 
 .harbor-mast h2 {
@@ -1159,7 +1195,7 @@ p {
 }
 
 .case-grid .work-entry + .work-entry {
-  border-left: 1px solid var(--rule);
+  border-left: 0;
 }
 
 .case-stack .work-entry + .work-entry {
@@ -1265,8 +1301,8 @@ p {
 .work-entry:hover,
 a.work-entry:hover {
   color: inherit;
-  transform: translateY(-2px);
-  box-shadow: var(--lift-hover);
+  border-color: var(--ink);
+  box-shadow: none;
 }
 
 a.work-entry:hover .more {
@@ -1280,24 +1316,23 @@ a.work-entry:hover .more {
 
 .live-mark,
 .sample-mark {
-  display: inline-block;
+  display: inline;
   margin-left: 0.35rem;
-  padding: 0.12rem 0.4rem;
-  border-radius: 2px;
+  padding: 0;
+  border-radius: 0;
+  background: none;
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.04em;
-  vertical-align: middle;
+  letter-spacing: 0;
+  vertical-align: baseline;
 }
 
 .live-mark {
-  background: var(--accent-soft);
   color: var(--accent);
 }
 
 .sample-mark {
-  background: var(--sample-soft);
   color: var(--sample);
 }
 
@@ -1733,7 +1768,6 @@ a.work-entry:hover .more {
 .pack-take:hover {
   color: #fff;
   background: #14573c;
-  transform: translateY(-1px);
 }
 
 .pack-take:focus-visible {
@@ -1902,6 +1936,19 @@ a.work-entry:hover .more {
   .proof-strip,
   .case-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .proof-strip li:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .proof-strip li:nth-child(n + 3) {
+    border-top: 1px solid var(--rule);
+  }
+
+  .method-terms li {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
   }
 
   .case-beats,

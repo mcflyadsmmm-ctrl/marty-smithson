@@ -2,6 +2,7 @@ import { BrandRoster } from "@/components/BrandRoster";
 import { CaseCards } from "@/components/CaseCards";
 import { Credo } from "@/components/Credo";
 import { CtaRow } from "@/components/CtaRow";
+import { GtmBridge } from "@/components/GtmBridge";
 import { HarborFeature } from "@/components/desks/HarborFeature";
 import { MethodNote } from "@/components/MethodNote";
 import { ProofStrip } from "@/components/ProofStrip";
@@ -41,6 +42,7 @@ export default function HomePage() {
           <h2 id="work-title">Black Clover, Nutricost, and the live desk</h2>
           <CaseCards />
         </section>
+        <GtmBridge />
         <HarborFeature />
         <MethodNote />
         <Credo />

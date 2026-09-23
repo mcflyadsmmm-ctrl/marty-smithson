@@ -6,7 +6,7 @@ One-page brief. Implement these tokens; do not restyle from taste.
 
 A hiring manager or recruiter screening a $150k+ marketing analytics / measurement seat. They need a person, a live desk, named brands, and three cases — not an architecture poem.
 
-**Leave-with:** he runs mix models, attribution, incrementality, and cash MER, and he has a live Shopify measurement product.
+**Leave-with:** he is a Marketing Analytics & Measurement Lead who runs Meridian MMM, incrementality (geo holdout or RCT), and cash MER versus platform ROAS, and the Black Clover warehouse feeds an executive and partner portal.
 
 **Stealth CTA:** Email, LinkedIn, and the resume PDF sit on every page. No apply language.
 
@@ -44,10 +44,12 @@ IBM Plex Sans (400/500) and IBM Plex Mono (400/500), via `next/font`. Systems fa
 ## Layout
 
 - Measure `--page: 68rem`. Gutter `1.75rem` / `1.15rem` on small screens.
-- Header sits on paper. Double hairline under it (ledger total), not a dark app bar.
-- Figures are cards: 12px radius, light lift, hover. Pine accent on the live take. Copper SAMPLE mark.
+- Header sits on paper. Double hairline under it (ledger total). No frosted bar, no blur.
+- Figures are sheets: 12px radius, a hairline, no hop on hover. Pine on the live word. SAMPLE is a mono word in `#9a4308`, not a pill.
+- Proof strip is four ruled columns on one plate (ink rules top and bottom). Not four floating metric cards.
+- Credo is a pine rule beside the sentence. No gradient plate.
 - Matrices live inside a padded figure body. Rules must not escape the plate.
-- Home fold: hero (Marketing Analytics & Measurement Lead + $25M+ paid mix, with email, LinkedIn, resume PDF, and the product on that same screen), proof strip, ten-name client strip (logos + public sites, every name visible), three case cards with stacked Problem / Method / Decision / Outcome rows, then Harbor Home Co SAMPLE as one proof desk. Method keywords. Credo. Contact. One spend headline ($25M+).
+- Home fold: hero (Marketing Analytics & Measurement Lead + $25M+ paid mix, with email, LinkedIn, resume PDF, and the product on that same screen), proof strip ($25M+ spend, Meridian MMM, incrementality, cash MER versus platform ROAS), ten-name client strip (logos + public sites, every name visible), three case cards with stacked Problem / Method / Decision / Outcome rows, then one GTM analytics bridge (Black Clover warehouse to the executive and partner portal), then Harbor Home Co SAMPLE as one proof desk. Method keywords. Credo. Contact. One spend headline ($25M+).
 - Resume is a pack ledger, not three equal cards over a void. Full resume is the take. The other two packs are lanes.
 - One theme on every route.
 
@@ -60,4 +62,4 @@ IBM Plex Sans (400/500) and IBM Plex Mono (400/500), via `next/font`. Systems fa
 
 ## Out of bounds
 
-Pills, soft-shadow card kits, decorative gradients, tracked caps, job-hunt chrome, apply CTAs, fake product shots, Northline / AI demo work.
+Pills, soft-shadow card kits, hover-lift, decorative gradients, frosted headers, tracked caps, job-hunt chrome, apply CTAs, fake product shots, Northline / AI demo work.

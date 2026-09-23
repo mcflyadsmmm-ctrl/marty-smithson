@@ -5,7 +5,8 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: "Marty Smithson’s resume. Same facts, different PDF emphasis.",
+  description:
+    "Marty Smithson resume. Marketing Analytics & Measurement Lead. Meridian MMM, incrementality, cash MER, attribution, and GTM analytics.",
   alternates: {
     canonical: "/resume",
     types: {
