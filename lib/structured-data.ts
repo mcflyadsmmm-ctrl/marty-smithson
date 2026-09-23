@@ -73,7 +73,8 @@ export const siteGraph = {
         {
           "@type": "Occupation",
           name: "Founder and Data Analytics Consultant",
-          description: "McFly Ads. Mcfly Analytics Shopify App is LIVE.",
+          description:
+            "McFly Ads consulting practice since 2020. Marketing science for named brands: mix models, incrementality, and media measurement. Mcfly Analytics Shopify App is LIVE.",
         },
       ],
       knowsAbout: [...site.keywords, site.mcflyProduct],

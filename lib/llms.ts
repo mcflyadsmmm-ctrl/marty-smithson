@@ -1,4 +1,13 @@
-import { brands, credo, featured, gtmBridge, hero, methods, proof } from "@/lib/content";
+import {
+  brands,
+  clientWall,
+  credo,
+  featured,
+  gtmBridge,
+  hero,
+  methods,
+  proof,
+} from "@/lib/content";
 import { site } from "@/lib/site";
 
 export function llmsText(): string {
@@ -60,6 +69,12 @@ ${cases}
 - [Full resume](${site.url}${site.resumes.full}): send this unless they asked for a lane.
 - [Measurement](${site.url}${site.resumes.measurement}): mix models and incrementality.
 - [Systems and analytics](${site.url}${site.resumes.systems}): the warehouse, the portal, and the BI work.
+
+## Consulting
+
+${clientWall.body}
+
+Title: ${site.mcflyTitle}, McFly Ads. ${site.mcflyProduct} is a separate product.
 
 ## McFly Ads clients
 

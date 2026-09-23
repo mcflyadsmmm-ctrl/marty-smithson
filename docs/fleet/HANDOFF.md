@@ -8,6 +8,7 @@
 - First screen still proves Marketing Analytics & Measurement Lead: Meridian MMM, incrementality (geo holdout or RCT), cash MER versus platform ROAS, $25M+ paid mix.
 - After the three cases, one GTM analytics bridge uses existing Black Clover facts only: warehouse off Domo onto Cloud Run, then the executive and partner portal. SQL and Snowflake. Not a RevOps title.
 - Crawler copy (visible DOM, JSON-LD, `/llms.txt`, meta) may name marketing science, MMM, incrementality, attribution, MER, GTM analytics, marketing data science, and decision science. Those are labels for work already on the page. Do not invent lifts, titles, or a RevOps identity.
+- Thin third lane: McFly Ads consulting (Founder and Data Analytics Consultant) is marketing science and media measurement for the ten named brands. Do not invent agency employment. Do not put outside agency names on user-facing surfaces.
 
 ### Site locks (2026-09-17) — override older rows below on user-facing surfaces
 - Hero: Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — $25M+ paid mix. Title/meta match. Not “I build the systems behind better decisions.”

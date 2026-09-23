@@ -77,7 +77,7 @@ export const methods = {
   terms: [
     {
       name: "Marketing science",
-      note: "Google Meridian MMM. A geo holdout or an RCT for incrementality.",
+      note: "Google Meridian MMM, a geo holdout, or an RCT. The same media measurement in the McFly Ads consulting practice.",
     },
     {
       name: "Attribution",
@@ -98,6 +98,12 @@ export const gtmBridge = {
   field: "GTM analytics",
   title: "From the warehouse to the partner desk",
   body: "At Black Clover I moved the warehouse off Domo onto Google Cloud Run. The same numbers feed an executive and partner portal for about fifty people — executives, rep leads, and reps — with live Oracle NetSuite and role-based access. SQL and Snowflake sit under that path. That path is how GTM analytics shows up on this seat: the measurement number, then the desk leadership and partners open.",
+} as const;
+
+export const clientWall = {
+  field: "McFly Ads clients",
+  title: "Named brands",
+  body: "Consulting since 2020. I do marketing science for these brands: mix models, incrementality, and media measurement. Public sites where they have one.",
 } as const;
 
 export const credo = {
@@ -161,7 +167,7 @@ export const featured = [
       decision:
         "Open the live SAMPLE at mcflyads.com/demo. Harbor Home Co SAMPLE — not a live client.",
       outcome:
-        "Mcfly Analytics Shopify App is LIVE at mcflyads.com. The consulting title is Founder and Data Analytics Consultant. Ten named brands sit on this site.",
+        "Mcfly Analytics Shopify App is LIVE at mcflyads.com. McFly Ads is the consulting practice: marketing science and media measurement for the ten named brands. The title is Founder and Data Analytics Consultant.",
     },
   },
 ] as const;
@@ -255,7 +261,7 @@ export const cases: CaseStudy[] = [
     body: [
       "The product is live. Install it. It reads the Shopify orders a shop already has and shows typical order, returning dollars, time to a second purchase, and LTV. Add spend when you want sales divided by spend. There is no ad-network login.",
       "I built Mcfly Analytics Shopify App as a personal project next to the full-time seats. The consulting practice is McFly Ads. The title there is Founder and Data Analytics Consultant — since 2020.",
-      "The public SAMPLE desk is Harbor Home Co at mcflyads.com/demo. The consulting work is marketing data science for ten named brands: mix models, incrementality, dashboards, and paid allocation. The names are on this page.",
+      "The public SAMPLE desk is Harbor Home Co at mcflyads.com/demo. The consulting work is marketing science for ten named brands: media measurement, mix models, incrementality, dashboards, and paid allocation. The names are on this page.",
     ],
     points: [
       {
@@ -396,7 +402,7 @@ export const resume = {
       meta: "Consulting practice. I started the company in 2020.",
       bullets: [
         "Mcfly Analytics Shopify App is LIVE at mcflyads.com. Personal project I run next to the full-time seats.",
-        "6 years of marketing data science for 10 named brands: Robyn and Meridian, GeoLift, executive dashboards, retail command centers, and paid allocation.",
+        "6 years of marketing data science for 10 named brands: media measurement, Robyn and Meridian, GeoLift, executive dashboards, retail command centers, and paid allocation.",
         "Named brands: Marksman Construction, Malama Solar, Royal Peak Lighting, Stretch Labs, Kin Home, BatBridge Bookkeeping, Whirly Board, Arizona Gym Floors, Pure Air Solutions, Priority Mulching Services.",
       ],
     },
@@ -405,7 +411,7 @@ export const resume = {
     {
       label: "Measurement",
       items:
-        "marketing mix modeling (MMM), Robyn, Meridian, incrementality testing, GeoLift, multi-touch attribution, cash MER, budget allocation",
+        "media measurement, marketing mix modeling (MMM), Robyn, Meridian, incrementality testing, GeoLift, multi-touch attribution, cash MER, budget allocation",
     },
     {
       label: "Data & BI",

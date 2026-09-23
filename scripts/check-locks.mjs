@@ -54,6 +54,7 @@ const REQUIRED = [
   "Cloud Run",
   "experimentation",
   "marketing science",
+  "media measurement",
   "GTM analytics",
   "marketing data science",
   "decision science",
@@ -81,6 +82,10 @@ const BANNED = [
   "sample-disclaimer",
   "RevOps",
   "Open to Work",
+  "PMG",
+  "Epsilon",
+  "Analytic Partners",
+  "Publicis",
 ];
 
 const DEAD_ARCHITECTURE = [
@@ -259,6 +264,9 @@ assert.match(structured, /site\.keywords/);
 assert.match(structured, /DigitalDocument/);
 assert.match(structured, /\/resume\.md/);
 assert.match(site, /marketing science/);
+assert.match(site, /media measurement/);
+assert.match(content, /Consulting since 2020/);
+assert.match(content, /McFly Ads is the consulting practice/);
 assert.match(site, /GTM analytics/);
 assert.match(site, /Snowflake/);
 assert.doesNotMatch(structured, /RevOps/);

@@ -5,11 +5,12 @@ import { CtaRow } from "@/components/CtaRow";
 import { DeskShelf } from "@/components/desks/DeskShelf";
 import { GtmBridge } from "@/components/GtmBridge";
 import { HarborFeature } from "@/components/desks/HarborFeature";
+import { clientWall } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Black Clover measurement: Meridian MMM, incrementality, cash MER, and GTM analytics from the warehouse to the partner portal. Nutricost marketing data science. Mcfly Analytics Shopify App.",
+    "Black Clover measurement: Meridian MMM, incrementality, cash MER, and GTM analytics from the warehouse to the partner portal. Nutricost marketing data science. McFly Ads consulting: marketing science and media measurement. Mcfly Analytics Shopify App.",
   alternates: { canonical: "/work" },
 };
 
@@ -39,8 +40,9 @@ export default function WorkPage() {
         <DeskShelf />
 
         <section className="section" aria-labelledby="clients-title">
-          <p className="field">McFly Ads clients</p>
-          <h2 id="clients-title">Named brands</h2>
+          <p className="field">{clientWall.field}</p>
+          <h2 id="clients-title">{clientWall.title}</h2>
+          <p className="quiet section-copy">{clientWall.body}</p>
           <BrandRoster wall />
         </section>
       </div>
