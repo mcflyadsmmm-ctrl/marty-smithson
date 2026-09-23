@@ -62,19 +62,19 @@ export const siteGraph = {
           "@type": "Occupation",
           name: "Head of BI & Performance Marketing",
           description:
-            "Black Clover. Reports to the CEO. Meridian MMM, incrementality, cash MER, and GTM analytics from the warehouse to an executive and partner portal.",
+            "Black Clover. Reports to the CEO. Runs and reads Meridian MMM, sets geo holdouts and RCTs, and spends against cash MER. The executive read is the mix recommendation and the cut.",
         },
         {
           "@type": "Occupation",
           name: "Advertising Data Scientist",
           description:
-            "Nutricost. Reported to the CMO. Organized a 13-sub-brand data portfolio and built the warehouse and advertising data-science station for margins and COGS.",
+            "Nutricost. Reported to the CMO. Organized a 13-sub-brand data portfolio and built the warehouse and advertising data-science station for margins and COGS. Read Robyn and ran GeoLift, then took the spend call to the CMO.",
         },
         {
           "@type": "Occupation",
           name: "Founder and Data Analytics Consultant",
           description:
-            "McFly Ads consulting practice since 2020. Marketing science for named brands: mix models, incrementality, and media measurement. Mcfly Analytics Shopify App is LIVE.",
+            "McFly Ads consulting practice since 2020. Founder-owned delivery of marketing science: mix models, incrementality, and media measurement. Mcfly Analytics Shopify App is LIVE.",
         },
       ],
       knowsAbout: [...site.keywords, site.mcflyProduct],

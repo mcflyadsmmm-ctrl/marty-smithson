@@ -60,6 +60,7 @@ const REQUIRED = [
   "decision science",
   "Snowflake",
   "RCT",
+  "test-and-learn",
   "martysmithson04@gmail.com",
   "linkedin.com/in/marty-smithson",
 ];
@@ -86,6 +87,14 @@ const BANNED = [
   "Epsilon",
   "Analytic Partners",
   "Publicis",
+  "IQVIA",
+  "Crossix",
+  "DV360",
+  "The Trade Desk",
+  "DISQO",
+  "Dynata",
+  "Kantar",
+  "PurpleLab",
 ];
 
 const DEAD_ARCHITECTURE = [

@@ -3,7 +3,7 @@ export const site = {
   title:
     "Marty Smithson — Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — $25M+ paid mix.",
   description:
-    "Marketing Analytics & Measurement Lead. Marketing science with Google Meridian MMM, incrementality (geo holdout and RCT), attribution, and cash MER versus platform ROAS. $25M+ in career-managed ad spend. GTM analytics from the Black Clover warehouse to an executive and partner portal — Snowflake and SQL. Head of BI & Performance Marketing at Black Clover. McFly Ads consulting practice: marketing science and media measurement for named brands. Mcfly Analytics Shopify App LIVE.",
+    "Marketing Analytics & Measurement Lead. Marketing science with Google Meridian MMM, incrementality (geo holdout, RCT, and test-and-learn), attribution, and cash MER versus platform ROAS. $25M+ in career-managed ad spend. GTM analytics from the Black Clover warehouse to an executive and partner portal — Snowflake and SQL. Head of BI & Performance Marketing at Black Clover. McFly Ads consulting practice: marketing science and media measurement for named brands. Mcfly Analytics Shopify App LIVE.",
   spendHeadline: "$25M+ in career-managed ad spend",
   url: "https://marty-smithson.pages.dev",
   revised: "2026-09-23",
@@ -36,6 +36,7 @@ export const site = {
     "incrementality",
     "geo holdout",
     "RCT",
+    "test-and-learn",
     "GeoLift",
     "attribution",
     "MTA",
@@ -51,7 +52,10 @@ export const site = {
     "SQL",
     "Snowflake",
     "Python",
+    "R",
     "dbt",
+    "Looker",
+    "Tableau",
     "BigQuery",
     "Google Cloud Run",
     "experimentation",

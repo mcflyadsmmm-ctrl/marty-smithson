@@ -56,11 +56,11 @@ export const proof = [
   },
   {
     label: "Meridian MMM",
-    note: "Google Meridian when the mix call has to be causal.",
+    note: "I run Google Meridian, read it, and recommend the mix.",
   },
   {
     label: "Incrementality",
-    note: "Geo holdout or RCT when two channels claim the same sale.",
+    note: "Geo holdout, GeoLift, or RCT. Test-and-learn decides keep or cut.",
   },
   {
     label: "Cash MER",
@@ -71,17 +71,26 @@ export const proof = [
 export const methods = {
   title: "How the desk reads",
   body: [
-    "The marketing science on this desk is marketing mix modeling (MMM) in Google Meridian when the mix call has to be causal. Incrementality is a geo holdout or an RCT when two channels claim the same sale. Incremental ROAS (iROAS) is what the test returns. Platform ROAS stays the platform's number.",
-    "Attribution and multi-touch attribution (MTA) sit next to cash MER, CAC, and LTV so finance and marketing share one desk. Marketing data science is that desk, and decision science is the call after it: which dollar caused the sale, and which dollar stays. The warehouse work is SQL and Python on Cloud Run. Experimentation is how a cut gets made.",
+    "The marketing science on this desk is marketing mix modeling (MMM) in Google Meridian. I run it on ledger sales and exact spend, read the model, and recommend the mix. Incrementality is a geo holdout, GeoLift, or an RCT when two channels claim the same sale. Test-and-learn returns incremental ROAS (iROAS). Platform ROAS stays the platform's number.",
+    "Attribution and multi-touch attribution (MTA) explain the path. They sit next to cash MER, CAC, and LTV. MTA is the path, the mix model is the mix, and the experiment is the cut. Marketing data science is that desk, and decision science is the call after it: which dollar caused the sale, and which dollar stays. The warehouse work is SQL and Python on Cloud Run. Experimentation is how a cut gets made.",
+    "Google, Meta, and Microsoft each score their own conversions. That channel setup is what platform ROAS can say. The executive read is cash, the mix the model recommends, and the cut the test supports. SQL, Snowflake, Python, R, Looker, and Tableau are how the desk is built and shown.",
   ],
   terms: [
     {
       name: "Marketing science",
-      note: "Google Meridian MMM, a geo holdout, or an RCT. The same media measurement in the McFly Ads consulting practice.",
+      note: "Run Google Meridian, read it, recommend the mix. The same media measurement in the McFly Ads consulting practice.",
+    },
+    {
+      name: "Test-and-learn",
+      note: "Geo holdout, GeoLift, or RCT. The decision is keep or cut.",
     },
     {
       name: "Attribution",
-      note: "MTA beside cash MER, CAC, and LTV. iROAS when the test decides.",
+      note: "MTA for the path, beside cash MER, CAC, and LTV. iROAS when the test decides.",
+    },
+    {
+      name: "Stack",
+      note: "SQL, Snowflake, Python, R, Looker, and Tableau, in the work itself.",
     },
     {
       name: "GTM analytics",
@@ -124,9 +133,9 @@ export const featured = [
       problem:
         "Platform ROAS was treated as the budget. Finance and marketing did not share one sales number.",
       method:
-        "Marketing science for the CEO. Cash MER as the control. Google Meridian MMM when the mix call is causal. A geo holdout, GeoLift, or an RCT when two channels claim the same sale.",
+        "Marketing science for the CEO. I run Google Meridian MMM on cash sales and exact spend, read it, and recommend the mix. A geo holdout, GeoLift, or an RCT when two channels claim the same sale.",
       decision:
-        "Below cash MER break-even, we cut. Meridian sets the mix. The holdout decides incrementality.",
+        "Below cash MER break-even, we cut. Meridian sets the mix. The holdout decides incrementality. That is the spend story I put in front of the CEO.",
       outcome:
         "The CEO spends against one cash MER desk. About $20K a month left the Domo bill. A Cloud Run partner portal for about fifty people sits under that seat.",
     },
@@ -143,9 +152,9 @@ export const featured = [
       problem:
         "Thirteen catalogs. No single place an executive could see contribution past last-click.",
       method:
-        "I organized the thirteen-sub-brand data portfolio. I built the warehouse and the advertising data-science station. MTA, LTV, and cohorts in BigQuery. Robyn and GeoLift when platforms claimed the same order.",
+        "I organized the thirteen-sub-brand data portfolio. I built the warehouse and the advertising data-science station. MTA, LTV, and cohorts in BigQuery. I read Robyn for the mix and ran GeoLift when platforms claimed the same order.",
       decision:
-        "The causal check went to the CMO. Contribution past last-click was the weekly read.",
+        "The causal check went to the CMO as the spend call. Contribution past last-click was the weekly read.",
       outcome:
         "Executives could see profit margins and COGS on one station. Organized and built. I did not inherit a finished desk.",
     },
@@ -180,8 +189,8 @@ export const fleet = {
   lead: "I run measurement for the CEO: cash MER, mix models, and incrementality. The warehouse left Domo for Cloud Run so that desk could keep one number.",
   beats: featured[0].beats,
   body: [
-    "The job is the number the CEO spends against. Cash MER is the control — ledger sales over exact spend on Google, Meta, and Microsoft. Platform ROAS is not the budget. When the mix call is causal I run Meridian. When two channels claim the same sale I run GeoLift or an RCT. Below break-even, we cut.",
-    "I allocate a seven-figure monthly paid mix on that desk. Attribution and incrementality sit next to the BI, not in a side deck. The warehouse work is underneath so finance and marketing are looking at the same sales number.",
+    "The job is the number the CEO spends against. Cash MER is the control — ledger sales over exact spend on Google, Meta, and Microsoft. I run Google Meridian on that cash and that spend, read the model, and recommend the mix. When two channels claim the same sale I set a geo holdout, GeoLift, or an RCT. Test-and-learn ends as a decision: keep or cut. Below break-even, we cut. Platform ROAS is not the budget.",
+    "The executive read is a spend story: cash in, exact spend, the mix the model recommends, and the cut the test supports. Google, Meta, and Microsoft each score their own conversions, and that channel setup is what platform ROAS can say. I choose the measurement for the question: Meridian for the mix, a holdout or RCT for incrementality, attribution and MTA for the path. SQL, Snowflake, Python, and R sit under the model. Looker and Tableau are how a desk gets seen. I lead the measurement myself, and I lead a social media manager, a graphic designer, and international advertising leads.",
     "The warehouse was in Domo when I arrived. I moved it to Google Cloud Run. Same work. About $20K a month left the bill. I also built a partner portal on Cloud Run for about fifty people — executives, rep leads, and reps — live Oracle NetSuite, role-based access, messaging between users. SQL and Snowflake sit under that path. That warehouse-to-portal path is the GTM analytics on this seat. The cost and the portal are on the resume. They support the measurement seat.",
   ],
   points: [
@@ -191,11 +200,15 @@ export const fleet = {
     },
     {
       title: "Mix models",
-      body: "Meridian when the mix call is causal. I put the number in front of the CEO.",
+      body: "I run Meridian on ledger sales and exact spend, read it, and put the mix recommendation in front of the CEO.",
     },
     {
       title: "Incrementality",
-      body: "GeoLift or an RCT when two channels claim the same sale. The test decides the call.",
+      body: "I set a geo holdout, GeoLift, or an RCT when two channels claim the same sale. Test-and-learn decides keep or cut.",
+    },
+    {
+      title: "Which measurement",
+      body: "Meridian for the mix. A holdout or RCT for incrementality. Attribution for the path. Platform ROAS stays the platform's claim.",
     },
     {
       title: "Warehouse move",
@@ -224,7 +237,7 @@ export const cases: CaseStudy[] = [
     body: [
       "I organized the data portfolio for thirteen unique sub-brands under the Nutricost main brand. That was the job on day one — one company, thirteen catalogs, and no single place an executive could see contribution.",
       "I built the full data warehouse. I built the advertising data-science station where executives could see profit margins and COGS. Organized and built. I did not inherit a finished desk.",
-      "The weekly read was marketing data science for the CMO: contribution past last-click, multi-touch attribution, LTV, and cohorts in BigQuery, with GA4 and Looker Studio on the same view. When two platforms claimed the same order I ran Robyn and GeoLift and presented the call to the CMO. That causal check is the decision science on the seat.",
+      "The weekly read was marketing data science for the CMO: contribution past last-click, multi-touch attribution, LTV, and cohorts in BigQuery, with GA4 and Looker Studio on the same view. SQL and R did that work. When two platforms claimed the same order I read Robyn for the mix and ran GeoLift. I took that spend call to the CMO. That causal check is the decision science on the seat.",
     ],
     points: [
       {
@@ -245,7 +258,7 @@ export const cases: CaseStudy[] = [
       },
       {
         title: "Causal check",
-        body: "Robyn and GeoLift when platforms claimed the same order. The test went to the CMO.",
+        body: "I read Robyn for the mix and ran GeoLift when platforms claimed the same order. The spend call went to the CMO.",
       },
     ],
   },
@@ -260,7 +273,7 @@ export const cases: CaseStudy[] = [
     beats: featured[2].beats,
     body: [
       "The product is live. Install it. It reads the Shopify orders a shop already has and shows typical order, returning dollars, time to a second purchase, and LTV. Add spend when you want sales divided by spend. There is no ad-network login.",
-      "I built Mcfly Analytics Shopify App as a personal project next to the full-time seats. The consulting practice is McFly Ads. The title there is Founder and Data Analytics Consultant — since 2020.",
+      "I built Mcfly Analytics Shopify App as a personal project next to the full-time seats. The consulting practice is McFly Ads. The title there is Founder and Data Analytics Consultant — since 2020. I own the delivery: the measurement plan, the read for the brand, and the product.",
       "The public SAMPLE desk is Harbor Home Co at mcflyads.com/demo. The consulting work is marketing science for ten named brands: media measurement, mix models, incrementality, dashboards, and paid allocation. The names are on this page.",
     ],
     points: [
@@ -270,7 +283,7 @@ export const cases: CaseStudy[] = [
       },
       {
         title: "Consulting title",
-        body: "Founder and Data Analytics Consultant at McFly Ads. The product name and the consulting practice are not the same thing.",
+        body: "Founder and Data Analytics Consultant at McFly Ads. I own the measurement plan and the read. The product name and the consulting practice are not the same thing.",
       },
       {
         title: "Ten named brands",
@@ -379,7 +392,7 @@ export const resume = {
       bullets: [
         "Moved the full data warehouse off Domo onto Google Cloud Run. About $20K a month saved.",
         "Built a partner portal on Cloud Run for about 50 people — executives, rep leads, and reps. Live Oracle NetSuite, role-based access, messaging between users, hard cost cap.",
-        "Meridian MMM on Google, Meta, and Microsoft. GeoLift and RCTs when two channels claimed the same sale. Below cash MER break-even, we cut.",
+        "Meridian MMM on Google, Meta, and Microsoft: read the model, then the mix recommendation to the CEO. GeoLift and RCTs when two channels claimed the same sale. Below cash MER break-even, we cut.",
         "Directed a seven-figure monthly paid mix against cash MER for the CEO. Platform ROAS was not the budget.",
         "Snowflake, dbt, and Airflow into Oracle NetSuite. R, SQL, and Python. BI in Looker, Domo, and Tableau.",
         "Led a social media manager, a graphic designer, and international advertising leads in Asia, the UK, Canada, and Australia.",
@@ -393,6 +406,7 @@ export const resume = {
       bullets: [
         "Organized a data portfolio for 13 unique sub-brands under the Nutricost main brand.",
         "Built the full data warehouse and the advertising data-science station where executives could see profit margins and COGS.",
+        "Read Robyn for the mix and ran GeoLift when platforms claimed the same order. Took that spend call to the CMO. MTA, LTV, and cohorts in BigQuery with SQL and R.",
       ],
     },
     {
@@ -411,7 +425,7 @@ export const resume = {
     {
       label: "Measurement",
       items:
-        "media measurement, marketing mix modeling (MMM), Robyn, Meridian, incrementality testing, GeoLift, multi-touch attribution, cash MER, budget allocation",
+        "media measurement, marketing mix modeling (MMM), Robyn, Meridian, incrementality testing, GeoLift, test-and-learn, multi-touch attribution, cash MER, budget allocation",
     },
     {
       label: "Data & BI",
