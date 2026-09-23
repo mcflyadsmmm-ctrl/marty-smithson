@@ -6,7 +6,12 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Resume",
   description: "Marty Smithson’s resume. Same facts, different PDF emphasis.",
-  alternates: { canonical: "/resume" },
+  alternates: {
+    canonical: "/resume",
+    types: {
+      "text/markdown": "/resume.md",
+    },
+  },
 };
 
 export default function ResumePage() {
@@ -16,6 +21,7 @@ export default function ResumePage() {
         <h1>Resume</h1>
         <p className="lede">{resume.role}</p>
         <p className="quiet">{site.locationLine}</p>
+        <p className="quiet">{site.authorization}</p>
         <p className="quiet">{resume.education}</p>
         <CtaRow />
       </header>
@@ -49,7 +55,7 @@ export default function ResumePage() {
                       href={pdf.href}
                       download
                     >
-                      Download
+                      Download {pdf.title}
                     </a>
                   </td>
                 </tr>
@@ -59,8 +65,7 @@ export default function ResumePage() {
         </table>
 
         <section className="section" aria-labelledby="experience-title">
-          <p className="field">Experience</p>
-          <h2 id="experience-title" className="visually-hidden">
+          <h2 id="experience-title" className="field">
             Experience
           </h2>
           <ol className="resume-jobs">
@@ -81,8 +86,7 @@ export default function ResumePage() {
         </section>
 
         <section className="section" aria-labelledby="skills-title">
-          <p className="field">Skills</p>
-          <h2 id="skills-title" className="visually-hidden">
+          <h2 id="skills-title" className="field">
             Skills
           </h2>
           {resume.skills.map((group) => (
@@ -93,12 +97,14 @@ export default function ResumePage() {
         </section>
 
         <section className="section" aria-labelledby="school-title">
-          <p className="field">Education</p>
-          <h2 id="school-title" className="visually-hidden">
+          <h2 id="school-title" className="field">
             Education
           </h2>
           <p>{resume.education}</p>
         </section>
+        <p className="quiet">
+          <a href="/resume.md">Plain-text resume</a>
+        </p>
 
         <div className="resume-sign">
           <p className="quiet">

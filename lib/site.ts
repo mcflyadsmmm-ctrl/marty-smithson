@@ -6,6 +6,7 @@ export const site = {
     "Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — $25M+ paid mix. Head of BI & Performance Marketing at Black Clover. I report to the CEO. Mcfly Analytics Shopify App LIVE.",
   spendHeadline: "$25M+ in career-managed ad spend",
   url: "https://marty-smithson.pages.dev",
+  revised: "2026-09-23",
   email: "martysmithson04@gmail.com",
   linkedin: "https://www.linkedin.com/in/marty-smithson",
   linkedinLabel: "linkedin.com/in/marty-smithson",

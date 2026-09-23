@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { ExternalLink } from "@/components/ExternalLink";
 import { brands } from "@/lib/content";
+import { clientListGraph, jsonLd } from "@/lib/structured-data";
 
 export function BrandRoster({
   wall = false,
@@ -7,39 +9,43 @@ export function BrandRoster({
   wall?: boolean;
 }) {
   return (
-    <ul className={wall ? "client-strip" : "brand-list"}>
-      {brands.map((brand) => {
-        const mark = (
-          <>
-            {brand.logo ? (
-              <Image
-                className="client-logo"
-                src={brand.logo}
-                alt=""
-                width={28}
-                height={28}
-              />
-            ) : (
-              <span className="brand-mark" aria-hidden="true">
-                {brand.mark}
-              </span>
-            )}
-            <span>{brand.name}</span>
-          </>
-        );
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(clientListGraph) }}
+      />
+      <ul className={wall ? "client-strip" : "brand-list"}>
+        {brands.map((brand) => {
+          const mark = (
+            <>
+              {brand.logo ? (
+                <Image
+                  className="client-logo"
+                  src={brand.logo}
+                  alt=""
+                  width={28}
+                  height={28}
+                />
+              ) : (
+                <span className="brand-mark" aria-hidden="true">
+                  {brand.mark}
+                </span>
+              )}
+              <span className="client-name">{brand.name}</span>
+            </>
+          );
 
-        return (
-          <li key={brand.name}>
-            {brand.href ? (
-              <a href={brand.href} rel="noreferrer" target="_blank">
-                {mark}
-              </a>
-            ) : (
-              <span className="client-plain">{mark}</span>
-            )}
-          </li>
-        );
-      })}
-    </ul>
+          return (
+            <li key={brand.name}>
+              {brand.href ? (
+                <ExternalLink href={brand.href}>{mark}</ExternalLink>
+              ) : (
+                <span className="client-plain">{mark}</span>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </>
   );
 }

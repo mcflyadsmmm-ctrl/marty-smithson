@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { BrandRoster } from "@/components/BrandRoster";
 import { CaseArticle } from "@/components/CaseArticle";
+import { ExternalLink } from "@/components/ExternalLink";
 import { McflyLiveDesk } from "@/components/desks/McflyLiveDesk";
 import { NutricostDesk } from "@/components/desks/NutricostDesk";
 import { caseBySlug, cases } from "@/lib/content";
@@ -54,12 +55,8 @@ export default async function CasePage({ params }: Props) {
           <Link href="/work">All work</Link>
           {study.slug === "mcfly" ? (
             <>
-              <a href={site.mcflyDemo} rel="noreferrer" target="_blank">
-                Harbor SAMPLE
-              </a>
-              <a href={site.mcfly} rel="noreferrer" target="_blank">
-                {site.mcflyProduct}
-              </a>
+              <ExternalLink href={site.mcflyDemo}>Harbor SAMPLE</ExternalLink>
+              <ExternalLink href={site.mcfly}>{site.mcflyProduct}</ExternalLink>
             </>
           ) : null}
         </>

@@ -1,3 +1,4 @@
+import { ExternalLink } from "@/components/ExternalLink";
 import { site } from "@/lib/site";
 
 export function CtaRow({
@@ -10,19 +11,13 @@ export function CtaRow({
   return (
     <p className={className}>
       <a href={`mailto:${site.email}`}>{site.email}</a>
-      <a href={site.linkedin} rel="noreferrer" target="_blank">
-        LinkedIn
-      </a>
+      <ExternalLink href={site.linkedin}>LinkedIn</ExternalLink>
       <a href={site.resumes.full} download>
-        Resume
+        Resume PDF
       </a>
-      <a href={site.mcfly} rel="noreferrer" target="_blank">
-        {site.mcflyProduct}
-      </a>
+      <ExternalLink href={site.mcfly}>{site.mcflyProduct}</ExternalLink>
       {showDemo ? (
-        <a href={site.mcflyDemo} rel="noreferrer" target="_blank">
-          Harbor SAMPLE
-        </a>
+        <ExternalLink href={site.mcflyDemo}>Harbor SAMPLE</ExternalLink>
       ) : null}
     </p>
   );

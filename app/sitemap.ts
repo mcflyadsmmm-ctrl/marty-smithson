@@ -1,30 +1,26 @@
 import type { MetadataRoute } from "next";
-import { cases } from "@/lib/content";
+import { cases, resumePdfs } from "@/lib/content";
 import { desks } from "@/lib/desks";
 import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-  const staticRoutes = [
+  const lastModified = new Date(site.revised);
+  const paths = [
     "",
     "/work",
     "/work/desks",
     "/work/systems-fleet",
     "/resume",
+    "/resume.md",
     "/contact",
+    "/llms.txt",
+    ...desks.map((desk) => `/work/desks/${desk.slug}`),
+    ...cases.map((study) => `/work/${study.slug}`),
+    ...resumePdfs.map((pdf) => pdf.href),
   ];
-  return [
-    ...staticRoutes.map((path) => ({
-      url: `${site.url}${path}`,
-      lastModified: now,
-    })),
-    ...desks.map((desk) => ({
-      url: `${site.url}/work/desks/${desk.slug}`,
-      lastModified: now,
-    })),
-    ...cases.map((study) => ({
-      url: `${site.url}/work/${study.slug}`,
-      lastModified: now,
-    })),
-  ];
+
+  return paths.map((path) => ({
+    url: `${site.url}${path}`,
+    lastModified,
+  }));
 }

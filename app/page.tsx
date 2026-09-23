@@ -6,16 +6,24 @@ import { HarborFeature } from "@/components/desks/HarborFeature";
 import { MethodNote } from "@/components/MethodNote";
 import { ProofStrip } from "@/components/ProofStrip";
 import { hero } from "@/lib/content";
+import { jsonLd, profileGraph } from "@/lib/structured-data";
 
 export default function HomePage() {
   return (
     <article className="page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(profileGraph) }}
+      />
       <header className="page-head page-head-hero wrap">
         <h1>{hero.name}</h1>
         <p className="lede">{hero.role}</p>
-        <p className="quiet">
-          {hero.line} {hero.place} {hero.school}
-        </p>
+        <div className="hero-facts">
+          <p>{hero.line}</p>
+          <p>{hero.place}</p>
+          <p>{hero.school}</p>
+        </div>
+        <CtaRow />
       </header>
 
       <div className="wrap">
@@ -36,7 +44,12 @@ export default function HomePage() {
         <HarborFeature />
         <MethodNote />
         <Credo />
-        <CtaRow />
+        <section className="section" aria-labelledby="contact-title">
+          <h2 id="contact-title" className="field">
+            Contact
+          </h2>
+          <CtaRow />
+        </section>
       </div>
     </article>
   );

@@ -1,7 +1,8 @@
 import { ImageResponse } from "next/og";
+import { hero } from "@/lib/content";
+import { site } from "@/lib/site";
 
-export const alt =
-  "Marty Smithson. Marketing analytics, measurement, and BI.";
+export const alt = site.title;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -15,8 +16,8 @@ export default function OpenGraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#d0dbd4",
-          color: "#141a17",
+          backgroundColor: "#e4eee7",
+          color: "#102018",
           padding: "72px 80px 64px",
         }}
       >
@@ -24,8 +25,8 @@ export default function OpenGraphImage() {
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: 28,
-            maxWidth: 920,
+            gap: 24,
+            maxWidth: 980,
           }}
         >
           <div
@@ -36,29 +37,28 @@ export default function OpenGraphImage() {
               lineHeight: 1.05,
             }}
           >
-            Marty Smithson
+            {site.name}
           </div>
           <div
             style={{
-              fontSize: 30,
-              lineHeight: 1.4,
-              color: "#141a17",
+              fontSize: 32,
+              lineHeight: 1.35,
+              color: "#102018",
             }}
           >
-            Marketing analytics and measurement. Mix models, attribution,
-            incrementality, cash MER.
+            {hero.role}
           </div>
         </div>
         <div
           style={{
             display: "flex",
             fontSize: 22,
-            color: "#465049",
-            borderTop: "2px solid #141a17",
+            color: "#1b6b4a",
+            borderTop: "2px solid #102018",
             paddingTop: 22,
           }}
         >
-          Black Clover · Nutricost · Mcfly Analytics Shopify App
+          Black Clover · Nutricost · {site.mcflyProduct}
         </div>
       </div>
     ),
