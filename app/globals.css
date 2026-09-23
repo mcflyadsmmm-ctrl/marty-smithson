@@ -7,7 +7,7 @@
   --rule: #c5d4cb;
   --accent: #1b6b4a;
   --accent-soft: #d8efe4;
-  --sample: #b45309;
+  --sample: #9a4308;
   --sample-soft: #f6e7d4;
   --spine: #102018;
   --spine-ink: #f4fff8;
@@ -48,6 +48,11 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
+  .work-entry:hover,
+  a.work-entry:hover {
+    transform: none;
+  }
 }
 
 body {
@@ -70,7 +75,8 @@ a:hover {
   color: var(--accent);
 }
 
-a:focus-visible {
+a:focus-visible,
+button:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 3px;
 }
@@ -235,9 +241,11 @@ p {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.55rem;
   margin: 0 0 1.15rem;
+  padding: 0;
+  list-style: none;
 }
 
-.proof-strip p {
+.proof-strip li {
   margin: 0;
   padding: 0.85rem 0.9rem 0.95rem;
   background: var(--plate);
@@ -279,7 +287,7 @@ p {
 }
 
 .case-beats.is-page {
-  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  grid-template-columns: repeat(4, minmax(12.5rem, 1fr));
   gap: 0.55rem;
 }
 
@@ -316,13 +324,13 @@ p {
 
 .case-beats dd {
   margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.45;
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: var(--ink);
   overflow: visible;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   word-break: normal;
-  hyphens: auto;
+  hyphens: manual;
 }
 
 .case-card {
@@ -479,6 +487,20 @@ p {
   max-width: 54rem;
   font-size: clamp(1.12rem, 2.1vw, 1.38rem);
   line-height: 1.35;
+}
+
+.hero-facts {
+  margin-top: 0.85rem;
+  max-width: 40rem;
+  color: var(--mute);
+}
+
+.hero-facts p {
+  margin: 0;
+}
+
+.hero-facts p + p {
+  margin-top: 0.25rem;
 }
 
 .page-head-tight h1 {
@@ -1082,8 +1104,14 @@ p {
   align-items: center;
   gap: 0.55rem;
   min-height: 44px;
+  min-width: 0;
   padding: 0.7rem 0.8rem;
   text-decoration: none;
+}
+
+.client-name {
+  min-width: 0;
+  line-height: 1.3;
 }
 
 .client-strip a:hover {
@@ -1255,7 +1283,7 @@ a.work-entry:hover .more {
   display: inline-block;
   margin-left: 0.35rem;
   padding: 0.12rem 0.4rem;
-  border-radius: 999px;
+  border-radius: 2px;
   font-family: var(--mono);
   font-size: 0.7rem;
   font-weight: 500;
@@ -1694,7 +1722,7 @@ a.work-entry:hover .more {
   justify-content: center;
   min-height: 44px;
   padding: 0 1.05rem;
-  border-radius: 999px;
+  border-radius: var(--radius);
   background: var(--take);
   color: var(--take-ink);
   text-decoration: none;
@@ -1868,18 +1896,7 @@ a.work-entry:hover .more {
 
   .client-wall,
   .client-strip {
-    display: flex;
-    grid-template-columns: none;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x proximity;
-    padding-bottom: 0.35rem;
-  }
-
-  .client-wall li,
-  .client-strip li {
-    flex: 0 0 13.5rem;
-    scroll-snap-align: start;
+    grid-template-columns: 1fr 1fr;
   }
 
   .proof-strip,
@@ -1891,6 +1908,10 @@ a.work-entry:hover .more {
   .case-beats.is-card,
   .case-card .case-beats {
     grid-template-columns: 1fr;
+  }
+
+  .case-beats.is-page {
+    grid-template-columns: 1fr 1fr;
   }
 
   .desk-rail {

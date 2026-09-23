@@ -213,6 +213,78 @@ for (const [file, expected] of Object.entries(PDF_MD5)) {
 
 assert.equal(CLIENTS.length, 10, "exactly ten named clients");
 
+const homeOrder = [
+  "ProofStrip",
+  "BrandRoster",
+  "CaseCards",
+  "HarborFeature",
+  "MethodNote",
+  "Credo",
+];
+let cursor = -1;
+for (const marker of homeOrder) {
+  const at = home.indexOf(`<${marker}`);
+  assert.ok(at > cursor, `${marker} is out of home order`);
+  cursor = at;
+}
+assert.ok(
+  home.indexOf("<CtaRow") < home.indexOf("<ProofStrip"),
+  "hero should carry the contact links",
+);
+assert.ok(
+  home.lastIndexOf("<CtaRow") > home.indexOf("<Credo"),
+  "contact should close the homepage",
+);
+assert.match(home, /profileGraph/, "homepage should emit ProfilePage JSON-LD");
+
+const structured = readFileSync(join(root, "lib/structured-data.ts"), "utf8");
+const worksFor = structured.match(/worksFor:\s*\[[^\]]*\]/);
+assert.ok(worksFor, "Person.worksFor missing");
+assert.match(worksFor[0], /Black Clover/);
+assert.match(worksFor[0], /McFly Ads/);
+assert.doesNotMatch(worksFor[0], /Nutricost/, "Nutricost is a prior seat, not a current employer");
+assert.match(structured, /Head of BI & Performance Marketing/);
+assert.match(structured, /Advertising Data Scientist/);
+assert.match(structured, /DigitalDocument/);
+assert.match(structured, /\/resume\.md/);
+
+const sitemap = readFileSync(join(root, "app/sitemap.ts"), "utf8");
+assert.doesNotMatch(sitemap, /new Date\(\)/, "sitemap lastmod must stay stable");
+assert.match(sitemap, /site\.revised/);
+assert.match(sitemap, /\/resume\.md/);
+assert.match(sitemap, /\/llms\.txt/);
+assert.match(sitemap, /resumePdfs/);
+
+assert.equal(
+  existsSync(join(root, "app/llms.txt/route.ts")),
+  true,
+  "llms.txt route missing",
+);
+const resumeMdRoute = readFileSync(join(root, "app/resume.md/route.ts"), "utf8");
+assert.doesNotMatch(
+  resumeMdRoute,
+  /Content-Disposition/,
+  "plain-text resume should be readable inline",
+);
+assert.match(resumePage, /Plain-text resume/);
+assert.match(resumePage, /site\.authorization/);
+
+const og = readFileSync(join(root, "app/opengraph-image.tsx"), "utf8");
+assert.match(og, /#e4eee7/, "share image should use the sage paper");
+assert.match(og, /hero\.role/, "share image should use the locked hero line");
+
+assert.match(
+  beatsCss,
+  /\.case-beats\.is-page \{[\s\S]*minmax\(12\.5rem, 1fr\)/,
+  "deep case beats need at least 12rem",
+);
+assert.match(beatsCss, /--sample:\s*#9a4308/, "SAMPLE mark must clear contrast");
+assert.doesNotMatch(
+  beatsCss,
+  /scroll-snap-type:\s*x proximity/,
+  "client names should stay on the page, not in a scroll tray",
+);
+
 const deskSource = readFileSync(join(root, "lib/desks.ts"), "utf8");
 assert.match(deskSource, /slug: "mcfly"/);
 assert.match(deskSource, /slug: "cash-mer"/);

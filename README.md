@@ -42,7 +42,7 @@ npm run build
 
 | Path | Page |
 | --- | --- |
-| `/` | Hero, proof strip, Harbor SAMPLE, three case cards, methods, client wall, credo, contact |
+| `/` | Hero, proof strip, ten-name client strip, three case cards, Harbor SAMPLE, methods, credo, contact |
 | `/work` | Harbor SAMPLE, case cards, desk shelf, client wall |
 | `/work/desks` | Desk shelf |
 | `/work/desks/mcfly` | Mcfly Analytics Shopify App LIVE peek |

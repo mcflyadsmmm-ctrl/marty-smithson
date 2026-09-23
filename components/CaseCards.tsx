@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CaseBeats } from "@/components/CaseBeats";
+import { ExternalLink } from "@/components/ExternalLink";
 import { featured } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -23,9 +24,7 @@ export function CaseCards() {
           <p className="close-links">
             <Link href={item.href}>Read the case</Link>
             {item.key === "mcfly" ? (
-              <a href={site.mcflyDemo} rel="noreferrer" target="_blank">
-                Harbor SAMPLE
-              </a>
+              <ExternalLink href={site.mcflyDemo}>Harbor SAMPLE</ExternalLink>
             ) : (
               <Link href={item.desk}>The desk</Link>
             )}

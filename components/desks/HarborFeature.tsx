@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ExternalLink } from "@/components/ExternalLink";
 import { SalesChart } from "@/components/desks/charts";
 import { harborSample, mcflyRoas, type McflyPeriod } from "@/lib/desks";
 import { money, multiple, percent, signedMoney, signedPercent } from "@/lib/format";
@@ -47,12 +48,8 @@ export function HarborFeature() {
           </p>
         </div>
         <p className="harbor-actions">
-          <a href={site.mcflyDemo} rel="noreferrer" target="_blank">
-            Harbor SAMPLE
-          </a>
-          <a href={site.mcfly} rel="noreferrer" target="_blank">
-            {site.mcflyProduct}
-          </a>
+          <ExternalLink href={site.mcflyDemo}>Harbor SAMPLE</ExternalLink>
+          <ExternalLink href={site.mcfly}>{site.mcflyProduct}</ExternalLink>
         </p>
       </div>
 
