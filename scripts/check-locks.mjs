@@ -33,7 +33,9 @@ const REQUIRED = [
   "Mcfly Analytics Shopify App",
   "Founder and Data Analytics Consultant",
   "Advertising Data Scientist",
-  "Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)",
+  "Bachelor of Science, Emphasis: Data Analytics and Statistics, Utah Valley University",
+  "I hold a bachelor's in data analytics and statistics from Utah Valley University.",
+  "Demo on simulated data",
   "$25M+ in career-managed ad spend",
   "https://mcflyads.com",
   "https://mcflyads.com/demo",
@@ -199,8 +201,15 @@ assert.match(content, /title: "Advertising Data Scientist"/);
 assert.match(content, /title: "Founder and Data Analytics Consultant"/);
 assert.match(
   content,
-  /Bachelor of Science — Emphasis: Data Analytics and Statistics \(Utah Valley University, May 2025\)/,
+  /Bachelor of Science, Emphasis: Data Analytics and Statistics, Utah Valley University/,
 );
+assert.match(
+  content,
+  /I hold a bachelor's in data analytics and statistics from Utah Valley University\./,
+);
+assert.doesNotMatch(blob, /May 2025/, "degree date must stay off user-facing surfaces");
+assert.match(content, /February 2025 to present/, "employment dates stay");
+assert.match(site, /Bachelor of Science, Emphasis: Data Analytics and Statistics, Utah Valley University/);
 assert.doesNotMatch(content, /listing pending/i);
 assert.doesNotMatch(content, /CEO of McFly/);
 assert.doesNotMatch(resumePage, /listing pending/i);
@@ -237,6 +246,7 @@ assert.equal(CLIENTS.length, 10, "exactly ten named clients");
 
 const homeOrder = [
   "ProofStrip",
+  "WorkSamples",
   "BrandRoster",
   "CaseCards",
   "GtmBridge",
@@ -259,6 +269,22 @@ assert.ok(
   "contact should close the homepage",
 );
 assert.match(home, /profileGraph/, "homepage should emit ProfilePage JSON-LD");
+const samples = readFileSync(join(root, "components/WorkSamples.tsx"), "utf8");
+assert.match(samples, /id="samples"/, "work samples need a nav target");
+assert.match(samples, /Demo on simulated data/);
+assert.match(site, /href: "\/#samples"/, "nav should link to work samples");
+for (const file of [
+  "mmm_geo_lift_demo.ipynb",
+  "test-writeup.md",
+  "client-readout-deck.pdf",
+  "measurement-pov.md",
+]) {
+  assert.match(
+    content,
+    new RegExp(`consulting-proof/${file.replace(".", "\\.")}`),
+    `missing work sample: ${file}`,
+  );
+}
 
 const structured = readFileSync(join(root, "lib/structured-data.ts"), "utf8");
 const worksFor = structured.match(/worksFor:\s*\[[^\]]*\]/);

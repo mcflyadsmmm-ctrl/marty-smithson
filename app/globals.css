@@ -34,6 +34,7 @@ html {
   color: var(--ink);
   font-size: 17px;
   scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1182,6 +1183,69 @@ p {
   background: transparent;
 }
 
+.work-samples {
+  scroll-margin-top: 4.5rem;
+}
+
+.work-samples .section-copy {
+  margin-bottom: 1rem;
+}
+
+.sample-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+}
+
+.sample-card {
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--accent);
+  color: inherit;
+  text-decoration: none;
+}
+
+.sample-card h3 {
+  margin-top: 0.15rem;
+  font-size: 1.15rem;
+}
+
+.sample-card:hover {
+  color: inherit;
+  border-color: var(--ink);
+  border-top-color: var(--accent);
+}
+
+.sample-card:hover .more {
+  color: var(--accent);
+}
+
+.sim-tag {
+  margin-left: 0.55rem;
+  color: var(--sample);
+  font-weight: 500;
+}
+
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-chips li {
+  padding: 0.22rem 0.45rem;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--accent-soft) 70%, var(--plate));
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
 .case-stack {
   grid-template-columns: 1fr;
   gap: 0.7rem;
@@ -1934,7 +1998,8 @@ a.work-entry:hover .more {
   }
 
   .proof-strip,
-  .case-grid {
+  .case-grid,
+  .sample-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -2007,6 +2072,12 @@ a.work-entry:hover .more {
     border-left: 0;
     border-top: 1px solid var(--rule);
   }
+
+  .sample-grid .sample-card,
+  .sample-grid .work-entry + .work-entry {
+    border-left: 1px solid var(--rule);
+    border-top: 3px solid var(--accent);
+  }
 }
 
 @media (max-width: 760px) {
@@ -2059,7 +2130,8 @@ a.work-entry:hover .more {
 
 @media (max-width: 640px) {
   .desk-rail,
-  .case-grid {
+  .case-grid,
+  .sample-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2129,8 +2201,16 @@ a.work-entry:hover .more {
   }
 
   .site-header-inner {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 0.1rem;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 0.1rem 1rem;
   }
 
   h1 {

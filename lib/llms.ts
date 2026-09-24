@@ -7,6 +7,7 @@ import {
   hero,
   methods,
   proof,
+  workSamples,
 } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -32,6 +33,17 @@ ${hero.place}
 ${hero.school}
 
 ${site.spendHeadline}.
+
+## Work samples
+
+Public files on simulated data.
+
+${workSamples
+  .map(
+    (item) =>
+      `- [${item.title}](${item.href}): ${item.line} Skills: ${item.skills.join(", ")}. Demo on simulated data.`,
+  )
+  .join("\n")}
 
 ## Measurement
 

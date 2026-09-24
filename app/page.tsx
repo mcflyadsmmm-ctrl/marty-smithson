@@ -6,6 +6,7 @@ import { GtmBridge } from "@/components/GtmBridge";
 import { HarborFeature } from "@/components/desks/HarborFeature";
 import { MethodNote } from "@/components/MethodNote";
 import { ProofStrip } from "@/components/ProofStrip";
+import { WorkSamples } from "@/components/WorkSamples";
 import { clientWall, hero } from "@/lib/content";
 import { jsonLd, profileGraph } from "@/lib/structured-data";
 
@@ -29,6 +30,7 @@ export default function HomePage() {
 
       <div className="wrap">
         <ProofStrip />
+        <WorkSamples />
         <section className="section" aria-labelledby="clients-title">
           <p className="field">{clientWall.field}</p>
           <h2 id="clients-title">{clientWall.title}</h2>
