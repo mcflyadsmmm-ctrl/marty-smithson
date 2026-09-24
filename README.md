@@ -65,7 +65,7 @@ Nutricost: Advertising Data Scientist, reported to the CMO. Organized a data por
 
 Product name (locked): Mcfly Analytics Shopify App. LIVE at https://mcflyads.com. Do not call the product “McFly” or “McFly Ads”. McFly Ads is the consulting practice only.
 
-Education: Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025).
+Education: Bachelor of Science, Emphasis: Data Analytics and Statistics, Utah Valley University. No month or year on the degree.
 
 One spend headline: $25M+ in career-managed ad spend. Do not invent $30M.
 

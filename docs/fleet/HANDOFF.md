@@ -13,18 +13,18 @@
 
 ### Site locks (2026-09-17) — override older rows below on user-facing surfaces
 - Hero: Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — $25M+ paid mix. Title/meta match. Not “I build the systems behind better decisions.”
-- Home order: hero → proof strip → 10-name client strip (logos + public sites) → three readable case cards → Harbor SAMPLE as one proof desk → method keywords → credo (platform ≠ incremental ≠ cash) → contact
+- Home order: hero → proof strip → Work samples (Measurement proof, simulated data) → 10-name client strip (logos + public sites) → three readable case cards → Harbor SAMPLE as one proof desk → method keywords → credo (platform ≠ incremental ≠ cash) → contact
 - Harbor Home Co SAMPLE ($82,068 / $23,414 / 3.51×) is one proof desk, not the site personality. Synthetic Black Clover / Nutricost books stay labeled as such. Case-card beats stack — never four skinny columns inside a third-width card.
 - McFly Ads consulting title: Founder and Data Analytics Consultant (never CEO)
 - All 10 clients visible as a name wall (exact spellings)
 - Three deep cases: Black Clover (Head of BI & Performance Marketing) · Nutricost Advertising Data Scientist · Mcfly Analytics Shopify App LIVE
-- Education: Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)
+- Education: Bachelor of Science, Emphasis: Data Analytics and Statistics, Utah Valley University
 - One spend headline: $25M+ in career-managed ad spend. Do not invent $30M.
 - Domo→Cloud Run supports the Black Clover case only. It must not own the site identity.
 - No sample architecture diagrams as homepage brand. No sample-disclaimer theater.
 
 ### Site locks (2026-09-16) — titles still locked; homepage brand superseded by 2026-09-17
-- Education: Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)
+- Education: Bachelor of Science, Emphasis: Data Analytics and Statistics, Utah Valley University
 - Nutricost title: Advertising Data Scientist
 - Product name (locked): Mcfly Analytics Shopify App — LIVE at https://mcflyads.com. Do not call the product “McFly” or “McFly Ads”.
 - McFly Ads: consulting practice / employer only
@@ -47,7 +47,7 @@ Grok Bot / Orchestrator briefs and routes only. **All real site/repo/code/PDF pr
 | Age | 29 |
 | Location | American Fork, UT · Utah hybrid / US remote · EST overlap |
 | Email (apps) | martysmithson04@gmail.com |
-| Education | Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025) |
+| Education | Bachelor of Science, Emphasis: Data Analytics and Statistics, Utah Valley University |
 | Current | Head of BI & Performance Marketing, Black Clover (~$45M apparel), reports to CEO · started Feb 2025 · ~18 mo as of Sep 2026 |
 | Also | Founder and Data Analytics Consultant, McFly Ads (consulting) since 2020; Mcfly Analytics Shopify App LIVE at mcflyads.com (side project) |
 | Prior | Advertising Data Scientist, Nutricost |
@@ -783,7 +783,7 @@ Head of BI & Performance Marketing at Black Clover USA (~$45M apparel), reports 
 
 ## Education
 
-Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)
+Bachelor of Science, Emphasis: Data Analytics and Statistics, Utah Valley University
 ```
 
 ---

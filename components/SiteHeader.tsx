@@ -15,12 +15,20 @@ export function SiteHeader() {
         </Link>
         <nav className="nav" aria-label="Primary">
           {nav.map((item) => {
+            if (item.href.includes("#")) {
+              return (
+                <a key={item.href} href={item.href}>
+                  {item.label}
+                </a>
+              );
+            }
             const current =
               item.href === "/work"
                 ? pathname === "/work" ||
                   (pathname.startsWith("/work/") &&
                     !pathname.startsWith("/work/desks"))
-                : pathname === item.href || pathname.startsWith(`${item.href}/`);
+                : pathname === item.href ||
+                  pathname.startsWith(`${item.href}/`);
             return (
               <Link
                 key={item.href}

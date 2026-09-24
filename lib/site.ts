@@ -6,7 +6,7 @@ export const site = {
     "Marketing Analytics & Measurement Lead. Marketing science with Google Meridian MMM, incrementality (geo holdout, RCT, and test-and-learn), attribution, and cash MER versus platform ROAS. $25M+ in career-managed ad spend. GTM analytics from the Black Clover warehouse to an executive and partner portal — Snowflake and SQL. Head of BI & Performance Marketing at Black Clover. McFly Ads consulting practice: marketing science and media measurement for named brands. Mcfly Analytics Shopify App LIVE.",
   spendHeadline: "$25M+ in career-managed ad spend",
   url: "https://marty-smithson.pages.dev",
-  revised: "2026-09-23",
+  revised: "2026-09-24",
   email: "martysmithson04@gmail.com",
   linkedin: "https://www.linkedin.com/in/marty-smithson",
   linkedinLabel: "linkedin.com/in/marty-smithson",
@@ -19,7 +19,7 @@ export const site = {
   mcflyProduct: "Mcfly Analytics Shopify App",
   mcflyTitle: "Founder and Data Analytics Consultant",
   education:
-    "Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)",
+    "Bachelor of Science, Emphasis: Data Analytics and Statistics, Utah Valley University",
   resumes: {
     full: "/resumes/Marty_Smithson_Resume_MASTER.pdf",
     measurement: "/resumes/Marty_Smithson_Resume_SCIENCE.pdf",
@@ -65,6 +65,7 @@ export const site = {
 } as const;
 
 export const nav = [
+  { href: "/#samples", label: "Samples" },
   { href: "/work/desks", label: "Desks" },
   { href: "/work", label: "Work" },
   { href: "/resume", label: "Resume" },

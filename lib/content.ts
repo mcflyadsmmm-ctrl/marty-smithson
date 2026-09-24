@@ -46,8 +46,39 @@ export const hero = {
   line: "Head of BI & Performance Marketing at Black Clover. I report to the CEO. Founder and Data Analytics Consultant, McFly Ads.",
   place: "American Fork, Utah. Central Utah or US remote.",
   school:
-    "Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025).",
+    "I hold a bachelor's in data analytics and statistics from Utah Valley University.",
 } as const;
+
+export const workSamples = [
+  {
+    kind: "Notebook",
+    title: "Marketing mix model + geo-lift notebook",
+    line: "A mix model and a geo holdout, fit on simulated spend and sales.",
+    skills: ["Bayesian MMM", "Geo holdout", "Python"],
+    href: "https://github.com/martysmithson04-alt/marketing-mix-model/blob/main/consulting-proof/mmm_geo_lift_demo.ipynb",
+  },
+  {
+    kind: "Write-up",
+    title: "Incrementality test write-up",
+    line: "How a geo test is designed, read, and turned into a keep-or-cut call.",
+    skills: ["Geo holdout", "Test design", "Incrementality"],
+    href: "https://github.com/martysmithson04-alt/marketing-mix-model/blob/main/consulting-proof/test-writeup.md",
+  },
+  {
+    kind: "PDF",
+    title: "Sample client readout deck",
+    line: "A short deck for the mix, the test, and the spend story.",
+    skills: ["Exec storytelling", "Cash MER", "Client readout"],
+    href: "https://github.com/martysmithson04-alt/marketing-mix-model/blob/main/consulting-proof/client-readout-deck.pdf",
+  },
+  {
+    kind: "POV",
+    title: "Measurement POV",
+    line: "When the question wants a mix model, an incrementality test, or attribution. Meridian, Robyn, and clean rooms.",
+    skills: ["Meridian vs Robyn", "Attribution", "Clean rooms"],
+    href: "https://github.com/martysmithson04-alt/marketing-mix-model/blob/main/consulting-proof/measurement-pov.md",
+  },
+] as const;
 
 export const proof = [
   {
@@ -380,7 +411,7 @@ export const resumePdfs = [
 
 export const resume = {
   role: "Head of Business Intelligence & Performance Marketing",
-  scan: "Head of BI & Performance Marketing at Black Clover · reports to the CEO · Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)",
+  scan: "Head of BI & Performance Marketing at Black Clover · reports to the CEO · Bachelor of Science, Emphasis: Data Analytics and Statistics, Utah Valley University",
   summary:
     "Head of Business Intelligence & Performance Marketing at Black Clover — I report to the CEO. Directed $25M+ in career-managed ad spend. I moved the full data warehouse off Domo onto Google Cloud Run (about $20K a month saved) and built a partner portal on Cloud Run for about 50 people. I allocate a seven-figure monthly paid mix across Google, Meta, and Microsoft against cash MER. Previously Advertising Data Scientist at Nutricost, reporting to the CMO: I organized a data portfolio for 13 unique sub-brands and built the full warehouse and advertising data-science station executives used for profit margins and COGS. Founder and Data Analytics Consultant at McFly Ads since 2020. Mcfly Analytics Shopify App is LIVE at mcflyads.com.",
   jobs: [
@@ -439,7 +470,7 @@ export const resume = {
     },
   ],
   education:
-    "Bachelor of Science — Emphasis: Data Analytics and Statistics (Utah Valley University, May 2025)",
+    "Bachelor of Science, Emphasis: Data Analytics and Statistics, Utah Valley University",
 } as const;
 
 export function caseBySlug(slug: string): CaseStudy | undefined {
