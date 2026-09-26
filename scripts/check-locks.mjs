@@ -64,6 +64,11 @@ const REQUIRED = [
   "GeoLift",
   "synthetic control",
   "augmented synthetic control",
+  "AI-assisted analytics",
+  "Cursor",
+  "Claude",
+  "ChatGPT",
+  "cohorts",
   "martysmithson04@gmail.com",
   "linkedin.com/in/marty-smithson",
 ];

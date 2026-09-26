@@ -72,8 +72,8 @@ export const methods = {
   title: "How the desk reads",
   body: [
     "The marketing science on this desk is marketing mix modeling (MMM) in Google Meridian. I run it on ledger sales and exact spend, read the model, and recommend the mix. Incrementality is a geo holdout, an RCT, or GeoLift when two channels claim the same sale. GeoLift uses synthetic control (augmented synthetic control). Test-and-learn returns incremental ROAS (iROAS). Platform ROAS stays the platform's number.",
-    "Attribution and multi-touch attribution (MTA) explain the path. They sit next to cash MER, CAC, and LTV. MTA is the path, the mix model is the mix, and the experiment is the cut. Marketing data science is that desk, and decision science is the call after it: which dollar caused the sale, and which dollar stays. The warehouse work is SQL and Python on Cloud Run. Experimentation is how a cut gets made.",
-    "Google, Meta, and Microsoft each score their own conversions. That channel setup is what platform ROAS can say. The executive read is cash, the mix the model recommends, and the cut the test supports. SQL, Snowflake, Python, R, Looker, and Tableau are how the desk is built and shown.",
+    "Attribution and multi-touch attribution (MTA) explain the path. They sit next to cash MER, CAC, LTV, and cohorts. MTA is the path, the mix model is the mix, and the experiment is the cut. Marketing data science is that desk, and decision science is the call after it: which dollar caused the sale, and which dollar stays. The warehouse work is SQL and Python on Cloud Run. Experimentation is how a cut gets made.",
+    "Google, Meta, and Microsoft each score their own conversions. That channel setup is what platform ROAS can say. The executive read is cash, the mix the model recommends, and the cut the test supports. SQL, Snowflake, Python, R, Looker, and Tableau are how the desk is built and shown. I build the models, the pipelines, the dashboards, the reporting, and Mcfly Analytics Shopify App with AI-assisted analytics: Cursor, Claude, ChatGPT, and agents, so the measurement work ships faster.",
   ],
   terms: [
     {
@@ -90,7 +90,11 @@ export const methods = {
     },
     {
       name: "Attribution",
-      note: "MTA for the path, beside cash MER, CAC, and LTV. iROAS when the test decides.",
+      note: "MTA for the path, beside cash MER, CAC, LTV, and cohorts. iROAS when the test decides.",
+    },
+    {
+      name: "How I work",
+      note: "AI-assisted analytics with Cursor, Claude, ChatGPT, and agents to build and ship measurement work faster.",
     },
     {
       name: "Stack",
@@ -277,7 +281,7 @@ export const cases: CaseStudy[] = [
     beats: featured[2].beats,
     body: [
       "The product is live. Install it. It reads the Shopify orders a shop already has and shows typical order, returning dollars, time to a second purchase, and LTV. Add spend when you want sales divided by spend. There is no ad-network login.",
-      "I built Mcfly Analytics Shopify App as a personal project next to the full-time seats. The consulting practice is McFly Ads. The title there is Founder and Data Analytics Consultant — since 2020. I own the delivery: the measurement plan, the read for the brand, and the product.",
+      "I built Mcfly Analytics Shopify App as a personal project next to the full-time seats. Cursor, Claude, ChatGPT, and agents are how I build and ship it, the same way I build the models, the pipelines, the dashboards, and the reporting. The consulting practice is McFly Ads. The title there is Founder and Data Analytics Consultant — since 2020. I own the delivery: the measurement plan, the read for the brand, and the product.",
       "The public SAMPLE desk is Harbor Home Co at mcflyads.com/demo. The consulting work is marketing science for ten named brands: media measurement, mix models, incrementality, dashboards, and paid allocation. The names are on this page.",
     ],
     points: [
@@ -430,6 +434,11 @@ export const resume = {
       label: "Measurement",
       items:
         "media measurement, marketing mix modeling (MMM), Robyn, Meridian, incrementality testing, GeoLift, synthetic control, augmented synthetic control, test-and-learn, multi-touch attribution, cash MER, budget allocation",
+    },
+    {
+      label: "How I work",
+      items:
+        "AI-assisted analytics with Cursor, Claude, ChatGPT, and agents to build and ship measurement work faster",
     },
     {
       label: "Data & BI",
