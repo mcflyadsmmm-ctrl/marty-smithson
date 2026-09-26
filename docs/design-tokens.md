@@ -49,7 +49,7 @@ IBM Plex Sans (400/500) and IBM Plex Mono (400/500), via `next/font`. Systems fa
 - Proof strip is four ruled columns on one plate (ink rules top and bottom). Not four floating metric cards.
 - Credo is a pine rule beside the sentence. No gradient plate.
 - Matrices live inside a padded figure body. Rules must not escape the plate.
-- Home fold: hero (Marketing Analytics & Measurement Lead + $25M+ paid mix, with email, LinkedIn, resume PDF, and the product on that same screen), proof strip ($25M+ spend, Meridian MMM, incrementality, cash MER versus platform ROAS), ten-name client strip (logos + public sites, every name visible), three case cards with stacked Problem / Method / Decision / Outcome rows, then one GTM analytics bridge (Black Clover warehouse to the executive and partner portal), then Harbor Home Co SAMPLE as one proof desk. Method keywords. Credo. Contact. One spend headline ($25M+).
+- Home fold: hero (Marketing Analytics & Measurement Lead + $25M+ paid mix, with email, LinkedIn, resume PDF, and the product on that same screen), proof strip ($25M+ spend, Meridian MMM, incrementality, cash MER versus platform ROAS), ten-name client strip (logos + public sites, every name visible, one ruled sheet), three full-measure case sheets (identity on the left, stacked Problem / Method / Decision / Outcome on the right, pine rule on the left edge — not three narrow columns), then one GTM analytics bridge (Black Clover warehouse to the executive and partner portal), then Harbor Home Co SAMPLE as one proof desk. Method keywords. Credo. Contact. One spend headline ($25M+).
 - Resume is a pack ledger, not three equal cards over a void. Full resume is the take. The other two packs are lanes.
 - One theme on every route.
 

@@ -23,8 +23,8 @@ export function BrandRoster({
                   className="client-logo"
                   src={brand.logo}
                   alt=""
-                  width={28}
-                  height={28}
+                  width={32}
+                  height={32}
                 />
               ) : (
                 <span className="brand-mark" aria-hidden="true">

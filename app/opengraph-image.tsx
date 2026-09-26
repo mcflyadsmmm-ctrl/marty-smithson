@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { hero } from "@/lib/content";
+import { hero, proof } from "@/lib/content";
 import { site } from "@/lib/site";
 
 export const alt = site.title;
@@ -18,47 +18,67 @@ export default function OpenGraphImage() {
           justifyContent: "space-between",
           backgroundColor: "#e4eee7",
           color: "#102018",
-          padding: "72px 80px 64px",
+          padding: "68px 76px 56px",
         }}
       >
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: 24,
-            maxWidth: 980,
+            maxWidth: 1020,
           }}
         >
           <div
             style={{
-              fontSize: 68,
-              fontWeight: 500,
-              letterSpacing: "-0.03em",
-              lineHeight: 1.05,
+              display: "flex",
+              fontSize: 28,
+              color: "#3d4f45",
+              letterSpacing: "-0.02em",
             }}
           >
             {site.name}
           </div>
           <div
             style={{
-              fontSize: 32,
-              lineHeight: 1.35,
-              color: "#102018",
+              display: "flex",
+              marginTop: 22,
+              fontSize: 46,
+              fontWeight: 500,
+              letterSpacing: "-0.03em",
+              lineHeight: 1.18,
             }}
           >
             {hero.role}
           </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            fontSize: 22,
-            color: "#1b6b4a",
-            borderTop: "2px solid #102018",
-            paddingTop: 22,
-          }}
-        >
-          Black Clover · Nutricost · {site.mcflyProduct}
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <div style={{ display: "flex", height: 1, background: "#102018" }} />
+          <div style={{ display: "flex", height: 3 }} />
+          <div style={{ display: "flex", height: 1, background: "#102018" }} />
+          <div
+            style={{
+              display: "flex",
+              paddingTop: 22,
+            }}
+          >
+          {proof.map((item, index) => (
+            <div
+              key={item.label}
+              style={{
+                display: "flex",
+                flex: 1,
+                padding: "0 18px",
+                borderLeft: index === 0 ? "none" : "1px solid #c5d4cb",
+                color: "#1b6b4a",
+                fontSize: 26,
+                fontWeight: 500,
+                letterSpacing: "-0.03em",
+              }}
+            >
+              {item.label}
+            </div>
+          ))}
+          </div>
         </div>
       </div>
     ),
