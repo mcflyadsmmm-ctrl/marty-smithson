@@ -68,7 +68,7 @@ export const siteGraph = {
           "@type": "Occupation",
           name: "Advertising Data Scientist",
           description:
-            "Nutricost. Reported to the CMO. Organized a 13-sub-brand data portfolio and built the warehouse and advertising data-science station for margins and COGS. Read Robyn and ran GeoLift, then took the spend call to the CMO.",
+            "Nutricost. Reported to the CMO. Organized a 13-sub-brand data portfolio and built the warehouse and advertising data-science station for margins and COGS. Read Robyn and ran GeoLift, which uses synthetic control (augmented synthetic control), then took the spend call to the CMO.",
         },
         {
           "@type": "Occupation",

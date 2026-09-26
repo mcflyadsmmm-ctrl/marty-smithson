@@ -38,6 +38,8 @@ export const site = {
     "RCT",
     "test-and-learn",
     "GeoLift",
+    "synthetic control",
+    "augmented synthetic control",
     "attribution",
     "MTA",
     "cash MER",

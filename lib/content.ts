@@ -60,7 +60,7 @@ export const proof = [
   },
   {
     label: "Incrementality",
-    note: "Geo holdout, GeoLift, or RCT. Test-and-learn decides keep or cut.",
+    note: "Geo holdout, GeoLift (synthetic control, augmented synthetic control), or RCT. Test-and-learn decides keep or cut.",
   },
   {
     label: "Cash MER",
@@ -71,7 +71,7 @@ export const proof = [
 export const methods = {
   title: "How the desk reads",
   body: [
-    "The marketing science on this desk is marketing mix modeling (MMM) in Google Meridian. I run it on ledger sales and exact spend, read the model, and recommend the mix. Incrementality is a geo holdout, GeoLift, or an RCT when two channels claim the same sale. Test-and-learn returns incremental ROAS (iROAS). Platform ROAS stays the platform's number.",
+    "The marketing science on this desk is marketing mix modeling (MMM) in Google Meridian. I run it on ledger sales and exact spend, read the model, and recommend the mix. Incrementality is a geo holdout, an RCT, or GeoLift when two channels claim the same sale. GeoLift uses synthetic control (augmented synthetic control). Test-and-learn returns incremental ROAS (iROAS). Platform ROAS stays the platform's number.",
     "Attribution and multi-touch attribution (MTA) explain the path. They sit next to cash MER, CAC, and LTV. MTA is the path, the mix model is the mix, and the experiment is the cut. Marketing data science is that desk, and decision science is the call after it: which dollar caused the sale, and which dollar stays. The warehouse work is SQL and Python on Cloud Run. Experimentation is how a cut gets made.",
     "Google, Meta, and Microsoft each score their own conversions. That channel setup is what platform ROAS can say. The executive read is cash, the mix the model recommends, and the cut the test supports. SQL, Snowflake, Python, R, Looker, and Tableau are how the desk is built and shown.",
   ],
@@ -82,7 +82,11 @@ export const methods = {
     },
     {
       name: "Test-and-learn",
-      note: "Geo holdout, GeoLift, or RCT. The decision is keep or cut.",
+      note: "Geo holdout, GeoLift (synthetic control), or RCT. The decision is keep or cut.",
+    },
+    {
+      name: "Synthetic control",
+      note: "GeoLift uses synthetic control (augmented synthetic control).",
     },
     {
       name: "Attribution",
@@ -133,7 +137,7 @@ export const featured = [
       problem:
         "Platform ROAS was treated as the budget. Finance and marketing did not share one sales number.",
       method:
-        "Marketing science for the CEO. I run Google Meridian MMM on cash sales and exact spend, read it, and recommend the mix. A geo holdout, GeoLift, or an RCT when two channels claim the same sale.",
+        "Marketing science for the CEO. I run Google Meridian MMM on cash sales and exact spend, read it, and recommend the mix. A geo holdout, GeoLift (synthetic control, augmented synthetic control), or an RCT when two channels claim the same sale.",
       decision:
         "Below cash MER break-even, we cut. Meridian sets the mix. The holdout decides incrementality. That is the spend story I put in front of the CEO.",
       outcome:
@@ -152,7 +156,7 @@ export const featured = [
       problem:
         "Thirteen catalogs. No single place an executive could see contribution past last-click.",
       method:
-        "I organized the thirteen-sub-brand data portfolio. I built the warehouse and the advertising data-science station. MTA, LTV, and cohorts in BigQuery. I read Robyn for the mix and ran GeoLift when platforms claimed the same order.",
+        "I organized the thirteen-sub-brand data portfolio. I built the warehouse and the advertising data-science station. MTA, LTV, and cohorts in BigQuery. I read Robyn for the mix and ran GeoLift (synthetic control, augmented synthetic control) when platforms claimed the same order.",
       decision:
         "The causal check went to the CMO as the spend call. Contribution past last-click was the weekly read.",
       outcome:
@@ -189,7 +193,7 @@ export const fleet = {
   lead: "I run measurement for the CEO: cash MER, mix models, and incrementality. The warehouse left Domo for Cloud Run so that desk could keep one number.",
   beats: featured[0].beats,
   body: [
-    "The job is the number the CEO spends against. Cash MER is the control — ledger sales over exact spend on Google, Meta, and Microsoft. I run Google Meridian on that cash and that spend, read the model, and recommend the mix. When two channels claim the same sale I set a geo holdout, GeoLift, or an RCT. Test-and-learn ends as a decision: keep or cut. Below break-even, we cut. Platform ROAS is not the budget.",
+    "The job is the number the CEO spends against. Cash MER is the control — ledger sales over exact spend on Google, Meta, and Microsoft. I run Google Meridian on that cash and that spend, read the model, and recommend the mix. When two channels claim the same sale I set a geo holdout, GeoLift, or an RCT. GeoLift uses synthetic control (augmented synthetic control). Test-and-learn ends as a decision: keep or cut. Below break-even, we cut. Platform ROAS is not the budget.",
     "The executive read is a spend story: cash in, exact spend, the mix the model recommends, and the cut the test supports. Google, Meta, and Microsoft each score their own conversions, and that channel setup is what platform ROAS can say. I choose the measurement for the question: Meridian for the mix, a holdout or RCT for incrementality, attribution and MTA for the path. SQL, Snowflake, Python, and R sit under the model. Looker and Tableau are how a desk gets seen. I lead the measurement myself, and I lead a social media manager, a graphic designer, and international advertising leads.",
     "The warehouse was in Domo when I arrived. I moved it to Google Cloud Run. Same work. About $20K a month left the bill. I also built a partner portal on Cloud Run for about fifty people — executives, rep leads, and reps — live Oracle NetSuite, role-based access, messaging between users. SQL and Snowflake sit under that path. That warehouse-to-portal path is the GTM analytics on this seat. The cost and the portal are on the resume. They support the measurement seat.",
   ],
@@ -204,7 +208,7 @@ export const fleet = {
     },
     {
       title: "Incrementality",
-      body: "I set a geo holdout, GeoLift, or an RCT when two channels claim the same sale. Test-and-learn decides keep or cut.",
+      body: "I set a geo holdout, GeoLift (synthetic control, augmented synthetic control), or an RCT when two channels claim the same sale. Test-and-learn decides keep or cut.",
     },
     {
       title: "Which measurement",
@@ -237,7 +241,7 @@ export const cases: CaseStudy[] = [
     body: [
       "I organized the data portfolio for thirteen unique sub-brands under the Nutricost main brand. That was the job on day one — one company, thirteen catalogs, and no single place an executive could see contribution.",
       "I built the full data warehouse. I built the advertising data-science station where executives could see profit margins and COGS. Organized and built. I did not inherit a finished desk.",
-      "The weekly read was marketing data science for the CMO: contribution past last-click, multi-touch attribution, LTV, and cohorts in BigQuery, with GA4 and Looker Studio on the same view. SQL and R did that work. When two platforms claimed the same order I read Robyn for the mix and ran GeoLift. I took that spend call to the CMO. That causal check is the decision science on the seat.",
+      "The weekly read was marketing data science for the CMO: contribution past last-click, multi-touch attribution, LTV, and cohorts in BigQuery, with GA4 and Looker Studio on the same view. SQL and R did that work. When two platforms claimed the same order I read Robyn for the mix and ran GeoLift. GeoLift uses synthetic control (augmented synthetic control). I took that spend call to the CMO. That causal check is the decision science on the seat.",
     ],
     points: [
       {
@@ -258,7 +262,7 @@ export const cases: CaseStudy[] = [
       },
       {
         title: "Causal check",
-        body: "I read Robyn for the mix and ran GeoLift when platforms claimed the same order. The spend call went to the CMO.",
+        body: "I read Robyn for the mix and ran GeoLift (synthetic control, augmented synthetic control) when platforms claimed the same order. The spend call went to the CMO.",
       },
     ],
   },
@@ -392,7 +396,7 @@ export const resume = {
       bullets: [
         "Moved the full data warehouse off Domo onto Google Cloud Run. About $20K a month saved.",
         "Built a partner portal on Cloud Run for about 50 people — executives, rep leads, and reps. Live Oracle NetSuite, role-based access, messaging between users, hard cost cap.",
-        "Meridian MMM on Google, Meta, and Microsoft: read the model, then the mix recommendation to the CEO. GeoLift and RCTs when two channels claimed the same sale. Below cash MER break-even, we cut.",
+        "Meridian MMM on Google, Meta, and Microsoft: read the model, then the mix recommendation to the CEO. GeoLift (synthetic control, augmented synthetic control) and RCTs when two channels claimed the same sale. Below cash MER break-even, we cut.",
         "Directed a seven-figure monthly paid mix against cash MER for the CEO. Platform ROAS was not the budget.",
         "Snowflake, dbt, and Airflow into Oracle NetSuite. R, SQL, and Python. BI in Looker, Domo, and Tableau.",
         "Led a social media manager, a graphic designer, and international advertising leads in Asia, the UK, Canada, and Australia.",
@@ -406,7 +410,7 @@ export const resume = {
       bullets: [
         "Organized a data portfolio for 13 unique sub-brands under the Nutricost main brand.",
         "Built the full data warehouse and the advertising data-science station where executives could see profit margins and COGS.",
-        "Read Robyn for the mix and ran GeoLift when platforms claimed the same order. Took that spend call to the CMO. MTA, LTV, and cohorts in BigQuery with SQL and R.",
+        "Read Robyn for the mix and ran GeoLift (synthetic control, augmented synthetic control) when platforms claimed the same order. Took that spend call to the CMO. MTA, LTV, and cohorts in BigQuery with SQL and R.",
       ],
     },
     {
@@ -416,7 +420,7 @@ export const resume = {
       meta: "Consulting practice. I started the company in 2020.",
       bullets: [
         "Mcfly Analytics Shopify App is LIVE at mcflyads.com. Personal project I run next to the full-time seats.",
-        "6 years of marketing data science for 10 named brands: media measurement, Robyn and Meridian, GeoLift, executive dashboards, retail command centers, and paid allocation.",
+        "6 years of marketing data science for 10 named brands: media measurement, Robyn and Meridian, GeoLift (synthetic control, augmented synthetic control), executive dashboards, retail command centers, and paid allocation.",
         "Named brands: Marksman Construction, Malama Solar, Royal Peak Lighting, Stretch Labs, Kin Home, BatBridge Bookkeeping, Whirly Board, Arizona Gym Floors, Pure Air Solutions, Priority Mulching Services.",
       ],
     },
@@ -425,7 +429,7 @@ export const resume = {
     {
       label: "Measurement",
       items:
-        "media measurement, marketing mix modeling (MMM), Robyn, Meridian, incrementality testing, GeoLift, test-and-learn, multi-touch attribution, cash MER, budget allocation",
+        "media measurement, marketing mix modeling (MMM), Robyn, Meridian, incrementality testing, GeoLift, synthetic control, augmented synthetic control, test-and-learn, multi-touch attribution, cash MER, budget allocation",
     },
     {
       label: "Data & BI",

@@ -61,6 +61,9 @@ const REQUIRED = [
   "Snowflake",
   "RCT",
   "test-and-learn",
+  "GeoLift",
+  "synthetic control",
+  "augmented synthetic control",
   "martysmithson04@gmail.com",
   "linkedin.com/in/marty-smithson",
 ];
@@ -95,6 +98,13 @@ const BANNED = [
   "Dynata",
   "Kantar",
   "PurpleLab",
+  "diff-in-diff",
+  "difference-in-differences",
+  "difference in differences",
+  "propensity matching",
+  "propensity score",
+  "uplift modeling",
+  "uplift model",
 ];
 
 const DEAD_ARCHITECTURE = [
