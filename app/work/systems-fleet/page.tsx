@@ -8,7 +8,7 @@ import { fleet } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Black Clover",
   description:
-    "Marketing measurement and BI at Black Clover. Cash MER, mix models, incrementality. I report to the CEO.",
+    "Marketing measurement at Black Clover. Meridian MMM, incrementality, cash MER, and GTM analytics from the warehouse to the executive and partner portal. I report to the CEO.",
   alternates: { canonical: "/work/systems-fleet" },
 };
 

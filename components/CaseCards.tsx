@@ -6,29 +6,31 @@ import { site } from "@/lib/site";
 
 export function CaseCards() {
   return (
-    <div className="case-grid">
+    <div className="case-stack">
       {featured.map((item) => (
         <article className="work-entry case-card" key={item.key}>
-          <p className="field">
-            {item.key === "mcfly" ? "Live product" : "Case"}
-            {"live" in item && item.live ? (
-              <>
-                {" "}
-                <span className="live-mark">LIVE</span>
-              </>
-            ) : null}
-          </p>
-          <h3>{item.title}</h3>
-          <p className="quiet">{item.role}</p>
+          <div className="case-card-main">
+            <p className="field">
+              {item.key === "mcfly" ? "Live product" : "Case"}
+              {"live" in item && item.live ? (
+                <>
+                  {" "}
+                  <span className="live-mark">LIVE</span>
+                </>
+              ) : null}
+            </p>
+            <h3>{item.title}</h3>
+            <p className="quiet">{item.role}</p>
+            <p className="close-links">
+              <Link href={item.href}>Read the case</Link>
+              {item.key === "mcfly" ? (
+                <ExternalLink href={site.mcflyDemo}>Harbor SAMPLE</ExternalLink>
+              ) : (
+                <Link href={item.desk}>The desk</Link>
+              )}
+            </p>
+          </div>
           <CaseBeats beats={item.beats} layout="card" />
-          <p className="close-links">
-            <Link href={item.href}>Read the case</Link>
-            {item.key === "mcfly" ? (
-              <ExternalLink href={site.mcflyDemo}>Harbor SAMPLE</ExternalLink>
-            ) : (
-              <Link href={item.desk}>The desk</Link>
-            )}
-          </p>
         </article>
       ))}
     </div>

@@ -28,6 +28,7 @@ export const siteGraph = {
       email: site.email,
       description: site.description,
       jobTitle: [
+        "Marketing Analytics & Measurement Lead",
         "Head of BI & Performance Marketing",
         "Founder and Data Analytics Consultant",
       ],
@@ -60,39 +61,23 @@ export const siteGraph = {
         {
           "@type": "Occupation",
           name: "Head of BI & Performance Marketing",
-          description: "Black Clover. Reports to the CEO.",
+          description:
+            "Black Clover. Reports to the CEO. Runs and reads Meridian MMM, sets geo holdouts and RCTs, and spends against cash MER. The executive read is the mix recommendation and the cut.",
         },
         {
           "@type": "Occupation",
           name: "Advertising Data Scientist",
-          description: "Nutricost. Reported to the CMO.",
+          description:
+            "Nutricost. Reported to the CMO. Organized a 13-sub-brand data portfolio and built the warehouse and advertising data-science station for margins and COGS. Read Robyn and ran GeoLift, which uses synthetic control (augmented synthetic control), then took the spend call to the CMO. MTA, LTV, and cohorts in BigQuery.",
         },
         {
           "@type": "Occupation",
           name: "Founder and Data Analytics Consultant",
-          description: "McFly Ads.",
+          description:
+            "McFly Ads consulting practice since 2020. Founder-owned delivery of marketing science: mix models, incrementality, and media measurement. Mcfly Analytics Shopify App is LIVE.",
         },
       ],
-      knowsAbout: [
-        "marketing mix modeling",
-        "MMM",
-        "Google Meridian",
-        "incrementality",
-        "geo holdout",
-        "attribution",
-        "MTA",
-        "cash MER",
-        "iROAS",
-        "CAC",
-        "LTV",
-        "SQL",
-        "Python",
-        "warehouse",
-        "Google Cloud Run",
-        "experimentation",
-        "executive BI",
-        site.mcflyProduct,
-      ],
+      knowsAbout: [...site.keywords, site.mcflyProduct],
       sameAs: [site.linkedin],
       subjectOf: [
         ...resumePdfs.map((pdf) => ({

@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     template: `%s — ${site.name}`,
   },
   description: site.description,
+  keywords: [...site.keywords],
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
   alternates: { canonical: site.url },

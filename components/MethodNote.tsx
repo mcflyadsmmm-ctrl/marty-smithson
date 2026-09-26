@@ -8,6 +8,14 @@ export function MethodNote() {
       {methods.body.map((paragraph) => (
         <p key={paragraph}>{paragraph}</p>
       ))}
+      <ul className="method-terms">
+        {methods.terms.map((term) => (
+          <li key={term.name}>
+            <strong>{term.name}</strong>
+            <span>{term.note}</span>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

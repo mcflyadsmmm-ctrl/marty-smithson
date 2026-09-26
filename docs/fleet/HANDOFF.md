@@ -4,6 +4,15 @@
 **Repo target:** `mcflyadsmmm-ctrl/marty-smithson`  
 **Live:** https://marty-smithson.pages.dev/ (Cloudflare Pages project `marty-smithson`; Vercel 308s here)
 
+### Site locks (2026-09-23) — applied-role weight on the 2026-09-17 page
+- First screen still proves Marketing Analytics & Measurement Lead: Meridian MMM, incrementality (geo holdout or RCT), cash MER versus platform ROAS, $25M+ paid mix.
+- After the three cases, one GTM analytics bridge uses existing Black Clover facts only: warehouse off Domo onto Cloud Run, then the executive and partner portal. SQL and Snowflake. Not a RevOps title.
+- Crawler copy (visible DOM, JSON-LD, `/llms.txt`, meta) may name marketing science, MMM, incrementality, attribution, MER, GTM analytics, marketing data science, and decision science. Those are labels for work already on the page. Do not invent lifts, titles, or a RevOps identity.
+- Thin third lane: McFly Ads consulting (Founder and Data Analytics Consultant) is marketing science and media measurement for the ten named brands. Do not invent agency employment. Do not put outside agency names on user-facing surfaces.
+- Consulting JD themes (MMM read and mix recommendation, test-and-learn, attribution versus experiment, executive spend narrative, channel setup versus cash, SQL/Snowflake/Python/R/Looker/Tableau, founder delivery) use facts already on the page. No healthcare claims, no DSP admin tenure, no master’s.
+- GeoLift, where it is already named, is synthetic control (augmented synthetic control). Do not add diff-in-diff, propensity matching, or uplift modeling unless a resume line already says so. The resume does not.
+- How I work: AI-assisted analytics with Cursor, Claude, ChatGPT, and agents to build and ship measurement work faster. It describes how the models, pipelines, dashboards, reporting, and Mcfly Analytics Shopify App get built. Do not pin it to a single metric bullet.
+
 ### Site locks (2026-09-17) — override older rows below on user-facing surfaces
 - Hero: Marketing Analytics & Measurement Lead — Meridian MMM, incrementality, cash MER, executive BI — $25M+ paid mix. Title/meta match. Not “I build the systems behind better decisions.”
 - Home order: hero → proof strip → 10-name client strip (logos + public sites) → three readable case cards → Harbor SAMPLE as one proof desk → method keywords → credo (platform ≠ incremental ≠ cash) → contact

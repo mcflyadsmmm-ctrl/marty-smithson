@@ -53,6 +53,22 @@ const REQUIRED = [
   "Python",
   "Cloud Run",
   "experimentation",
+  "marketing science",
+  "media measurement",
+  "GTM analytics",
+  "marketing data science",
+  "decision science",
+  "Snowflake",
+  "RCT",
+  "test-and-learn",
+  "GeoLift",
+  "synthetic control",
+  "augmented synthetic control",
+  "AI-assisted analytics",
+  "Cursor",
+  "Claude",
+  "ChatGPT",
+  "cohorts",
   "martysmithson04@gmail.com",
   "linkedin.com/in/marty-smithson",
 ];
@@ -73,6 +89,27 @@ const BANNED = [
   "not the main story",
   "not the main seat",
   "sample-disclaimer",
+  "RevOps",
+  "Open to Work",
+  "PMG",
+  "Epsilon",
+  "Analytic Partners",
+  "Publicis",
+  "IQVIA",
+  "Crossix",
+  "DV360",
+  "The Trade Desk",
+  "DISQO",
+  "Dynata",
+  "Kantar",
+  "PurpleLab",
+  "diff-in-diff",
+  "difference-in-differences",
+  "difference in differences",
+  "propensity matching",
+  "propensity score",
+  "uplift modeling",
+  "uplift model",
 ];
 
 const DEAD_ARCHITECTURE = [
@@ -217,6 +254,7 @@ const homeOrder = [
   "ProofStrip",
   "BrandRoster",
   "CaseCards",
+  "GtmBridge",
   "HarborFeature",
   "MethodNote",
   "Credo",
@@ -245,8 +283,17 @@ assert.match(worksFor[0], /McFly Ads/);
 assert.doesNotMatch(worksFor[0], /Nutricost/, "Nutricost is a prior seat, not a current employer");
 assert.match(structured, /Head of BI & Performance Marketing/);
 assert.match(structured, /Advertising Data Scientist/);
+assert.match(structured, /Marketing Analytics & Measurement Lead/);
+assert.match(structured, /site\.keywords/);
 assert.match(structured, /DigitalDocument/);
 assert.match(structured, /\/resume\.md/);
+assert.match(site, /marketing science/);
+assert.match(site, /media measurement/);
+assert.match(content, /Consulting since 2020/);
+assert.match(content, /McFly Ads is the consulting practice/);
+assert.match(site, /GTM analytics/);
+assert.match(site, /Snowflake/);
+assert.doesNotMatch(structured, /RevOps/);
 
 const sitemap = readFileSync(join(root, "app/sitemap.ts"), "utf8");
 assert.doesNotMatch(sitemap, /new Date\(\)/, "sitemap lastmod must stay stable");
